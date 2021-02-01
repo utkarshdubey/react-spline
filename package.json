@@ -21,7 +21,10 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "@types/animejs": "^3.1.2",
+    "animejs": "^3.2.1",
+    "three": "^0.125.2"
   },
   "devDependencies": {
     "@types/node": "^12.12.38",
