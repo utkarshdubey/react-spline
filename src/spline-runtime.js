@@ -2557,13 +2557,13 @@ class SpeLoaderManager {
   }
 }
 export class SpeRuntime {
-  constructor(e, t, i = {}) {
+  constructor(e, t, i = {},canvas$1) {
     ;(this.mGltfScene = e),
       (this.mConfig = i),
       (this.mViewportMode = SPE_RUNTIME_VIEWMODE_FULLSCREEN),
       (this.mViewportWidth = window.innerWidth),
       (this.mViewportHeight = window.innerHeight)
-    const r = document.getElementById('canvas3d')
+    const r = canvas$1
     ;(this.mRenderer = new THREE.WebGLRenderer({
       antialias: !0,
       alpha: !0,

@@ -18,13 +18,18 @@ export const Spline = ({ scene, assets }: Props) => {
       // @ts-ignore
       current.width = current.width
     }
-    const splineRuntime = new SpeRuntime(scene, assets)
+    const splineRuntime = new SpeRuntime(scene, assets, {}, current)
+
     splineRuntime.run()
   }, [scene, assets])
   return (
     <div>
       <div className={styles.container}>
-        <canvas id='canvas3d' className={styles.canvas} ref={canvasRef}></canvas>
+        <canvas
+          id='canvas3d'
+          className={styles.canvas}
+          ref={canvasRef}
+        ></canvas>
       </div>
     </div>
   )
