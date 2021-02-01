@@ -7,9 +7,11 @@ import { Spline } from 'react-spline'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hi! This is an experiment.</h1>
-      <Spline scene={SPLINE_EXPORTED_SCENE} assets={SPLINE_ASSETS_LIST} />
+    <div style={{backgroundSize: "cover", display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <h1 style={{ position: "absolute", zIndex: 1 }}>If you see this, react-spline works.</h1>
+      <div>
+        <Spline scene={SPLINE_EXPORTED_SCENE} assets={SPLINE_ASSETS_LIST} />
+      </div>
     </div>
   )
 }

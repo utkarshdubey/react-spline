@@ -1,8 +1,6 @@
-import { useEffect, createElement } from 'react';
 import * as three from 'three';
 import anime$1 from 'animejs/lib/anime.es.js';
-
-var styles = {"canvas":"_3yjUb","container":"_1Lxpd"};
+import { useRef, useEffect, createElement } from 'react';
 
 window.THREE = three;
 window.anime = anime$1;
@@ -6661,19 +6659,31 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
 };
 
+var styles = {"canvas":"_3yjUb","container":"_1Lxpd"};
+
 const Spline = ({
   scene,
   assets
 }) => {
+  const canvasRef = useRef();
   useEffect(() => {
+    const {
+      current
+    } = canvasRef;
+
+    if (current != null) {
+      current.width = current.width;
+    }
+
     const splineRuntime = new SpeRuntime(scene, assets);
     splineRuntime.run();
-  }, []);
+  }, [scene, assets]);
   return createElement("div", null, createElement("div", {
     className: styles.container
   }, createElement("canvas", {
     id: 'canvas3d',
-    className: styles.canvas
+    className: styles.canvas,
+    ref: canvasRef
   })));
 };
 
