@@ -15,12 +15,12 @@ npm install --save react-spline
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-spline'
+import { Spline } from 'react-spline'
 import 'react-spline/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Spline scene={SCENE_OBJECT} assets={ASSETS_OBJECT} />
   }
 }
 ```
