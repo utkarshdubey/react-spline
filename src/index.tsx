@@ -11,10 +11,11 @@ interface Props {
 }
 
 export const Spline = ({ scene, assets }: Props) => {
-  const ref = React.useRef()
+  const canvasRef: any = React.useRef<HTMLCanvasElement>()
   React.useEffect(() => {
-    const { current } = ref
-    if (current) {
+    const { current } = canvasRef
+    if (current != null) {
+      // @ts-ignore
       current.width = current.width
     }
     const splineRuntime = new SpeRuntime(scene, assets)
@@ -23,7 +24,7 @@ export const Spline = ({ scene, assets }: Props) => {
   return (
     <div>
       <div className={styles.container}>
-        <canvas id='canvas3d' className={styles.canvas} ref={ref}></canvas>
+        <canvas id='canvas3d' className={styles.canvas} ref={canvasRef}></canvas>
       </div>
     </div>
   )
