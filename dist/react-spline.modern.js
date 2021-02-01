@@ -6659,11 +6659,13 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
 };
 
-var styles = {"canvas":"_3yjUb","container":"_1Lxpd"};
+var styles = {"canvas":"_styles-module__canvas__3yjUb","container":"_styles-module__container__1Lxpd"};
 
 const Spline = ({
   scene,
   assets,
+  id,
+  className,
   style
 }) => {
   const canvasRef = useRef();
@@ -6685,6 +6687,8 @@ const Spline = ({
     splineRuntime.run();
   }, [scene, assets]);
   return createElement("div", {
+    id: id,
+    className: className,
     style: style
   }, createElement("div", {
     className: styles.container

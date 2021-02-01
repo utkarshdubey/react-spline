@@ -15,7 +15,7 @@
   "scripts": {
     "build": "microbundle-crl src/index.tsx -o ./dist --no-compress --format modern --tsconfig tsconfig.json",
     "postbuild": "node scripts/mv.js",
-    "start": "microbundle-crl src/index.tsx -o ./dist watch --no-compress --format modern --tsconfig tsconfig.json",
+    "start": "microbundle-crl watch src/index.tsx -o ./dist --no-compress --format modern --tsconfig tsconfig.json",
     "prepare": "run-s build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
