@@ -1,9 +1,9 @@
-import React from 'react'
+import 'react-spline/react-spline.modern.css'
 
-import { Spline } from 'react-spline';
-import 'react-spline/dist/index.css';
-import { SPLINE_EXPORTED_SCENE } from './scene';
-import { SPLINE_ASSETS_LIST } from './assets';
+import React from 'react'
+import { SPLINE_ASSETS_LIST } from './assets'
+import { SPLINE_EXPORTED_SCENE } from './scene'
+import { Spline } from 'react-spline'
 
 const App = () => {
   return (

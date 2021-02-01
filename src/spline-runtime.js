@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-nocheck
 window.SPE = window.SPE || {}
 
 const UNSIGNED_BYTE = 5121,
@@ -3045,7 +3045,7 @@ function PlayMode(e, t, i) {
         e.up,
         new THREE.Vector3(0, 1, 0)
       )),
-      (a = r.clone().inverse()),
+      (a = r.clone().invert()),
       (s = new THREE.Vector3()),
       (n = new THREE.Quaternion()),
       (o = 2 * Math.PI),
@@ -4706,7 +4706,7 @@ function PlayMode(e, t, i) {
       e.updateWorldMatrix(!0, !1)
       for (let r = 0, a = this.i.states.length; r < a; ++r) {
         const a = this.i.states[r]
-        t.getInverse(e.matrixWorld),
+        t.copy(e.matrixWorld).invert(),
           null !== this.i.object.parent &&
             (this.i.object.parent.updateWorldMatrix(!0, !1),
             t.multiply(this.i.object.parent.matrixWorld)),
@@ -7538,7 +7538,7 @@ class Cloner extends THREE.Object3D {
         (e = !0))
     for (var t = this.children, i = 0, r = t.length; i < r; i++)
       t[i].updateMatrixWorld(e)
-    this.matrixWorldInverse.getInverse(this.matrixWorld)
+    this.matrixWorldInverse.copy(this.matrixWorld).invert()
   }
   updateWorldMatrix(e, t) {
     var i = this.parent
@@ -7559,13 +7559,13 @@ class Cloner extends THREE.Object3D {
     )
       for (var r = this.children, a = 0, s = r.length; a < s; a++)
         r[a].updateWorldMatrix(!1, !0)
-    this.matrixWorldInverse.getInverse(this.matrixWorld)
+    this.matrixWorldInverse.copy(this.matrixWorld).invert()
   }
   attach(e) {
     const t = new THREE.Matrix4()
     return (
       this.updateWorldMatrix(!0, !1),
-      t.getInverse(this.matrixWorld),
+      t.copy(this.matrixWorld).invert(),
       null !== e.parent &&
         (e.parent.updateWorldMatrix(!0, !1), t.multiply(e.parent.matrixWorld)),
       void 0 !== e.userData.hiddenMatrix
@@ -7742,7 +7742,7 @@ class Cloner extends THREE.Object3D {
         r.copy(s.boundingSphere),
         r.applyMatrix4(n),
         !1 !== e.ray.intersectsSphere(r) &&
-          (a.getInverse(n),
+          (a.copy(n).invert(),
           i.copy(e.ray).applyMatrix4(a),
           null === s.boundingBox || !1 !== i.intersectsBox(s.boundingBox)))
       ) {
@@ -7902,7 +7902,7 @@ class Cloner extends THREE.Object3D {
       const t = new THREE.Matrix4()
       return (
         this.updateWorldMatrix(!0, !1),
-        t.getInverse(this.matrixWorld),
+        t.copy(this.matrixWorld).invert(),
         null !== e.parent &&
           (e.parent.updateWorldMatrix(!0, !1),
           t.multiply(e.parent.matrixWorld)),
@@ -8110,7 +8110,7 @@ class Cloner extends THREE.Object3D {
       const t = new THREE.Matrix4()
       return (
         this.updateWorldMatrix(!0, !1),
-        t.getInverse(this.matrixWorld),
+        t.copy(this.matrixWorld).invert(),
         null !== e.parent &&
           (e.parent.updateWorldMatrix(!0, !1),
           t.multiply(e.parent.matrixWorld)),
@@ -8297,7 +8297,7 @@ class Cloner extends THREE.Object3D {
       const t = new THREE.Matrix4()
       return (
         this.updateWorldMatrix(!0, !1),
-        t.getInverse(this.matrixWorld),
+        t.copy(this.matrixWorld).invert(),
         null !== e.parent &&
           (e.parent.updateWorldMatrix(!0, !1),
           t.multiply(e.parent.matrixWorld)),
@@ -8404,7 +8404,7 @@ class Cloner extends THREE.Object3D {
         r.copy(s.boundingSphere),
         r.applyMatrix4(n),
         !1 !== e.ray.intersectsSphere(r) &&
-          (a.getInverse(n),
+          (a.copy(n).invert(),
           i.copy(e.ray).applyMatrix4(a),
           null === s.boundingBox || !1 !== i.intersectsBox(s.boundingBox)))
       ) {
@@ -8475,7 +8475,7 @@ class Cloner extends THREE.Object3D {
         r.copy(s.boundingSphere),
         r.applyMatrix4(n),
         !1 !== e.ray.intersectsSphere(r) &&
-          (a.getInverse(n),
+          (a.copy(n).invert(),
           i.copy(e.ray).applyMatrix4(a),
           null === s.boundingBox || !1 !== i.intersectsBox(s.boundingBox)))
       ) {
@@ -8545,7 +8545,7 @@ class Cloner extends THREE.Object3D {
         r.copy(s.boundingSphere),
         r.applyMatrix4(n),
         !1 !== e.ray.intersectsSphere(r) &&
-          (a.getInverse(n),
+          (a.copy(n).invert(),
           i.copy(e.ray).applyMatrix4(a),
           null === s.boundingBox || !1 !== i.intersectsBox(s.boundingBox)))
       ) {
@@ -8646,7 +8646,7 @@ class Cloner extends THREE.Object3D {
     e.updateWorldMatrix(!1, !1),
       this.makeEmpty(),
       (this.transform = e.matrixWorld)
-    let i = new THREE.Matrix4().getInverse(e.matrixWorld)
+    let i = new THREE.Matrix4().copy(e.matrixWorld).invert()
     return this.expandByObjectSize(e, i, t)
   }),
   (SPE.Box3.prototype.expandByObjectSize = (function () {
