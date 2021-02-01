@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "module": "esnext",
+    "module": "ESNext",
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "jsx": "react",
@@ -17,6 +17,7 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "target": "ESNext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
