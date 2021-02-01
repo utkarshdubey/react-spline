@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { Spline } from '.'
 
-describe('ExampleComponent', () => {
+describe('Spline', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(Spline).toBeTruthy()
   })
 })
