@@ -11,9 +11,10 @@ interface Props {
   id?: string
   className?: string
   style?: React.CSSProperties
+  canvasStyle?: React.CSSProperties
 }
 
-export const Spline = ({ scene, assets, id, className, style }: Props) => {
+export const Spline = ({ scene, assets, id, className, style, canvasStyle }: Props) => {
   const canvasRef: any = React.useRef<HTMLCanvasElement>()
   React.useEffect(() => {
     const { current } = canvasRef
@@ -26,12 +27,13 @@ export const Spline = ({ scene, assets, id, className, style }: Props) => {
     splineRuntime.run()
   }, [scene, assets])
   return (
-    <div id={id} className={className} style={style}>
+    <div className={className} style={style}>
       <div className={styles.container}>
         <canvas
-          id='canvas3d'
+          id={id}
           className={styles.canvas}
           ref={canvasRef}
+          style={canvasStyle}
         ></canvas>
       </div>
     </div>

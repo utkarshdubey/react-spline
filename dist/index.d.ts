@@ -6,6 +6,7 @@ interface Props {
     id?: string;
     className?: string;
     style?: React.CSSProperties;
+    canvasStyle?: React.CSSProperties;
 }
-export declare const Spline: ({ scene, assets, id, className, style }: Props) => JSX.Element;
+export declare const Spline: ({ scene, assets, id, className, style, canvasStyle }: Props) => JSX.Element;
 export {};

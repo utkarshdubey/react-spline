@@ -6664,7 +6664,10 @@ var styles = {"canvas":"_3yjUb","container":"_1Lxpd"};
 const Spline = ({
   scene,
   assets,
-  style
+  id,
+  className,
+  style,
+  canvasStyle
 }) => {
   const canvasRef = useRef();
   useEffect(() => {
@@ -6685,13 +6688,15 @@ const Spline = ({
     splineRuntime.run();
   }, [scene, assets]);
   return createElement("div", {
+    className: className,
     style: style
   }, createElement("div", {
     className: styles.container
   }, createElement("canvas", {
-    id: 'canvas3d',
+    id: id,
     className: styles.canvas,
-    ref: canvasRef
+    ref: canvasRef,
+    style: canvasStyle
   })));
 };
 
