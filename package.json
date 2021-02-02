@@ -1,6 +1,6 @@
 {
   "name": "react-spline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A wrapper for loading Spline models and animations.",
   "author": "utkarshdubey",
   "license": "MIT",
