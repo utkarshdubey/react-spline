@@ -6378,14 +6378,8 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
 };
 SPE.Box3 = (_temp = class extends THREE.Box3 {
-  constructor(...args) {
-    super(...args);
-
-    this.setFromObjectSize = (e, t) => {
-      e.updateWorldMatrix(!1, !1), this.makeEmpty(), this.transform = e.matrixWorld;
-      let i = new THREE.Matrix4().copy(e.matrixWorld).invert();
-      return this.expandByObjectSize(e, i, t);
-    };
+  constructor(..._e97) {
+    super(..._e97);
 
     this.expandByObjectSize = (() => {
       var e,
@@ -6409,14 +6403,6 @@ SPE.Box3 = (_temp = class extends THREE.Box3 {
         return e = r, n = i.enableHelper, t = [], !0 === a ? (i.traverseEntity(o), this.setFromPoints(t)) : (o(i), this.setFromPoints(t)), this;
       };
     })();
-
-    this.getCenter = e => {
-      return (e = THREE.Box3.prototype.getCenter.call(this, e)).applyMatrix4(this.transform), e;
-    };
-
-    this.setFromObject = (e, t) => {
-      return this.makeEmpty(), this.expandByObject(e, t);
-    };
 
     this.expandByObject = (() => {
       var e,
@@ -6442,22 +6428,36 @@ SPE.Box3 = (_temp = class extends THREE.Box3 {
       };
     })();
 
-    this.computeVertices = () => {
-      let e = this.getSize(new THREE.Vector3()).multiplyScalar(0.5);
-      var t = this.getCenter(new THREE.Vector3()),
-          i = new THREE.Matrix4().copy(this.transform).setPosition(t);
-      this.vertices = [new THREE.Vector3(-e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, e.y, -e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, -e.z).applyMatrix4(i)];
-    };
-
-    this.computeEdges = () => {
-      this.vertices || this.computeVertices(), this.edges = [new THREE.Line3().set(this.vertices[0], this.vertices[3]), new THREE.Line3().set(this.vertices[1], this.vertices[2]), new THREE.Line3().set(this.vertices[5], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[7]), new THREE.Line3().set(this.vertices[0], this.vertices[1]), new THREE.Line3().set(this.vertices[3], this.vertices[2]), new THREE.Line3().set(this.vertices[7], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[5]), new THREE.Line3().set(this.vertices[0], this.vertices[4]), new THREE.Line3().set(this.vertices[1], this.vertices[5]), new THREE.Line3().set(this.vertices[2], this.vertices[6]), new THREE.Line3().set(this.vertices[3], this.vertices[7])];
-    };
-
-    this.computeFaces = () => {
-      this.vertices || this.computeVertices(), this.faces = [new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[2]).multiplyScalar(0.5).add(this.vertices[2]), new THREE.Vector3().copy(this.vertices[3]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6]), new THREE.Vector3().copy(this.vertices[7]).sub(this.vertices[5]).multiplyScalar(0.5).add(this.vertices[5]), new THREE.Vector3().copy(this.vertices[4]).sub(this.vertices[1]).multiplyScalar(0.5).add(this.vertices[1]), new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[7]).multiplyScalar(0.5).add(this.vertices[7]), new THREE.Vector3().copy(this.vertices[1]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6])];
-    };
-
     this.transform = new THREE.Matrix4();
+  }
+
+  setFromObjectSize(e, t) {
+    e.updateWorldMatrix(!1, !1), this.makeEmpty(), this.transform = e.matrixWorld;
+    let i = new THREE.Matrix4().copy(e.matrixWorld).invert();
+    return this.expandByObjectSize(e, i, t);
+  }
+
+  getCenter(e) {
+    return (e = THREE.Box3.prototype.getCenter.call(this, e)).applyMatrix4(this.transform), e;
+  }
+
+  setFromObject(e, t) {
+    return this.makeEmpty(), this.expandByObject(e, t);
+  }
+
+  computeVertices() {
+    let e = this.getSize(new THREE.Vector3()).multiplyScalar(0.5);
+    var t = this.getCenter(new THREE.Vector3()),
+        i = new THREE.Matrix4().copy(this.transform).setPosition(t);
+    this.vertices = [new THREE.Vector3(-e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, e.y, -e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, -e.z).applyMatrix4(i)];
+  }
+
+  computeEdges() {
+    this.vertices || this.computeVertices(), this.edges = [new THREE.Line3().set(this.vertices[0], this.vertices[3]), new THREE.Line3().set(this.vertices[1], this.vertices[2]), new THREE.Line3().set(this.vertices[5], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[7]), new THREE.Line3().set(this.vertices[0], this.vertices[1]), new THREE.Line3().set(this.vertices[3], this.vertices[2]), new THREE.Line3().set(this.vertices[7], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[5]), new THREE.Line3().set(this.vertices[0], this.vertices[4]), new THREE.Line3().set(this.vertices[1], this.vertices[5]), new THREE.Line3().set(this.vertices[2], this.vertices[6]), new THREE.Line3().set(this.vertices[3], this.vertices[7])];
+  }
+
+  computeFaces() {
+    this.vertices || this.computeVertices(), this.faces = [new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[2]).multiplyScalar(0.5).add(this.vertices[2]), new THREE.Vector3().copy(this.vertices[3]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6]), new THREE.Vector3().copy(this.vertices[7]).sub(this.vertices[5]).multiplyScalar(0.5).add(this.vertices[5]), new THREE.Vector3().copy(this.vertices[4]).sub(this.vertices[1]).multiplyScalar(0.5).add(this.vertices[1]), new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[7]).multiplyScalar(0.5).add(this.vertices[7]), new THREE.Vector3().copy(this.vertices[1]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6])];
   }
 
 }, _temp);
@@ -6622,7 +6622,7 @@ SPE.Math = class {
         a = 1 / (t.steps * r),
         s = new THREE.Color();
 
-    for (let _e97 = 0, n = r; _e97 < n; _e97++) s.set(makeColorGradient(_e97, a, t.phase)), i[3 * _e97] = s.r, i[3 * _e97 + 1] = s.g, i[3 * _e97 + 2] = s.b;
+    for (let _e98 = 0, n = r; _e98 < n; _e98++) s.set(makeColorGradient(_e98, a, t.phase)), i[3 * _e98] = s.r, i[3 * _e98 + 1] = s.g, i[3 * _e98 + 2] = s.b;
 
     e.geometry.attributes.color.needsUpdate = !0;
   }
@@ -6642,7 +6642,7 @@ SPE.Math = class {
         m = 1 / (e * o),
         u = new THREE.Color();
 
-    for (let _e98 = 0, _i66 = o; _e98 < _i66; _e98++) r = n[_e98].x, a = n[_e98].y, s = n[_e98].z, c[3 * _e98] = r, c[3 * _e98 + 1] = a, c[3 * _e98 + 2] = s, u.set(makeColorGradient(_e98, m, t)), d[3 * _e98] = u.r, d[3 * _e98 + 1] = u.g, d[3 * _e98 + 2] = u.b;
+    for (let _e99 = 0, _i66 = o; _e99 < _i66; _e99++) r = n[_e99].x, a = n[_e99].y, s = n[_e99].z, c[3 * _e99] = r, c[3 * _e99 + 1] = a, c[3 * _e99 + 2] = s, u.set(makeColorGradient(_e99, m, t)), d[3 * _e99] = u.r, d[3 * _e99 + 1] = u.g, d[3 * _e99 + 2] = u.b;
 
     return h.setAttribute("position", new THREE.BufferAttribute(c, 3)), h.setAttribute("color", new THREE.BufferAttribute(d, 3)), new THREE.Line(h, l);
   }
