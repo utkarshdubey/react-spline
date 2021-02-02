@@ -7,21 +7,23 @@ window.anime = anime$1;
 window.SPE = window.SPE || {};
 window.SPE_USES_PREVIEW_IMAGE = false;
 
+var _temp;
+
 window.SPE = window.SPE || {};
 const UNSIGNED_BYTE = 5121,
       UNSIGNED_SHORT = 5123,
       UNSIGNED_INT = 5125,
       FLOAT = 5126,
-      SPE_LAYER_TYPE_LIGHTING = 'light',
-      SPE_LAYER_TYPE_COLOR = 'color',
-      SPE_LAYER_TYPE_GRADIENT = 'gradient',
-      SPE_LAYER_TYPE_NORMAL = 'normal',
-      SPE_LAYER_TYPE_DEPTH = 'depth',
-      SPE_LAYER_TYPE_TEXTURE = 'texture',
-      SPE_LAYER_TYPE_NOISE = 'noise',
-      SPE_LAYER_TYPE_FRESNEL = 'fresnel',
-      SPE_LAYER_TYPE_POINTS = 'points',
-      SPE_LAYER_TYPE_LINES = 'lines',
+      SPE_LAYER_TYPE_LIGHTING = "light",
+      SPE_LAYER_TYPE_COLOR = "color",
+      SPE_LAYER_TYPE_GRADIENT = "gradient",
+      SPE_LAYER_TYPE_NORMAL = "normal",
+      SPE_LAYER_TYPE_DEPTH = "depth",
+      SPE_LAYER_TYPE_TEXTURE = "texture",
+      SPE_LAYER_TYPE_NOISE = "noise",
+      SPE_LAYER_TYPE_FRESNEL = "fresnel",
+      SPE_LAYER_TYPE_POINTS = "points",
+      SPE_LAYER_TYPE_LINES = "lines",
       SPE_LAYER_UNIFORM_TYPE_BOOL = 0,
       SPE_LAYER_UNIFORM_TYPE_INT = 1,
       SPE_LAYER_UNIFORM_TYPE_FLOAT = 2,
@@ -43,7 +45,7 @@ const UNSIGNED_BYTE = 5121,
       SPE_RUNTIME_VIEWMODE_FULLSCREEN = 1,
       SPE_RUNTIME_VIEWMODE_FULL_WIDTH = 3,
       SPE_RUNTIME_VIEWMODE_FULL_HEIGHT = 4,
-      SPE_RUNTIME_QUALITY_DEFAULT = 'default';
+      SPE_RUNTIME_QUALITY_DEFAULT = "default";
 SPE.QualityModifiers = {
   SphereGeometry: {
     widthSegments: {
@@ -211,8 +213,8 @@ class SpeGltfDecoder {
   }
 
   decode(e) {
-    e && (this.mGltfSceneGraph = e), this.mSceneGraph = new SpeScene(), this.mSceneCamera = null, this.mSceneOptions = {}, this.mNodes = [this.mSceneGraph], this.mObjects = {}, this.mCameras = [], this.mLights = [], this.mGeometries = [], this.mGeometriesSpe = [], this.mAccessors = [], this.mMaterials = [], this.mInteractionStates = {}, void 0 !== this.mGltfSceneGraph.spline && (this.mSceneOptions.usePrimitives = void 0 === this.mGltfSceneGraph.spline.usePrimitives || this.mGltfSceneGraph.spline.usePrimitives, this.mSceneOptions.useOrbitControls = void 0 === this.mGltfSceneGraph.spline.useOrbitControls || this.mGltfSceneGraph.spline.useOrbitControls, this.mSceneOptions.bgColor = void 0 !== this.mGltfSceneGraph.spline.bgColor ? this.mGltfSceneGraph.spline.bgColor : new THREE.Color(1644825), this.mSceneOptions.bgAlpha = void 0 !== this.mGltfSceneGraph.spline.bgAlpha ? this.mGltfSceneGraph.spline.bgAlpha : 0, this.mSceneOptions.orbitDamped = void 0 !== this.mGltfSceneGraph.spline.orbitDamped && this.mGltfSceneGraph.spline.orbitDamped, this.mSceneOptions.orbitTarget = void 0 !== this.mGltfSceneGraph.spline.orbitTarget ? this.mGltfSceneGraph.spline.orbitTarget : [0, 0, 0], this.mSceneOptions.cameraType = void 0 !== this.mGltfSceneGraph.spline.cameraType ? this.mGltfSceneGraph.spline.cameraType : 'Orthographic', this.mSceneOptions.cameraRotate = void 0 === this.mGltfSceneGraph.spline.cameraRotate || this.mGltfSceneGraph.spline.cameraRotate, this.mSceneOptions.cameraPan = void 0 === this.mGltfSceneGraph.spline.cameraPan || this.mGltfSceneGraph.spline.cameraPan, this.mSceneOptions.cameraZoom = void 0 === this.mGltfSceneGraph.spline.cameraZoom || this.mGltfSceneGraph.spline.cameraZoom, this.mSceneOptions.viewMode = void 0 !== this.mGltfSceneGraph.spline.viewMode ? this.mGltfSceneGraph.spline.viewMode : SPE_RUNTIME_VIEWMODE_FULLSCREEN, this.mSceneOptions.viewWidth = void 0 !== this.mGltfSceneGraph.spline.viewWidth ? this.mGltfSceneGraph.spline.viewWidth : 1024, this.mSceneOptions.viewHeight = void 0 !== this.mGltfSceneGraph.spline.viewHeight ? this.mGltfSceneGraph.spline.viewHeight : 768, this.mSceneOptions.quality = void 0 !== this.mGltfSceneGraph.spline.quality ? this.mGltfSceneGraph.spline.quality : SPE_RUNTIME_QUALITY_DEFAULT);
-    const t = 'function' == typeof Interaction;
+    e && (this.mGltfSceneGraph = e), this.mSceneGraph = new SpeScene(), this.mSceneCamera = null, this.mSceneOptions = {}, this.mNodes = [this.mSceneGraph], this.mObjects = {}, this.mCameras = [], this.mLights = [], this.mGeometries = [], this.mGeometriesSpe = [], this.mAccessors = [], this.mMaterials = [], this.mInteractionStates = {}, void 0 !== this.mGltfSceneGraph.spline && (this.mSceneOptions.usePrimitives = void 0 === this.mGltfSceneGraph.spline.usePrimitives || this.mGltfSceneGraph.spline.usePrimitives, this.mSceneOptions.useOrbitControls = void 0 === this.mGltfSceneGraph.spline.useOrbitControls || this.mGltfSceneGraph.spline.useOrbitControls, this.mSceneOptions.bgColor = void 0 !== this.mGltfSceneGraph.spline.bgColor ? this.mGltfSceneGraph.spline.bgColor : new THREE.Color(1644825), this.mSceneOptions.bgAlpha = void 0 !== this.mGltfSceneGraph.spline.bgAlpha ? this.mGltfSceneGraph.spline.bgAlpha : 0, this.mSceneOptions.orbitDamped = void 0 !== this.mGltfSceneGraph.spline.orbitDamped && this.mGltfSceneGraph.spline.orbitDamped, this.mSceneOptions.orbitTarget = void 0 !== this.mGltfSceneGraph.spline.orbitTarget ? this.mGltfSceneGraph.spline.orbitTarget : [0, 0, 0], this.mSceneOptions.cameraType = void 0 !== this.mGltfSceneGraph.spline.cameraType ? this.mGltfSceneGraph.spline.cameraType : "Orthographic", this.mSceneOptions.cameraRotate = void 0 === this.mGltfSceneGraph.spline.cameraRotate || this.mGltfSceneGraph.spline.cameraRotate, this.mSceneOptions.cameraPan = void 0 === this.mGltfSceneGraph.spline.cameraPan || this.mGltfSceneGraph.spline.cameraPan, this.mSceneOptions.cameraZoom = void 0 === this.mGltfSceneGraph.spline.cameraZoom || this.mGltfSceneGraph.spline.cameraZoom, this.mSceneOptions.viewMode = void 0 !== this.mGltfSceneGraph.spline.viewMode ? this.mGltfSceneGraph.spline.viewMode : SPE_RUNTIME_VIEWMODE_FULLSCREEN, this.mSceneOptions.viewWidth = void 0 !== this.mGltfSceneGraph.spline.viewWidth ? this.mGltfSceneGraph.spline.viewWidth : 1024, this.mSceneOptions.viewHeight = void 0 !== this.mGltfSceneGraph.spline.viewHeight ? this.mGltfSceneGraph.spline.viewHeight : 768, this.mSceneOptions.quality = void 0 !== this.mGltfSceneGraph.spline.quality ? this.mGltfSceneGraph.spline.quality : SPE_RUNTIME_QUALITY_DEFAULT);
+    const t = "function" == typeof Interaction;
 
     if (t) {
       if (SPE.CachedImages = {}, this.mGltfSceneGraph.spline && this.mGltfSceneGraph.spline.images) {
@@ -329,7 +331,7 @@ class SpeGltfDecoder {
   }
 
   _decodeCamera(e) {
-    let t = void 0 !== e.type ? e.type : 'Perspective',
+    let t = void 0 !== e.type ? e.type : "Perspective",
         i = 100,
         r = 100,
         a = 45,
@@ -337,14 +339,14 @@ class SpeGltfDecoder {
         o = 5e4,
         h = null;
 
-    if ('Perspective' === t) {
+    if ("Perspective" === t) {
       const _t9 = e.perspective ? e.perspective : {},
             l = e.spe_options ? e.spe_options : {};
 
       a = void 0 !== _t9.yfov ? _t9.yfov : 45, n = void 0 !== _t9.znear ? _t9.znear : 0.1, o = void 0 !== _t9.zfar ? _t9.zfar : 5e4, (h = new SPE.CombinedCamera(i, r, a, n, o)).toPerspective();
       const c = void 0 !== l.zoom ? l.zoom : 1;
       h.zoom = c;
-    } else if ('Orthographic' === t) {
+    } else if ("Orthographic" === t) {
       const _t10 = e.orthographic ? e.orthographic : {},
             _s2 = e.spe_options ? e.spe_options : {};
 
@@ -357,16 +359,16 @@ class SpeGltfDecoder {
   }
 
   _decodeLight(e) {
-    if ('hemispheric' === e.type) {
+    if ("hemispheric" === e.type) {
       const t = new THREE.Color().fromArray(void 0 !== e.color ? e.color : [1, 1, 1]),
             i = new THREE.Color().setHex(8553090),
             r = e.intensity ? e.intensity : 1;
       this.mLights.push(new THREE.HemisphereLight(t, i, r));
-    } else if ('directional' === e.type) {
+    } else if ("directional" === e.type) {
       const t = new SPE.LightDirectional(new THREE.Color().fromArray(e.color), e.intensity),
             i = e.shadows || {};
       t.castShadow = void 0 !== i.castShadow && i.castShadow, t.shadow.camera.right = void 0 !== i.shadowmapViewRight ? i.shadowmapViewRight : 1250, t.shadow.camera.left = void 0 !== i.shadowmapViewLeft ? i.shadowmapViewLeft : -1250, t.shadow.camera.top = void 0 !== i.shadowmapViewTop ? i.shadowmapViewTop : 1250, t.shadow.camera.bottom = void 0 !== i.shadowmapViewBottom ? i.shadowmapViewBottom : -1250, t.shadow.camera.near = void 0 !== i.shadowmapViewNear ? i.shadowmapViewNear : 1, t.shadow.camera.far = void 0 !== i.shadowmapViewFar ? i.shadowmapViewFar : 2500, this.mLights.push(t);
-    } else if ('point' === e.type) {
+    } else if ("point" === e.type) {
       const t = new THREE.Color().fromArray(void 0 !== e.color ? e.color : [1, 1, 1]),
             i = e.intensity ? e.intensity : 1,
             r = void 0 !== e.range ? e.range : 0,
@@ -374,7 +376,7 @@ class SpeGltfDecoder {
             s = new SPE.LightPoint(t, i, r, a),
             n = e.shadows || {};
       s.castShadow = void 0 !== n.castShadow && n.castShadow, s.shadow.camera.near = void 0 !== n.shadowmapViewNear ? n.shadowmapViewNear : 1, s.shadow.camera.far = void 0 !== n.shadowmapViewFar ? n.shadowmapViewFar : 2500, this.mLights.push(s);
-    } else if ('spot' === e.type) {
+    } else if ("spot" === e.type) {
       const t = new THREE.Color().fromArray(void 0 !== e.color ? e.color : [1, 1, 1]),
             i = e.intensity ? e.intensity : 1,
             r = void 0 !== e.range ? e.range : 0,
@@ -384,7 +386,7 @@ class SpeGltfDecoder {
             o = new SPE.LightSpot(t, i, r, s, n, a),
             h = e.shadows || {};
       o.castShadow = void 0 !== h.castShadow && h.castShadow, o.shadow.camera.fov = void 0 !== h.shadowmapViewFov ? h.shadowmapViewFov : 2 * THREE.MathUtils.RAD2DEG * s, o.shadow.camera.near = void 0 !== h.shadowmapViewNear ? h.shadowmapViewNear : 1, o.shadow.camera.far = void 0 !== h.shadowmapViewFar ? h.shadowmapViewFar : 2500, this.mLights.push(o);
-    } else console.error('SpeGltfDecoder::_decodeLight >>> unsupported light type: ', e.type);
+    } else console.error("SpeGltfDecoder::_decodeLight >>> unsupported light type: ", e.type);
   }
 
   _constructGeometricData() {
@@ -407,8 +409,8 @@ class SpeGltfDecoder {
     const t = e.byteLength,
           i = e.uri;
 
-    if (i.indexOf('base64')) {
-      const _e20 = i.slice(i.indexOf('base64') + 7),
+    if (i.indexOf("base64")) {
+      const _e20 = i.slice(i.indexOf("base64") + 7),
             r = atob(_e20),
             a = new Uint8Array(_e20.length);
 
@@ -420,7 +422,7 @@ class SpeGltfDecoder {
       };
     }
 
-    return i.indexOf('.bin') ? (console.error('SpeGltfDecoder::_decodeBuffer >>> encode-from-.bin is not implement yet'), '') : (console.error('SpeGltfDecoder::_decodeBuffer >>> invalid options to parse buffer data'), '');
+    return i.indexOf(".bin") ? (console.error("SpeGltfDecoder::_decodeBuffer >>> encode-from-.bin is not implement yet"), "") : (console.error("SpeGltfDecoder::_decodeBuffer >>> invalid options to parse buffer data"), "");
   }
 
   _decodeBufferView(e, t) {
@@ -437,7 +439,7 @@ class SpeGltfDecoder {
       };
     }
 
-    return console.error('SpeGltfDecoder::_decodeBufferView >>> index-out-of-range in buffers array'), {};
+    return console.error("SpeGltfDecoder::_decodeBufferView >>> index-out-of-range in buffers array"), {};
   }
 
   _decodeAccessor(e, t) {
@@ -454,10 +456,10 @@ class SpeGltfDecoder {
             l = _e22.slice(r, r + h);
 
       let c = null;
-      return a === UNSIGNED_SHORT ? c = this._createUint16Buffer(l) : a === UNSIGNED_INT ? c = this._createUint32Buffer(l) : a === FLOAT && (c = this._createFloat32Buffer(l)), c ? this._createBufferAttribute(c, o) : (console.error('SpeGltfDecoder::_decodeAccessor >>> invalid component-type given'), null);
+      return a === UNSIGNED_SHORT ? c = this._createUint16Buffer(l) : a === UNSIGNED_INT ? c = this._createUint32Buffer(l) : a === FLOAT && (c = this._createFloat32Buffer(l)), c ? this._createBufferAttribute(c, o) : (console.error("SpeGltfDecoder::_decodeAccessor >>> invalid component-type given"), null);
     }
 
-    return console.error('SpeGltfDecoder::_decodeAccessor >>> index-out-of-range in bufferViews array'), null;
+    return console.error("SpeGltfDecoder::_decodeAccessor >>> index-out-of-range in bufferViews array"), null;
   }
 
   _decodeMaterial(e) {
@@ -466,12 +468,12 @@ class SpeGltfDecoder {
   }
 
   _decodeSimpleMaterial(e, t, i) {
-    const r = e.technique || 'PHONG',
+    const r = e.technique || "PHONG",
           a = e.values || {},
           s = t || {},
           n = i || {};
 
-    if ('PHONG' === r) {
+    if ("PHONG" === r) {
       const _e23 = new THREE.Color().fromArray(void 0 !== a.diffuse ? a.diffuse : [0.5, 0.5, 0.5]),
             _t11 = new THREE.Color().fromArray(void 0 !== a.specular ? a.specular : [0.5, 0.5, 0.5]),
             _i9 = new THREE.Color().fromArray(void 0 !== a.emission ? a.emission : [0, 0, 0]),
@@ -496,7 +498,7 @@ class SpeGltfDecoder {
       });
 
       this.mMaterials.push(u);
-    } else if ('LAMBERT' === r) {
+    } else if ("LAMBERT" === r) {
       const _e24 = new THREE.Color().fromArray(void 0 !== a.diffuse ? a.diffuse : [0.5, 0.5, 0.5]),
             _t12 = new THREE.Color().fromArray(void 0 !== a.emission ? a.emission : [0, 0, 0]),
             _i10 = void 0 !== a.transparent && a.transparent,
@@ -517,7 +519,7 @@ class SpeGltfDecoder {
       });
 
       this.mMaterials.push(d);
-    } else if ('CONSTANT' === r) {
+    } else if ("CONSTANT" === r) {
       const _e25 = new THREE.Color().fromArray(void 0 !== a.ambient ? a.ambient : [0.5, 0.5, 0.5]),
             _t13 = void 0 !== a.transparent && a.transparent,
             _i11 = void 0 !== a.transparency ? a.transparency : 1,
@@ -536,7 +538,7 @@ class SpeGltfDecoder {
       });
 
       this.mMaterials.push(c);
-    } else if ('TOON' === r) {
+    } else if ("TOON" === r) {
       const _e26 = new THREE.Color().fromArray(void 0 !== a.ambient ? a.ambient : [0.5, 0.5, 0.5]),
             _t14 = void 0 !== a.transparent && a.transparent,
             _i12 = void 0 !== a.transparency ? a.transparency : 1,
@@ -555,7 +557,7 @@ class SpeGltfDecoder {
       });
 
       this.mMaterials.push(c);
-    } else if ('PHYSICAL' === r) {
+    } else if ("PHYSICAL" === r) {
       const _e27 = new THREE.Color().fromArray(void 0 !== a.ambient ? a.ambient : [0.5, 0.5, 0.5]),
             _t15 = void 0 !== a.transparent && a.transparent,
             _i13 = void 0 !== a.transparency ? a.transparency : 1,
@@ -580,20 +582,20 @@ class SpeGltfDecoder {
       });
 
       this.mMaterials.push(u);
-    } else if ('ARRAY' === r) {
-      const _e28 = void 0 !== a.techniques ? a.techniques : new Array(n.length).fill('CONSTANT'),
+    } else if ("ARRAY" === r) {
+      const _e28 = void 0 !== a.techniques ? a.techniques : new Array(n.length).fill("CONSTANT"),
             _t16 = [];
 
-      for (let _i14 = 0; _i14 < n.length; _i14++) 'CONSTANT' === _e28[_i14] ? _t16.push(new SpeBasicMaterial(n[_i14], {})) : 'LAMBERT' === _e28[_i14] ? _t16.push(new SpeLambertMaterial(n[_i14], {})) : 'PHONG' === _e28[_i14] ? _t16.push(new SpePhongMaterial(n[_i14], {})) : 'TOON' === _e28[_i14] ? _t16.push(new SpeToonMaterial(n[_i14], {})) : 'PHYSICAL' === _e28[_i14] ? _t16.push(new SpePhysicalMaterial(n[_i14], {})) : (console.error(`SpeGltfDecoder::_decodeSimpleMaterial >>> unsupported technique (${_e28[_i14]}) for element of array of materials`), _t16.push(new SpeBasicMaterial(n[_i14], {})));
+      for (let _i14 = 0; _i14 < n.length; _i14++) "CONSTANT" === _e28[_i14] ? _t16.push(new SpeBasicMaterial(n[_i14], {})) : "LAMBERT" === _e28[_i14] ? _t16.push(new SpeLambertMaterial(n[_i14], {})) : "PHONG" === _e28[_i14] ? _t16.push(new SpePhongMaterial(n[_i14], {})) : "TOON" === _e28[_i14] ? _t16.push(new SpeToonMaterial(n[_i14], {})) : "PHYSICAL" === _e28[_i14] ? _t16.push(new SpePhysicalMaterial(n[_i14], {})) : (console.error(`SpeGltfDecoder::_decodeSimpleMaterial >>> unsupported technique (${_e28[_i14]}) for element of array of materials`), _t16.push(new SpeBasicMaterial(n[_i14], {})));
 
       this.mMaterials.push(_t16);
-    } else console.error('SpeGltfDecoder::_decodeSimpleMaterial >>> unsupported material type: ', e.technique);
+    } else console.error("SpeGltfDecoder::_decodeSimpleMaterial >>> unsupported material type: ", e.technique);
   }
 
   _decodePbrMaterial(e) {}
 
   _decodeSpeGeometry(e) {
-    const t = void 0 !== e.type ? e.type : 'SphereGeometry',
+    const t = void 0 !== e.type ? e.type : "SphereGeometry",
           i = this._applyQualityScalers(t, void 0 !== e.parameters ? { ...e.parameters
     } : {
       width: 100,
@@ -601,8 +603,8 @@ class SpeGltfDecoder {
       depth: 100
     });
 
-    if ('CharacterGeometry' === t) {
-      SpeLoadCharData(void 0 !== i.char ? i.char : '.', void 0 !== i.fontFamily ? i.fontFamily : 'roboto_regular', void 0 !== i.lod ? i.lod : 1), this.mGeometriesSpe.push(i);
+    if ("CharacterGeometry" === t) {
+      SpeLoadCharData(void 0 !== i.char ? i.char : ".", void 0 !== i.fontFamily ? i.fontFamily : "roboto_regular", void 0 !== i.lod ? i.lod : 1), this.mGeometriesSpe.push(i);
     } else {
       const _e29 = (0, SPE[t].build)(i);
 
@@ -659,7 +661,7 @@ class SpeGltfDecoder {
             _a3 = void 0 !== r.depth ? r.depth : _e33.z;
 
       l.scale(Math.abs(_e33.x) < 1e-5 ? 1 : _t18 / _e33.x, Math.abs(_e33.y) < 1e-5 ? 1 : _i15 / _e33.y, Math.abs(_e33.z) < 1e-5 ? 1 : _a3 / _e33.z), l.userData = {
-        type: 'NonParametricGeometry',
+        type: "NonParametricGeometry",
         parameters: {
           width: _t18,
           height: _i15,
@@ -680,39 +682,39 @@ class SpeGltfDecoder {
         i.visible = void 0 === e.visible || e.visible, i.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), i.quaternion.copy(new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1])), i.hiddenMatrix.copy(new THREE.Matrix4().fromArray(e.hiddenMatrix ? e.hiddenMatrix : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])), i.updateMatrix(), this.mNodes.push(i);
         const r = void 0 !== e.uuid ? e.uuid : THREE.MathUtils.generateUUID();
         this.mObjects[r] = i;
-      } else console.error('SpeGltfDecoder::_decodeNode >>> couldnt create node for associated camera (index out of bounds)');
+      } else console.error("SpeGltfDecoder::_decodeNode >>> couldnt create node for associated camera (index out of bounds)");
     } else if (void 0 !== e.mesh_spe) {
       const t = e.mesh_spe;
       let i = null;
-      t < this.mGeometriesSpe.length && t >= 0 ? i = this.mGeometriesSpe[t] : (console.warn('SpeGltfDecoder::_decodeNode >>> couldnt grab any associated geometry for a mesh-node (index out of bounds). Creating a default sphere instead'), i = new THREE.SphereBufferGeometry(1, 10, 10));
+      t < this.mGeometriesSpe.length && t >= 0 ? i = this.mGeometriesSpe[t] : (console.warn("SpeGltfDecoder::_decodeNode >>> couldnt grab any associated geometry for a mesh-node (index out of bounds). Creating a default sphere instead"), i = new THREE.SphereBufferGeometry(1, 10, 10));
       let r = null;
 
       if (void 0 !== e.material) {
         const _t19 = e.material;
-        _t19 < this.mMaterials.length && _t19 >= 0 ? r = this.mMaterials[_t19] : console.warn('SpeGltfDecoder::_decodeNode >>> couldnt grab any associated material for a mesh-node (index out of bounds)');
+        _t19 < this.mMaterials.length && _t19 >= 0 ? r = this.mMaterials[_t19] : console.warn("SpeGltfDecoder::_decodeNode >>> couldnt grab any associated material for a mesh-node (index out of bounds)");
       }
 
-      r || (console.error('SpeGltfDecoder::_decodeNode >>> mesh-node doesnt have a material. Creating a default phong-material instead'), r = new SpePhongMaterial({}, {
+      r || (console.error("SpeGltfDecoder::_decodeNode >>> mesh-node doesnt have a material. Creating a default phong-material instead"), r = new SpePhongMaterial({}, {
         color: new THREE.Color(16777215),
         specular: new THREE.Color(16777215)
       }));
-      const a = void 0 !== e.type ? e.type : 'mesh3d';
+      const a = void 0 !== e.type ? e.type : "mesh3d";
       let s = null;
-      'mesh3d' === a ? s = new SpeMesh3D(i, r) : 'mesh2d' === a ? s = new SpeMesh2D(i, r) : 'text' === a ? s = new SpeTextContainer(i, r) : 'character' === a ? s = new SpeTextChar3D(i, r) : (console.error(`SpeGltfDecoder::_decodeNode >>> mesh-type ${a} not supported`), s = new SpeMesh3D(i, r)), s.visible = void 0 === e.visible || e.visible, s.castShadow = void 0 === e.castShadow || e.castShadow, s.receiveShadow = void 0 === e.receiveShadow || e.receiveShadow, s.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), s.quaternion.copy(new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1])), s.scale.copy(new THREE.Vector3().fromArray(e.scale ? e.scale : [1, 1, 1])), s.hiddenMatrix.copy(new THREE.Matrix4().fromArray(e.hiddenMatrix ? e.hiddenMatrix : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])), s.updateMatrix(), this.mNodes.push(s);
+      "mesh3d" === a ? s = new SpeMesh3D(i, r) : "mesh2d" === a ? s = new SpeMesh2D(i, r) : "text" === a ? s = new SpeTextContainer(i, r) : "character" === a ? s = new SpeTextChar3D(i, r) : (console.error(`SpeGltfDecoder::_decodeNode >>> mesh-type ${a} not supported`), s = new SpeMesh3D(i, r)), s.visible = void 0 === e.visible || e.visible, s.castShadow = void 0 === e.castShadow || e.castShadow, s.receiveShadow = void 0 === e.receiveShadow || e.receiveShadow, s.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), s.quaternion.copy(new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1])), s.scale.copy(new THREE.Vector3().fromArray(e.scale ? e.scale : [1, 1, 1])), s.hiddenMatrix.copy(new THREE.Matrix4().fromArray(e.hiddenMatrix ? e.hiddenMatrix : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])), s.updateMatrix(), this.mNodes.push(s);
       const n = void 0 !== e.uuid ? e.uuid : THREE.MathUtils.generateUUID();
       this.mObjects[n] = s, e.spe_cloner && (s.cloner = new Cloner(s).fromJSON(e.spe_cloner_data), s.add(s.cloner));
     } else if (void 0 !== e.mesh) {
       const t = e.mesh;
       let i = null;
-      t < this.mGeometries.length && t >= 0 ? i = this.mGeometries[t] : (console.warn('SpeGltfDecoder::_decodeNode >>> couldnt grab any associated geometry for a mesh-node (index out of bounds). Creating a default sphere instead'), i = new THREE.SphereBufferGeometry(1, 10, 10));
+      t < this.mGeometries.length && t >= 0 ? i = this.mGeometries[t] : (console.warn("SpeGltfDecoder::_decodeNode >>> couldnt grab any associated geometry for a mesh-node (index out of bounds). Creating a default sphere instead"), i = new THREE.SphereBufferGeometry(1, 10, 10));
       let r = null;
 
       if (void 0 !== e.material) {
         const _t20 = e.material;
-        _t20 < this.mMaterials.length && _t20 >= 0 ? r = this.mMaterials[_t20] : console.warn('SpeGltfDecoder::_decodeNode >>> couldnt grab any associated material for a mesh-node (index out of bounds)');
+        _t20 < this.mMaterials.length && _t20 >= 0 ? r = this.mMaterials[_t20] : console.warn("SpeGltfDecoder::_decodeNode >>> couldnt grab any associated material for a mesh-node (index out of bounds)");
       }
 
-      r || (console.warn('SpeGltfDecoder::_decodeNode >>> mesh-node doesnt have a material. Creating a default phong-material instead'), r = new SpePhongMaterial({}, {
+      r || (console.warn("SpeGltfDecoder::_decodeNode >>> mesh-node doesnt have a material. Creating a default phong-material instead"), r = new SpePhongMaterial({}, {
         color: new THREE.Color(16777215),
         specular: new THREE.Color(16777215)
       }));
@@ -726,7 +728,7 @@ class SpeGltfDecoder {
       if (t < this.mLights.length && t >= 0) {
         const i = this.mLights[t];
 
-        if (i.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), 'SpotLight' === i.type || 'DirectionalLight' === i.type) {
+        if (i.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), "SpotLight" === i.type || "DirectionalLight" === i.type) {
           const _t21 = new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1]),
                 _r10 = new THREE.Matrix4().makeRotationFromQuaternion(_t21),
                 a = new THREE.Vector3(_r10.elements[8], _r10.elements[9], _r10.elements[10]);
@@ -737,25 +739,25 @@ class SpeGltfDecoder {
         i.hiddenMatrix && i.hiddenMatrix.copy(new THREE.Matrix4().fromArray(e.hiddenMatrix ? e.hiddenMatrix : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])), i.visible = void 0 === e.visible || e.visible, this.mNodes.push(i);
         const r = void 0 !== e.uuid ? e.uuid : THREE.MathUtils.generateUUID();
         this.mObjects[r] = i;
-      } else console.error('SpeGltfDecoder::_decodeNode >>> couldnt create node for associated light (index out of bounds)');
+      } else console.error("SpeGltfDecoder::_decodeNode >>> couldnt create node for associated light (index out of bounds)");
     } else if (e.spe_empty_object) {
       const t = new SpeEmptyObject();
       t.visible = void 0 === e.visible || e.visible, t.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), t.quaternion.copy(new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1])), t.scale.copy(new THREE.Vector3().fromArray(e.scale ? e.scale : [1, 1, 1])), t.hiddenMatrix.copy(new THREE.Matrix4().fromArray(e.hiddenMatrix ? e.hiddenMatrix : [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])), t.updateMatrix(), this.mNodes.push(t);
       const i = void 0 !== e.uuid ? e.uuid : THREE.MathUtils.generateUUID();
       this.mObjects[i] = t;
     } else {
-      console.warn('SpeGltfDecoder::_decodeNode >>> Unsupported node, creating a default THREE.Object3D instead');
+      console.warn("SpeGltfDecoder::_decodeNode >>> Unsupported node, creating a default THREE.Object3D instead");
       const t = new THREE.Object3D();
       t.position.copy(new THREE.Vector3().fromArray(e.translation ? e.translation : [0, 0, 0])), t.quaternion.copy(new THREE.Quaternion().fromArray(e.rotation ? e.rotation : [0, 0, 0, 1])), t.scale.copy(new THREE.Vector3().fromArray(e.scale ? e.scale : [1, 1, 1])), this.mNodes.push(t);
     }
   }
 
   _getAccessorItemSize(e) {
-    return 'SCALAR' === e ? 1 : 'VEC2' === e ? 2 : 'VEC3' === e ? 3 : 'VEC4' === e ? 4 : 'MAT4' === e ? 16 : (console.error('SpeGltfDecoder::_getAccessorItemSize >>> invalid item-type'), 1);
+    return "SCALAR" === e ? 1 : "VEC2" === e ? 2 : "VEC3" === e ? 3 : "VEC4" === e ? 4 : "MAT4" === e ? 16 : (console.error("SpeGltfDecoder::_getAccessorItemSize >>> invalid item-type"), 1);
   }
 
   _getAccessorComponentSize(e) {
-    return e === UNSIGNED_BYTE ? 1 : e === UNSIGNED_SHORT ? 2 : e === UNSIGNED_INT ? 4 : e === FLOAT ? 4 : (console.error('SpeGltfDecoder::_getAccessorComponentSize >>> invalid component-type'), 1);
+    return e === UNSIGNED_BYTE ? 1 : e === UNSIGNED_SHORT ? 2 : e === UNSIGNED_INT ? 4 : e === FLOAT ? 4 : (console.error("SpeGltfDecoder::_getAccessorComponentSize >>> invalid component-type"), 1);
   }
 
   _createUint16Buffer(e) {
@@ -776,14 +778,14 @@ class SpeGltfDecoder {
   }
 
   _createBufferAttribute(e, t) {
-    return 'Float32Array' === e.constructor.name ? new THREE.Float32BufferAttribute(e, t) : 'Uint16Array' === e.constructor.name ? new THREE.Uint16BufferAttribute(e, t) : 'Uint32Array' === e.constructor.name ? new THREE.Uint32BufferAttribute(e, t) : (console.error('SpeGltfDecoder::_createBufferAttribute >>> unsupported buffer-array-type'), null);
+    return "Float32Array" === e.constructor.name ? new THREE.Float32BufferAttribute(e, t) : "Uint16Array" === e.constructor.name ? new THREE.Uint16BufferAttribute(e, t) : "Uint32Array" === e.constructor.name ? new THREE.Uint32BufferAttribute(e, t) : (console.error("SpeGltfDecoder::_createBufferAttribute >>> unsupported buffer-array-type"), null);
   }
 
 }
 
 class SpeIMesh extends THREE.Mesh {
   constructor(e, t) {
-    super(e, t), this.mLocalTransform = new THREE.Matrix4(), this.mInteraction = 'function' == typeof Interaction ? new Interaction(this) : null;
+    super(e, t), this.mLocalTransform = new THREE.Matrix4(), this.mInteraction = "function" == typeof Interaction ? new Interaction(this) : null;
   }
 
   get interaction() {
@@ -883,7 +885,7 @@ class SpeMesh2D extends SpeIMesh {
 
 class SpeEmptyObject extends THREE.Group {
   constructor() {
-    super(), this.mLocalTransform = new THREE.Matrix4(), this.mInteraction = 'function' == typeof Interaction ? new Interaction(this) : null;
+    super(), this.mLocalTransform = new THREE.Matrix4(), this.mInteraction = "function" == typeof Interaction ? new Interaction(this) : null;
   }
 
   get interaction() {
@@ -918,7 +920,7 @@ class SpeEmptyObject extends THREE.Group {
 
 class SpeLayer {
   constructor(e, t = SPE_LAYER_TYPE_COLOR, i = {}) {
-    this.mId = e, this.mType = t, this.mNext = null, this.mDefines = {}, this.mUniforms = {}, this.mProgramVertUniforms = '', this.mProgramFragUniforms = '', this.initializeUniformsAndDefines(i);
+    this.mId = e, this.mType = t, this.mNext = null, this.mDefines = {}, this.mUniforms = {}, this.mProgramVertUniforms = "", this.mProgramFragUniforms = "", this.initializeUniformsAndDefines(i);
   }
 
   get id() {
@@ -973,23 +975,23 @@ class SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    console.error('SpeLayer::initializeUniformsAndDefines >>> virtual method');
+    console.error("SpeLayer::initializeUniformsAndDefines >>> virtual method");
   }
 
   generateUniformsCodeVert() {
-    return '\n\r';
+    return "\n\r";
   }
 
   generateUniformsCodeFrag() {
-    return '\n\r';
+    return "\n\r";
   }
 
   generateShaderCodeVert(e) {
-    return '\n\r';
+    return "\n\r";
   }
 
   generateShaderCodeFrag(e) {
-    return '\n\r';
+    return "\n\r";
   }
 
   copy(e) {
@@ -1002,7 +1004,7 @@ class SpeLayer {
   }
 
   copyUniforms(e) {
-    console.error('SpeLayer::copyUniforms >>> virtual method');
+    console.error("SpeLayer::copyUniforms >>> virtual method");
   }
 
   static CreateLayer(e, t, i) {
@@ -1027,7 +1029,7 @@ class SpeLayerLighting extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_LIGHTING = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_LIGHTING = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1058,7 +1060,7 @@ class SpeLayerColor extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_COLOR = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_COLOR = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1094,17 +1096,17 @@ class SpeLayerTexture extends SpeLayer {
 
   initializeUniformsAndDefines(e) {
     var t;
-    this.mDefines.SPE_USE_LAYER_TEXTURE = '', this.mDefines.USE_UV = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_TEXTURE = "", this.mDefines.USE_UV = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
     }, this.mUniforms[`f${this.mId}_texture`] = {
-      value: void 0 !== e.texture ? (t = e.texture.value, t instanceof THREE.Texture ? t : 'string' == typeof t ? function (e) {
+      value: void 0 !== e.texture ? (t = e.texture.value, t instanceof THREE.Texture ? t : "string" == typeof t ? function (e) {
         const t = new Image();
         t.src = e;
         const i = new THREE.Texture(t);
         return i.needsUpdate = !0, i;
-      }(t) : (console.error('SpeLayerTexture::get_texture >>> cant retrieve texture from given parameters'), new THREE.Texture())) : new THREE.Texture()
+      }(t) : (console.error("SpeLayerTexture::get_texture >>> cant retrieve texture from given parameters"), new THREE.Texture())) : new THREE.Texture()
     }, this.mUniforms[`f${this.mId}_mat`] = {
       value: void 0 !== e.mat ? this.mUniforms[`f${this.mId}_texture`].value.matrix.fromArray(void 0 !== e.mat.value.elements ? e.mat.value.elements : e.mat.value) : this.mUniforms[`f${this.mId}_texture`].value.matrix
     }, this.mUniforms[`f${this.mId}_crop`] = {
@@ -1162,7 +1164,7 @@ class SpeLayerNormal extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_NORMAL = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_NORMAL = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1197,7 +1199,7 @@ class SpeLayerDepth extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_DEPTH = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_DEPTH = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1252,7 +1254,7 @@ class SpeLayerNoise extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_NOISE = '', this.mDefines.SPE_USE_LAYER_TEXTURE = '', this.mDefines.SPE_NOISE_NUM_OCTAVES = '5', this.mDefines.USE_UV = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_NOISE = "", this.mDefines.SPE_USE_LAYER_TEXTURE = "", this.mDefines.SPE_NOISE_NUM_OCTAVES = "5", this.mDefines.USE_UV = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1335,7 +1337,7 @@ class SpeLayerFresnel extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_FRESNEL = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_FRESNEL = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1386,7 +1388,7 @@ class SpeLayerGradient extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_GRADIENT = '', this.mDefines.SPE_GRADIENT_MAX_SIZE = '10', this.mDefines.USE_UV = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_GRADIENT = "", this.mDefines.SPE_GRADIENT_MAX_SIZE = "10", this.mDefines.USE_UV = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1474,7 +1476,7 @@ class SpeLayerPoints extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_POINTS = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_POINTS = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1503,7 +1505,7 @@ class SpeLayerLines extends SpeLayer {
   }
 
   initializeUniformsAndDefines(e) {
-    this.mDefines.SPE_USE_LAYER_LINES = '', this.mUniforms[`f${this.mId}_alpha`] = {
+    this.mDefines.SPE_USE_LAYER_LINES = "", this.mUniforms[`f${this.mId}_alpha`] = {
       value: void 0 !== e.alpha ? e.alpha.value : 1
     }, this.mUniforms[`f${this.mId}_mode`] = {
       value: void 0 !== e.mode ? e.mode.value : SPE_BLENDING_NORMAL
@@ -1537,11 +1539,11 @@ if (!SPE.CreateLayerFromJSON) {
       const a = _e34.slice(_e34.indexOf(r) + r.length),
             s = t[_e34].value;
 
-      if ('boolean' == typeof s) i[a] = {
+      if ("boolean" == typeof s) i[a] = {
         name: a,
         value: s,
         type: SPE_LAYER_UNIFORM_TYPE_BOOL
-      };else if ('number' == typeof s) Number.isInteger(s) ? i[a] = {
+      };else if ("number" == typeof s) Number.isInteger(s) ? i[a] = {
         name: a,
         value: s,
         type: SPE_LAYER_UNIFORM_TYPE_INT
@@ -1549,7 +1551,7 @@ if (!SPE.CreateLayerFromJSON) {
         name: a,
         value: s,
         type: SPE_LAYER_UNIFORM_TYPE_FLOAT
-      };else if ('string' != typeof s || isNaN(s)) {
+      };else if ("string" != typeof s || isNaN(s)) {
         if (s instanceof Object && 2 === Object.entries(s).length) void 0 !== s.x && void 0 !== s.y && (i[a] = {
           name: a,
           value: [s.x, s.y],
@@ -1566,7 +1568,7 @@ if (!SPE.CreateLayerFromJSON) {
           name: a,
           value: [s.r, s.g, s.b, s.a],
           type: SPE_LAYER_UNIFORM_TYPE_COLOR
-        });else if (s instanceof Array && 'number' == typeof s[0]) Number.isInteger(s[0]) ? i[a] = {
+        });else if (s instanceof Array && "number" == typeof s[0]) Number.isInteger(s[0]) ? i[a] = {
           name: a,
           value: [].concat(s),
           type: SPE_LAYER_UNIFORM_TYPE_ARRAY_INT
@@ -1630,11 +1632,11 @@ if (!SPE.CreateLayerFromJSON) {
           name: a,
           value: [].concat(s.elements),
           type: SPE_LAYER_UNIFORM_TYPE_MAT4
-        } : console.error('SpeLayer::preprocess_uniforms >>> unsupported matrix-type of uniform: ', s.elements)) : 'string' == typeof s ? i[a] = {
+        } : console.error("SpeLayer::preprocess_uniforms >>> unsupported matrix-type of uniform: ", s.elements)) : "string" == typeof s ? i[a] = {
           name: a,
           value: SPE.CachedTextures[s],
           type: SPE_LAYER_UNIFORM_TYPE_SAMPLER_2D
-        } : console.error('SpeLayer::preprocess_uniforms >>> unsupported uniform-value: ', s);
+        } : console.error("SpeLayer::preprocess_uniforms >>> unsupported uniform-value: ", s);
       } else {
         const _e39 = Number(s);
 
@@ -1696,13 +1698,13 @@ class SpeLayersList {
       return r;
     }
 
-    console.error('SpeLayersList::addLayer >>> couldnt create a layer of type: ', t);
+    console.error("SpeLayersList::addLayer >>> couldnt create a layer of type: ", t);
   }
 
   addLayerBeforeAt(e, t) {
     const i = void 0 !== e.id ? e.id : 100 + Math.floor(999 * Math.random()),
           r = void 0 !== e.type ? e.type : SPE_LAYER_TYPE_COLOR,
-          a = 'texture' !== r ? SpeLayer.DictToUniforms(e) : SpeLayerTexture.DictToUniforms(e),
+          a = "texture" !== r ? SpeLayer.DictToUniforms(e) : SpeLayerTexture.DictToUniforms(e),
           s = SpeLayer.CreateLayer(i, r, a);
     let n = this.head;
     if (s.next = t, n === t) this.head = s;else {
@@ -1763,7 +1765,7 @@ class SpeLayersList {
   }
 
   getDefinesCode() {
-    let e = '',
+    let e = "",
         t = this.mHead;
 
     for (; t;) {
@@ -1776,7 +1778,7 @@ class SpeLayersList {
   }
 
   getVertUniformsCode() {
-    let e = '',
+    let e = "",
         t = this.mHead;
 
     for (; t;) e += t.generateUniformsCodeVert(), t = t.next;
@@ -1785,7 +1787,7 @@ class SpeLayersList {
   }
 
   getFragUniformsCode() {
-    let e = '',
+    let e = "",
         t = this.mHead;
 
     for (; t;) e += t.generateUniformsCodeFrag(), t = t.next;
@@ -1794,10 +1796,10 @@ class SpeLayersList {
   }
 
   getFragShaderCodePreLighting() {
-    let e = '',
+    let e = "",
         t = this.mHead;
 
-    for (; t.type !== SPE_LAYER_TYPE_LIGHTING;) e += t.generateShaderCodeFrag('bef'), t = t.next;
+    for (; t.type !== SPE_LAYER_TYPE_LIGHTING;) e += t.generateShaderCodeFrag("bef"), t = t.next;
 
     return e;
   }
@@ -1811,12 +1813,12 @@ class SpeLayersList {
   }
 
   getFragShaderCodePostLighting() {
-    let e = '',
+    let e = "",
         t = this.mHead;
 
     for (; t.type !== SPE_LAYER_TYPE_LIGHTING;) t = t.next;
 
-    for (t = t.next; t;) e += t.generateShaderCodeFrag('aft'), t = t.next;
+    for (t = t.next; t;) e += t.generateShaderCodeFrag("aft"), t = t.next;
 
     return e;
   }
@@ -1945,9 +1947,9 @@ class SpeToonMaterial extends THREE.MeshToonMaterial {
 
 var SpeFontsCache = {},
     SpeCharsCache = {};
-const SPE_PATH_FONTS = 'assets/fonts/',
-      SPE_DEFAULT_TEXT_FONT = 'roboto_regular',
-      SPE_DEFAULT_TEXT_CHARACTER = '.',
+const SPE_PATH_FONTS = "assets/fonts/",
+      SPE_DEFAULT_TEXT_FONT = "roboto_regular",
+      SPE_DEFAULT_TEXT_CHARACTER = ".",
       SPE_DEFAULT_TEXT_LOD = 16;
 
 function SpeLoadCharData(e, t, i) {
@@ -2004,7 +2006,7 @@ class SpeLoaderManager {
       for (let _i19 = 0; _i19 < t.length; _i19++) {
         const _r11 = new THREE.FontLoader(),
               _a4 = t[_i19],
-              s = SPE_PATH_FONTS + _a4 + '.json';
+              s = SPE_PATH_FONTS + _a4 + ".json";
 
         _r11.load(s, function (t) {
           SpeFontsCache[_a4] = t, _e41.mNumAssetsLoaded++, _e41.mNumAssetsLoaded === _e41.mNumAssetsToLoad && _e41.mOnFinishCallback();
@@ -2031,15 +2033,15 @@ class SpeRuntime {
   }
 
   onRuntimeAssetsLoaded() {
-    console.info('SpeRuntime >>> Finished loading assets for the spline-runtime'), this.loadFromGltf(this.mGltfScene), window.addEventListener('resize', this.onResize.bind(this)), this.mRunning = !0, this.onResize();
+    console.info("SpeRuntime >>> Finished loading assets for the spline-runtime"), this.loadFromGltf(this.mGltfScene), window.addEventListener("resize", this.onResize.bind(this)), this.mRunning = !0, this.onResize();
   }
 
   onRender() {
-    this.mRunning && (SPE_USES_PREVIEW_IMAGE && (document.querySelector('.spline-preview-image-container').style.display = 'none', SPE_USES_PREVIEW_IMAGE = !1), this.mPlayHandler && !this.mPlayHandler.isEnable && this.mPlayHandler.activate(), this.mOrbitControls && this.mOrbitControls.update(), this.mScene && this.mMainCamera && (this.mRenderer.autoClear = !0, this.mRenderer.render(this.mScene, this.mMainCamera)));
+    this.mRunning && (SPE_USES_PREVIEW_IMAGE && (document.querySelector(".spline-preview-image-container").style.display = "none", SPE_USES_PREVIEW_IMAGE = !1), this.mPlayHandler && !this.mPlayHandler.isEnable && this.mPlayHandler.activate(), this.mOrbitControls && this.mOrbitControls.update(), this.mScene && this.mMainCamera && (this.mRenderer.autoClear = !0, this.mRenderer.render(this.mScene, this.mMainCamera)));
   }
 
   onResize() {
-    this.mRunning && (this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULLSCREEN && this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULL_WIDTH || (this.mViewportWidth = window.innerWidth), this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULLSCREEN && this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULL_HEIGHT || (this.mViewportHeight = window.innerHeight), this.mMainCamera && ('PerspectiveCamera' === this.mMainCamera.type ? this.mMainCamera.aspect = this.mViewportWidth / this.mViewportHeight : 'OrthographicCamera' === this.mMainCamera.type && (this.mMainCamera.left = -this.mViewportWidth / 2, this.mMainCamera.right = this.mViewportWidth / 2, this.mMainCamera.top = this.mViewportHeight / 2, this.mMainCamera.bottom = -this.mViewportHeight / 2), this.mMainCamera.updateProjectionMatrix()), this.mRenderer && this.mRenderer.setSize(this.mViewportWidth, this.mViewportHeight));
+    this.mRunning && (this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULLSCREEN && this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULL_WIDTH || (this.mViewportWidth = window.innerWidth), this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULLSCREEN && this.mViewportMode !== SPE_RUNTIME_VIEWMODE_FULL_HEIGHT || (this.mViewportHeight = window.innerHeight), this.mMainCamera && ("PerspectiveCamera" === this.mMainCamera.type ? this.mMainCamera.aspect = this.mViewportWidth / this.mViewportHeight : "OrthographicCamera" === this.mMainCamera.type && (this.mMainCamera.left = -this.mViewportWidth / 2, this.mMainCamera.right = this.mViewportWidth / 2, this.mMainCamera.top = this.mViewportHeight / 2, this.mMainCamera.bottom = -this.mViewportHeight / 2), this.mMainCamera.updateProjectionMatrix()), this.mRenderer && this.mRenderer.setSize(this.mViewportWidth, this.mViewportHeight));
   }
 
   loadFromGltf(e) {
@@ -2048,7 +2050,7 @@ class SpeRuntime {
     this.mScene = i, this.mMainCamera = r, this.mSceneOptions = a;
     const s = void 0 !== this.mSceneOptions.bgColor ? new THREE.Color().fromArray(this.mSceneOptions.bgColor) : new THREE.Color(1644825),
           n = void 0 !== this.mSceneOptions.bgAlpha ? this.mSceneOptions.bgAlpha : 0;
-    this.mRenderer.setClearColor(s, n), this.mViewportMode = this.mSceneOptions.viewMode, this.mViewportWidth = this.mSceneOptions.viewWidth, this.mViewportHeight = this.mSceneOptions.viewHeight, this.mSceneOptions.useOrbitControls && (this.mOrbitControls = new THREE.OrbitControls(this.mMainCamera, this.mRenderer.domElement), this.mOrbitControls.target.fromArray(this.mSceneOptions.orbitTarget), this.mOrbitControls.enableRotate = this.mSceneOptions.cameraRotate, this.mOrbitControls.enablePan = this.mSceneOptions.cameraPan, this.mOrbitControls.enableZoom = this.mSceneOptions.cameraZoom, this.mOrbitControls.enableDamping = this.mSceneOptions.orbitDamped, this.mOrbitControls.rotateSpeed = 1, this.mOrbitControls.panSpeed = 1), 'function' == typeof Interaction && (this.mPlayHandler = new PlayMode(this.mRenderer.domElement, this.mScene, this.mMainCamera));
+    this.mRenderer.setClearColor(s, n), this.mViewportMode = this.mSceneOptions.viewMode, this.mViewportWidth = this.mSceneOptions.viewWidth, this.mViewportHeight = this.mSceneOptions.viewHeight, this.mSceneOptions.useOrbitControls && (this.mOrbitControls = new THREE.OrbitControls(this.mMainCamera, this.mRenderer.domElement), this.mOrbitControls.target.fromArray(this.mSceneOptions.orbitTarget), this.mOrbitControls.enableRotate = this.mSceneOptions.cameraRotate, this.mOrbitControls.enablePan = this.mSceneOptions.cameraPan, this.mOrbitControls.enableZoom = this.mSceneOptions.cameraZoom, this.mOrbitControls.enableDamping = this.mSceneOptions.orbitDamped, this.mOrbitControls.rotateSpeed = 1, this.mOrbitControls.panSpeed = 1), "function" == typeof Interaction && (this.mPlayHandler = new PlayMode(this.mRenderer.domElement, this.mScene, this.mMainCamera));
   }
 
 }
@@ -2074,15 +2076,15 @@ class SpeScene extends THREE.Scene {
 
 class SpeShaderLib {
   static SetupShader(e, t) {
-    e.fragmentShader = '\n            /* SPE-Blending helper functions */\n            #define SPE_BLENDING_NORMAL 0\n            #define SPE_BLENDING_MULTIPLY 1\n            #define SPE_BLENDING_SCREEN 2\n            #define SPE_BLENDING_OVERLAY 3\n            vec3 spe_normalBlend( vec3 a, vec3 b, float alpha ) {\n                return mix( a, b, alpha );\n            }\n            vec3 spe_multiplyBlend( vec3 a, vec3 b, float alpha ) {\n                return mix( a, a * b, alpha );\n            }\n            vec3 spe_screenBlend( vec3 a, vec3 b, float alpha ) {\n                vec3 tmp = 1.0 - ( 1.0 - a ) * ( 1.0 - b );\n                return mix( a, tmp, alpha );\n            }\n            vec3 spe_overlayBlend( vec3 a, vec3 b, float alpha ) {\n                vec3 tmp = mix( 1. - 2. * (1. - a) * (1. - b), 2. * a * b, step( a, vec3(.5) ) );\n                return clamp( mix( a, tmp, alpha ), 0.0, 1.0 );\n            }\n            vec3 spe_blend( vec3 a, vec3 b, float alpha, int mode ) {\n                /**/ if ( mode == SPE_BLENDING_NORMAL ) return spe_normalBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_MULTIPLY ) return spe_multiplyBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_SCREEN ) return spe_screenBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_OVERLAY ) return spe_overlayBlend( a, b, alpha );\n                return vec3( 1.0 );\n            }\n            ' + e.fragmentShader, e.vertexShader = '\n            #ifdef SPE_USE_LAYER_FRESNEL\n                varying vec3 vWorldViewDir;\n                varying vec3 vWorldNormal;\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            ' + e.vertexShader, e.fragmentShader = '\n            #ifdef SPE_USE_LAYER_FRESNEL\n                varying vec3 vWorldViewDir;\n                varying vec3 vWorldNormal;\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            ' + e.fragmentShader, e.vertexShader = e.vertexShader.replace('#include <project_vertex>', '\n            #include <project_vertex>\n            #ifdef SPE_USE_LAYER_FRESNEL\n                vec4 fWorldPosition = modelMatrix * vec4( position, 1.0 );\n                vWorldViewDir = isPerspectiveMatrix( projectionMatrix ) ? \n                                    ( fWorldPosition.xyz - cameraPosition ) : vec3( -viewMatrix[0][2], -viewMatrix[1][2], -viewMatrix[2][2] );\n                vWorldNormal = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            '), e.vertexShader = '\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                attribute vec3 barycentric;\n                varying vec3 vBarycentric;\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n        ' + e.vertexShader, e.vertexShader = e.vertexShader.replace('#include <begin_vertex>', '\n            #include <begin_vertex>\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                vBarycentric = barycentric;\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n            '), e.fragmentShader = '\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                varying vec3 vBarycentric;\n                float aastep( float threshold, float dist, float smoothOffset ) {\n                    float afwidth = fwidth( dist ) * 0.5;\n                    return smoothstep( threshold - afwidth - smoothOffset, threshold + afwidth + smoothOffset, dist );\n                }\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n        ' + e.fragmentShader, e.fragmentShader = '\n            #ifdef SPE_USE_LAYER_NOISE\n                float random ( in vec2 _st ) {\n                    return sin(sin(dot(_st.xy, vec2(12.834,77.212))) * 320.3456); // Ale: I am usin sin() instead of fract() to create a different noise.\n                }\n                float noise ( in vec2 _st ) {\n                    vec2 i = floor(_st);\n                    vec2 f = fract(_st);\n                    // Four corners in 2D of a tile\n                    float a = random(i);\n                    float b = random(i + vec2(1.0, 0.0)); // Ale: By incrementing disproportionally these values. You get a geometrical distortion.\n                    float c = random(i + vec2(0.0, 1.0));\n                    float d = random(i + vec2(1.0, 1.0));\n                    vec2 u = f * f * (3.0 - 2.0 * f);\n                    return mix(a, b, u.x) + (c - a)* u.y * (1.0 - u.x) + (d - b) * u.x * u.y;\n                }\n                float fbm ( in vec2 _st ) {\n                    float v = 0.0;\n                    float a = 0.5;\n                    vec2 shift = vec2(100.0);\n                    // Rotate to reduce axial bias\n                    mat2 rot = mat2(cos(0.5), sin(0.5),\n                                    -sin(0.5), cos(0.50));\n                    for (int i = 0; i < SPE_NOISE_NUM_OCTAVES; ++i) {\n                        v += a * noise(_st);\n                        _st = rot * _st * 2.0 + shift;\n                        a *= 0.5;\n                    }\n                    return v;\n                }\n            #endif /* SPE_USE_LAYER_NOISE */\n            ' + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace('#include <normal_fragment_begin>', ''), e.fragmentShader = e.fragmentShader.replace('#include <normal_fragment_maps>', ''), t instanceof SpeBasicMaterial && (e.fragmentShader = e.fragmentShader.replace('#include <lights_phong_fragment>\n                #include <lights_fragment_begin>\n                #include <lights_fragment_maps>\n                #include <lights_fragment_end>', ''), e.fragmentShader = e.fragmentShader.replace('vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;', 'vec3 outgoingLight = diffuseColor.rgb;')), t instanceof SpeLambertMaterial && (e.vertexShader = '\n                #ifdef SPE_USE_LAYER_NORMAL\n                    varying vec3 vNormal;\n                #endif /* SPE_USE_LAYER_NORMAL */\n                ' + e.vertexShader, e.vertexShader = e.vertexShader.replace('#include <defaultnormal_vertex>', '\n                #include <defaultnormal_vertex>\n                #ifdef SPE_USE_LAYER_NORMAL\n                    vNormal = normalize( transformedNormal );\n                #endif /* SPE_USE_LAYER_NORMAL */\n                '), e.fragmentShader = '\n                #ifdef SPE_USE_LAYER_NORMAL\n                    varying vec3 vNormal;\n                #endif /* SPE_USE_LAYER_NORMAL */\n                ' + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace('vec4 diffuseColor = vec4( diffuse, opacity );', '\n                #ifdef SPE_USE_LAYER_NORMAL\n                    #include <normal_fragment_begin>\n                    #include <normal_fragment_maps>\n                #endif /* SPE_USE_LAYER_NORMAL */\n                    float accumAlpha = 0.0;\n                    vec3 bef = vec3( 1.0 );\n                    #before\n                    vec4 diffuseColor = vec4( bef, 1.0 );\n                ')), e.vertexShader = e.vertexShader.replace('#include <common>', '\n            #include <common>\n            #ifdef SPE_USE_LAYER_DEPTH\n                varying vec4 dWorldPosition;\n            #endif /* SPE_USE_LAYER_DEPTH */\n            '), e.vertexShader = e.vertexShader.replace('#include <worldpos_vertex>', '\n            #include <worldpos_vertex>\n            #ifdef SPE_USE_LAYER_DEPTH\n                dWorldPosition = modelMatrix * vec4( transformed, 1.0 );\n            #endif\n            '), e.fragmentShader = '\n            #ifdef SPE_USE_LAYER_DEPTH\n                varying vec4 dWorldPosition;\n            #endif /* SPE_USE_LAYER_DEPTH */\n            ' + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace('vec4 diffuseColor = vec4( diffuse, opacity );', '\n                #include <normal_fragment_begin>\n                #include <normal_fragment_maps>\n                float accumAlpha = 0.0;\n                vec3 bef = vec3( 1.0 );\n                #before\n                vec4 diffuseColor = vec4( bef, 1.0 );\n            '), e.fragmentShader = e.fragmentShader.replace('gl_FragColor = vec4( outgoingLight, diffuseColor.a );', '\n                #lighting\n                vec3 aft = outgoingLight;\n                #after\n                gl_FragColor = vec4( aft, accumAlpha * opacity );\n            ');
+    e.fragmentShader = "\n            /* SPE-Blending helper functions */\n            #define SPE_BLENDING_NORMAL 0\n            #define SPE_BLENDING_MULTIPLY 1\n            #define SPE_BLENDING_SCREEN 2\n            #define SPE_BLENDING_OVERLAY 3\n            vec3 spe_normalBlend( vec3 a, vec3 b, float alpha ) {\n                return mix( a, b, alpha );\n            }\n            vec3 spe_multiplyBlend( vec3 a, vec3 b, float alpha ) {\n                return mix( a, a * b, alpha );\n            }\n            vec3 spe_screenBlend( vec3 a, vec3 b, float alpha ) {\n                vec3 tmp = 1.0 - ( 1.0 - a ) * ( 1.0 - b );\n                return mix( a, tmp, alpha );\n            }\n            vec3 spe_overlayBlend( vec3 a, vec3 b, float alpha ) {\n                vec3 tmp = mix( 1. - 2. * (1. - a) * (1. - b), 2. * a * b, step( a, vec3(.5) ) );\n                return clamp( mix( a, tmp, alpha ), 0.0, 1.0 );\n            }\n            vec3 spe_blend( vec3 a, vec3 b, float alpha, int mode ) {\n                /**/ if ( mode == SPE_BLENDING_NORMAL ) return spe_normalBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_MULTIPLY ) return spe_multiplyBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_SCREEN ) return spe_screenBlend( a, b, alpha );\n                else if ( mode == SPE_BLENDING_OVERLAY ) return spe_overlayBlend( a, b, alpha );\n                return vec3( 1.0 );\n            }\n            " + e.fragmentShader, e.vertexShader = "\n            #ifdef SPE_USE_LAYER_FRESNEL\n                varying vec3 vWorldViewDir;\n                varying vec3 vWorldNormal;\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            " + e.vertexShader, e.fragmentShader = "\n            #ifdef SPE_USE_LAYER_FRESNEL\n                varying vec3 vWorldViewDir;\n                varying vec3 vWorldNormal;\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            " + e.fragmentShader, e.vertexShader = e.vertexShader.replace("#include <project_vertex>", "\n            #include <project_vertex>\n            #ifdef SPE_USE_LAYER_FRESNEL\n                vec4 fWorldPosition = modelMatrix * vec4( position, 1.0 );\n                vWorldViewDir = isPerspectiveMatrix( projectionMatrix ) ? \n                                    ( fWorldPosition.xyz - cameraPosition ) : vec3( -viewMatrix[0][2], -viewMatrix[1][2], -viewMatrix[2][2] );\n                vWorldNormal = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );\n            #endif /* SPE_USE_LAYER_FRESNEL */\n            "), e.vertexShader = "\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                attribute vec3 barycentric;\n                varying vec3 vBarycentric;\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n        " + e.vertexShader, e.vertexShader = e.vertexShader.replace("#include <begin_vertex>", "\n            #include <begin_vertex>\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                vBarycentric = barycentric;\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n            "), e.fragmentShader = "\n            #if defined( SPE_USE_LAYER_POINTS ) || defined( SPE_USE_LAYER_LINES )\n                varying vec3 vBarycentric;\n                float aastep( float threshold, float dist, float smoothOffset ) {\n                    float afwidth = fwidth( dist ) * 0.5;\n                    return smoothstep( threshold - afwidth - smoothOffset, threshold + afwidth + smoothOffset, dist );\n                }\n            #endif /* SPE_USE_LAYER_POINTS || SPE_USE_LAYER_LINES */\n        " + e.fragmentShader, e.fragmentShader = "\n            #ifdef SPE_USE_LAYER_NOISE\n                float random ( in vec2 _st ) {\n                    return sin(sin(dot(_st.xy, vec2(12.834,77.212))) * 320.3456); // Ale: I am usin sin() instead of fract() to create a different noise.\n                }\n                float noise ( in vec2 _st ) {\n                    vec2 i = floor(_st);\n                    vec2 f = fract(_st);\n                    // Four corners in 2D of a tile\n                    float a = random(i);\n                    float b = random(i + vec2(1.0, 0.0)); // Ale: By incrementing disproportionally these values. You get a geometrical distortion.\n                    float c = random(i + vec2(0.0, 1.0));\n                    float d = random(i + vec2(1.0, 1.0));\n                    vec2 u = f * f * (3.0 - 2.0 * f);\n                    return mix(a, b, u.x) + (c - a)* u.y * (1.0 - u.x) + (d - b) * u.x * u.y;\n                }\n                float fbm ( in vec2 _st ) {\n                    float v = 0.0;\n                    float a = 0.5;\n                    vec2 shift = vec2(100.0);\n                    // Rotate to reduce axial bias\n                    mat2 rot = mat2(cos(0.5), sin(0.5),\n                                    -sin(0.5), cos(0.50));\n                    for (int i = 0; i < SPE_NOISE_NUM_OCTAVES; ++i) {\n                        v += a * noise(_st);\n                        _st = rot * _st * 2.0 + shift;\n                        a *= 0.5;\n                    }\n                    return v;\n                }\n            #endif /* SPE_USE_LAYER_NOISE */\n            " + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace("#include <normal_fragment_begin>", ""), e.fragmentShader = e.fragmentShader.replace("#include <normal_fragment_maps>", ""), t instanceof SpeBasicMaterial && (e.fragmentShader = e.fragmentShader.replace("#include <lights_phong_fragment>\n                #include <lights_fragment_begin>\n                #include <lights_fragment_maps>\n                #include <lights_fragment_end>", ""), e.fragmentShader = e.fragmentShader.replace("vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;", "vec3 outgoingLight = diffuseColor.rgb;")), t instanceof SpeLambertMaterial && (e.vertexShader = "\n                #ifdef SPE_USE_LAYER_NORMAL\n                    varying vec3 vNormal;\n                #endif /* SPE_USE_LAYER_NORMAL */\n                " + e.vertexShader, e.vertexShader = e.vertexShader.replace("#include <defaultnormal_vertex>", "\n                #include <defaultnormal_vertex>\n                #ifdef SPE_USE_LAYER_NORMAL\n                    vNormal = normalize( transformedNormal );\n                #endif /* SPE_USE_LAYER_NORMAL */\n                "), e.fragmentShader = "\n                #ifdef SPE_USE_LAYER_NORMAL\n                    varying vec3 vNormal;\n                #endif /* SPE_USE_LAYER_NORMAL */\n                " + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace("vec4 diffuseColor = vec4( diffuse, opacity );", "\n                #ifdef SPE_USE_LAYER_NORMAL\n                    #include <normal_fragment_begin>\n                    #include <normal_fragment_maps>\n                #endif /* SPE_USE_LAYER_NORMAL */\n                    float accumAlpha = 0.0;\n                    vec3 bef = vec3( 1.0 );\n                    #before\n                    vec4 diffuseColor = vec4( bef, 1.0 );\n                ")), e.vertexShader = e.vertexShader.replace("#include <common>", "\n            #include <common>\n            #ifdef SPE_USE_LAYER_DEPTH\n                varying vec4 dWorldPosition;\n            #endif /* SPE_USE_LAYER_DEPTH */\n            "), e.vertexShader = e.vertexShader.replace("#include <worldpos_vertex>", "\n            #include <worldpos_vertex>\n            #ifdef SPE_USE_LAYER_DEPTH\n                dWorldPosition = modelMatrix * vec4( transformed, 1.0 );\n            #endif\n            "), e.fragmentShader = "\n            #ifdef SPE_USE_LAYER_DEPTH\n                varying vec4 dWorldPosition;\n            #endif /* SPE_USE_LAYER_DEPTH */\n            " + e.fragmentShader, e.fragmentShader = e.fragmentShader.replace("vec4 diffuseColor = vec4( diffuse, opacity );", "\n                #include <normal_fragment_begin>\n                #include <normal_fragment_maps>\n                float accumAlpha = 0.0;\n                vec3 bef = vec3( 1.0 );\n                #before\n                vec4 diffuseColor = vec4( bef, 1.0 );\n            "), e.fragmentShader = e.fragmentShader.replace("gl_FragColor = vec4( outgoingLight, diffuseColor.a );", "\n                #lighting\n                vec3 aft = outgoingLight;\n                #after\n                gl_FragColor = vec4( aft, accumAlpha * opacity );\n            ");
   }
 
   static GetSetupCallback(material) {
-    let string = '';
+    let string = "";
 
     for (let e = 0; e < material.uuid.length; ++e) {
       const t = material.uuid[e];
-      '-' != t && (string += t);
+      "-" != t && (string += t);
     }
 
     return eval(`shader => {\n            // Hashing required as in issue https://github.com/mrdoob/three.js/issues/13192\n            const __hash___${string} = true;\n            const layersList = material.layersList;\n            // Inject base functionality into both vertex and fragment shaders\n            SpeShaderLib.SetupShader( shader, material );\n            shader.uniforms = THREE.UniformsUtils.merge( [ shader.uniforms, layersList.getUniforms() ] );\n            for ( let [key, uniform] of Object.entries( shader.uniforms ) ) {\n                if ( uniform.value && uniform.value.isTexture ) {\n                    uniform.value.needsUpdate = true;\n                }\n            }\n            // Inject shader-code in fragment shader previous to the lighting step\n            shader.fragmentShader = shader.fragmentShader.replace( '#before', layersList.getFragShaderCodePreLighting() );\n            // Inject shader-code in fragment shader for the lighting step\n            shader.fragmentShader = shader.fragmentShader.replace( '#lighting', layersList.getFragShaderCodeLighting() );\n            // Inject shader-code in fragment shader after the lighting step\n            shader.fragmentShader = shader.fragmentShader.replace( '#after', layersList.getFragShaderCodePostLighting() );\n            // Inject uniforms variables in both vertex and fragment shaders\n            shader.vertexShader = layersList.getVertUniformsCode() + shader.vertexShader;\n            shader.fragmentShader = layersList.getFragUniformsCode() + shader.fragmentShader;\n            // Inject defines in both vertex and fragment shaders\n            shader.vertexShader = layersList.getDefinesCode() + shader.vertexShader;\n            shader.fragmentShader = layersList.getDefinesCode() + shader.fragmentShader;\n            // Link the shader to its related layers-list\n            layersList.shader = shader;\n        }`);
@@ -2133,7 +2135,7 @@ function InteractionTarget() {
     stiffness: 80,
     damping: 10,
     velocity: 0
-  }, this.repeat = !1, this.cycle = !1, this.rewind = !1, this.url = '';
+  }, this.repeat = !1, this.cycle = !1, this.rewind = !1, this.url = "";
 }
 
 function InteractionStatesManager(e) {
@@ -2201,6 +2203,7 @@ function PlayMode(e, t, i) {
       y: -(t.clientY - i.top) / i.height * 2 + 1
     };
   }
+
   this.activate = function () {
     this.isEnable = !0;
 
@@ -2216,17 +2219,18 @@ function PlayMode(e, t, i) {
           object: e
         });
       }
-    }), s[InteractionEvent.TYPE.MOUSE_DOWN].length > 0 && e.addEventListener('pointerdown', n, !1), s[InteractionEvent.TYPE.MOUSE_UP].length > 0 && e.addEventListener('pointerup', o, !1), s[InteractionEvent.TYPE.MOUSE_HOVER].length > 0 && e.addEventListener('pointermove', h, !1), s[InteractionEvent.TYPE.LOOK_AT].length > 0 && e.addEventListener('mousemove', l, !1), s[InteractionEvent.TYPE.KEY_DOWN].length > 0 && document.addEventListener('keydown', c, !1), s[InteractionEvent.TYPE.KEY_UP].length > 0 && document.addEventListener('keyup', d, !1);
+    }), s[InteractionEvent.TYPE.MOUSE_DOWN].length > 0 && e.addEventListener("pointerdown", n, !1), s[InteractionEvent.TYPE.MOUSE_UP].length > 0 && e.addEventListener("pointerup", o, !1), s[InteractionEvent.TYPE.MOUSE_HOVER].length > 0 && e.addEventListener("pointermove", h, !1), s[InteractionEvent.TYPE.LOOK_AT].length > 0 && e.addEventListener("mousemove", l, !1), s[InteractionEvent.TYPE.KEY_DOWN].length > 0 && document.addEventListener("keydown", c, !1), s[InteractionEvent.TYPE.KEY_UP].length > 0 && document.addEventListener("keyup", d, !1);
   }, this.deactivate = function () {
     t.traverseEntity(function (e) {
       void 0 !== e.interaction && e.interaction.end();
-    }), s[InteractionEvent.TYPE.MOUSE_DOWN].length > 0 && e.removeEventListener('pointerdown', n), s[InteractionEvent.TYPE.MOUSE_UP].length > 0 && e.removeEventListener('pointerup', o), s[InteractionEvent.TYPE.MOUSE_HOVER].length > 0 && e.removeEventListener('pointermove', h), s[InteractionEvent.TYPE.LOOK_AT].length > 0 && e.removeEventListener('pointermove', l, !1), s[InteractionEvent.TYPE.KEY_DOWN].length > 0 && document.removeEventListener('keydown', c), s[InteractionEvent.TYPE.KEY_UP].length > 0 && document.removeEventListener('keyup', d), s = {}, this.isEnable = !1;
+    }), s[InteractionEvent.TYPE.MOUSE_DOWN].length > 0 && e.removeEventListener("pointerdown", n), s[InteractionEvent.TYPE.MOUSE_UP].length > 0 && e.removeEventListener("pointerup", o), s[InteractionEvent.TYPE.MOUSE_HOVER].length > 0 && e.removeEventListener("pointermove", h), s[InteractionEvent.TYPE.LOOK_AT].length > 0 && e.removeEventListener("pointermove", l, !1), s[InteractionEvent.TYPE.KEY_DOWN].length > 0 && document.removeEventListener("keydown", c), s[InteractionEvent.TYPE.KEY_UP].length > 0 && document.removeEventListener("keyup", d), s = {}, this.isEnable = !1;
   }, this.reset = function () {
     t.traverseEntity(function (e) {
       e.interaction.start();
     });
   };
 }
+
 THREE.OrbitControls = function (e, t) {
   var i, r, a, s, n, o;
   void 0 === t && console.warn('THREE.OrbitControls: The second parameter "domElement" is now mandatory.'), t === document && console.error('THREE.OrbitControls: "document" should not be used as the target "domElement". Please use "renderer.domElement" instead.'), this.object = e, this.domElement = t, this.enabled = !0, this.target = new THREE.Vector3(), this.minDistance = 0, this.maxDistance = 1 / 0, this.minZoom = 0, this.maxZoom = 1 / 0, this.minPolarAngle = 0, this.maxPolarAngle = Math.PI, this.minAzimuthAngle = -1 / 0, this.maxAzimuthAngle = 1 / 0, this.enableDamping = !1, this.dampingFactor = 0.05, this.enableZoom = !0, this.zoomSpeed = 1, this.enableRotate = !0, this.rotateSpeed = 1, this.enablePan = !0, this.panSpeed = 1, this.screenSpacePanning = !0, this.keyPanSpeed = 7, this.autoRotate = !1, this.autoRotateSpeed = 2, this.enableKeys = !0, this.keys = {
@@ -2256,18 +2260,18 @@ THREE.OrbitControls = function (e, t) {
         c = h.maxAzimuthAngle;
     return isFinite(t) && isFinite(c) && (t < -Math.PI ? t += o : t > Math.PI && (t -= o), c < -Math.PI ? c += o : c > Math.PI && (c -= o), f.theta = t < c ? Math.max(t, Math.min(c, f.theta)) : f.theta > (t + c) / 2 ? Math.max(t, f.theta) : Math.min(c, f.theta)), f.phi = Math.max(h.minPolarAngle, Math.min(h.maxPolarAngle, f.phi)), f.makeSafe(), f.radius *= g, f.radius = Math.max(h.minDistance, Math.min(h.maxDistance, f.radius)), !0 === h.enableDamping ? h.target.addScaledVector(y, h.dampingFactor) : h.target.add(y), i.setFromSpherical(f), i.applyQuaternion(a), e.copy(h.target).add(i), h.object.lookAt(h.target), !0 === h.enableDamping ? (E.theta *= 1 - h.dampingFactor, E.phi *= 1 - h.dampingFactor, y.multiplyScalar(1 - h.dampingFactor)) : (E.set(0, 0, 0), y.set(0, 0, 0)), g = 1, !!(v || s.distanceToSquared(h.object.position) > p || 8 * (1 - n.dot(h.object.quaternion)) > p) && (h.dispatchEvent(l), s.copy(h.object.position), n.copy(h.object.quaternion), v = !1, !0);
   }), this.dispose = function () {
-    h.domElement.removeEventListener('contextmenu', ee, !1), h.domElement.removeEventListener('pointerdown', W, !1), h.domElement.removeEventListener('wheel', q, !1), h.domElement.removeEventListener('touchstart', K, !1), h.domElement.removeEventListener('touchend', Q, !1), h.domElement.removeEventListener('touchmove', Z, !1), h.domElement.ownerDocument.removeEventListener('pointermove', k, !1), h.domElement.ownerDocument.removeEventListener('pointerup', X, !1), h.domElement.removeEventListener('keydown', J, !1);
+    h.domElement.removeEventListener("contextmenu", ee, !1), h.domElement.removeEventListener("pointerdown", W, !1), h.domElement.removeEventListener("wheel", q, !1), h.domElement.removeEventListener("touchstart", K, !1), h.domElement.removeEventListener("touchend", Q, !1), h.domElement.removeEventListener("touchmove", Z, !1), h.domElement.ownerDocument.removeEventListener("pointermove", k, !1), h.domElement.ownerDocument.removeEventListener("pointerup", X, !1), h.domElement.removeEventListener("keydown", J, !1);
   };
 
   var h = this,
       l = {
-    type: 'change'
+    type: "change"
   },
       c = {
-    type: 'start'
+    type: "start"
   },
       d = {
-    type: 'end'
+    type: "end"
   },
       m = {
     NONE: -1,
@@ -2328,16 +2332,16 @@ THREE.OrbitControls = function (e, t) {
         e.copy(a).sub(h.target);
         var s = e.length();
         s *= Math.tan(h.object.fov / 2 * Math.PI / 180), C(2 * t * s / r.clientHeight, h.object.matrix), D(2 * i * s / r.clientHeight, h.object.matrix);
-      } else h.object.isOrthographicCamera ? (C(t * (h.object.right - h.object.left) / h.object.zoom / r.clientWidth, h.object.matrix), D(i * (h.object.top - h.object.bottom) / h.object.zoom / r.clientHeight, h.object.matrix)) : (console.warn('WARNING: OrbitControls.js encountered an unknown camera type - pan disabled.'), h.enablePan = !1);
+      } else h.object.isOrthographicCamera ? (C(t * (h.object.right - h.object.left) / h.object.zoom / r.clientWidth, h.object.matrix), D(i * (h.object.top - h.object.bottom) / h.object.zoom / r.clientHeight, h.object.matrix)) : (console.warn("WARNING: OrbitControls.js encountered an unknown camera type - pan disabled."), h.enablePan = !1);
     };
   }();
 
   function $(e) {
-    h.object.isPerspectiveCamera ? g /= e : h.object.isOrthographicCamera ? (h.object.zoom = Math.max(h.minZoom, Math.min(h.maxZoom, h.object.zoom * e)), h.object.updateProjectionMatrix(), v = !0) : (console.warn('WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'), h.enableZoom = !1);
+    h.object.isPerspectiveCamera ? g /= e : h.object.isOrthographicCamera ? (h.object.zoom = Math.max(h.minZoom, Math.min(h.maxZoom, h.object.zoom * e)), h.object.updateProjectionMatrix(), v = !0) : (console.warn("WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled."), h.enableZoom = !1);
   }
 
   function U(e) {
-    h.object.isPerspectiveCamera ? g *= e : h.object.isOrthographicCamera ? (h.object.zoom = Math.max(h.minZoom, Math.min(h.maxZoom, h.object.zoom / e)), h.object.updateProjectionMatrix(), v = !0) : (console.warn('WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'), h.enableZoom = !1);
+    h.object.isPerspectiveCamera ? g *= e : h.object.isOrthographicCamera ? (h.object.zoom = Math.max(h.minZoom, Math.min(h.maxZoom, h.object.zoom / e)), h.object.updateProjectionMatrix(), v = !0) : (console.warn("WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled."), h.enableZoom = !1);
   }
 
   function B(e) {
@@ -2401,8 +2405,8 @@ THREE.OrbitControls = function (e, t) {
 
   function W(e) {
     if (!1 !== h.enabled) switch (e.pointerType) {
-      case 'mouse':
-      case 'pen':
+      case "mouse":
+      case "pen":
         !function (e) {
           var t;
 
@@ -2457,15 +2461,15 @@ THREE.OrbitControls = function (e, t) {
               u = m.NONE;
           }
 
-          u !== m.NONE && (h.domElement.ownerDocument.addEventListener('pointermove', k, !1), h.domElement.ownerDocument.addEventListener('pointerup', X, !1), h.dispatchEvent(c));
+          u !== m.NONE && (h.domElement.ownerDocument.addEventListener("pointermove", k, !1), h.domElement.ownerDocument.addEventListener("pointerup", X, !1), h.dispatchEvent(c));
         }(e);
     }
   }
 
   function k(e) {
     if (!1 !== h.enabled) switch (e.pointerType) {
-      case 'mouse':
-      case 'pen':
+      case "mouse":
+      case "pen":
         !function (e) {
           if (!1 === h.enabled) return;
 
@@ -2498,11 +2502,11 @@ THREE.OrbitControls = function (e, t) {
 
   function X(e) {
     if (!1 !== h.enabled) switch (e.pointerType) {
-      case 'mouse':
-      case 'pen':
+      case "mouse":
+      case "pen":
         !function (e) {
           if (!1 === h.enabled) return;
-          h.domElement.ownerDocument.removeEventListener('pointermove', k, !1), h.domElement.ownerDocument.removeEventListener('pointerup', X, !1), h.dispatchEvent(d), u = m.NONE;
+          h.domElement.ownerDocument.removeEventListener("pointermove", k, !1), h.domElement.ownerDocument.removeEventListener("pointerup", X, !1), h.dispatchEvent(d), u = m.NONE;
         }();
     }
   }
@@ -2628,7 +2632,7 @@ THREE.OrbitControls = function (e, t) {
     !1 !== h.enabled && e.preventDefault();
   }
 
-  h.domElement.addEventListener('contextmenu', ee, !1), h.domElement.addEventListener('pointerdown', W, !1), h.domElement.addEventListener('wheel', q, !1), h.domElement.addEventListener('touchstart', K, !1), h.domElement.addEventListener('touchend', Q, !1), h.domElement.addEventListener('touchmove', Z, !1), h.domElement.addEventListener('keydown', J, !1), -1 === h.domElement.tabIndex && (h.domElement.tabIndex = 0), this.update();
+  h.domElement.addEventListener("contextmenu", ee, !1), h.domElement.addEventListener("pointerdown", W, !1), h.domElement.addEventListener("wheel", q, !1), h.domElement.addEventListener("touchstart", K, !1), h.domElement.addEventListener("touchend", Q, !1), h.domElement.addEventListener("touchmove", Z, !1), h.domElement.addEventListener("keydown", J, !1), -1 === h.domElement.tabIndex && (h.domElement.tabIndex = 0), this.update();
 }, THREE.OrbitControls.prototype = Object.create(THREE.EventDispatcher.prototype), THREE.OrbitControls.prototype.constructor = THREE.OrbitControls, THREE.MapControls = function (e, t) {
   THREE.OrbitControls.call(this, e, t), this.screenSpacePanning = !1, this.mouseButtons.LEFT = THREE.MOUSE.PAN, this.mouseButtons.RIGHT = THREE.MOUSE.ROTATE, this.touches.ONE = THREE.TOUCH.PAN, this.touches.TWO = THREE.TOUCH.DOLLY_ROTATE;
 }, THREE.MapControls.prototype = Object.create(THREE.EventDispatcher.prototype), THREE.MapControls.prototype.constructor = THREE.MapControls, Interaction.targets = new Set(), Interaction.prototype = {
@@ -2762,19 +2766,19 @@ THREE.OrbitControls = function (e, t) {
   getTimingFunction: function (e, t, i) {
     switch (e) {
       case InteractionTarget.EASING.LINEAR:
-        return 'cubicBezier( 0, 0, 1, 1 )';
+        return "cubicBezier( 0, 0, 1, 1 )";
 
       case InteractionTarget.EASING.EASE:
-        return 'cubicBezier( .25, .1, .25, 1 )';
+        return "cubicBezier( .25, .1, .25, 1 )";
 
       case InteractionTarget.EASING.EASE_IN:
-        return 'cubicBezier( .42, 0, 1, 1 )';
+        return "cubicBezier( .42, 0, 1, 1 )";
 
       case InteractionTarget.EASING.EASE_OUT:
-        return 'cubicBezier( 0, 0, .58, 1 )';
+        return "cubicBezier( 0, 0, .58, 1 )";
 
       case InteractionTarget.EASING.EASE_IN_OUT:
-        return 'cubicBezier( .42, 0, .58, 1 )';
+        return "cubicBezier( .42, 0, .58, 1 )";
 
       case InteractionTarget.EASING.CUBIC:
         return `cubicBezier( ${t[0]}, ${t[1]}, ${t[2]}, ${t[3]} )`;
@@ -2788,7 +2792,7 @@ THREE.OrbitControls = function (e, t) {
       duration: t.duration,
       delay: t.delay / 2,
       endDelay: t.delay / 2,
-      direction: 'alternate',
+      direction: "alternate",
       loop: !0,
       rewind: t.rewind,
       easing: this.getTimingFunction(t.easing, t.cubicControls, t.springParameters)
@@ -2796,19 +2800,19 @@ THREE.OrbitControls = function (e, t) {
       duration: t.duration,
       delay: t.delay,
       endDelay: t.delay / 2,
-      direction: 'alternate',
+      direction: "alternate",
       rewind: t.rewind,
       easing: this.getTimingFunction(t.easing, t.cubicControls, t.springParameters)
     }) : !1 === t.cycle && !0 === t.repeat ? this.animation = anime.timeline({
       duration: t.duration,
       delay: t.delay,
-      direction: 'normal',
+      direction: "normal",
       loop: !0,
       easing: this.getTimingFunction(t.easing, t.cubicControls, t.springParameters)
     }) : this.animation = anime.timeline({
       duration: t.duration,
       delay: t.delay,
-      direction: 'normal',
+      direction: "normal",
       easing: this.getTimingFunction(t.easing, t.cubicControls, t.springParameters)
     }), this.animation.finished.then(() => {
       this._removeBackLayer();
@@ -2925,7 +2929,7 @@ THREE.OrbitControls = function (e, t) {
               o = `f${i.id}_${_s4}`,
               h = t.uniforms[n],
               l = i.uniforms[o];
-        'mode' !== _s4 && 'boolean' != typeof h.value ? 'number' != typeof h.value ? h.value instanceof THREE.Vector2 ? !1 === h.value.equals(l.value) && this.animation.add({
+        "mode" !== _s4 && "boolean" != typeof h.value ? "number" != typeof h.value ? h.value instanceof THREE.Vector2 ? !1 === h.value.equals(l.value) && this.animation.add({
           targets: h.value,
           x: l.value.x,
           y: l.value.y,
@@ -3025,7 +3029,7 @@ THREE.OrbitControls = function (e, t) {
         }, 0);
       }
 
-      t(e, i, r, ['alpha', 'mode']);
+      t(e, i, r, ["alpha", "mode"]);
     },
           a = (e, i, r) => {
       const a = e.layersList,
@@ -3125,7 +3129,7 @@ THREE.OrbitControls = function (e, t) {
         });
       }
 
-      t(e, i, r, ['alpha', 'mode', 'gl_type', 'smooth', 'offset', 'morph', 'angle']);
+      t(e, i, r, ["alpha", "mode", "gl_type", "smooth", "offset", "morph", "angle"]);
     };
 
     function s(e, s) {
@@ -3140,11 +3144,11 @@ THREE.OrbitControls = function (e, t) {
 
         const h = s.layersList[o++];
 
-        if ('texture' === n.type) {
+        if ("texture" === n.type) {
           const t = n.uniforms[`f${n.id}_texture`].value,
                 a = h.uniforms[`f${h.id}_texture`].value;
           t.image === a.image ? r(e, n, h) : i(e, n, h);
-        } else 'gradient' === n.type ? n.uniforms[`f${n.id}_gl_type`].value === h.uniforms[`f${h.id}_gl_type`].value ? a(e, n, h) : i(e, n, h) : t(e, n, h);
+        } else "gradient" === n.type ? n.uniforms[`f${n.id}_gl_type`].value === h.uniforms[`f${h.id}_gl_type`].value ? a(e, n, h) : i(e, n, h) : t(e, n, h);
 
         n = n.next;
       }
@@ -3701,7 +3705,7 @@ THREE.OrbitControls = function (e, t) {
   }) {
     let d;
     return e = Math.abs(e), t = Math.abs(t), i = Math.abs(i), (d = h > 0 || l > 0 || o < 360 ? new SPE.CylinderGeometry.RoundedCylinderBufferGeometry(0, e / 2, t, r, a, s, n, o * Math.PI / 180, h, l, c, 0, !0) : new THREE.ConeBufferGeometry(e / 2, t, r, a, s)).scale(1, 1, i / e), d.userData = {
-      type: 'ConeGeometry',
+      type: "ConeGeometry",
       parameters: {
         width: e,
         height: t,
@@ -3756,7 +3760,7 @@ THREE.OrbitControls = function (e, t) {
   }) {
     let h;
     return e = Math.abs(e), t = Math.abs(t), i = Math.abs(i), (h = 0 == n ? new THREE.BoxBufferGeometry(e, t, i, r, a, s) : new RoundedBoxBufferGeometry(e, t, i, r, a, s, n, o)).userData = {
-      type: 'CubeGeometry',
+      type: "CubeGeometry",
       parameters: {
         width: e,
         height: t,
@@ -3795,7 +3799,7 @@ const pi2 = Math.PI / 2;
 class RoundedBoxBufferGeometry extends THREE.BufferGeometry {
   constructor(e = 1, t = 1, i = 1, r = 1, a = 1, s = 1, n = 0, o = 4) {
     const h = THREE.Vector3;
-    super(), this.type = 'BoxBufferGeometry', this.parameters = {
+    super(), this.type = "BoxBufferGeometry", this.parameters = {
       width: e,
       height: t,
       depth: i,
@@ -3932,7 +3936,7 @@ class RoundedBoxBufferGeometry extends THREE.BufferGeometry {
       }
     }
 
-    E('z', 'y', 'x', -1, -1, i, t, e, s, a, 0), E('z', 'y', 'x', 1, -1, i, t, -e, s, a, 1), E('x', 'z', 'y', 1, 1, e, i, t, r, s, 2), E('x', 'z', 'y', 1, -1, e, i, -t, r, s, 3), E('x', 'y', 'z', 1, -1, e, t, i, r, a, 4), E('x', 'y', 'z', -1, -1, e, t, -i, r, a, 5), n > 0 && (g('z', 'y', 'x', -1, -1, 1, i, t, e, s, 0), g('z', 'y', 'x', 1, -1, -1, i, t, e, s, 1), g('z', 'y', 'x', -1, 1, -1, i, t, e, s, 1), g('z', 'y', 'x', 1, 1, 1, i, t, e, s, 0), g('x', 'y', 'z', -1, -1, -1, e, t, i, r, 0), g('x', 'y', 'z', 1, -1, 1, e, t, i, r, 1), g('x', 'y', 'z', -1, 1, 1, e, t, i, r, 0), g('x', 'y', 'z', 1, 1, -1, e, t, i, r, 1), g('y', 'x', 'z', -1, -1, 1, t, e, i, a, 0), g('y', 'x', 'z', 1, -1, -1, t, e, i, a, 1), g('y', 'x', 'z', 1, 1, 1, t, e, i, a, 1), g('y', 'x', 'z', -1, 1, -1, t, e, i, a, 0), y(1, 1, 1), y(-1, 1, 1), y(1, -1, 1), y(-1, -1, 1), y(1, 1, -1), y(-1, 1, -1), y(1, -1, -1), y(-1, -1, -1)), this.setIndex(c), this.setAttribute('position', new THREE.Float32BufferAttribute(d, 3)), this.setAttribute('normal', new THREE.Float32BufferAttribute(m, 3)), this.setAttribute('uv', new THREE.Float32BufferAttribute(u, 2));
+    E("z", "y", "x", -1, -1, i, t, e, s, a, 0), E("z", "y", "x", 1, -1, i, t, -e, s, a, 1), E("x", "z", "y", 1, 1, e, i, t, r, s, 2), E("x", "z", "y", 1, -1, e, i, -t, r, s, 3), E("x", "y", "z", 1, -1, e, t, i, r, a, 4), E("x", "y", "z", -1, -1, e, t, -i, r, a, 5), n > 0 && (g("z", "y", "x", -1, -1, 1, i, t, e, s, 0), g("z", "y", "x", 1, -1, -1, i, t, e, s, 1), g("z", "y", "x", -1, 1, -1, i, t, e, s, 1), g("z", "y", "x", 1, 1, 1, i, t, e, s, 0), g("x", "y", "z", -1, -1, -1, e, t, i, r, 0), g("x", "y", "z", 1, -1, 1, e, t, i, r, 1), g("x", "y", "z", -1, 1, 1, e, t, i, r, 0), g("x", "y", "z", 1, 1, -1, e, t, i, r, 1), g("y", "x", "z", -1, -1, 1, t, e, i, a, 0), g("y", "x", "z", 1, -1, -1, t, e, i, a, 1), g("y", "x", "z", 1, 1, 1, t, e, i, a, 1), g("y", "x", "z", -1, 1, -1, t, e, i, a, 0), y(1, 1, 1), y(-1, 1, 1), y(1, -1, 1), y(-1, -1, 1), y(1, 1, -1), y(-1, 1, -1), y(1, -1, -1), y(-1, -1, -1)), this.setIndex(c), this.setAttribute("position", new THREE.Float32BufferAttribute(d, 3)), this.setAttribute("normal", new THREE.Float32BufferAttribute(m, 3)), this.setAttribute("uv", new THREE.Float32BufferAttribute(u, 2));
   }
 
 }
@@ -3962,7 +3966,7 @@ SPE.CylinderGeometry = new function () {
     if (r === a) r = u, a = u;else if (r > a) a = a * u / (r = u);else r = r * u / a, a = u;
     let p = new RoundedCylinderBufferGeometry(r, a, t, s, n, o, h, l * Math.PI / 180, c, c, d, m);
     return p.scale(1, 1, i / e), p.userData = {
-      type: 'CylinderGeometry',
+      type: "CylinderGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4014,7 +4018,7 @@ SPE.CylinderGeometry = new function () {
 
 class RoundedCylinderBufferGeometry extends THREE.BufferGeometry {
   constructor(e, t, i, r, a, s, n, o, h, l, c, d, m = !1) {
-    super(), this.type = 'RoundedCylinderBufferGeometry', this.parameters = {
+    super(), this.type = "RoundedCylinderBufferGeometry", this.parameters = {
       radiusTop: e,
       radiusBottom: t,
       height: i,
@@ -4164,7 +4168,7 @@ class RoundedCylinderBufferGeometry extends THREE.BufferGeometry {
       h(c, _ - 1, c + 1);
     }
 
-    o < 2 * Math.PI && (W(-1, j[0], n), W(1, j[j.length - 1], n + o)), this.setIndex(E), this.setAttribute('position', new f(g, 3)), this.setAttribute('normal', new f(y, 3)), this.setAttribute('uv', new f(v, 2));
+    o < 2 * Math.PI && (W(-1, j[0], n), W(1, j[j.length - 1], n + o)), this.setIndex(E), this.setAttribute("position", new f(g, 3)), this.setAttribute("normal", new f(y, 3)), this.setAttribute("uv", new f(v, 2));
   }
 
 }
@@ -4194,6 +4198,7 @@ function projectOntoLine(e, t, i) {
         a = i.clone().sub(t);
   return r.projectOnVector(a), r.add(t);
 }
+
 SPE.CylinderGeometry.RoundedCylinderBufferGeometry = RoundedCylinderBufferGeometry, SPE.EllipseGeometry = new function () {
   this.build = function ({
     width: e = 100,
@@ -4228,7 +4233,7 @@ SPE.CylinderGeometry.RoundedCylinderBufferGeometry = RoundedCylinderBufferGeomet
     }
 
     return s.userData = {
-      type: 'EllipseGeometry',
+      type: "EllipseGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4263,7 +4268,7 @@ SPE.CylinderGeometry.RoundedCylinderBufferGeometry = RoundedCylinderBufferGeomet
     e = Math.abs(e), t = Math.abs(t), i = Math.abs(i);
     let a = new THREE.IcosahedronBufferGeometry(0.5 * e, r);
     return a.scale(1, t / e, i / e), a.userData = {
-      type: 'IcosahedronGeometry',
+      type: "IcosahedronGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4318,7 +4323,7 @@ SPE.CylinderGeometry.RoundedCylinderBufferGeometry = RoundedCylinderBufferGeomet
       bevelOffset: 0,
       bevelSegments: n
     }) : new THREE.ShapeBufferGeometry(d, 32)).userData = {
-      type: 'PolygonGeometry',
+      type: "PolygonGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4363,7 +4368,7 @@ SPE.CylinderGeometry.RoundedCylinderBufferGeometry = RoundedCylinderBufferGeomet
     e = Math.abs(e), t = Math.abs(t), i = Math.abs(i);
     let h = new RoundedPyramidBufferGeometry(0.5 * e, t, r, a, s, n, o);
     return h.scale(1, 1, i / e), h.userData = {
-      type: 'PyramidGeometry',
+      type: "PyramidGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4402,7 +4407,7 @@ class RoundedPyramidBufferGeometry extends THREE.BufferGeometry {
   constructor(e = 0.5, t = 1, i = 4, r = 1, a = !1, s = 0, n = 4) {
     const o = THREE.Vector2,
           h = THREE.Vector3;
-    super(), this.type = 'RoundedPyramidBufferGeometry', this.parameters = {
+    super(), this.type = "RoundedPyramidBufferGeometry", this.parameters = {
       radius: e,
       height: t,
       radialSegments: i,
@@ -4642,7 +4647,7 @@ class RoundedPyramidBufferGeometry extends THREE.BufferGeometry {
       }
     }
 
-    this.setIndex(l), this.setAttribute('position', new THREE.Float32BufferAttribute(c, 3)), this.setAttribute('normal', new THREE.Float32BufferAttribute(d, 3)), this.setAttribute('uv', new THREE.Float32BufferAttribute(m, 2));
+    this.setIndex(l), this.setAttribute("position", new THREE.Float32BufferAttribute(c, 3)), this.setAttribute("normal", new THREE.Float32BufferAttribute(d, 3)), this.setAttribute("uv", new THREE.Float32BufferAttribute(m, 2));
   }
 
 }
@@ -4741,8 +4746,9 @@ function genHelix(e, t, i, r, a, s, n, o, h, l, c, d) {
   for (let _e85 = 0; _e85 < l - 2; _e85++) m.push(v, v + _e85 + 1, v + _e85 + 2), m.push(0, _e85 + 2, _e85 + 1);
 
   let ie = new THREE.BufferGeometry();
-  return ie.setIndex(m), ie.setAttribute('position', new THREE.Float32BufferAttribute(u, 3)), ie.setAttribute('normal', new THREE.Float32BufferAttribute(p, 3)), ie.setAttribute('uv', new THREE.Float32BufferAttribute(f, 2)), ie;
+  return ie.setIndex(m), ie.setAttribute("position", new THREE.Float32BufferAttribute(u, 3)), ie.setAttribute("normal", new THREE.Float32BufferAttribute(p, 3)), ie.setAttribute("uv", new THREE.Float32BufferAttribute(f, 2)), ie;
 }
+
 SPE.RectangleGeometry = new function () {
   this.build = function ({
     width: e = 100,
@@ -4795,7 +4801,7 @@ SPE.RectangleGeometry = new function () {
       bevelOffset: 0,
       bevelSegments: o
     }) : new THREE.ShapeBufferGeometry(y, 32)).userData = {
-      type: 'RectangleGeometry',
+      type: "RectangleGeometry",
       ui: {
         enabledIndieCorners: a
       },
@@ -4846,7 +4852,7 @@ SPE.RectangleGeometry = new function () {
     e = Math.abs(e), t = Math.abs(t), i = Math.abs(i);
     let l = new THREE.SphereBufferGeometry(0.5 * e, r, a, s, n, o, h);
     return l.scale(1, t / e, i / e), l.userData = {
-      type: 'SphereGeometry',
+      type: "SphereGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4935,7 +4941,7 @@ SPE.RectangleGeometry = new function () {
       bevelOffset: 0,
       bevelSegments: h
     }) : new THREE.ShapeBufferGeometry(E)).userData = {
-      type: 'StarGeometry',
+      type: "StarGeometry",
       parameters: {
         width: e,
         height: t,
@@ -4991,7 +4997,7 @@ SPE.RectangleGeometry = new function () {
     }(e, t, i = i || 2 * l, 0, n, a, 0, 0, s, o, h);
 
     return c.scale(1, t / e, 1), c.userData = {
-      type: 'TorusGeometry',
+      type: "TorusGeometry",
       parameters: {
         width: e,
         height: t,
@@ -5041,7 +5047,7 @@ SPE.RectangleGeometry = new function () {
     let h = 0.5 * e - r,
         l = new THREE.TorusKnotBufferGeometry(h, r, a, s, n, o);
     return l.userData = {
-      type: 'TorusKnotGeometry',
+      type: "TorusKnotGeometry",
       parameters: {
         width: e,
         height: t,
@@ -5103,7 +5109,7 @@ SPE.RectangleGeometry = new function () {
     n.moveTo(s[0].x, s[0].y), n.bezierCurveTo(s[1].x, s[1].y, s[2].x, s[2].y, s[3].x, s[3].y);
     let o = new THREE.LatheBufferGeometry(n.extractPoints(a).shape, r);
     return o.rotateZ(Math.PI), o.userData = {
-      type: 'LatheGeometry',
+      type: "LatheGeometry",
       parameters: {
         width: e,
         height: t,
@@ -5146,7 +5152,7 @@ SPE.RectangleGeometry = new function () {
   }) {
     let d = genHelix(!1, Math.abs(e), Math.abs(t), Math.abs(i), Math.abs(r), Math.abs(a), Math.abs(s), Math.abs(n), Math.abs(o), Math.abs(h), Math.abs(l), Math.abs(c));
     return d.userData = {
-      type: 'HelixGeometry',
+      type: "HelixGeometry",
       parameters: {
         height: t,
         width: e,
@@ -5243,7 +5249,7 @@ SPE.RectangleGeometry = new function () {
       bevelOffset: 0,
       bevelSegments: s
     }) : new THREE.ShapeBufferGeometry(h, 32)).userData = {
-      type: 'TriangleGeometry',
+      type: "TriangleGeometry",
       parameters: {
         width: e,
         height: t,
@@ -5288,7 +5294,7 @@ SPE.RectangleGeometry = new function () {
     } else a = r.x, s = r.y, n = r.z;
 
     return i.userData = {
-      type: 'NonParametricGeometry',
+      type: "NonParametricGeometry",
       parameters: {
         width: a,
         height: s,
@@ -5313,30 +5319,30 @@ SPE.RectangleGeometry = new function () {
           a = [];
 
     switch (e.userData.type) {
-      case 'PolygonGeometry':
+      case "PolygonGeometry":
         var s = 3,
-            n = e.getAttribute('position').array.length - 3;
+            n = e.getAttribute("position").array.length - 3;
         break;
 
-      case 'StarGeometry':
-        s = 0, n = e.getAttribute('position').array.length - 3;
+      case "StarGeometry":
+        s = 0, n = e.getAttribute("position").array.length - 3;
         break;
 
       default:
-        s = 0, n = e.getAttribute('position').array.length;
+        s = 0, n = e.getAttribute("position").array.length;
     }
 
-    for (let _t63 = s; _t63 < n; _t63 += 3) a.push([e.getAttribute('position').array[_t63], e.getAttribute('position').array[_t63 + 1]]);
+    for (let _t63 = s; _t63 < n; _t63 += 3) a.push([e.getAttribute("position").array[_t63], e.getAttribute("position").array[_t63 + 1]]);
 
     const o = createLineGeo(a, i, r)(THREE);
     return o.userData = {
-      type: 'StrokeGeometry',
+      type: "StrokeGeometry",
       parameters: {
         strokeAlignment: i
       }
     }, o.toJSON = function () {
       const t = {};
-      return t.uuid = this.uuid, t.type = this.type, '' !== this.name && (t.name = this.name), t.userData = this.userData, t.userData.meshGeometry = e.uuid, t;
+      return t.uuid = this.uuid, t.type = this.type, "" !== this.name && (t.name = this.name), t.userData = this.userData, t.userData.meshGeometry = e.uuid, t;
     }, o;
   }, this.buildFromGeometry = function (e, t, {
     strokeAlignment: i = t.userData.parameters.strokeAlignment,
@@ -5354,7 +5360,7 @@ SPE.RectangleGeometry = new function () {
   }) {
     let i = new THREE.PlaneBufferGeometry(e, t);
     return i.userData = {
-      type: 'TextFrameGeometry',
+      type: "TextFrameGeometry",
       parameters: {
         width: e,
         height: t,
@@ -5426,17 +5432,17 @@ SPE.RectangleGeometry = new function () {
 
 class Cloner extends THREE.Object3D {
   constructor(e, t = {}) {
-    super(), this.object = e, this.userData.type = 'Cloner', this.userData.skip = !0, e.computeComplexBoundingBox(!0);
+    super(), this.object = e, this.userData.type = "Cloner", this.userData.skip = !0, e.computeComplexBoundingBox(!0);
     const i = e.complexBoundingBox.getSize(new THREE.Vector3());
     this.parameters = {
-      type: void 0 !== t.type ? t.type : 'radial',
+      type: void 0 !== t.type ? t.type : "radial",
       hideBase: void 0 !== t.hideBase && t.hideBase,
       count: void 0 !== t.count ? t.count : 3,
       ra_radius: void 0 !== t.ra_radius ? t.ra_radius : 2 * Math.max(i.x, i.y),
       ra_startAngle: void 0 !== t.ra_startAngle ? t.ra_startAngle : 0,
       ra_endAngle: void 0 !== t.ra_endAngle ? t.ra_endAngle : 360,
       ra_align: void 0 !== t.ra_align && t.ra_align,
-      ra_axis: void 0 !== t.ra_axis ? t.ra_axis : 'y',
+      ra_axis: void 0 !== t.ra_axis ? t.ra_axis : "y",
       ra_scale: void 0 !== t.ra_scale ? t.ra_scale.clone() : new THREE.Vector3(),
       ra_rotation: void 0 !== t.ra_rotation ? t.ra_rotation.clone() : new THREE.Euler(),
       ra_position: void 0 !== t.ra_position ? t.ra_position.clone() : new THREE.Vector3(),
@@ -5466,17 +5472,17 @@ class Cloner extends THREE.Object3D {
 
   update() {
     switch (this._updateCount(), this.parameters.type) {
-      case 'radial':
+      case "radial":
         this._updateRadial();
 
         break;
 
-      case 'linear':
+      case "linear":
         this._updateLinear();
 
         break;
 
-      case 'grid':
+      case "grid":
         this._updateGrid();
 
     }
@@ -5484,7 +5490,7 @@ class Cloner extends THREE.Object3D {
 
   _updateCount() {
     const e = this.parameters,
-          t = 'grid' === e.type ? e.gr_count.x * e.gr_count.y * e.gr_count.z : e.count;
+          t = "grid" === e.type ? e.gr_count.x * e.gr_count.y * e.gr_count.z : e.count;
     if (this.children.length !== t) if (this.children.length < t) for (let _e93 = 0, i = t - this.children.length; _e93 < i; ++_e93) {
       const _e94 = this.object.shallowClone(!1);
 
@@ -5498,13 +5504,13 @@ class Cloner extends THREE.Object3D {
           i = t - e.ra_endAngle * THREE.Math.DEG2RAD,
           r = new THREE.Euler(e.ra_rotation.x * THREE.Math.DEG2RAD, e.ra_rotation.y * THREE.Math.DEG2RAD, e.ra_rotation.z * THREE.Math.DEG2RAD);
     let a;
-    'x' == e.ra_axis && (a = new THREE.Vector3(1, 0, 0)), 'y' == e.ra_axis && (a = new THREE.Vector3(0, 1, 0)), 'z' == e.ra_axis && (a = new THREE.Vector3(0, 0, 1));
+    "x" == e.ra_axis && (a = new THREE.Vector3(1, 0, 0)), "y" == e.ra_axis && (a = new THREE.Vector3(0, 1, 0)), "z" == e.ra_axis && (a = new THREE.Vector3(0, 0, 1));
 
     for (let s = 0; s < e.count; s++) {
       const n = this.children[s];
       n.hiddenMatrix.identity(), n.scale.x = e.ra_scale.x + 1, n.scale.y = e.ra_scale.y + 1, n.scale.z = e.ra_scale.z + 1, n.position.setScalar(0);
       const o = i / e.count * s - t;
-      'x' == e.ra_axis && n.rotation.set(0, o, 0), 'y' == e.ra_axis && n.rotation.set(0, 0, o), 'z' == e.ra_axis && n.rotation.set(o, 0, 0), n.translateOnAxis(a, e.ra_radius), n.position.add(e.ra_position), !0 === e.ra_align ? (n.rotation.x += r.x, n.rotation.y += r.y, n.rotation.z += r.z) : n.rotation.copy(r);
+      "x" == e.ra_axis && n.rotation.set(0, o, 0), "y" == e.ra_axis && n.rotation.set(0, 0, o), "z" == e.ra_axis && n.rotation.set(o, 0, 0), n.translateOnAxis(a, e.ra_radius), n.position.add(e.ra_position), !0 === e.ra_align ? (n.rotation.x += r.x, n.rotation.y += r.y, n.rotation.z += r.z) : n.rotation.copy(r);
     }
   }
 
@@ -5588,9 +5594,10 @@ class Cloner extends THREE.Object3D {
   }
 
 }
+
 SPE.CombinedCamera = class extends THREE.Camera {
   constructor(e = 100, t = 100, i = 45, r = 0.1, a = 5e4) {
-    super(), e = window.innerWidth, t = window.innerHeight, this.orthoCamera = new THREE.OrthographicCamera(-0.5 * e, 0.5 * e, 0.5 * t, -0.5 * t, r, a), this.perspCamera = new THREE.PerspectiveCamera(i, e / t, r, a), this.left = this.orthoCamera.left, this.right = this.orthoCamera.right, this.top = this.orthoCamera.top, this.bottom = this.orthoCamera.bottom, this.view = this.orthoCamera.view, this.far = this.orthoCamera.far, this.isOrthographicCamera = !0, this._type = 'OrthographicCamera', this.aspect = this.perspCamera.aspect, this.fov = this.perspCamera.fov, this.focus = this.perspCamera.focus, this.filmGauge = this.perspCamera.filmGauge, this.filmOffset = this.perspCamera.filmOffset, this.targetOffset = 1e3, this.userData = {
+    super(), e = window.innerWidth, t = window.innerHeight, this.orthoCamera = new THREE.OrthographicCamera(-0.5 * e, 0.5 * e, 0.5 * t, -0.5 * t, r, a), this.perspCamera = new THREE.PerspectiveCamera(i, e / t, r, a), this.left = this.orthoCamera.left, this.right = this.orthoCamera.right, this.top = this.orthoCamera.top, this.bottom = this.orthoCamera.bottom, this.view = this.orthoCamera.view, this.far = this.orthoCamera.far, this.isOrthographicCamera = !0, this._type = "OrthographicCamera", this.aspect = this.perspCamera.aspect, this.fov = this.perspCamera.fov, this.focus = this.perspCamera.focus, this.filmGauge = this.perspCamera.filmGauge, this.filmOffset = this.perspCamera.filmOffset, this.targetOffset = 1e3, this.userData = {
       type: SPE.CombinedCamera.name,
       isEntity: !0,
       lock: !1,
@@ -5629,7 +5636,7 @@ SPE.CombinedCamera = class extends THREE.Camera {
   }
 
   set type(e) {
-    'PerspectiveCamera' === e ? this.toPerspective() : 'OrthographicCamera' === e && this.toOrthographic();
+    "PerspectiveCamera" === e ? this.toPerspective() : "OrthographicCamera" === e && this.toOrthographic();
   }
 
   get near() {
@@ -5650,7 +5657,7 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
   getTarget(e, t) {
     let i;
-    return void 0 === e && (console.warn('SPE.CombinedCamera: .getTarget() target is now required'), e = new THREE.Vector3()), i = void 0 === t ? this.getWorldDirection(new THREE.Vector3()).multiplyScalar(this.targetOffset) : t.clone().multiplyScalar(this.targetOffset), e.copy(this.position).add(i), e;
+    return void 0 === e && (console.warn("SPE.CombinedCamera: .getTarget() target is now required"), e = new THREE.Vector3()), i = void 0 === t ? this.getWorldDirection(new THREE.Vector3()).multiplyScalar(this.targetOffset) : t.clone().multiplyScalar(this.targetOffset), e.copy(this.position).add(i), e;
   }
 
   getViewFrontToObject(e) {
@@ -5676,11 +5683,11 @@ SPE.CombinedCamera = class extends THREE.Camera {
   }
 
   toOrthographic(e) {
-    this.orthoCamera.left = this.left, this.orthoCamera.right = this.right, this.orthoCamera.top = this.top, this.orthoCamera.bottom = this.bottom, this.orthoCamera.view = this.view, this.orthoCamera.far = this.far, this.orthoCamera.updateProjectionMatrix(), this.projectionMatrix = this.orthoCamera.projectionMatrix, this.projectionMatrixInverse = this.orthoCamera.projectionMatrixInverse, delete this.isPerspectiveCamera, this.isOrthographicCamera = !0, this._type = 'OrthographicCamera', !0 !== this.enableHelper && !0 !== e || this.objectHelper.update();
+    this.orthoCamera.left = this.left, this.orthoCamera.right = this.right, this.orthoCamera.top = this.top, this.orthoCamera.bottom = this.bottom, this.orthoCamera.view = this.view, this.orthoCamera.far = this.far, this.orthoCamera.updateProjectionMatrix(), this.projectionMatrix = this.orthoCamera.projectionMatrix, this.projectionMatrixInverse = this.orthoCamera.projectionMatrixInverse, delete this.isPerspectiveCamera, this.isOrthographicCamera = !0, this._type = "OrthographicCamera", !0 !== this.enableHelper && !0 !== e || this.objectHelper.update();
   }
 
   toPerspective(e) {
-    this.perspCamera.aspect = this.aspect, this.perspCamera.fov = this.fov, this.perspCamera.view = this.view, this.perspCamera.far = this.far, this.perspCamera.updateProjectionMatrix(), this.projectionMatrix = this.perspCamera.projectionMatrix, this.projectionMatrixInverse = this.perspCamera.projectionMatrixInverse, delete this.isOrthographicCamera, this.isPerspectiveCamera = !0, this._type = 'PerspectiveCamera', !0 !== this.enableHelper && !0 !== e || this.objectHelper.update();
+    this.perspCamera.aspect = this.aspect, this.perspCamera.fov = this.fov, this.perspCamera.view = this.view, this.perspCamera.far = this.far, this.perspCamera.updateProjectionMatrix(), this.projectionMatrix = this.perspCamera.projectionMatrix, this.projectionMatrixInverse = this.perspCamera.projectionMatrixInverse, delete this.isOrthographicCamera, this.isPerspectiveCamera = !0, this._type = "PerspectiveCamera", !0 !== this.enableHelper && !0 !== e || this.objectHelper.update();
   }
 
   setFocalLength(e) {
@@ -6354,7 +6361,7 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
 }, SPE.DirectionalLightHelper._ray = new THREE.Ray(), SPE.DirectionalLightHelper._sphere = new THREE.Sphere(), SPE.DirectionalLightHelper._inverseMatrix = new THREE.Matrix4(), SPE.DirectionalLightHelper.geometryHelper = new THREE.BoxBufferGeometry(30, 30, 30), SPE.Raycaster = class extends THREE.Raycaster {
   setFromCamera(e, t) {
-    t && t.isPerspectiveCamera ? (this.ray.origin.setFromMatrixPosition(t.matrixWorld), this.ray.direction.set(e.x, e.y, 0.5).unproject(t).sub(this.ray.origin).normalize(), this.camera = t) : t && t.isOrthographicCamera ? (this.ray.origin.set(e.x, e.y, -1).unproject(t), this.ray.direction.set(0, 0, -1).transformDirection(t.matrixWorld), this.camera = t) : console.error('THREE.Raycaster: Unsupported camera type.');
+    t && t.isPerspectiveCamera ? (this.ray.origin.setFromMatrixPosition(t.matrixWorld), this.ray.direction.set(e.x, e.y, 0.5).unproject(t).sub(this.ray.origin).normalize(), this.camera = t) : t && t.isOrthographicCamera ? (this.ray.origin.set(e.x, e.y, -1).unproject(t), this.ray.direction.set(0, 0, -1).transformDirection(t.matrixWorld), this.camera = t) : console.error("THREE.Raycaster: Unsupported camera type.");
   }
 
   createRaycastLineHelper() {
@@ -6369,69 +6376,92 @@ SPE.CombinedCamera = class extends THREE.Camera {
     return r.multiplyScalar(0), t.vertices.push(i), t.vertices.push(a), t.vertices.push(r), new THREE.Line(t, e);
   }
 
-}, SPE.Box3 = function (e, t) {
-  THREE.Box3.call(this, e, t), this.transform = new THREE.Matrix4();
-}, SPE.Box3.prototype = Object.create(THREE.Box3.prototype), SPE.Box3.prototype.constructor = SPE.Box3, SPE.Box3.prototype.setFromObjectSize = function (e, t) {
-  e.updateWorldMatrix(!1, !1), this.makeEmpty(), this.transform = e.matrixWorld;
-  let i = new THREE.Matrix4().copy(e.matrixWorld).invert();
-  return this.expandByObjectSize(e, i, t);
-}, SPE.Box3.prototype.expandByObjectSize = function () {
-  var e,
-      t,
-      i = new THREE.Vector3(),
-      r = new THREE.Matrix4();
-  const a = new THREE.Box3(),
-        s = new THREE.Vector3();
-  var n;
+};
+SPE.Box3 = (_temp = class extends THREE.Box3 {
+  constructor(...args) {
+    super(...args);
 
-  function o(o) {
-    if (void 0 !== o.geometry) {
-      const e = o.geometry.userData.parameters;
-      a.setFromArray(o.geometry.getAttribute('position').array), a.getCenter(s), i.set(e.width, e.height, e.depth).multiplyScalar(0.5);
-    } else void 0 !== o.geometryHelper && !0 === n ? (a.setFromArray(o.geometryHelper.getAttribute('position').array), a.getCenter(s), a.getSize(i).multiplyScalar(0.5)) : (s.setScalar(0), i.setScalar(0));
+    this.setFromObjectSize = (e, t) => {
+      e.updateWorldMatrix(!1, !1), this.makeEmpty(), this.transform = e.matrixWorld;
+      let i = new THREE.Matrix4().copy(e.matrixWorld).invert();
+      return this.expandByObjectSize(e, i, t);
+    };
 
-    r.copy(e).multiply(o.matrixWorld), o.userData.positionToCenter = s, 0 === i.x && 0 === i.y && 0 === i.z ? t.push(new THREE.Vector3(s.x, s.y, s.z).applyMatrix4(r)) : t.push(new THREE.Vector3(-i.x, i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, -i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, -i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, -i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, -i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, i.y, -i.z).add(s).applyMatrix4(r));
+    this.expandByObjectSize = (() => {
+      var e,
+          t,
+          i = new THREE.Vector3(),
+          r = new THREE.Matrix4();
+      const a = new THREE.Box3(),
+            s = new THREE.Vector3();
+      var n;
+
+      function o(o) {
+        if (void 0 !== o.geometry) {
+          const e = o.geometry.userData.parameters;
+          a.setFromArray(o.geometry.getAttribute("position").array), a.getCenter(s), i.set(e.width, e.height, e.depth).multiplyScalar(0.5);
+        } else void 0 !== o.geometryHelper && !0 === n ? (a.setFromArray(o.geometryHelper.getAttribute("position").array), a.getCenter(s), a.getSize(i).multiplyScalar(0.5)) : (s.setScalar(0), i.setScalar(0));
+
+        r.copy(e).multiply(o.matrixWorld), o.userData.positionToCenter = s, 0 === i.x && 0 === i.y && 0 === i.z ? t.push(new THREE.Vector3(s.x, s.y, s.z).applyMatrix4(r)) : t.push(new THREE.Vector3(-i.x, i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, -i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, -i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, i.y, i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(-i.x, -i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, -i.y, -i.z).add(s).applyMatrix4(r), new THREE.Vector3(i.x, i.y, -i.z).add(s).applyMatrix4(r));
+      }
+
+      return function (i, r, a) {
+        return e = r, n = i.enableHelper, t = [], !0 === a ? (i.traverseEntity(o), this.setFromPoints(t)) : (o(i), this.setFromPoints(t)), this;
+      };
+    })();
+
+    this.getCenter = e => {
+      return (e = THREE.Box3.prototype.getCenter.call(this, e)).applyMatrix4(this.transform), e;
+    };
+
+    this.setFromObject = (e, t) => {
+      return this.makeEmpty(), this.expandByObject(e, t);
+    };
+
+    this.expandByObject = (() => {
+      var e,
+          t,
+          i,
+          r,
+          a = new THREE.Vector3();
+
+      function s(s) {
+        var n = s.geometry;
+        if (void 0 !== n) if (n.isGeometry) {
+          var o = n.vertices;
+
+          for (t = 0, i = o.length; t < i; t++) a.copy(o[t]), a.applyMatrix4(s.matrixWorld), void 0 !== r && a.applyMatrix4(r), e.expandByPoint(a);
+        } else if (n.isBufferGeometry) {
+          var h = n.attributes.position;
+          if (void 0 !== h) for (t = 0, i = h.count; t < i; t++) a.fromBufferAttribute(h, t).applyMatrix4(s.matrixWorld), void 0 !== r && a.applyMatrix4(r), e.expandByPoint(a);
+        }
+      }
+
+      return function (t, i) {
+        return e = this, t.updateMatrixWorld(!0), r = i, t.traverse(s), this;
+      };
+    })();
+
+    this.computeVertices = () => {
+      let e = this.getSize(new THREE.Vector3()).multiplyScalar(0.5);
+      var t = this.getCenter(new THREE.Vector3()),
+          i = new THREE.Matrix4().copy(this.transform).setPosition(t);
+      this.vertices = [new THREE.Vector3(-e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, e.y, -e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, -e.z).applyMatrix4(i)];
+    };
+
+    this.computeEdges = () => {
+      this.vertices || this.computeVertices(), this.edges = [new THREE.Line3().set(this.vertices[0], this.vertices[3]), new THREE.Line3().set(this.vertices[1], this.vertices[2]), new THREE.Line3().set(this.vertices[5], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[7]), new THREE.Line3().set(this.vertices[0], this.vertices[1]), new THREE.Line3().set(this.vertices[3], this.vertices[2]), new THREE.Line3().set(this.vertices[7], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[5]), new THREE.Line3().set(this.vertices[0], this.vertices[4]), new THREE.Line3().set(this.vertices[1], this.vertices[5]), new THREE.Line3().set(this.vertices[2], this.vertices[6]), new THREE.Line3().set(this.vertices[3], this.vertices[7])];
+    };
+
+    this.computeFaces = () => {
+      this.vertices || this.computeVertices(), this.faces = [new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[2]).multiplyScalar(0.5).add(this.vertices[2]), new THREE.Vector3().copy(this.vertices[3]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6]), new THREE.Vector3().copy(this.vertices[7]).sub(this.vertices[5]).multiplyScalar(0.5).add(this.vertices[5]), new THREE.Vector3().copy(this.vertices[4]).sub(this.vertices[1]).multiplyScalar(0.5).add(this.vertices[1]), new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[7]).multiplyScalar(0.5).add(this.vertices[7]), new THREE.Vector3().copy(this.vertices[1]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6])];
+    };
+
+    this.transform = new THREE.Matrix4();
   }
 
-  return function (i, r, a) {
-    return e = r, n = i.enableHelper, t = [], !0 === a ? (i.traverseEntity(o), this.setFromPoints(t)) : (o(i), this.setFromPoints(t)), this;
-  };
-}(), SPE.Box3.prototype.getCenter = function (e) {
-  return (e = THREE.Box3.prototype.getCenter.call(this, e)).applyMatrix4(this.transform), e;
-}, SPE.Box3.prototype.setFromObject = function (e, t) {
-  return this.makeEmpty(), this.expandByObject(e, t);
-}, SPE.Box3.prototype.expandByObject = function () {
-  var e,
-      t,
-      i,
-      r,
-      a = new THREE.Vector3();
-
-  function s(s) {
-    var n = s.geometry;
-    if (void 0 !== n) if (n.isGeometry) {
-      var o = n.vertices;
-
-      for (t = 0, i = o.length; t < i; t++) a.copy(o[t]), a.applyMatrix4(s.matrixWorld), void 0 !== r && a.applyMatrix4(r), e.expandByPoint(a);
-    } else if (n.isBufferGeometry) {
-      var h = n.attributes.position;
-      if (void 0 !== h) for (t = 0, i = h.count; t < i; t++) a.fromBufferAttribute(h, t).applyMatrix4(s.matrixWorld), void 0 !== r && a.applyMatrix4(r), e.expandByPoint(a);
-    }
-  }
-
-  return function (t, i) {
-    return e = this, t.updateMatrixWorld(!0), r = i, t.traverse(s), this;
-  };
-}(), SPE.Box3.prototype.computeVertices = function () {
-  let e = this.getSize(new THREE.Vector3()).multiplyScalar(0.5);
-  var t = this.getCenter(new THREE.Vector3()),
-      i = new THREE.Matrix4().copy(this.transform).setPosition(t);
-  this.vertices = [new THREE.Vector3(-e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, e.z).applyMatrix4(i), new THREE.Vector3(-e.x, e.y, -e.z).applyMatrix4(i), new THREE.Vector3(-e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, -e.y, -e.z).applyMatrix4(i), new THREE.Vector3(e.x, e.y, -e.z).applyMatrix4(i)];
-}, SPE.Box3.prototype.computeEdges = function () {
-  this.vertices || this.computeVertices(), this.edges = [new THREE.Line3().set(this.vertices[0], this.vertices[3]), new THREE.Line3().set(this.vertices[1], this.vertices[2]), new THREE.Line3().set(this.vertices[5], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[7]), new THREE.Line3().set(this.vertices[0], this.vertices[1]), new THREE.Line3().set(this.vertices[3], this.vertices[2]), new THREE.Line3().set(this.vertices[7], this.vertices[6]), new THREE.Line3().set(this.vertices[4], this.vertices[5]), new THREE.Line3().set(this.vertices[0], this.vertices[4]), new THREE.Line3().set(this.vertices[1], this.vertices[5]), new THREE.Line3().set(this.vertices[2], this.vertices[6]), new THREE.Line3().set(this.vertices[3], this.vertices[7])];
-}, SPE.Box3.prototype.computeFaces = function () {
-  this.vertices || this.computeVertices(), this.faces = [new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[2]).multiplyScalar(0.5).add(this.vertices[2]), new THREE.Vector3().copy(this.vertices[3]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6]), new THREE.Vector3().copy(this.vertices[7]).sub(this.vertices[5]).multiplyScalar(0.5).add(this.vertices[5]), new THREE.Vector3().copy(this.vertices[4]).sub(this.vertices[1]).multiplyScalar(0.5).add(this.vertices[1]), new THREE.Vector3().copy(this.vertices[0]).sub(this.vertices[7]).multiplyScalar(0.5).add(this.vertices[7]), new THREE.Vector3().copy(this.vertices[1]).sub(this.vertices[6]).multiplyScalar(0.5).add(this.vertices[6])];
-}, SPE.Math = class {
+}, _temp);
+SPE.Math = class {
   static slerp(e, t, i, r) {
     if (0 === r) return i.copy(e);
     if (1 === r) return i.copy(t);
@@ -6502,8 +6532,8 @@ SPE.CombinedCamera = class extends THREE.Camera {
   }
 
   static round(e, t) {
-    let i = (e + 'e').split('e');
-    return +((i = (Math.round(i[0] + 'e' + (+i[1] + t)) + 'e').split('e'))[0] + 'e' + (+i[1] - t));
+    let i = (e + "e").split("e");
+    return +((i = (Math.round(i[0] + "e" + (+i[1] + t)) + "e").split("e"))[0] + "e" + (+i[1] - t));
   }
 
   static normalize(e, t, i) {
@@ -6548,7 +6578,7 @@ SPE.CombinedCamera = class extends THREE.Camera {
   }
 
   static resetTransform(e, t) {
-    for (let i = 0; i < t.length; i++) 'all' == e ? (t[i].position.set(0, 0, 0), t[i].scale.set(1, 1, 1), t[i].rotation.set(0, 0, 0)) : 'scale' == e ? t[i].scale.set(1, 1, 1) : t[i].rotation.set(0, 0, 0), t[i].geometry && t[i].geometry.computeBoundingBox();
+    for (let i = 0; i < t.length; i++) "all" == e ? (t[i].position.set(0, 0, 0), t[i].scale.set(1, 1, 1), t[i].rotation.set(0, 0, 0)) : "scale" == e ? t[i].scale.set(1, 1, 1) : t[i].rotation.set(0, 0, 0), t[i].geometry && t[i].geometry.computeBoundingBox();
   }
 
   static containsObject(e, t) {
@@ -6614,7 +6644,7 @@ SPE.CombinedCamera = class extends THREE.Camera {
 
     for (let _e98 = 0, _i66 = o; _e98 < _i66; _e98++) r = n[_e98].x, a = n[_e98].y, s = n[_e98].z, c[3 * _e98] = r, c[3 * _e98 + 1] = a, c[3 * _e98 + 2] = s, u.set(makeColorGradient(_e98, m, t)), d[3 * _e98] = u.r, d[3 * _e98 + 1] = u.g, d[3 * _e98 + 2] = u.b;
 
-    return h.setAttribute('position', new THREE.BufferAttribute(c, 3)), h.setAttribute('color', new THREE.BufferAttribute(d, 3)), new THREE.Line(h, l);
+    return h.setAttribute("position", new THREE.BufferAttribute(c, 3)), h.setAttribute("color", new THREE.BufferAttribute(d, 3)), new THREE.Line(h, l);
   }
 
   static makeColorGradient(e, t, i) {
@@ -6625,11 +6655,11 @@ SPE.CombinedCamera = class extends THREE.Camera {
         h = 127 * Math.sin(r * e + i) + 128,
         l = 127 * Math.sin(a * e + n) + 128,
         c = 127 * Math.sin(s * e + o) + 128;
-    return parseInt('0x' + _byte2Hex(h) + _byte2Hex(l) + _byte2Hex(c));
+    return parseInt("0x" + _byte2Hex(h) + _byte2Hex(l) + _byte2Hex(c));
   }
 
   static _byte2Hex(e) {
-    return String('0123456789ABCDEF'.substr(e >> 4 & 15, 1)) + '0123456789ABCDEF'.substr(15 & e, 1);
+    return String("0123456789ABCDEF".substr(e >> 4 & 15, 1)) + "0123456789ABCDEF".substr(15 & e, 1);
   }
 
   static drawBezierTangent(e, t) {
