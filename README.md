@@ -31,14 +31,13 @@ class Example extends Component {
 ## Props
 |Property|Description|
 |--|--|
-| scene ``object`` | Required. The scene object exported from Spline. More info on exporting here. |
+| scene ``object`` | Required. The scene object exported from Spline.|
 | assets ``object`` | Default ``{ fonts:  [], images:  [], models:  [], animations:  []  }``. The assets object exported from Spline. |
 | id ``string`` | Default empty. Assignable HTMLAttribute ``id`` for the ``<canvas>`` element.|
 | className ``string`` | Default empty. Assignable HTMLAttribute ``class`` for the ``<div>`` wrapper. |
 | style ``JSX CSS`` | Default empty. Custom styling for the ``<div>`` wrapper. |
 | canvasStyle ``JSX CSS`` | Default empty. Custom styling for the ``<canvas>`` element. |
 
-## Exporting Spline projects
 
 ## License
 
