@@ -14,13 +14,13 @@ yarn add react-spline
 ```
 
 ## Usage
-Import the ``Spline`` component from ``react-spline``, and include the stylesheet from ``react-spline/dist/index.css``. You're set.
+Import the ``Spline`` component from ``react-spline``, and include the stylesheet from ``react-spline/dist/react-spline.modern.css``. You're set.
 
 ```tsx
 import React, { Component } from 'react'
 
 import { Spline } from 'react-spline'
-import 'react-spline/dist/index.css'
+import 'react-spline/dist/react-spline.modern.css'
 
 class Example extends Component {
   render() {
