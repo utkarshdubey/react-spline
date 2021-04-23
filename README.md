@@ -44,6 +44,9 @@ class Example extends Component {
 | style `JSX CSS`       | Default empty. Custom styling for the `<div>` wrapper.                   |
 | canvasStyle `JSX CSS` | Default empty. Custom styling for the `<canvas>` element.                |
 
+## Loading the Spline model
+To download Spline models from the link that gets generated in Spline, it's accessible at ``https://my.spline.design/example-8b43571.../scene.json`` (**Note**: Here *example-8b43571* in the link is a placeholder for a Spline generated link). You can then import the object and use it like shown above.
+
 ## License
 
 MIT © [utkarshdubey](https://github.com/utkarshdubey)
