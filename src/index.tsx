@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as three from 'three'
+import './three'
 
 import { speRuntimeFactory } from './spline-runtime.js'
 
@@ -11,7 +11,7 @@ interface Props {
   canvasStyle?: React.CSSProperties
   containerStyle?: React.CSSProperties
 }
-const SpeRuntime = speRuntimeFactory({}, three)
+const SpeRuntime = speRuntimeFactory({}, (window as any).THREE)
 
 export const Spline = ({
   scene,
