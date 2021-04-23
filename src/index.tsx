@@ -1,40 +1,43 @@
-import './setup'
-
 import * as React from 'react'
+import * as three from 'three'
 
-import { SpeRuntime } from './spline-runtime.js'
-import styles from './styles.module.css'
+import { speRuntimeFactory } from './spline-runtime.js'
 
 interface Props {
   scene: object
-  assets?: object
   id?: string
   className?: string
   style?: React.CSSProperties
   canvasStyle?: React.CSSProperties
+  containerStyle?: React.CSSProperties
 }
+const SpeRuntime = speRuntimeFactory({}, three)
 
-export const Spline = ({ scene, assets, id, className, style, canvasStyle }: Props) => {
+export const Spline = ({
+  scene,
+  id,
+  className,
+  style,
+  canvasStyle = { height: '100%', width: '100%', outline: 'none' },
+  containerStyle = {
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    position: 'relative'
+  }
+}: Props) => {
   const canvasRef: any = React.useRef<HTMLCanvasElement>()
   React.useEffect(() => {
     const { current } = canvasRef
     if (current != null) {
-      // @ts-ignore
       current.width = current.width
     }
-    const splineRuntime = new SpeRuntime(scene, assets || { fonts: [], images: [], models: [], animations: [] }, {}, current)
-
-    splineRuntime.run()
-  }, [scene, assets])
+    new SpeRuntime.Application().start(scene, current)
+  }, [scene])
   return (
     <div className={className} style={style}>
-      <div className={styles.container}>
-        <canvas
-          id={id}
-          className={styles.canvas}
-          ref={canvasRef}
-          style={canvasStyle}
-        ></canvas>
+      <div style={containerStyle}>
+        <canvas id={id} ref={canvasRef} style={canvasStyle}></canvas>
       </div>
     </div>
   )

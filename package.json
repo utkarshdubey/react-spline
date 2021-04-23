@@ -1,30 +1,33 @@
 {
   "name": "react-spline",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A wrapper for loading Spline models and animations.",
   "author": "utkarshdubey",
   "license": "MIT",
-  "keywords": ["spline", "react-spline", "spline animations"],
-  "main": "dist/index.js",
+  "keywords": [
+    "spline",
+    "react-spline",
+    "spline animations"
+  ],
+  "main": "dist/react-spline.js",
+  "exports": "./dist/index.js",
   "module": "dist/index.js",
-  "modern": "dist/react-spline.modern.js",
+  "modern": "dist/index.js",
   "repository": "utkarshdubey/react-spline",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl src/index.tsx -o ./dist --no-compress --format modern --tsconfig tsconfig.json",
-    "postbuild": "node scripts/mv.js",
-    "start": "microbundle-crl watch src/index.tsx -o ./dist --no-compress --format modern --tsconfig tsconfig.json",
+    "build": "microbundle-crl src/index.tsx -o ./dist --format modern,cjs --tsconfig tsconfig.json",
+    "start": "microbundle-crl watch src/index.tsx -o ./dist --format modern --tsconfig tsconfig.json",
     "prepare": "run-s build",
+    "postbuild": "node scripts/mv.js",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "@types/animejs": "^3.1.2",
-    "animejs": "^3.2.1",
     "three": "^0.125.2"
   },
   "devDependencies": {
