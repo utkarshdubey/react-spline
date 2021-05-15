@@ -26,6 +26,7 @@ Import the `Spline` component from `react-spline` and you're set.
 import React, { Component } from 'react'
 
 import { Spline } from 'react-spline'
+import SCENE_OBJECT from './scene.json'
 
 class Example extends Component {
   render() {
