@@ -1,1 +1,1 @@
-export function speRuntimeFactory(exports: any, THREE: any): any;
+export function speRuntimeFactory(exports: any): any;

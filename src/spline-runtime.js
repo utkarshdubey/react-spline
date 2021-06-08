@@ -1,4 +1,5 @@
-export const speRuntimeFactory = function (exports, THREE) {
+import * as THREE from "three"
+export const speRuntimeFactory = function (exports) {
   'use strict'
   /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -583,12 +584,12 @@ export const speRuntimeFactory = function (exports, THREE) {
           M = 0,
           L = 0
         d > 0 && ((D = Math.min(t, i) * (1 - d)), (M = t - D), (L = i - D))
-        var I = _.clone()
-        I.x -= D
-        var P = Math.PI - O.angle(),
+        var P = _.clone()
+        P.x -= D
+        var I = Math.PI - O.angle(),
           B = O.angle(),
           H = Math.tan(B / 2),
-          N = Math.tan(P / 2),
+          N = Math.tan(I / 2),
           F = H + N,
           G = d ? F : N,
           U = d ? F : H
@@ -607,7 +608,7 @@ export const speRuntimeFactory = function (exports, THREE) {
           ;(b = w.clone().sub(new THREE.Vector2(z, -u))),
             w.add(O.clone().setLength(z)),
             d &&
-              (((C = b.clone()).x -= D - F * u), I.sub(O.clone().setLength(z)))
+              (((C = b.clone()).x -= D - F * u), P.sub(O.clone().setLength(z)))
         }
         for (
           var V = (O = _.clone().sub(w)).length() < 0.5, k = [], j = 0;
@@ -615,14 +616,14 @@ export const speRuntimeFactory = function (exports, THREE) {
           j++
         ) {
           var Y = [],
-            Q = j / n,
-            $ = Q * l + s,
-            W = new THREE.Vector2(Math.sin($), Math.cos($))
+            $ = j / n,
+            Q = $ * l + s,
+            W = new THREE.Vector2(Math.sin(Q), Math.cos(Q))
           if (
             (C && b
-              ? (oe(Y, Q, W, P, u, C, -1, !0), oe(Y, Q, W, B, u, b, -1, !1))
+              ? (oe(Y, $, W, I, u, C, -1, !0), oe(Y, $, W, B, u, b, -1, !1))
               : b
-              ? (ae(Y, W, b.x, 0, -1), oe(Y, Q, W, B, u, b, -1, !1))
+              ? (ae(Y, W, b.x, 0, -1), oe(Y, $, W, B, u, b, -1, !1))
               : a || ae(Y, W, i, L, -1),
             two2three(flip(O).normalize(), W, T),
             !V)
@@ -632,24 +633,24 @@ export const speRuntimeFactory = function (exports, THREE) {
               two2three(O.clone().multiplyScalar(J).add(w), W, x),
                 m.push(x.x, x.y, x.z),
                 g.push(T.x, T.y, T.z),
-                E.push(Q, 0.5 + x.y / r),
+                E.push($, 0.5 + x.y / r),
                 Y.push(y++)
             }
           if (
             (R && S
-              ? (oe(Y, Q, W, P, c, S, 1, !1), oe(Y, Q, W, B, c, R, 1, !0))
+              ? (oe(Y, $, W, I, c, S, 1, !1), oe(Y, $, W, B, c, R, 1, !0))
               : S
-              ? (oe(Y, Q, W, P, c, S, 1, !1), ae(Y, W, S.x, 0, 1))
+              ? (oe(Y, $, W, I, c, S, 1, !1), ae(Y, W, S.x, 0, 1))
               : a || ae(Y, W, t, M, 1),
             d && !V)
           ) {
             two2three(flip(O).multiplyScalar(-1).normalize(), W, T)
             for (X = 0; X <= o; X++) {
               J = X / o
-              two2three(O.clone().multiplyScalar(-J).add(I), W, x),
+              two2three(O.clone().multiplyScalar(-J).add(P), W, x),
                 m.push(x.x, x.y, x.z),
                 g.push(T.x, T.y, T.z),
-                E.push(Q, 0.5 + x.y / r),
+                E.push($, 0.5 + x.y / r),
                 Y.push(y++)
             }
           }
@@ -958,11 +959,11 @@ export const speRuntimeFactory = function (exports, THREE) {
             }
           for (O = 0; O < g; O++)
             for (M = 0; M < c; M++) {
-              var I = v + M + w * O,
-                P = v + M + w * (O + 1),
+              var P = v + M + w * O,
+                I = v + M + w * (O + 1),
                 B = v + (M + 1) + w * (O + 1),
                 H = v + (M + 1) + w * O
-              h.push(I, P, H), h.push(P, B, H), (R += 6)
+              h.push(P, I, H), h.push(I, B, H), (R += 6)
             }
           u.addGroup(m, R, E), (m += R), (v += b)
         }
@@ -984,13 +985,13 @@ export const speRuntimeFactory = function (exports, THREE) {
             var D = (O / l) * pi2,
               M = Math.sin(D) * s,
               L = (1 - Math.cos(D)) * s,
-              I = Math.sin(D),
-              P = Math.cos(D)
+              P = Math.sin(D),
+              I = Math.cos(D)
             ;(R[t] = (x + M) * n),
               (R[i] = (_ - L) * o),
               (C[e] = 0),
-              (C[t] = I * Math.sign(R[t])),
-              (C[i] = P * Math.sign(R[i]))
+              (C[t] = P * Math.sign(R[t])),
+              (C[i] = I * Math.sign(R[i]))
             for (var B = 0; B < w; B++) {
               var H = B * A - T
               ;(R[e] = H * r),
@@ -1393,8 +1394,8 @@ export const speRuntimeFactory = function (exports, THREE) {
           D = new THREE.Vector3(),
           M = new THREE.Vector3(),
           L = new THREE.Vector3(),
-          I = new THREE.Vector3(),
           P = new THREE.Vector3(),
+          I = new THREE.Vector3(),
           B = new THREE.Vector3(),
           H = new THREE.Vector3(),
           N = new THREE.Vector3(),
@@ -1406,8 +1407,8 @@ export const speRuntimeFactory = function (exports, THREE) {
           k = Math.ceil(s * a),
           j = z / k,
           Y = -z / 2,
-          Q = (2 * Math.PI) / u,
-          $ = Math.PI / 2 / d,
+          $ = (2 * Math.PI) / u,
+          Q = Math.PI / 2 / d,
           W = Math.min((1 - h / 100) * l, l - 0.1),
           X = l - W
         function J(e, i) {
@@ -1419,37 +1420,37 @@ export const speRuntimeFactory = function (exports, THREE) {
             (g = Math.cos(A) * U),
             t ? e.set(g, y, E) : e.set(g, E, y)
         }
-        J(M, -1), J(L, 0), I.copy(M)
+        J(M, -1), J(L, 0), P.copy(M)
         for (
           var K = M.distanceTo(L), q = K * k + 2 * X, Z = q - X, ee = 0;
           ee <= k;
           ee++
         ) {
           J(O, ee),
-            G.subVectors(O, I).normalize(),
-            I.copy(O),
+            G.subVectors(O, P).normalize(),
+            P.copy(O),
             N.copy(O)
               .setComponent(+t + 1, 0)
               .normalize(),
             F.crossVectors(G, N).normalize()
           for (
-            var te = 0 == ee ? (3 * Math.PI) / 2 : $,
+            var te = 0 == ee ? (3 * Math.PI) / 2 : Q,
               ie = 0 == ee ? 0 : Z,
               re = 0,
               ne = 0;
             re <= u;
-            ne = ++re * Q
+            ne = ++re * $
           ) {
             if (
-              (P.addVectors(
+              (I.addVectors(
                 M.copy(N).multiplyScalar(l * Math.cos(ne)),
                 L.copy(F).multiplyScalar(l * Math.sin(ne))
               ),
-              H.copy(P).normalize(),
+              H.copy(I).normalize(),
               0 == ee || ee == k)
             ) {
               L.copy(H).multiplyScalar(W), D.addVectors(O, L)
-              for (var oe = 0, ae = te; oe < d; ae = ++oe * $ + te) {
+              for (var oe = 0, ae = te; oe < d; ae = ++oe * Q + te) {
                 B.addVectors(
                   M.copy(G).multiplyScalar(X * Math.sin(ae)),
                   L.copy(H).multiplyScalar(X * Math.cos(ae))
@@ -1462,7 +1463,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                 C.push((ie + X * se) / q, re / u, 0)
               }
             }
-            L.addVectors(O, P),
+            L.addVectors(O, I),
               _.push(L.x, L.y, L.z),
               w.push(H.x, H.y, H.z),
               S.push((X + ee * K) / q, re / u)
@@ -1731,7 +1732,7 @@ export const speRuntimeFactory = function (exports, THREE) {
               if (t) throw t.error
             }
           }
-          var I = []
+          var P = []
           for (n = 0, o = c.length; n < o; n++) {
             for (
               R = c[n],
@@ -1748,45 +1749,45 @@ export const speRuntimeFactory = function (exports, THREE) {
               a++
             )
               (v = (S = b[a]).a !== R ? S.a : S.b), l.add(v)
-            l.multiplyScalar(Number(w)), C.add(l), I.push(C)
+            l.multiplyScalar(Number(w)), C.add(l), P.push(C)
           }
-          var P,
+          var I,
             B,
             H,
             N,
             F,
             G,
             U,
-            z = I.concat(O),
-            V = I.length,
+            z = P.concat(O),
+            V = P.length,
             k = [],
             j = [],
             Y = new THREE.Vector2(),
-            Q = new THREE.Vector2(),
-            $ = new THREE.Vector2()
+            $ = new THREE.Vector2(),
+            Q = new THREE.Vector2()
           for (n = 0, o = u.length; n < o; n++)
             (E = u[n]),
               newFace(
                 k,
-                (P = Number(getEdge(E.a, E.b, p).newEdge) + V),
+                (I = Number(getEdge(E.a, E.b, p).newEdge) + V),
                 (B = Number(getEdge(E.b, E.c, p).newEdge) + V),
                 (H = Number(getEdge(E.c, E.a, p).newEdge) + V),
                 E.materialIndex
               ),
-              newFace(k, E.a, P, H, E.materialIndex),
-              newFace(k, E.b, B, P, E.materialIndex),
+              newFace(k, E.a, I, H, E.materialIndex),
+              newFace(k, E.b, B, I, E.materialIndex),
               newFace(k, E.c, H, B, E.materialIndex),
               d &&
                 ((F = (N = h[n])[0]),
                 (G = N[1]),
                 (U = N[2]),
                 Y.set(midpoint(F.x, G.x), midpoint(F.y, G.y)),
-                Q.set(midpoint(G.x, U.x), midpoint(G.y, U.y)),
-                $.set(midpoint(F.x, U.x), midpoint(F.y, U.y)),
-                newUv(j, Y, Q, $),
-                newUv(j, F, Y, $),
-                newUv(j, G, Q, Y),
-                newUv(j, U, $, Q))
+                $.set(midpoint(G.x, U.x), midpoint(G.y, U.y)),
+                Q.set(midpoint(F.x, U.x), midpoint(F.y, U.y)),
+                newUv(j, Y, $, Q),
+                newUv(j, F, Y, Q),
+                newUv(j, G, $, Y),
+                newUv(j, U, Q, $))
           ;(e.vertices = z), (e.faces = k), d && (e.faceVertexUvs[0] = j)
         }),
         e
@@ -2092,15 +2093,15 @@ export const speRuntimeFactory = function (exports, THREE) {
         var M = new THREE.Vector3(C.x, C.y, 0),
           L = new THREE.Vector3(Math.cos(y) * M.x, M.y, Math.sin(y) * M.x)
         u = M.angleTo(L)
-        var I = a / Math.tan((Math.PI - b.angle()) / 2),
-          P = a / Math.tan((Math.PI - u) / 2),
+        var P = a / Math.tan((Math.PI - b.angle()) / 2),
+          I = a / Math.tan((Math.PI - u) / 2),
           B = new THREE.Vector3()
         if (!o) {
           d.push(x.x, x.y, x.z), f.push(0, -1, 0), p.push(0, 0)
           var H = v++,
             N = [],
             F = w.clone(),
-            G = I / Math.cos(Math.PI / r)
+            G = P / Math.cos(Math.PI / r)
           F.x -= G
           for (var U = 0; U < r; U++) {
             var z = (U / r) * Math.PI * 2 + g
@@ -2117,23 +2118,23 @@ export const speRuntimeFactory = function (exports, THREE) {
           k = new THREE.Vector3(),
           j = new THREE.Vector3(),
           Y = new THREE.Vector3(),
-          Q = new THREE.Vector3()
+          $ = new THREE.Vector3()
         for (U = 0; U < r; U++) {
-          var $ = (U / r) * Math.PI * 2 + g,
+          var Q = (U / r) * Math.PI * 2 + g,
             W = ((U + 0.5) / r) * Math.PI * 2 + g,
             X = ((U + 1) / r) * Math.PI * 2 + g,
-            J = new THREE.Vector2(Math.sin($), Math.cos($)),
+            J = new THREE.Vector2(Math.sin(Q), Math.cos(Q)),
             K = new THREE.Vector2(Math.sin(W), Math.cos(W)),
             q = new THREE.Vector2(Math.sin(X), Math.cos(X))
           two2three$1(w, J, V),
             two2three$1(w, q, k),
             two2three$1(C, K, M),
-            offset3d(_, V, k, P, P, j),
+            offset3d(_, V, k, I, I, j),
             d.push(j.x, j.y, j.z),
-            offset3d(V, _, k, P, I, Y),
+            offset3d(V, _, k, I, P, Y),
             d.push(Y.x, Y.y, Y.z),
-            offset3d(k, V, _, I, P, Q),
-            d.push(Q.x, Q.y, Q.z),
+            offset3d(k, V, _, P, I, $),
+            d.push($.x, $.y, $.z),
             f.push(M.x, M.y, M.z),
             f.push(M.x, M.y, M.z),
             f.push(M.x, M.y, M.z),
@@ -2153,18 +2154,18 @@ export const speRuntimeFactory = function (exports, THREE) {
                 .add(ie)
                 .normalize()
                 .multiplyScalar(-1)
-            Ce(H, Q.clone().sub(Y), re, b.angle())
+            Ce(H, $.clone().sub(Y), re, b.angle())
             var ne,
               oe = void 0
             two2three$1(O, q, (re = new THREE.Vector3())),
               (ne = (l = __read(
                 Ce(
                   (H = projectOntoLine(
-                    (H = Q.clone().add(j).multiplyScalar(0.5)),
+                    (H = $.clone().add(j).multiplyScalar(0.5)),
                     k,
                     _
                   )),
-                  Q.clone().sub(j),
+                  $.clone().sub(j),
                   re,
                   u,
                   j.y
@@ -2300,8 +2301,8 @@ export const speRuntimeFactory = function (exports, THREE) {
               M = l[O + 1],
               L = D.length - 1
             h.push(D[0], M[1], M[0])
-            for (var I = 1; I <= L; I++)
-              h.push(D[I - 1], D[I], M[I]), h.push(D[I], M[I + 1], M[I])
+            for (var P = 1; P <= L; P++)
+              h.push(D[P - 1], D[P], M[P]), h.push(D[P], M[P + 1], M[P])
           }
         }
         return (
@@ -5325,13 +5326,13 @@ export const speRuntimeFactory = function (exports, THREE) {
           var D = C.elements[p + 0],
             M = C.elements[p + 1],
             L = D + M,
-            I = L - 2,
-            P = L - 1,
+            P = L - 2,
+            I = L - 1,
             B = D,
             H = D + 1
           do {
-            var N = o.buildVert(C, [I, P, B], 'pre', O),
-              F = o.buildVert(C, [P, B, H], 'post', O)
+            var N = o.buildVert(C, [P, I, B], 'pre', O),
+              F = o.buildVert(C, [I, B, H], 'post', O)
             ;(o._indices[m + 0] = F.bottom),
               (o._indices[m + 1] = F.top),
               (o._indices[m + 2] = N.bottom),
@@ -5339,8 +5340,8 @@ export const speRuntimeFactory = function (exports, THREE) {
               (o._indices[m + 4] = N.top),
               (o._indices[m + 5] = N.bottom),
               (m += 6),
-              (I = (n = __read([P, B, H, H + 1], 4))[0]),
-              (P = n[1]),
+              (P = (n = __read([I, B, H, H + 1], 4))[0]),
+              (I = n[1]),
               (B = n[2]),
               (H = n[3]) >= L && (H -= M)
           } while (B !== D)
@@ -7663,9 +7664,10 @@ export const speRuntimeFactory = function (exports, THREE) {
       : void 0
   }
   function getUnit(e) {
-    var t = /[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$/.exec(
-      e
-    )
+    var t =
+      /[+-]?\d*\.?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$/.exec(
+        e
+      )
     if (t) return t[1]
   }
   function getTransformUnit(e) {
@@ -8609,8 +8611,9 @@ export const speRuntimeFactory = function (exports, THREE) {
           if (void 0 !== n) {
             for (
               var o = 0,
-                a = (c = this.i.states[Number(this.i.selectedState)].material[n]
-                  .layersList).length;
+                a = (c =
+                  this.i.states[Number(this.i.selectedState)].material[n]
+                    .layersList).length;
               o < a;
               ++o
             )
@@ -8633,8 +8636,9 @@ export const speRuntimeFactory = function (exports, THREE) {
           var c
           for (
             o = 0,
-              a = (c = this.i.states[Number(this.i.selectedState)].material
-                .layersList).length;
+              a = (c =
+                this.i.states[Number(this.i.selectedState)].material.layersList)
+                .length;
             o < a;
             ++o
           )
@@ -8949,7 +8953,14 @@ export const speRuntimeFactory = function (exports, THREE) {
             (this._prevState = void 0)
         }),
         (e.prototype.lookAt = function (e) {
-          this.object.lookAt(e)
+          var t,
+            i = this
+          this.object.lookAt(e),
+            null === (t = this._animation) ||
+              void 0 === t ||
+              t.finished.then(function () {
+                i.lookAt(e)
+              })
         }),
         (e.prototype.follow = function (e) {
           this.object.position.copy(e),
@@ -9112,12 +9123,11 @@ export const speRuntimeFactory = function (exports, THREE) {
                       t.springParameters
                     )
                   })),
-              this._animation.finished.then(
-                function () {
-                  l._removeBackLayer()
-                },
-                function () {}
-              ),
+              this._animation.finished.then(function () {
+                l._removeBackLayer(),
+                  (l._animation = void 0),
+                  (l._currentState = void 0)
+              }),
               this.animateMatrix(e),
               this.animateGeometry(e),
               this.animateMaterial(e),
@@ -9810,6 +9820,9 @@ export const speRuntimeFactory = function (exports, THREE) {
     },
     isEntity$1 = function (e) {
       return 'isEntity' in e
+    },
+    isMeshEntity$1 = function (e) {
+      return 'isAbstractMesh' in e
     },
     isHelperableEntity$1 = function (e) {
       return 'objectHelper' in e
@@ -11764,7 +11777,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             (this.orthoCamera.far = this.far),
             this.orthoCamera.updateProjectionMatrix(),
             (this.projectionMatrix = this.orthoCamera.projectionMatrix),
-            (this.projectionMatrixInverse = this.orthoCamera.projectionMatrixInverse),
+            (this.projectionMatrixInverse =
+              this.orthoCamera.projectionMatrixInverse),
             (this._cameraType = 'OrthographicCamera'),
             (!0 !== this.enableHelper && !0 !== e) || this.objectHelper.update()
         }),
@@ -11775,7 +11789,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             (this.perspCamera.far = this.far),
             this.perspCamera.updateProjectionMatrix(),
             (this.projectionMatrix = this.perspCamera.projectionMatrix),
-            (this.projectionMatrixInverse = this.perspCamera.projectionMatrixInverse),
+            (this.projectionMatrixInverse =
+              this.perspCamera.projectionMatrixInverse),
             (this._cameraType = 'PerspectiveCamera'),
             (!0 !== this.enableHelper && !0 !== e) || this.objectHelper.update()
         }),
@@ -12820,146 +12835,73 @@ export const speRuntimeFactory = function (exports, THREE) {
         ;(this.isEnable = !1),
           (this._enableEvent = {}),
           (this._map = {}),
+          (this._prevAncestors = []),
           (this._raycaster = new Raycaster()),
           (this._intersection = new THREE.Vector3()),
           (this._plane = new THREE.Plane()),
           (this._normal = new THREE.Vector3()),
           (this._position = new THREE.Vector3()),
           (this._onMouseDown = function (e) {
-            var t
-            r._raycaster.setFromCamera(r._getPointer(e), r._camera)
-            var i = r._scene.raycastMesh(r._raycaster),
-              n = i.length > 0 ? i[0].object : void 0
-            n &&
-              (null === (t = n.interactionCache.mouseDown) ||
-                void 0 === t ||
-                t.dispatch(),
-              n.traverseAncestors(function (e) {
-                var t
-                e instanceof EmptyObject &&
-                  (null === (t = e.interactionCache.mouseDown) ||
-                    void 0 === t ||
-                    t.dispatch())
-              }))
+            r._raycaster.setFromCamera(
+              r._getPointer(e.clientX, e.clientY),
+              r._camera
+            ),
+              r._handleMouseDownEvent()
           }),
           (this._onMouseUp = function (e) {
-            var t
-            r._raycaster.setFromCamera(r._getPointer(e), r._camera)
-            var i = r._scene.raycastMesh(r._raycaster),
-              n = i.length > 0 ? i[0].object : void 0
-            n &&
-              (null === (t = n.interactionCache.mouseUp) ||
-                void 0 === t ||
-                t.dispatch(),
-              n.traverseAncestors(function (e) {
-                var t
-                e instanceof EmptyObject &&
-                  (null === (t = e.interactionCache.mouseUp) ||
-                    void 0 === t ||
-                    t.dispatch())
-              }))
+            r._raycaster.setFromCamera(
+              r._getPointer(e.clientX, e.clientY),
+              r._camera
+            ),
+              r._handleMouseUpEvent()
           }),
           (this._onMouseMove = function (e) {
-            var t, i, n, o, a
-            if (
-              (r._raycaster.setFromCamera(r._getPointer(e), r._camera),
+            r._raycaster.setFromCamera(
+              r._getPointer(e.clientX, e.clientY),
+              r._camera
+            ),
               r._camera.getWorldDirection(r._normal),
               r._normal.negate(),
-              void 0 !== r._enableEvent[INTERACTION_EVENT.MOUSE_HOVER])
-            ) {
-              var s = r._scene.raycastMesh(r._raycaster),
-                l = s.length > 0 ? s[0].object : void 0
-              if (r._prevObject !== l) {
-                if (
-                  void 0 !== r._prevObject &&
-                  (null === (n = r._prevObject.interactionCache.mouseHover) ||
-                    void 0 === n ||
-                    n.dispatchReverse(),
-                  r._prevSubObjects)
-                )
-                  try {
-                    for (
-                      var c = __values(r._prevSubObjects), u = c.next();
-                      !u.done;
-                      u = c.next()
-                    ) {
-                      null === (o = u.value.interactionCache.mouseHover) ||
-                        void 0 === o ||
-                        o.dispatchReverse()
-                    }
-                  } catch (e) {
-                    t = { error: e }
-                  } finally {
-                    try {
-                      u && !u.done && (i = c.return) && i.call(c)
-                    } finally {
-                      if (t) throw t.error
-                    }
-                  }
-                void 0 !== l &&
-                  (null === (a = l.interactionCache.mouseHover) ||
-                    void 0 === a ||
-                    a.dispatch(),
-                  (r._prevSubObjects = []),
-                  l.traverseAncestors(function (e) {
-                    var t
-                    if (e instanceof EmptyObject) {
-                      var i = e.interactionCache.mouseHover
-                      i &&
-                        (null === (t = r._prevSubObjects) ||
-                          void 0 === t ||
-                          t.push(e),
-                        null == i || i.dispatch())
-                    }
-                  }))
-              }
-              r._prevObject = l
-            }
-            void 0 !== r._enableEvent[INTERACTION_EVENT.LOOK_AT] &&
-              r._map[INTERACTION_EVENT.LOOK_AT].forEach(function (e) {
-                var t,
-                  i =
-                    null === (t = e.interactionCache.lookAt) || void 0 === t
-                      ? void 0
-                      : t.distance
-                void 0 !== i &&
-                  (r._plane.set(r._normal, -i),
-                  r._raycaster.ray.intersectPlane(r._plane, r._intersection),
-                  e.interaction.lookAt(r._intersection))
-              }),
-              void 0 !== r._enableEvent[INTERACTION_EVENT.FOLLOW] &&
-                r._map[INTERACTION_EVENT.FOLLOW].forEach(function (e) {
-                  r._plane.setFromNormalAndCoplanarPoint(
-                    r._normal,
-                    e.getWorldPosition(r._position)
-                  ),
-                    r._raycaster.ray.intersectPlane(r._plane, r._intersection),
-                    e.interaction.follow(r._intersection)
-                })
+              r._handleMouseHoverEvent(),
+              r._handleLookAtEvent(),
+              r._handleFollowEvent()
+          }),
+          (this._onTouchStart = function (e) {
+            1 === e.touches.length &&
+              (e.preventDefault(),
+              r._raycaster.setFromCamera(
+                r._getPointer(e.touches[0].clientX, e.touches[0].clientY),
+                r._camera
+              ),
+              r._camera.getWorldDirection(r._normal),
+              r._normal.negate(),
+              r._handleMouseDownEvent(),
+              r._handleMouseHoverEvent(),
+              r._handleLookAtEvent(),
+              r._handleFollowEvent())
+          }),
+          (this._onTouchEnd = function () {
+            r._handleMouseUpEvent(), r._handleMouseHoverEvent(!0)
+          }),
+          (this._onTouchMove = function (e) {
+            1 === e.touches.length &&
+              (e.preventDefault(),
+              e.stopPropagation(),
+              r._raycaster.setFromCamera(
+                r._getPointer(e.touches[0].clientX, e.touches[0].clientY),
+                r._camera
+              ),
+              r._camera.getWorldDirection(r._normal),
+              r._normal.negate(),
+              r._handleMouseHoverEvent(),
+              r._handleLookAtEvent(),
+              r._handleFollowEvent())
           }),
           (this._onKeyDown = function (e) {
-            r._map[INTERACTION_EVENT.KEY_DOWN].forEach(function (t) {
-              var i,
-                r =
-                  null === (i = t.interactionCache.keyDown) || void 0 === i
-                    ? void 0
-                    : i.find(function (t) {
-                        return t.key === e.key
-                      })
-              null == r || r.dispatch()
-            })
+            r._handleKeyDownEvent(e.key)
           }),
           (this._onKeyUp = function (e) {
-            r._map[INTERACTION_EVENT.KEY_UP].forEach(function (t) {
-              var i,
-                r =
-                  null === (i = t.interactionCache.keyUp) || void 0 === i
-                    ? void 0
-                    : i.find(function (t) {
-                        return t.key === e.key
-                      })
-              null == r || r.dispatch()
-            })
+            r._handleKeyUpEvent(e.key)
           }),
           (this._domElement = e),
           (this._scene = t),
@@ -12967,85 +12909,86 @@ export const speRuntimeFactory = function (exports, THREE) {
       }
       return (
         (e.prototype.activate = function () {
-          var e,
-            t,
-            i,
-            r = this
-          if (
-            ((this.isEnable = !0),
-            this._scene.traverseEntity(function (e) {
-              var t, i
-              if (void 0 !== e.interaction) {
-                e.interaction.start()
+          var e = this
+          ;(this.isEnable = !0),
+            this._scene.traverseEntity(function (t) {
+              var i, r
+              if (void 0 !== t.interaction) {
+                t.interaction.start()
                 try {
                   for (
-                    var n = __values(e.interaction.events), o = n.next();
+                    var n = __values(t.interaction.events), o = n.next();
                     !o.done;
                     o = n.next()
                   ) {
                     var a = o.value.type
-                    ;(r._enableEvent[a] = !0),
+                    ;(e._enableEvent[a] = !0),
                       (a !== INTERACTION_EVENT.KEY_DOWN &&
                         a !== INTERACTION_EVENT.KEY_UP &&
                         a !== INTERACTION_EVENT.START &&
                         a !== INTERACTION_EVENT.LOOK_AT &&
                         a !== INTERACTION_EVENT.FOLLOW) ||
-                        (void 0 === r._map[a] && (r._map[a] = []),
-                        r._map[a].push(e))
+                        (void 0 === e._map[a] && (e._map[a] = []),
+                        e._map[a].push(t))
                   }
                 } catch (e) {
-                  t = { error: e }
+                  i = { error: e }
                 } finally {
                   try {
-                    o && !o.done && (i = n.return) && i.call(n)
+                    o && !o.done && (r = n.return) && r.call(n)
                   } finally {
-                    if (t) throw t.error
+                    if (i) throw i.error
                   }
                 }
               }
             }),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.START])
-          )
-            try {
-              for (
-                var n = __values(this._map[INTERACTION_EVENT.START]),
-                  o = n.next();
-                !o.done;
-                o = n.next()
-              ) {
-                null === (i = o.value.interactionCache.start) ||
-                  void 0 === i ||
-                  i.dispatch()
-              }
-            } catch (t) {
-              e = { error: t }
-            } finally {
-              try {
-                o && !o.done && (t = n.return) && t.call(n)
-              } finally {
-                if (e) throw e.error
-              }
-            }
-          void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_DOWN] &&
-            this._domElement.addEventListener(
-              'pointerdown',
-              this._onMouseDown,
-              !1
-            ),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_UP] &&
+            void 0 !== this._enableEvent[INTERACTION_EVENT.START] &&
+              this._handleStartEvent(),
+            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_DOWN] &&
+              (this._domElement.addEventListener(
+                'mousedown',
+                this._onMouseDown,
+                !1
+              ),
               this._domElement.addEventListener(
-                'pointerup',
+                'touchstart',
+                this._onTouchStart,
+                !1
+              )),
+            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_UP] &&
+              (this._domElement.addEventListener(
+                'mouseup',
                 this._onMouseUp,
                 !1
               ),
+              this._domElement.addEventListener(
+                'touchend',
+                this._onTouchEnd,
+                !1
+              )),
             (void 0 === this._enableEvent[INTERACTION_EVENT.MOUSE_HOVER] &&
               void 0 === this._enableEvent[INTERACTION_EVENT.LOOK_AT] &&
               void 0 === this._enableEvent[INTERACTION_EVENT.FOLLOW]) ||
-              this._domElement.addEventListener(
-                'pointermove',
+              (this._domElement.addEventListener(
+                'mousemove',
                 this._onMouseMove,
                 !1
               ),
+              this._domElement.addEventListener(
+                'touchstart',
+                this._onTouchStart,
+                !1
+              ),
+              this._domElement.addEventListener(
+                'touchend',
+                this._onTouchEnd,
+                !1
+              ),
+              this._domElement.addEventListener(
+                'touchmove',
+                this._onTouchMove,
+                !1
+              )),
             void 0 !== this._enableEvent[INTERACTION_EVENT.KEY_DOWN] &&
               document.addEventListener('keydown', this._onKeyDown, !1),
             void 0 !== this._enableEvent[INTERACTION_EVENT.KEY_UP] &&
@@ -13056,66 +12999,247 @@ export const speRuntimeFactory = function (exports, THREE) {
             void 0 !== e.interaction && e.interaction.end(),
               (e.interaction.cache = void 0)
           }),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_DOWN] &&
-              this._domElement.removeEventListener(
-                'pointerdown',
-                this._onMouseDown
-              ),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_UP] &&
-              this._domElement.removeEventListener(
-                'pointerup',
-                this._onMouseUp
-              ),
-            (void 0 === this._enableEvent[INTERACTION_EVENT.MOUSE_HOVER] &&
-              void 0 === this._enableEvent[INTERACTION_EVENT.LOOK_AT] &&
-              void 0 === this._enableEvent[INTERACTION_EVENT.FOLLOW]) ||
-              this._domElement.removeEventListener(
-                'pointermove',
-                this._onMouseMove
-              ),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.KEY_DOWN] &&
-              document.removeEventListener('keydown', this._onKeyDown),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.KEY_UP] &&
-              document.removeEventListener('keyup', this._onKeyUp),
+            this._domElement.removeEventListener(
+              'mousedown',
+              this._onMouseDown
+            ),
+            this._domElement.removeEventListener('mouseup', this._onMouseUp),
+            this._domElement.removeEventListener(
+              'mousemove',
+              this._onMouseMove
+            ),
+            this._domElement.removeEventListener(
+              'touchstart',
+              this._onTouchStart
+            ),
+            this._domElement.removeEventListener('touchend', this._onTouchEnd),
+            this._domElement.removeEventListener(
+              'touchmove',
+              this._onTouchMove
+            ),
+            document.removeEventListener('keydown', this._onKeyDown),
+            document.removeEventListener('keyup', this._onKeyUp),
             (this._enableEvent = {}),
             (this._map = {}),
             (this.isEnable = !1)
         }),
         (e.prototype.reset = function () {
-          var e, t, i
+          this._scene.traverseEntity(function (e) {
+            e.interaction.start()
+          }),
+            this._handleStartEvent()
+        }),
+        (e.prototype._getPointer = function (e, t) {
+          var i = this._domElement.getBoundingClientRect()
+          return {
+            x: ((e - i.left) / i.width) * 2 - 1,
+            y: (-(t - i.top) / i.height) * 2 + 1
+          }
+        }),
+        (e.prototype._handleStartEvent = function () {
+          var e
+          null === (e = this._map[INTERACTION_EVENT.START]) ||
+            void 0 === e ||
+            e.forEach(function (e) {
+              var t
+              null === (t = e.interactionCache.start) ||
+                void 0 === t ||
+                t.dispatch()
+            })
+        }),
+        (e.prototype._handleMouseDownEvent = function () {
+          for (
+            var e, t = this._raycastMesh(this._raycaster), i = 0, r = t.length;
+            i < r;
+            ++i
+          ) {
+            var n = t[i].object
+            if (
+              (null === (e = n.interactionCache.mouseDown) ||
+                void 0 === e ||
+                e.dispatch(),
+              n.traverseAncestors(function (e) {
+                var t
+                e instanceof EmptyObject &&
+                  (null === (t = e.interactionCache.mouseDown) ||
+                    void 0 === t ||
+                    t.dispatch())
+              }),
+              !n.interactionCache.follow)
+            )
+              break
+          }
+        }),
+        (e.prototype._handleMouseUpEvent = function () {
+          for (
+            var e, t = this._raycastMesh(this._raycaster), i = 0, r = t.length;
+            i < r;
+            ++i
+          ) {
+            var n = t[i].object
+            if (
+              (null === (e = n.interactionCache.mouseUp) ||
+                void 0 === e ||
+                e.dispatch(),
+              n.traverseAncestors(function (e) {
+                var t
+                e instanceof EmptyObject &&
+                  (null === (t = e.interactionCache.mouseUp) ||
+                    void 0 === t ||
+                    t.dispatch())
+              }),
+              !n.interactionCache.follow)
+            )
+              break
+          }
+        }),
+        (e.prototype._handleMouseHoverEvent = function (e) {
+          var t,
+            i,
+            r = this
           if (
-            (this._scene.traverseEntity(function (e) {
-              e.interaction.start()
-            }),
-            void 0 !== this._enableEvent[INTERACTION_EVENT.START])
-          )
-            try {
-              for (
-                var r = __values(this._map[INTERACTION_EVENT.START]),
-                  n = r.next();
-                !n.done;
-                n = r.next()
-              ) {
-                null === (i = n.value.interactionCache.start) ||
-                  void 0 === i ||
-                  i.dispatch()
-              }
-            } catch (t) {
-              e = { error: t }
-            } finally {
+            (void 0 === e && (e = !1),
+            void 0 !== this._enableEvent[INTERACTION_EVENT.MOUSE_HOVER])
+          ) {
+            var n = void 0
+            if (!e) {
+              var o = this._raycastMesh(this._raycaster).find(function (e) {
+                return !e.object.interactionCache.follow
+              })
+              n = o ? o.object : void 0
+            }
+            if (this._prevObject !== n) {
+              void 0 !== this._prevObject &&
+                (null === (t = this._prevObject.interactionCache.mouseHover) ||
+                  void 0 === t ||
+                  t.dispatchReverse()),
+                void 0 !== n &&
+                  (null === (i = n.interactionCache.mouseHover) ||
+                    void 0 === i ||
+                    i.dispatch())
+              var a = []
+              null == n ||
+                n.traverseAncestors(function (e) {
+                  e instanceof EmptyObject &&
+                    e.interactionCache.mouseHover &&
+                    a.push(e)
+                }),
+                this._prevAncestors.filter(function (e) {
+                  var t
+                  return (
+                    !a.includes(e) &&
+                    (null === (t = e.interactionCache.mouseHover) ||
+                      void 0 === t ||
+                      t.dispatchReverse(),
+                    !0)
+                  )
+                })
+              var s = a.filter(function (e) {
+                  var t
+                  return (
+                    !r._prevAncestors.includes(e) &&
+                    (null === (t = e.interactionCache.mouseHover) ||
+                      void 0 === t ||
+                      t.dispatch(),
+                    !0)
+                  )
+                }),
+                l = this._prevAncestors.filter(function (e) {
+                  return a.includes(e)
+                })
+              this._prevAncestors = __spread(l, s)
+            }
+            this._prevObject = n
+          }
+        }),
+        (e.prototype._handleLookAtEvent = function () {
+          var e,
+            t = this
+          null === (e = this._map[INTERACTION_EVENT.LOOK_AT]) ||
+            void 0 === e ||
+            e.forEach(function (e) {
+              var i,
+                r =
+                  null === (i = e.interactionCache.lookAt) || void 0 === i
+                    ? void 0
+                    : i.distance
+              void 0 !== r &&
+                (t._plane.set(t._normal, -r),
+                t._raycaster.ray.intersectPlane(t._plane, t._intersection),
+                e.interaction.lookAt(t._intersection))
+            })
+        }),
+        (e.prototype._handleFollowEvent = function () {
+          var e,
+            t = this
+          null === (e = this._map[INTERACTION_EVENT.FOLLOW]) ||
+            void 0 === e ||
+            e.forEach(function (e) {
+              t._plane.setFromNormalAndCoplanarPoint(
+                t._normal,
+                e.getWorldPosition(t._position)
+              ),
+                t._raycaster.ray.intersectPlane(t._plane, t._intersection),
+                e.interaction.follow(t._intersection)
+            })
+        }),
+        (e.prototype._handleKeyDownEvent = function (e) {
+          var t
+          null === (t = this._map[INTERACTION_EVENT.KEY_DOWN]) ||
+            void 0 === t ||
+            t.forEach(function (t) {
+              var i,
+                r =
+                  null === (i = t.interactionCache.keyDown) || void 0 === i
+                    ? void 0
+                    : i.find(function (t) {
+                        return t.key === e
+                      })
+              null == r || r.dispatch()
+            })
+        }),
+        (e.prototype._handleKeyUpEvent = function (e) {
+          var t
+          null === (t = this._map[INTERACTION_EVENT.KEY_UP]) ||
+            void 0 === t ||
+            t.forEach(function (t) {
+              var i,
+                r =
+                  null === (i = t.interactionCache.keyUp) || void 0 === i
+                    ? void 0
+                    : i.find(function (t) {
+                        return t.key === e
+                      })
+              null == r || r.dispatch()
+            })
+        }),
+        (e.prototype._raycastMesh = function (e) {
+          var t = [],
+            i = function (r) {
+              var n, o
               try {
-                n && !n.done && (t = r.return) && t.call(r)
+                for (
+                  var a = __values(r.children), s = a.next();
+                  !s.done;
+                  s = a.next()
+                ) {
+                  var l = s.value
+                  isEntity$1(l) &&
+                    !l.raycastLock &&
+                    l.visible &&
+                    (isMeshEntity$1(l) && e.intersectObject(l, !1, t), i(l))
+                }
+              } catch (e) {
+                n = { error: e }
               } finally {
-                if (e) throw e.error
+                try {
+                  s && !s.done && (o = a.return) && o.call(a)
+                } finally {
+                  if (n) throw n.error
+                }
               }
             }
-        }),
-        (e.prototype._getPointer = function (e) {
-          var t = this._domElement.getBoundingClientRect()
-          return {
-            x: ((e.clientX - t.left) / t.width) * 2 - 1,
-            y: (-(e.clientY - t.top) / t.height) * 2 + 1
-          }
+          return i(this._scene), t
         }),
         e
       )
@@ -15060,22 +15184,19 @@ export const speRuntimeFactory = function (exports, THREE) {
           (this.renderTargetMasked.texture.name = 'DoF.Masked.Far'),
           (this.renderTargetNear = this.renderTarget.clone()),
           (this.renderTargetNear.texture.name = 'DoF.Bokeh.Near'),
-          (this.uniforms.get(
-            'nearColorBuffer'
-          ).value = this.renderTargetNear.texture),
+          (this.uniforms.get('nearColorBuffer').value =
+            this.renderTargetNear.texture),
           (this.renderTargetFar = this.renderTarget.clone()),
           (this.renderTargetFar.texture.name = 'DoF.Bokeh.Far'),
-          (this.uniforms.get(
-            'farColorBuffer'
-          ).value = this.renderTargetFar.texture),
+          (this.uniforms.get('farColorBuffer').value =
+            this.renderTargetFar.texture),
           (this.renderTargetCoC = this.renderTarget.clone()),
           (this.renderTargetCoC.texture.format = THREE.RGBFormat),
           (this.renderTargetCoC.texture.name = 'DoF.CoC'),
           (this.renderTargetCoCBlurred = this.renderTargetCoC.clone()),
           (this.renderTargetCoCBlurred.texture.name = 'DoF.CoC.Blurred'),
-          (this.uniforms.get(
-            'nearCoCBuffer'
-          ).value = this.renderTargetCoCBlurred.texture),
+          (this.uniforms.get('nearCoCBuffer').value =
+            this.renderTargetCoCBlurred.texture),
           (this.cocPass = new ShaderPass(new CircleOfConfusionMaterial(e)))
         const s = this.circleOfConfusionMaterial
         ;(s.uniforms.focusDistance.value = i),
@@ -15314,9 +15435,8 @@ export const speRuntimeFactory = function (exports, THREE) {
           (this.renderTargetWeights = this.renderTargetEdges.clone()),
           (this.renderTargetWeights.texture.name = 'SMAA.Weights'),
           (this.renderTargetWeights.texture.format = THREE.RGBAFormat),
-          (this.uniforms.get(
-            'weightMap'
-          ).value = this.renderTargetWeights.texture),
+          (this.uniforms.get('weightMap').value =
+            this.renderTargetWeights.texture),
           (this.clearPass = new ClearPass(!0, !1, !1)),
           (this.clearPass.overrideClearColor = new THREE.Color(0)),
           (this.clearPass.overrideClearAlpha = 1),
@@ -15816,7 +15936,8 @@ export const speRuntimeFactory = function (exports, THREE) {
               .value
           },
           set: function (e) {
-            this.effect.circleOfConfusionMaterial.uniforms.focusDistance.value = e
+            this.effect.circleOfConfusionMaterial.uniforms.focusDistance.value =
+              e
           },
           enumerable: !1,
           configurable: !0
@@ -16100,34 +16221,6 @@ export const speRuntimeFactory = function (exports, THREE) {
                       (isHelperableEntity(l) && l.enableHelper)) &&
                       e.intersectObject(l, !1, t),
                     i(l))
-                }
-              } catch (e) {
-                n = { error: e }
-              } finally {
-                try {
-                  s && !s.done && (o = a.return) && o.call(a)
-                } finally {
-                  if (n) throw n.error
-                }
-              }
-            }
-          return i(this), t
-        }),
-        (t.prototype.raycastMesh = function (e) {
-          var t = [],
-            i = function (r) {
-              var n, o
-              try {
-                for (
-                  var a = __values(r.children), s = a.next();
-                  !s.done;
-                  s = a.next()
-                ) {
-                  var l = s.value
-                  isEntity$1(l) &&
-                    !l.raycastLock &&
-                    l.visible &&
-                    (isMeshEntity(l) && e.intersectObject(l, !1, t), i(l))
                 }
               } catch (e) {
                 n = { error: e }
@@ -17146,7 +17239,9 @@ export const speRuntimeFactory = function (exports, THREE) {
             r.textFrame.textLines.push(l)
             for (var u = 0; u < c.length; u++) this.add(c[u])
           }
-          return this.textFullUpdate(), this
+          return (
+            this.textFullUpdate(), this.updateColor(n.textFrame.hexColor), this
+          )
         }),
         (t.prototype.toJSON = function (t) {
           var i = e.prototype.toJSON.call(this, t),
@@ -17264,36 +17359,8 @@ export const speRuntimeFactory = function (exports, THREE) {
     DEFAULT_IMAGE = new Image(),
     DEFAULT_TEXTURE = new THREE.Texture(),
     DEFAULT_ARRAY_COLORS = [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0
     ],
     DEFAULT_STEPS = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     DEFAULT_SHADOWMAP_SIZE = [2048, 2048],
@@ -17385,8 +17452,33 @@ export const speRuntimeFactory = function (exports, THREE) {
           )
         }),
         (e.prototype._decodeTextureData = function (e) {
-          var t, i, r, n, o, a, s, l, c, u, h, d, f, p, v, m
-          function g(e) {
+          var t,
+            i,
+            r,
+            n,
+            o,
+            a,
+            s,
+            l,
+            c,
+            u,
+            h,
+            d,
+            f,
+            p,
+            v,
+            m,
+            g,
+            E,
+            y,
+            A,
+            T,
+            x,
+            _,
+            w,
+            S,
+            b
+          function R(e) {
             switch (e) {
               case GLTF_TEXTURE_WRAP_MODE.CLAMP_TO_EDGE:
                 return THREE.ClampToEdgeWrapping
@@ -17396,7 +17488,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                 return THREE.RepeatWrapping
             }
           }
-          function E(e) {
+          function C(e) {
             switch (e) {
               case GLTF_TEXTURE_MAG_FILTER.LINEAR:
                 return THREE.LinearFilter
@@ -17404,7 +17496,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                 return THREE.NearestFilter
             }
           }
-          function y(e) {
+          function O(e) {
             switch (e) {
               case GLTF_TEXTURE_MIN_FILTER.LINEAR:
                 return THREE.LinearFilter
@@ -17421,75 +17513,111 @@ export const speRuntimeFactory = function (exports, THREE) {
             }
           }
           for (
-            var A = null !== (t = e.images) && void 0 !== t ? t : [],
-              T = [],
-              x = 0;
-            x < A.length;
-            x++
+            var D = null !== (t = e.images) && void 0 !== t ? t : [],
+              M = [],
+              L = 0;
+            L < D.length;
+            L++
           ) {
-            ;((C = new Image()).src =
-              null !== (i = A[x].uri) && void 0 !== i ? i : ''),
-              T.push(C)
+            ;((F = new Image()).src =
+              null !== (i = D[L].uri) && void 0 !== i ? i : ''),
+              M.push(F)
           }
-          var _ = null !== (r = e.samplers) && void 0 !== r ? r : [],
-            w = null !== (n = e.textures) && void 0 !== n ? n : []
-          for (x = 0; x < w.length; x++) {
-            var S = w[x],
-              b = null !== (o = S.source) && void 0 !== o ? o : -1,
-              R = null !== (a = S.sampler) && void 0 !== a ? a : -1,
-              C = null !== (s = T[b]) && void 0 !== s ? s : DEFAULT_IMAGE,
-              O = null !== (l = _[R]) && void 0 !== l ? l : DEFAULT_SAMPLER,
-              D =
+          var P = null !== (r = e.samplers) && void 0 !== r ? r : [],
+            I = null !== (n = e.textures) && void 0 !== n ? n : []
+          for (L = 0; L < I.length; L++) {
+            var B = I[L],
+              H = null !== (o = B.source) && void 0 !== o ? o : -1,
+              N = null !== (a = B.sampler) && void 0 !== a ? a : -1,
+              F = null !== (s = M[H]) && void 0 !== s ? s : DEFAULT_IMAGE,
+              G = null !== (l = P[N]) && void 0 !== l ? l : DEFAULT_SAMPLER,
+              U =
                 null !==
                   (u =
-                    null === (c = O.extensions) || void 0 === c
+                    null === (c = G.extensions) || void 0 === c
                       ? void 0
                       : c.repeat) && void 0 !== u
                   ? u
                   : [1, 1],
-              M =
+              z =
                 null !==
                   (d =
-                    null === (h = O.extensions) || void 0 === h
+                    null === (h = G.extensions) || void 0 === h
                       ? void 0
                       : h.offset) && void 0 !== d
                   ? d
                   : [0, 0],
-              L =
+              V =
                 null !==
                   (p =
-                    null === (f = O.extensions) || void 0 === f
+                    null === (f = G.extensions) || void 0 === f
                       ? void 0
                       : f.center) && void 0 !== p
                   ? p
                   : [0, 0],
-              I =
+              k =
                 null !==
                   (m =
-                    null === (v = O.extensions) || void 0 === v
+                    null === (v = G.extensions) || void 0 === v
                       ? void 0
                       : v.rotation) && void 0 !== m
                   ? m
                   : 0,
-              P = new THREE.Texture(
-                C,
+              j = new THREE.Texture(
+                F,
                 THREE.Texture.DEFAULT_MAPPING,
-                g(O.wrapS),
-                g(O.wrapT),
-                E(O.magFilter),
-                y(O.minFilter)
+                R(G.wrapS),
+                R(G.wrapT),
+                C(G.magFilter),
+                O(G.minFilter),
+                null !==
+                  (E =
+                    null === (g = G.extensions) || void 0 === g
+                      ? void 0
+                      : g.format) && void 0 !== E
+                  ? E
+                  : THREE.RGBAFormat,
+                null !==
+                  (A =
+                    null === (y = G.extensions) || void 0 === y
+                      ? void 0
+                      : y.type) && void 0 !== A
+                  ? A
+                  : THREE.UnsignedByteType,
+                null !==
+                  (x =
+                    null === (T = G.extensions) || void 0 === T
+                      ? void 0
+                      : T.anisotropy) && void 0 !== x
+                  ? x
+                  : 1,
+                null !==
+                  (w =
+                    null === (_ = G.extensions) || void 0 === _
+                      ? void 0
+                      : _.encoding) && void 0 !== w
+                  ? w
+                  : THREE.sRGBEncoding
               )
-            P.repeat.fromArray(D),
-              P.offset.fromArray(M),
-              P.center.fromArray(L),
-              (P.rotation = I),
-              P.updateMatrix(),
-              this._textures.push(P)
+            j.repeat.fromArray(U),
+              j.offset.fromArray(z),
+              j.center.fromArray(V),
+              (j.flipY =
+                null ===
+                  (b =
+                    null === (S = G.extensions) || void 0 === S
+                      ? void 0
+                      : S.flipY) ||
+                void 0 === b ||
+                b),
+              (j.rotation = k),
+              j.updateMatrix(),
+              this._textures.push(j)
           }
-          var B = e.extensions.SPE_textures_uuid_map
-          for (var H in B) {
-            var N = B[Number(H)]
-            this._texturesMap[N] = this._textures[Number(H)]
+          var Y = e.extensions.SPE_textures_uuid_map
+          for (var $ in Y) {
+            var Q = Y[Number($)]
+            this._texturesMap[Q] = this._textures[Number($)]
           }
         }),
         (e.prototype._decodeInteractionStates = function (e) {
@@ -17646,9 +17774,10 @@ export const speRuntimeFactory = function (exports, THREE) {
                 null !== (n = v.bgAlpha) && void 0 !== n ? n : 0),
               (this._exportOptions.orbitDamped =
                 null !== (o = v.orbitDamped) && void 0 !== o && o),
-              (this._exportOptions.orbitTarget = new THREE.Vector3().fromArray(
-                null !== (a = v.orbitTarget) && void 0 !== a ? a : [0, 0, 0]
-              )),
+              (this._exportOptions.orbitTarget =
+                new THREE.Vector3().fromArray(
+                  null !== (a = v.orbitTarget) && void 0 !== a ? a : [0, 0, 0]
+                )),
               (this._exportOptions.cameraType =
                 null !== (s = v.cameraType) && void 0 !== s
                   ? s
@@ -17911,8 +18040,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             D,
             M,
             L,
-            I,
             P,
+            I,
             B,
             H,
             N,
@@ -17924,8 +18053,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             k,
             j,
             Y,
-            Q,
             $,
+            Q,
             W,
             X,
             J,
@@ -17965,8 +18094,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             De,
             Me,
             Le,
-            Ie,
             Pe,
+            Ie,
             Be,
             He,
             Ne,
@@ -17978,8 +18107,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             ke,
             je,
             Ye,
-            Qe,
             $e,
+            Qe,
             We,
             Xe,
             Je,
@@ -18117,12 +18246,12 @@ export const speRuntimeFactory = function (exports, THREE) {
                       null ===
                         (B =
                           null ===
-                            (P =
-                              null === (I = e.extensions) || void 0 === I
+                            (I =
+                              null === (P = e.extensions) || void 0 === P
                                 ? void 0
-                                : I.SPE_light_parameters) || void 0 === P
+                                : P.SPE_light_parameters) || void 0 === I
                             ? void 0
-                            : P.shadows) || void 0 === B
+                            : I.shadows) || void 0 === B
                         ? void 0
                         : B.shadowmapViewNear) && void 0 !== H
                     ? H
@@ -18152,19 +18281,19 @@ export const speRuntimeFactory = function (exports, THREE) {
               var tt = null !== (k = e.range) && void 0 !== k ? k : 0,
                 it =
                   null !==
-                    ($ =
+                    (Q =
                       null ===
-                        (Q =
+                        ($ =
                           null ===
                             (Y =
                               null === (j = e.extensions) || void 0 === j
                                 ? void 0
                                 : j.SPE_light_parameters) || void 0 === Y
                             ? void 0
-                            : Y.custom) || void 0 === Q
+                            : Y.custom) || void 0 === $
                         ? void 0
-                        : Q.decay) && void 0 !== $
-                    ? $
+                        : $.decay) && void 0 !== Q
+                    ? Q
                     : 1
               ;((Ke = new LightPoint(qe, et, tt, it)).castShadow =
                 null !==
@@ -18312,19 +18441,19 @@ export const speRuntimeFactory = function (exports, THREE) {
                 De),
                 (Ke.shadow.mapSize = new THREE.Vector2().fromArray(
                   null !==
-                    (Pe =
+                    (Ie =
                       null ===
-                        (Ie =
+                        (Pe =
                           null ===
                             (Le =
                               null === (Me = e.extensions) || void 0 === Me
                                 ? void 0
                                 : Me.SPE_light_parameters) || void 0 === Le
                             ? void 0
-                            : Le.shadows) || void 0 === Ie
+                            : Le.shadows) || void 0 === Pe
                         ? void 0
-                        : Ie.shadowmapSize) && void 0 !== Pe
-                    ? Pe
+                        : Pe.shadowmapSize) && void 0 !== Ie
+                    ? Ie
                     : DEFAULT_SHADOWMAP_SIZE
                 )),
                 (Ke.shadow.bias =
@@ -18361,7 +18490,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                     : 2 * THREE.MathUtils.RAD2DEG * rt),
                 (Ke.shadow.camera.near =
                   null !==
-                    (Qe =
+                    ($e =
                       null ===
                         (Ye =
                           null ===
@@ -18372,8 +18501,8 @@ export const speRuntimeFactory = function (exports, THREE) {
                             ? void 0
                             : je.shadows) || void 0 === Ye
                         ? void 0
-                        : Ye.shadowmapViewNear) && void 0 !== Qe
-                    ? Qe
+                        : Ye.shadowmapViewNear) && void 0 !== $e
+                    ? $e
                     : 1),
                 (Ke.shadow.camera.far =
                   null !==
@@ -18382,9 +18511,9 @@ export const speRuntimeFactory = function (exports, THREE) {
                         (Xe =
                           null ===
                             (We =
-                              null === ($e = e.extensions) || void 0 === $e
+                              null === (Qe = e.extensions) || void 0 === Qe
                                 ? void 0
-                                : $e.SPE_light_parameters) || void 0 === We
+                                : Qe.SPE_light_parameters) || void 0 === We
                             ? void 0
                             : We.shadows) || void 0 === Xe
                         ? void 0
@@ -18612,7 +18741,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                     ? l
                     : [0.5, 0.5, 0.5]
                 ),
-                I = null !== (c = T.shininess) && void 0 !== c ? c : 32
+                P = null !== (c = T.shininess) && void 0 !== c ? c : 32
               ;(M = new THREE.Color().fromArray(
                 null !== (u = T.emission) && void 0 !== u ? u : [0, 0, 0]
               )),
@@ -18624,7 +18753,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                 name: E,
                 color: b,
                 specular: L,
-                shininess: I,
+                shininess: P,
                 emissive: M,
                 visible: R,
                 wireframe: C,
@@ -18661,7 +18790,7 @@ export const speRuntimeFactory = function (exports, THREE) {
               b = new THREE.Color().fromArray(
                 null !== (f = T.diffuse) && void 0 !== f ? f : [0.5, 0.5, 0.5]
               )
-              var P = null !== (p = T.roughness) && void 0 !== p ? p : 0.3,
+              var I = null !== (p = T.roughness) && void 0 !== p ? p : 0.3,
                 B = null !== (v = T.metalness) && void 0 !== v ? v : 0,
                 H = null !== (m = T.reflectivity) && void 0 !== m ? m : 0.5
               ;(M = new THREE.Color().fromArray(
@@ -18674,7 +18803,7 @@ export const speRuntimeFactory = function (exports, THREE) {
               S = new PhysicalMaterial({
                 name: E,
                 color: b,
-                roughness: P,
+                roughness: I,
                 metalness: B,
                 reflectivity: H,
                 emissive: M,
@@ -18693,7 +18822,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                 name: E,
                 color: b,
                 specular: L,
-                shininess: (I = 32),
+                shininess: (P = 32),
                 transparent: y,
                 opacity: A
               })
@@ -18736,8 +18865,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             D,
             M,
             L,
-            I,
             P,
+            I,
             B,
             H,
             N,
@@ -18749,8 +18878,8 @@ export const speRuntimeFactory = function (exports, THREE) {
             k,
             j,
             Y,
-            Q,
             $,
+            Q,
             W,
             X,
             J,
@@ -18929,18 +19058,18 @@ export const speRuntimeFactory = function (exports, THREE) {
                     : 2,
                 move:
                   null !==
-                    (I =
+                    (P =
                       null === (L = we.move) || void 0 === L
                         ? void 0
-                        : L.value) && void 0 !== I
-                    ? I
+                        : L.value) && void 0 !== P
+                    ? P
                     : 1,
                 distortion: new THREE.Vector2().fromArray(
                   null !==
                     (B =
-                      null === (P = we.distortion) || void 0 === P
+                      null === (I = we.distortion) || void 0 === I
                         ? void 0
-                        : P.value) && void 0 !== B
+                        : I.value) && void 0 !== B
                     ? B
                     : [1, 1]
                 ),
@@ -18988,11 +19117,11 @@ export const speRuntimeFactory = function (exports, THREE) {
                     : 10,
                 intD:
                   null !==
-                    ($ =
-                      null === (Q = we.intD) || void 0 === Q
+                    (Q =
+                      null === ($ = we.intD) || void 0 === $
                         ? void 0
-                        : Q.value) && void 0 !== $
-                    ? $
+                        : $.value) && void 0 !== Q
+                    ? Q
                     : 10,
                 bias:
                   null !==
@@ -19175,14 +19304,18 @@ export const speRuntimeFactory = function (exports, THREE) {
             D,
             M,
             L,
-            I,
             P,
+            I,
             B,
             H,
             N,
             F,
             G,
-            U
+            U,
+            z,
+            V,
+            k,
+            j
           if (
             !(null === (t = e.extensions) || void 0 === t
               ? void 0
@@ -19194,60 +19327,60 @@ export const speRuntimeFactory = function (exports, THREE) {
               ),
               new THREE.Object3D()
             )
-          var z = e.extensions.SPE_node_3d,
-            V = z.type
-          switch (V) {
+          var Y = e.extensions.SPE_node_3d,
+            $ = Y.type
+          switch ($) {
             case OBJECT_TYPE.SCENE:
-              var k =
+              var Q =
                   null !== (i = e.name) && void 0 !== i ? i : 'Default Scene',
-                j =
-                  null !== (r = z.uuid) && void 0 !== r
+                W =
+                  null !== (r = Y.uuid) && void 0 !== r
                     ? r
                     : THREE.MathUtils.generateUUID(),
-                Y = new Scene()
-              return (Y.name = k), (Y.uuid = j), Y
+                X = new Scene()
+              return (X.name = Q), (X.uuid = W), X
             case OBJECT_TYPE.CAMERA:
-              var Q = null !== (n = e.camera) && void 0 !== n ? n : -1
-              if (Q < 0 || Q >= this._cameras.length)
+              var J = null !== (n = e.camera) && void 0 !== n ? n : -1
+              if (J < 0 || J >= this._cameras.length)
                 return (
                   console.error(
                     'GLTFImporter::_decodeNode >>> camera index out of range'
                   ),
                   new EmptyObject()
                 )
-              var $ = this._cameras[Q],
-                W = new THREE.Vector3().fromArray(
+              var K = this._cameras[J],
+                q = new THREE.Vector3().fromArray(
                   null !== (o = e.translation) && void 0 !== o ? o : [0, 0, 0]
                 ),
-                X = new THREE.Quaternion().fromArray(
+                Z = new THREE.Quaternion().fromArray(
                   null !== (a = e.rotation) && void 0 !== a ? a : [0, 0, 0, 1]
                 ),
-                J = new THREE.Matrix4().fromArray(
-                  null !== (s = z.hiddenMatrix) && void 0 !== s
+                ee = new THREE.Matrix4().fromArray(
+                  null !== (s = Y.hiddenMatrix) && void 0 !== s
                     ? s
                     : IDENTITY_MATRIX
                 ),
-                K = null === (l = z.visible) || void 0 === l || l,
-                q =
-                  null !== (c = z.uuid) && void 0 !== c
+                te = null === (l = Y.visible) || void 0 === l || l,
+                ie =
+                  null !== (c = Y.uuid) && void 0 !== c
                     ? c
                     : THREE.MathUtils.generateUUID(),
-                Z =
+                re =
                   null !== (u = e.name) && void 0 !== u
                     ? u
                     : 'Camera_' + THREE.MathUtils.generateUUID()
               return (
-                $.position.copy(W),
-                $.quaternion.copy(X),
-                $.hiddenMatrix.copy(J),
-                ($.visible = K),
-                ($.uuid = q),
-                ($.name = Z),
-                $.updateMatrix(),
-                $
+                K.position.copy(q),
+                K.quaternion.copy(Z),
+                K.hiddenMatrix.copy(ee),
+                (K.visible = te),
+                (K.uuid = ie),
+                (K.name = re),
+                K.updateMatrix(),
+                K
               )
             case OBJECT_TYPE.LIGHT:
-              var ee =
+              var ne =
                 null !==
                   (d =
                     null === (h = e.extensions.KHR_lights_punctual) ||
@@ -19256,184 +19389,219 @@ export const speRuntimeFactory = function (exports, THREE) {
                       : h.light) && void 0 !== d
                   ? d
                   : -1
-              if (ee < 0 || ee >= this._lights.length)
+              if (ne < 0 || ne >= this._lights.length)
                 return (
                   console.error(
                     'GLTFImporter::_decodeNode >>> light index out of range'
                   ),
                   new EmptyObject()
                 )
-              var te = this._lights[ee],
-                ie = new THREE.Vector3().fromArray(
+              var oe = this._lights[ne],
+                ae = new THREE.Vector3().fromArray(
                   null !== (f = e.translation) && void 0 !== f ? f : [0, 0, 0]
                 ),
-                re = new THREE.Quaternion().fromArray(
+                se = new THREE.Quaternion().fromArray(
                   null !== (p = e.rotation) && void 0 !== p ? p : [0, 0, 0, 1]
                 ),
-                ne = new THREE.Matrix4().fromArray(
-                  null !== (v = z.hiddenMatrix) && void 0 !== v
+                le = new THREE.Matrix4().fromArray(
+                  null !== (v = Y.hiddenMatrix) && void 0 !== v
                     ? v
                     : IDENTITY_MATRIX
                 ),
-                oe = null === (m = z.visible) || void 0 === m || m,
-                ae =
-                  null !== (g = z.uuid) && void 0 !== g
+                ce = null === (m = Y.visible) || void 0 === m || m,
+                ue =
+                  null !== (g = Y.uuid) && void 0 !== g
                     ? g
                     : THREE.MathUtils.generateUUID(),
-                se =
+                he =
                   null !== (E = e.name) && void 0 !== E
                     ? E
                     : 'Light_' + THREE.MathUtils.generateUUID()
               if (
-                ('HemisphereLight' !== te.type && te.position.copy(ie),
-                (te.visible = oe),
-                (te.uuid = ae),
-                (te.name = se),
-                'HemisphereLight' !== te.type && te.hiddenMatrix.copy(ne),
-                'SpotLight' === te.type || 'DirectionalLight' === te.type)
+                ('HemisphereLight' !== oe.type && oe.position.copy(ae),
+                (oe.visible = ce),
+                (oe.uuid = ue),
+                (oe.name = he),
+                'HemisphereLight' !== oe.type && oe.hiddenMatrix.copy(le),
+                'SpotLight' === oe.type || 'DirectionalLight' === oe.type)
               ) {
-                var le = new THREE.Matrix4().makeRotationFromQuaternion(re),
-                  ce = new THREE.Vector3(
-                    le.elements[8],
-                    le.elements[9],
-                    le.elements[10]
+                var de = new THREE.Matrix4().makeRotationFromQuaternion(se),
+                  fe = new THREE.Vector3(
+                    de.elements[8],
+                    de.elements[9],
+                    de.elements[10]
                   )
-                te.target.position.copy(te.position.clone().add(ce))
+                oe.target.position.copy(oe.position.clone().add(fe))
               }
-              return 'HemisphereLight' !== te.type && te.updateMatrix(), te
+              return 'HemisphereLight' !== oe.type && oe.updateMatrix(), oe
             case OBJECT_TYPE.MESH_3D:
             case OBJECT_TYPE.MESH_2D:
             case OBJECT_TYPE.TEXTFRAME:
             case OBJECT_TYPE.VECTOR_OBJECT:
-              var ue = null !== (y = e.mesh) && void 0 !== y ? y : -1
-              ;(ue < 0 || ue >= this._meshes.length) &&
+              var pe = null !== (y = e.mesh) && void 0 !== y ? y : -1
+              ;(pe < 0 || pe >= this._meshes.length) &&
                 console.error(
                   'GLTFImporter::_decodeNode >>> geometry index out of range'
                 )
-              var he =
-                  null !== (A = this._meshes[ue]) && void 0 !== A
+              var ve =
+                  null !== (A = this._meshes[pe]) && void 0 !== A
                     ? A
                     : new THREE.SphereBufferGeometry(100),
-                de = (null !== (T = this._gltfFile.meshes) && void 0 !== T
-                  ? T
-                  : [])[ue],
-                fe = -1
-              if (de.primitives.length > 0)
-                fe =
-                  null !== (x = de.primitives[0].material) && void 0 !== x
-                    ? x
-                    : -1
-              else {
-                var pe =
-                  null === (_ = de.extensions) || void 0 === _
-                    ? void 0
-                    : _.SPE_material
-                fe = pe && null !== (w = pe[0]) && void 0 !== w ? w : -1
-              }
-              ;(fe < 0 || fe >= this._materials.length) &&
-                console.error(
-                  'GLTFImporter::_decodeNode >>> material index out of range'
+                me = (
+                  null !== (T = this._gltfFile.meshes) && void 0 !== T ? T : []
+                )[pe],
+                ge = me.primitives.length > 0,
+                Ee =
+                  null !==
+                    (w =
+                      null ===
+                        (_ =
+                          null === (x = me.extensions) || void 0 === x
+                            ? void 0
+                            : x.SPE_material) || void 0 === _
+                        ? void 0
+                        : _.indices) && void 0 !== w
+                    ? w
+                    : [-1],
+                ye =
+                  null !==
+                    (R =
+                      null ===
+                        (b =
+                          null === (S = me.extensions) || void 0 === S
+                            ? void 0
+                            : S.SPE_material) || void 0 === b
+                        ? void 0
+                        : b.groups) && void 0 !== R
+                    ? R
+                    : [],
+                Ae = Ee.length > 1,
+                Te = new PhongMaterial$1({ color: 10592673 })
+              if (Ae) {
+                Te.dispose(), (Te = [])
+                for (var xe = 0; xe < Ee.length; xe++) {
+                  if ((_e = Ee[xe]) < 0 || _e >= this._materials.length)
+                    throw new Error(
+                      'GLTFImporter::_decodeNode >>> material index out of range'
+                    )
+                  Te.push(this._materials[_e])
+                }
+                ve.clearGroups()
+                for (xe = 0; xe < ye.length; xe++)
+                  ve.addGroup(ye[xe].start, ye[xe].count, ye[xe].materialIndex)
+              } else {
+                var _e = -1
+                if (
+                  (_e = ge
+                    ? null !== (C = me.primitives[0].material) && void 0 !== C
+                      ? C
+                      : -1
+                    : null !== (O = Ee[0]) && void 0 !== O
+                    ? O
+                    : -1) < 0 ||
+                  _e >= this._materials.length
                 )
-              var ve =
-                  null !== (S = this._materials[fe]) && void 0 !== S
-                    ? S
-                    : new PhongMaterial$1({ color: 10592673 }),
-                me = null
-              switch (V) {
+                  throw new Error(
+                    'GLTFImporter::_decodeNode >>> material index out of range'
+                  )
+                Te.dispose(), (Te = this._materials[_e])
+              }
+              var we = null
+              switch ($) {
                 case OBJECT_TYPE.MESH_3D:
-                  me = new Mesh3D(he, ve)
+                  we = new Mesh3D(ve, Te)
                   break
                 case OBJECT_TYPE.MESH_2D:
-                  me = new Mesh2D(he, ve)
+                  we = new Mesh2D(ve, Te)
                   break
                 case OBJECT_TYPE.TEXTFRAME:
-                  me = new TextFrame(he, ve)
-                  var ge = e.extensions.SPE_node_3d.textData.object
-                  me.fromJSONasync(ge)
+                  we = new TextFrame(ve, Te)
+                  var Se = e.extensions.SPE_node_3d.textData.object
+                  we.fromJSONasync(Se)
                     .then(function () {})
                     .catch(function (e) {
                       console.error(e)
                     })
                   break
                 case OBJECT_TYPE.VECTOR_OBJECT:
-                  me = new VectorObject(he, ve)
+                  we = new VectorObject(ve, Te)
               }
-              var Ee = new THREE.Vector3().fromArray(
-                  null !== (b = e.translation) && void 0 !== b ? b : [0, 0, 0]
+              var be = new THREE.Vector3().fromArray(
+                  null !== (D = e.translation) && void 0 !== D ? D : [0, 0, 0]
                 ),
-                ye = new THREE.Quaternion().fromArray(
-                  null !== (R = e.rotation) && void 0 !== R ? R : [0, 0, 0, 1]
+                Re = new THREE.Quaternion().fromArray(
+                  null !== (M = e.rotation) && void 0 !== M ? M : [0, 0, 0, 1]
                 ),
-                Ae = new THREE.Vector3().fromArray(
-                  null !== (C = e.scale) && void 0 !== C ? C : [1, 1, 1]
+                Ce = new THREE.Vector3().fromArray(
+                  null !== (L = e.scale) && void 0 !== L ? L : [1, 1, 1]
                 ),
-                Te = new THREE.Matrix4().fromArray(
-                  null !== (O = z.hiddenMatrix) && void 0 !== O
-                    ? O
+                Oe = new THREE.Matrix4().fromArray(
+                  null !== (P = Y.hiddenMatrix) && void 0 !== P
+                    ? P
                     : IDENTITY_MATRIX
                 ),
-                xe = null === (D = z.visible) || void 0 === D || D,
-                _e =
-                  null !== (M = z.uuid) && void 0 !== M
-                    ? M
+                De = null === (I = Y.visible) || void 0 === I || I,
+                Me =
+                  null !== (B = Y.uuid) && void 0 !== B
+                    ? B
                     : THREE.MathUtils.generateUUID(),
-                we = null === (L = z.castShadow) || void 0 === L || L,
-                Se = null === (I = z.receiveShadow) || void 0 === I || I
+                Le = null === (H = Y.castShadow) || void 0 === H || H,
+                Pe = null === (N = Y.receiveShadow) || void 0 === N || N
               return (
-                me.position.copy(Ee),
-                me.quaternion.copy(ye),
-                me.scale.copy(Ae),
-                me.hiddenMatrix.copy(Te),
-                (me.visible = xe),
-                (me.uuid = _e),
-                (me.castShadow = we),
-                (me.receiveShadow = Se),
-                me.updateMatrix(),
-                null !== (P = e.extensions.SPE_node_3d.isCloner) &&
-                  void 0 !== P &&
-                  P &&
-                  ((me.cloner = new Cloner(me).fromJSON(
+                we.position.copy(be),
+                we.quaternion.copy(Re),
+                we.scale.copy(Ce),
+                we.hiddenMatrix.copy(Oe),
+                (we.visible = De),
+                (we.uuid = Me),
+                (we.castShadow = Le),
+                (we.receiveShadow = Pe),
+                we.updateMatrix(),
+                null !== (F = e.extensions.SPE_node_3d.isCloner) &&
+                  void 0 !== F &&
+                  F &&
+                  ((we.cloner = new Cloner(we).fromJSON(
                     e.extensions.SPE_node_3d.cloner
                   )),
-                  me.add(me.cloner)),
-                me
+                  we.add(we.cloner)),
+                we
               )
             case OBJECT_TYPE.EMPTY_OBJECT:
-              var be = new EmptyObject(),
-                Re = new THREE.Vector3().fromArray(
-                  null !== (B = e.translation) && void 0 !== B ? B : [0, 0, 0]
+              var Ie = new EmptyObject(),
+                Be = new THREE.Vector3().fromArray(
+                  null !== (G = e.translation) && void 0 !== G ? G : [0, 0, 0]
                 ),
-                Ce = new THREE.Quaternion().fromArray(
-                  null !== (H = e.rotation) && void 0 !== H ? H : [0, 0, 0, 1]
+                He = new THREE.Quaternion().fromArray(
+                  null !== (U = e.rotation) && void 0 !== U ? U : [0, 0, 0, 1]
                 ),
-                Oe = new THREE.Vector3().fromArray(
-                  null !== (N = e.scale) && void 0 !== N ? N : [1, 1, 1]
+                Ne = new THREE.Vector3().fromArray(
+                  null !== (z = e.scale) && void 0 !== z ? z : [1, 1, 1]
                 ),
-                De = new THREE.Matrix4().fromArray(
-                  null !== (F = z.hiddenMatrix) && void 0 !== F
-                    ? F
+                Fe = new THREE.Matrix4().fromArray(
+                  null !== (V = Y.hiddenMatrix) && void 0 !== V
+                    ? V
                     : IDENTITY_MATRIX
                 ),
-                Me = null === (G = z.visible) || void 0 === G || G,
-                Le =
-                  null !== (U = z.uuid) && void 0 !== U
-                    ? U
+                Ge = null === (k = Y.visible) || void 0 === k || k,
+                Ue =
+                  null !== (j = Y.uuid) && void 0 !== j
+                    ? j
                     : THREE.MathUtils.generateUUID()
               return (
-                be.position.copy(Re),
-                be.quaternion.copy(Ce),
-                be.scale.copy(Oe),
-                be.hiddenMatrix.copy(De),
-                (be.visible = Me),
-                (be.uuid = Le),
-                be.updateMatrix(),
-                be
+                Ie.position.copy(Be),
+                Ie.quaternion.copy(He),
+                Ie.scale.copy(Ne),
+                Ie.hiddenMatrix.copy(Fe),
+                (Ie.visible = Ge),
+                (Ie.uuid = Ue),
+                Ie.updateMatrix(),
+                Ie
               )
           }
           return (
             console.error(
               'GLTFImporter::_decodeNode >>> unsupported object type (' +
-                V +
+                $ +
                 ')'
             ),
             new THREE.Object3D()
@@ -19598,12 +19766,12 @@ export const speRuntimeFactory = function (exports, THREE) {
         (this.dispose = function () {
           s.domElement.removeEventListener('contextmenu', q, !1),
             s.domElement.removeEventListener('mousedown', j, !1),
-            s.domElement.removeEventListener('wheel', $, !1),
+            s.domElement.removeEventListener('wheel', Q, !1),
             s.domElement.removeEventListener('touchstart', X, !1),
             s.domElement.removeEventListener('touchend', K, !1),
             s.domElement.removeEventListener('touchmove', J, !1),
             document.removeEventListener('mousemove', Y, !1),
-            document.removeEventListener('mouseup', Q, !1),
+            document.removeEventListener('mouseup', $, !1),
             s.domElement.removeEventListener('keydown', W, !1)
         })
       var s = this,
@@ -19661,7 +19829,7 @@ export const speRuntimeFactory = function (exports, THREE) {
               g.add(e)
           }
         })(),
-        I = (function () {
+        P = (function () {
           var e = new THREE.Vector3()
           return function (t, i) {
             var r = s.domElement
@@ -19692,7 +19860,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                   (s.enablePan = !1))
           }
         })()
-      function P(e) {
+      function I(e) {
         'PerspectiveCamera' === s.object.cameraType
           ? (m /= e)
           : 'OrthographicCamera' === s.object.cameraType
@@ -19770,7 +19938,7 @@ export const speRuntimeFactory = function (exports, THREE) {
             i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
           _.set(t, i)
         }
-        w.subVectors(_, x).multiplyScalar(s.panSpeed), I(w.x, w.y), x.copy(_)
+        w.subVectors(_, x).multiplyScalar(s.panSpeed), P(w.x, w.y), x.copy(_)
       }
       function k(e) {
         var t = e.touches[0].pageX - e.touches[1].pageX,
@@ -19778,7 +19946,7 @@ export const speRuntimeFactory = function (exports, THREE) {
           r = Math.sqrt(t * t + i * i)
         b.set(0, r),
           R.set(0, Math.pow(b.y / S.y, s.zoomSpeed)),
-          P(R.y),
+          I(R.y),
           S.copy(b)
       }
       function j(e) {
@@ -19832,7 +20000,7 @@ export const speRuntimeFactory = function (exports, THREE) {
           }
           d !== h.NONE &&
             (document.addEventListener('mousemove', Y, !1),
-            document.addEventListener('mouseup', Q, !1),
+            document.addEventListener('mouseup', $, !1),
             s.dispatchEvent(c))
         }
       }
@@ -19856,7 +20024,7 @@ export const speRuntimeFactory = function (exports, THREE) {
               !(function (e) {
                 b.set(e.clientX, e.clientY),
                   R.subVectors(b, S),
-                  R.y > 0 ? P(C()) : R.y < 0 && B(C()),
+                  R.y > 0 ? I(C()) : R.y < 0 && B(C()),
                   S.copy(b),
                   s.update()
               })(e)
@@ -19866,20 +20034,20 @@ export const speRuntimeFactory = function (exports, THREE) {
               !(function (e) {
                 _.set(e.clientX, e.clientY),
                   w.subVectors(_, x).multiplyScalar(s.panSpeed),
-                  I(w.x, w.y),
+                  P(w.x, w.y),
                   x.copy(_),
                   s.update()
               })(e)
           }
       }
-      function Q(e) {
+      function $(e) {
         !1 !== s.enabled &&
           (document.removeEventListener('mousemove', Y, !1),
-          document.removeEventListener('mouseup', Q, !1),
+          document.removeEventListener('mouseup', $, !1),
           s.dispatchEvent(u),
           (d = h.NONE))
       }
-      function $(e) {
+      function Q(e) {
         !1 === s.enabled ||
           !1 === s.enableZoom ||
           (d !== h.NONE && d !== h.ROTATE) ||
@@ -19887,7 +20055,7 @@ export const speRuntimeFactory = function (exports, THREE) {
           e.stopPropagation(),
           s.dispatchEvent(c),
           (function (e) {
-            e.deltaY < 0 ? B(C()) : e.deltaY > 0 && P(C()), s.update()
+            e.deltaY < 0 ? B(C()) : e.deltaY > 0 && I(C()), s.update()
           })(e),
           s.dispatchEvent(u))
       }
@@ -19899,16 +20067,16 @@ export const speRuntimeFactory = function (exports, THREE) {
             var t = !1
             switch (e.keyCode) {
               case s.keys.UP:
-                I(0, s.keyPanSpeed), (t = !0)
+                P(0, s.keyPanSpeed), (t = !0)
                 break
               case s.keys.BOTTOM:
-                I(0, -s.keyPanSpeed), (t = !0)
+                P(0, -s.keyPanSpeed), (t = !0)
                 break
               case s.keys.LEFT:
-                I(s.keyPanSpeed, 0), (t = !0)
+                P(s.keyPanSpeed, 0), (t = !0)
                 break
               case s.keys.RIGHT:
-                I(-s.keyPanSpeed, 0), (t = !0)
+                P(-s.keyPanSpeed, 0), (t = !0)
             }
             t && (e.preventDefault(), s.update())
           })(e)
@@ -19993,7 +20161,7 @@ export const speRuntimeFactory = function (exports, THREE) {
       }
       s.domElement.addEventListener('contextmenu', q, !1),
         s.domElement.addEventListener('mousedown', j, !1),
-        s.domElement.addEventListener('wheel', $, !1),
+        s.domElement.addEventListener('wheel', Q, !1),
         s.domElement.addEventListener('touchstart', X, !1),
         s.domElement.addEventListener('touchend', K, !1),
         s.domElement.addEventListener('touchmove', J, !1),
@@ -20028,7 +20196,7 @@ export const speRuntimeFactory = function (exports, THREE) {
           window.addEventListener('resize', this.resize.bind(this))
       }
       return (
-        (e.prototype.start = function (e,__REACT_SPLINE_EDIT___CANVAS__) {
+             (e.prototype.start = function (e,__REACT_SPLINE_EDIT___CANVAS__) {
           var t = this
           const fetchPromise = new Promise((resolve) =>
             resolve(
@@ -20096,7 +20264,7 @@ export const speRuntimeFactory = function (exports, THREE) {
             this._renderer &&
               this._renderer.setSize(this._viewportWidth, this._viewportHeight))
         }),
-        (e.prototype.init = function (__REACT_SPLINE_EDIT___CANVAS__) {
+        (e.prototype.init = function(__REACT_SPLINE_EDIT___CANVAS__) {
           __REACT_SPLINE_EDIT___CANVAS__=__REACT_SPLINE_EDIT___CANVAS__||document.getElementById("canvas3d")
           var e,
             t,
@@ -20170,7 +20338,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                     : o.viewHeight) && void 0 !== a
                 ? a
                 : window.innerHeight,
-            I =
+            P =
               null !==
                 (l =
                   null === (s = this._exportOptions) || void 0 === s
@@ -20178,7 +20346,7 @@ export const speRuntimeFactory = function (exports, THREE) {
                     : s.bgColor) && void 0 !== l
                 ? l
                 : new THREE.Color(1644825),
-            P =
+            I =
               null !==
                 (u =
                   null === (c = this._exportOptions) || void 0 === c
@@ -20193,7 +20361,7 @@ export const speRuntimeFactory = function (exports, THREE) {
             this._renderer.setSize(this._viewportWidth, this._viewportHeight),
             (this._renderer.shadowMap.enabled = !0),
             (this._renderer.shadowMap.type = THREE.PCFSoftShadowMap),
-            this._renderer.setClearColor(I, P),
+            this._renderer.setClearColor(P, I),
             (this._viewportMode =
               null !==
                 (d =
