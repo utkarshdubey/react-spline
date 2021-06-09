@@ -1,4 +1,4 @@
-import * as THREE from "three"
+import * as THREE from "three/build/three"
 export const speRuntimeFactory = function (exports) {
   'use strict'
   /*! *****************************************************************************
