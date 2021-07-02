@@ -1,4 +1,6 @@
-import * as THREE from "three/build/three.min.js";
+import * as _THREE from "three/build/three.min.js";
+
+window. THREE =_THREE;
 
 export function speRuntimeFactory (exports) {
   'use strict'
@@ -17385,6 +17387,7 @@ export function speRuntimeFactory (exports) {
       }
       return (
         (e.prototype.decode = function (e) {
+          e&&(e.extensions=e.extensions||{});
           var t, i
           if (
             ((this._scene = null),
