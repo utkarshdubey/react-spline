@@ -1,6 +1,6 @@
 import React from 'react'
-import { SPLINE_EXPORTED_SCENE_TWO } from './scene2'
-import { SPLINE_EXPORTED_SCENE } from './scene'
+// import { SPLINE_EXPORTED_SCENE_TWO } from './scene2'
+import SPLINE_EXPORTED_SCENE from './scene.json'
 import { Spline } from 'react-spline'
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         </h1>
         <Spline scene={SPLINE_EXPORTED_SCENE} />
       </div>
-      <div
+      {/* <div
         style={{
           backgroundSize: 'cover',
           display: 'flex',
@@ -33,7 +33,7 @@ const App = () => {
           If you see this, multiple canvas elements work too :)
         </h1>
         <Spline scene={SPLINE_EXPORTED_SCENE_TWO} />
-      </div>
+      </div> */}
     </div>
   )
 }

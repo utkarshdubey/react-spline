@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { speRuntimeFactory } from './spline-runtime.js'
+import {speRuntimeFactory}  from  './splineRuntime';
 
 interface Props {
   scene: object
