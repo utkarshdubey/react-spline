@@ -1,6 +1,6 @@
-import * as _THREE from "three/build/three.min.js";
+import * as _THREE from 'three/build/three.min.js'
 
-window. THREE =_THREE;
+window.THREE = _THREE
 
 export function speRuntimeFactory (exports) {
   'use strict'
@@ -17,19 +17,20 @@ export function speRuntimeFactory (exports) {
     LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
-    ***************************************************************************** */
-  var extendStatics = function (e, t) {
-    return (extendStatics =
-      Object.setPrototypeOf ||
-      ({ __proto__: [] } instanceof Array &&
+    ***************************************************************************** */ 
+   var extendStatics =
+    function (e, t) {
+      return (extendStatics =
+        Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &&
+          function (e, t) {
+            e.__proto__ = t
+          }) ||
         function (e, t) {
-          e.__proto__ = t
-        }) ||
-      function (e, t) {
-        for (var i in t)
-          Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-      })(e, t)
-  }
+          for (var i in t)
+            Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+        })(e, t)
+    }
   function __extends(e, t) {
     if ('function' != typeof t && null !== t)
       throw new TypeError(
@@ -43,48 +44,29 @@ export function speRuntimeFactory (exports) {
         null === t ? Object.create(t) : ((i.prototype = t.prototype), new i()))
   }
   var __assign = function () {
-      return (__assign =
-        Object.assign ||
-        function (e) {
-          for (var t, i = 1, r = arguments.length; i < r; i++)
-            for (var n in (t = arguments[i]))
-              Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n])
-          return e
-        }).apply(this, arguments)
-    },
-    GLTF_GENERATOR_FORMAT,
-    GLTF_COMPONENT_TYPE,
-    GLTF_RENDER_MODE,
-    GLTF_TEXTURE_MAG_FILTER,
-    GLTF_TEXTURE_MIN_FILTER,
-    GLTF_TEXTURE_WRAP_MODE,
-    GLTF_BUFFER_TARGET,
-    GLTF_ACCESSOR_TYPE,
-    GLTF_LIGHTING_TECHNIQUE,
-    GLTF_MATERIAL_ALPHA_MODE,
-    GLTF_MATERIAL_SIDE,
-    GLTF_MATERIAL_SHADING_MODE,
-    RUNTIME_VIEWMODE,
-    RUNTIME_QUALITY,
-    OBJECT_TYPE,
-    CAMERA_TYPE,
-    LIGHT_TYPE,
-    LAYER_TYPE,
-    UNIFORM_TYPE
+    return (__assign =
+      Object.assign ||
+      function (e) {
+        for (var t, i = 1, r = arguments.length; i < r; i++)
+          for (var n in (t = arguments[i]))
+            Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n])
+        return e
+      }).apply(this, arguments)
+  }
   function __awaiter(e, t, i, r) {
-    return new (i || (i = Promise))(function (n, o) {
-      function a(e) {
+    return new (i || (i = Promise))(function (n, a) {
+      function o(e) {
         try {
           l(r.next(e))
         } catch (e) {
-          o(e)
+          a(e)
         }
       }
       function s(e) {
         try {
           l(r.throw(e))
         } catch (e) {
-          o(e)
+          a(e)
         }
       }
       function l(e) {
@@ -96,7 +78,7 @@ export function speRuntimeFactory (exports) {
               ? t
               : new i(function (e) {
                   e(t)
-                })).then(a, s)
+                })).then(o, s)
       }
       l((r = r.apply(e, t || [])).next())
     })
@@ -105,8 +87,8 @@ export function speRuntimeFactory (exports) {
     var i,
       r,
       n,
-      o,
-      a = {
+      a,
+      o = {
         label: 0,
         sent: function () {
           if (1 & n[0]) throw n[1]
@@ -116,77 +98,77 @@ export function speRuntimeFactory (exports) {
         ops: []
       }
     return (
-      (o = { next: s(0), throw: s(1), return: s(2) }),
+      (a = { next: s(0), throw: s(1), return: s(2) }),
       'function' == typeof Symbol &&
-        (o[Symbol.iterator] = function () {
+        (a[Symbol.iterator] = function () {
           return this
         }),
-      o
+      a
     )
-    function s(o) {
+    function s(a) {
       return function (s) {
-        return (function (o) {
+        return (function (a) {
           if (i) throw new TypeError('Generator is already executing.')
-          for (; a; )
+          for (; o; )
             try {
               if (
                 ((i = 1),
                 r &&
                   (n =
-                    2 & o[0]
+                    2 & a[0]
                       ? r.return
-                      : o[0]
+                      : a[0]
                       ? r.throw || ((n = r.return) && n.call(r), 0)
                       : r.next) &&
-                  !(n = n.call(r, o[1])).done)
+                  !(n = n.call(r, a[1])).done)
               )
                 return n
-              switch (((r = 0), n && (o = [2 & o[0], n.value]), o[0])) {
+              switch (((r = 0), n && (a = [2 & a[0], n.value]), a[0])) {
                 case 0:
                 case 1:
-                  n = o
+                  n = a
                   break
                 case 4:
-                  return a.label++, { value: o[1], done: !1 }
+                  return o.label++, { value: a[1], done: !1 }
                 case 5:
-                  a.label++, (r = o[1]), (o = [0])
+                  o.label++, (r = a[1]), (a = [0])
                   continue
                 case 7:
-                  ;(o = a.ops.pop()), a.trys.pop()
+                  ;(a = o.ops.pop()), o.trys.pop()
                   continue
                 default:
                   if (
-                    !((n = a.trys),
+                    !((n = o.trys),
                     (n = n.length > 0 && n[n.length - 1]) ||
-                      (6 !== o[0] && 2 !== o[0]))
+                      (6 !== a[0] && 2 !== a[0]))
                   ) {
-                    a = 0
+                    o = 0
                     continue
                   }
-                  if (3 === o[0] && (!n || (o[1] > n[0] && o[1] < n[3]))) {
-                    a.label = o[1]
+                  if (3 === a[0] && (!n || (a[1] > n[0] && a[1] < n[3]))) {
+                    o.label = a[1]
                     break
                   }
-                  if (6 === o[0] && a.label < n[1]) {
-                    ;(a.label = n[1]), (n = o)
+                  if (6 === a[0] && o.label < n[1]) {
+                    ;(o.label = n[1]), (n = a)
                     break
                   }
-                  if (n && a.label < n[2]) {
-                    ;(a.label = n[2]), a.ops.push(o)
+                  if (n && o.label < n[2]) {
+                    ;(o.label = n[2]), o.ops.push(a)
                     break
                   }
-                  n[2] && a.ops.pop(), a.trys.pop()
+                  n[2] && o.ops.pop(), o.trys.pop()
                   continue
               }
-              o = t.call(e, a)
+              a = t.call(e, o)
             } catch (e) {
-              ;(o = [6, e]), (r = 0)
+              ;(a = [6, e]), (r = 0)
             } finally {
               i = n = 0
             }
-          if (5 & o[0]) throw o[1]
-          return { value: o[0] ? o[1] : void 0, done: !0 }
-        })([o, s])
+          if (5 & a[0]) throw a[1]
+          return { value: a[0] ? a[1] : void 0, done: !0 }
+        })([a, s])
       }
     }
   }
@@ -212,198 +194,27 @@ export function speRuntimeFactory (exports) {
     if (!i) return e
     var r,
       n,
-      o = i.call(e),
-      a = []
+      a = i.call(e),
+      o = []
     try {
-      for (; (void 0 === t || t-- > 0) && !(r = o.next()).done; )
-        a.push(r.value)
+      for (; (void 0 === t || t-- > 0) && !(r = a.next()).done; )
+        o.push(r.value)
     } catch (e) {
       n = { error: e }
     } finally {
       try {
-        r && !r.done && (i = o.return) && i.call(o)
+        r && !r.done && (i = a.return) && i.call(a)
       } finally {
         if (n) throw n.error
       }
     }
-    return a
+    return o
   }
   function __spread() {
     for (var e = [], t = 0; t < arguments.length; t++)
       e = e.concat(__read(arguments[t]))
     return e
   }
-  function GetAccessorComponentSize(e) {
-    switch (e) {
-      case GLTF_COMPONENT_TYPE.UNSIGNED_BYTE:
-        return 1
-      case GLTF_COMPONENT_TYPE.UNSIGNED_SHORT:
-        return 2
-      case GLTF_COMPONENT_TYPE.UNSIGNED_INT:
-      case GLTF_COMPONENT_TYPE.FLOAT:
-        return 4
-      default:
-        return (
-          console.error(
-            'GetAccessorComponentSize >>> invalid component-type (' + e + ')'
-          ),
-          1
-        )
-    }
-  }
-  function GetAccessorItemSize(e) {
-    switch (e) {
-      case GLTF_ACCESSOR_TYPE.SCALAR:
-        return 1
-      case GLTF_ACCESSOR_TYPE.VEC2:
-        return 2
-      case GLTF_ACCESSOR_TYPE.VEC3:
-        return 3
-      case GLTF_ACCESSOR_TYPE.VEC4:
-      case GLTF_ACCESSOR_TYPE.MAT2:
-        return 4
-      case GLTF_ACCESSOR_TYPE.MAT3:
-        return 9
-      case GLTF_ACCESSOR_TYPE.MAT4:
-        return 16
-      default:
-        return (
-          console.error(
-            'GetAccessorItemSize >>> invalid item-type (' + e + ')'
-          ),
-          1
-        )
-    }
-  }
-  function CreateFromJson(e) {
-    return e
-  }
-  !(function (e) {
-    ;(e[(e.FORMAT_GLTF_2_0_COMPAT = 0)] = 'FORMAT_GLTF_2_0_COMPAT'),
-      (e[(e.FORMAT_GLTF_SPLINE_EXT = 1)] = 'FORMAT_GLTF_SPLINE_EXT')
-  })(GLTF_GENERATOR_FORMAT || (GLTF_GENERATOR_FORMAT = {})),
-    (function (e) {
-      ;(e[(e.UNSIGNED_BYTE = 5121)] = 'UNSIGNED_BYTE'),
-        (e[(e.UNSIGNED_SHORT = 5123)] = 'UNSIGNED_SHORT'),
-        (e[(e.UNSIGNED_INT = 5125)] = 'UNSIGNED_INT'),
-        (e[(e.FLOAT = 5126)] = 'FLOAT')
-    })(GLTF_COMPONENT_TYPE || (GLTF_COMPONENT_TYPE = {})),
-    (function (e) {
-      ;(e[(e.POINTS = 0)] = 'POINTS'),
-        (e[(e.LINES = 1)] = 'LINES'),
-        (e[(e.LINE_LOOP = 2)] = 'LINE_LOOP'),
-        (e[(e.LINE_STRIP = 3)] = 'LINE_STRIP'),
-        (e[(e.TRIANGLES = 4)] = 'TRIANGLES'),
-        (e[(e.TRIANGLE_STRIP = 5)] = 'TRIANGLE_STRIP'),
-        (e[(e.TRIANGLE_FAN = 6)] = 'TRIANGLE_FAN')
-    })(GLTF_RENDER_MODE || (GLTF_RENDER_MODE = {})),
-    (function (e) {
-      ;(e[(e.NEAREST = 9728)] = 'NEAREST'), (e[(e.LINEAR = 9729)] = 'LINEAR')
-    })(GLTF_TEXTURE_MAG_FILTER || (GLTF_TEXTURE_MAG_FILTER = {})),
-    (function (e) {
-      ;(e[(e.NEAREST = 9728)] = 'NEAREST'),
-        (e[(e.LINEAR = 9729)] = 'LINEAR'),
-        (e[(e.NEAREST_MIPMAP_NEAREST = 9984)] = 'NEAREST_MIPMAP_NEAREST'),
-        (e[(e.LINEAR_MIPMAP_NEAREST = 9985)] = 'LINEAR_MIPMAP_NEAREST'),
-        (e[(e.NEAREST_MIPMAP_LINEAR = 9986)] = 'NEAREST_MIPMAP_LINEAR'),
-        (e[(e.LINEAR_MIPMAP_LINEAR = 9987)] = 'LINEAR_MIPMAP_LINEAR')
-    })(GLTF_TEXTURE_MIN_FILTER || (GLTF_TEXTURE_MIN_FILTER = {})),
-    (function (e) {
-      ;(e[(e.CLAMP_TO_EDGE = 33071)] = 'CLAMP_TO_EDGE'),
-        (e[(e.MIRRORED_REPEAT = 33648)] = 'MIRRORED_REPEAT'),
-        (e[(e.REPEAT = 10497)] = 'REPEAT')
-    })(GLTF_TEXTURE_WRAP_MODE || (GLTF_TEXTURE_WRAP_MODE = {})),
-    (function (e) {
-      ;(e[(e.ARRAY_BUFFER = 34962)] = 'ARRAY_BUFFER'),
-        (e[(e.ELEMENT_ARRAY_BUFFER = 34963)] = 'ELEMENT_ARRAY_BUFFER')
-    })(GLTF_BUFFER_TARGET || (GLTF_BUFFER_TARGET = {})),
-    (function (e) {
-      ;(e.SCALAR = 'SCALAR'),
-        (e.VEC2 = 'VEC2'),
-        (e.VEC3 = 'VEC3'),
-        (e.VEC4 = 'VEC4'),
-        (e.MAT2 = 'MAT2'),
-        (e.MAT3 = 'MAT3'),
-        (e.MAT4 = 'MAT4')
-    })(GLTF_ACCESSOR_TYPE || (GLTF_ACCESSOR_TYPE = {})),
-    (function (e) {
-      ;(e.CONSTANT = 'CONSTANT'),
-        (e.BLINN = 'BLINN'),
-        (e.LAMBERT = 'LAMBERT'),
-        (e.PHYSICAL = 'PHYSICAL'),
-        (e.TOON = 'TOON')
-    })(GLTF_LIGHTING_TECHNIQUE || (GLTF_LIGHTING_TECHNIQUE = {})),
-    (function (e) {
-      ;(e.OPAQUE = 'OPAQUE'), (e.MASK = 'MASK'), (e.BLEND = 'BLEND')
-    })(GLTF_MATERIAL_ALPHA_MODE || (GLTF_MATERIAL_ALPHA_MODE = {})),
-    (function (e) {
-      ;(e[(e.FRONT_SIDE = 0)] = 'FRONT_SIDE'),
-        (e[(e.BACK_SIDE = 1)] = 'BACK_SIDE'),
-        (e[(e.DOUBLE_SIDE = 2)] = 'DOUBLE_SIDE')
-    })(GLTF_MATERIAL_SIDE || (GLTF_MATERIAL_SIDE = {})),
-    (function (e) {
-      ;(e[(e.FLAT_SHADING = 1)] = 'FLAT_SHADING'),
-        (e[(e.SMOOTH_SHADING = 2)] = 'SMOOTH_SHADING')
-    })(GLTF_MATERIAL_SHADING_MODE || (GLTF_MATERIAL_SHADING_MODE = {})),
-    (function (e) {
-      ;(e[(e.FULLSCREEN = 1)] = 'FULLSCREEN'),
-        (e[(e.CUSTOM_SIZE = 2)] = 'CUSTOM_SIZE')
-    })(RUNTIME_VIEWMODE || (RUNTIME_VIEWMODE = {})),
-    (function (e) {
-      ;(e.HIGH = 'high'),
-        (e.MIDDLE = 'middle'),
-        (e.LOW = 'low'),
-        (e.DEFAULT = 'default')
-    })(RUNTIME_QUALITY || (RUNTIME_QUALITY = {})),
-    (function (e) {
-      ;(e.EMPTY_OBJECT = 'emtpy_object'),
-        (e.MESH_3D = 'mesh_3d'),
-        (e.MESH_2D = 'mesh_2d'),
-        (e.TEXTFRAME = 'textframe'),
-        (e.VECTOR_OBJECT = 'vector_object'),
-        (e.LIGHT = 'light'),
-        (e.CAMERA = 'camera'),
-        (e.SCENE = 'scene')
-    })(OBJECT_TYPE || (OBJECT_TYPE = {})),
-    (function (e) {
-      ;(e.PERSPECTIVE = 'perspective'), (e.ORTHOGRAPHIC = 'orthographic')
-    })(CAMERA_TYPE || (CAMERA_TYPE = {})),
-    (function (e) {
-      ;(e.SPOT = 'spot'),
-        (e.POINT = 'point'),
-        (e.DIRECTIONAL = 'directional'),
-        (e.HEMISPHERIC = 'hemispheric')
-    })(LIGHT_TYPE || (LIGHT_TYPE = {})),
-    (function (e) {
-      ;(e.LIGHTING = 'light'),
-        (e.COLOR = 'color'),
-        (e.GRADIENT = 'gradient'),
-        (e.NORMAL = 'normal'),
-        (e.DEPTH = 'depth'),
-        (e.TEXTURE = 'texture'),
-        (e.NOISE = 'noise'),
-        (e.FRESNEL = 'fresnel'),
-        (e.POINTS = 'points'),
-        (e.LINES = 'lines')
-    })(LAYER_TYPE || (LAYER_TYPE = {})),
-    (function (e) {
-      ;(e[(e.BOOLEAN = 0)] = 'BOOLEAN'),
-        (e[(e.INTEGER = 1)] = 'INTEGER'),
-        (e[(e.FLOAT = 2)] = 'FLOAT'),
-        (e[(e.VECTOR2 = 3)] = 'VECTOR2'),
-        (e[(e.VECTOR3 = 4)] = 'VECTOR3'),
-        (e[(e.VECTOR4 = 5)] = 'VECTOR4'),
-        (e[(e.COLOR = 6)] = 'COLOR'),
-        (e[(e.ARRAY_INTEGER = 7)] = 'ARRAY_INTEGER'),
-        (e[(e.ARRAY_FLOAT = 8)] = 'ARRAY_FLOAT'),
-        (e[(e.ARRAY_VECTOR2 = 9)] = 'ARRAY_VECTOR2'),
-        (e[(e.ARRAY_VECTOR3 = 10)] = 'ARRAY_VECTOR3'),
-        (e[(e.ARRAY_VECTOR4 = 11)] = 'ARRAY_VECTOR4'),
-        (e[(e.ARRAY_COLOR = 12)] = 'ARRAY_COLOR'),
-        (e[(e.MATRIX_3 = 13)] = 'MATRIX_3'),
-        (e[(e.MATRIX_4 = 14)] = 'MATRIX_4'),
-        (e[(e.TEXTURE = 15)] = 'TEXTURE')
-    })(UNIFORM_TYPE || (UNIFORM_TYPE = {}))
   var Raycaster = (function (e) {
       function t() {
         return (null !== e && e.apply(this, arguments)) || this
@@ -465,8 +276,8 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o,
             a,
+            o,
             s = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
@@ -486,24 +297,24 @@ export function speRuntimeFactory (exports) {
             ),
             l = s.width / 2,
             c = null !== (r = s.radiusTop) && void 0 !== r ? r : l,
-            u = null !== (n = s.radiusBottom) && void 0 !== n ? n : l
+            h = null !== (n = s.radiusBottom) && void 0 !== n ? n : l
           return (
-            c === u
-              ? ((c = l), (u = l))
-              : c > u
-              ? (u = (u * l) / (c = l))
-              : ((c = (c * l) / u), (u = l)),
+            c === h
+              ? ((c = l), (h = l))
+              : c > h
+              ? (h = (h * l) / (c = l))
+              : ((c = (c * l) / h), (h = l)),
             {
               parameters: Object.assign(s, {
                 width: Math.abs(s.width),
                 height: Math.abs(
-                  null !== (o = s.height) && void 0 !== o ? o : s.width
+                  null !== (a = s.height) && void 0 !== a ? a : s.width
                 ),
                 depth: Math.abs(
-                  null !== (a = s.depth) && void 0 !== a ? a : s.width
+                  null !== (o = s.depth) && void 0 !== o ? o : s.width
                 ),
                 radiusTop: c,
-                radiusBottom: u
+                radiusBottom: h
               })
             }
           )
@@ -513,22 +324,22 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.depth,
             n = t.height,
-            o = t.radialSegments,
-            a = t.heightSegments,
+            a = t.radialSegments,
+            o = t.heightSegments,
             s = t.openEnded,
             l = t.thetaStart,
             c = t.thetaLength,
-            u = t.radiusTop,
-            h = t.radiusBottom,
+            h = t.radiusTop,
+            u = t.radiusBottom,
             d = t.cornerRadius,
             f = t.cornerSegments,
             p = t.hollow,
-            v = new RoundedCylinderBufferGeometry(
-              u,
+            m = new RoundedCylinderBufferGeometry(
               h,
+              u,
               n,
-              o,
               a,
+              o,
               s,
               l,
               (c * Math.PI) / 180,
@@ -538,8 +349,8 @@ export function speRuntimeFactory (exports) {
               p
             )
           return (
-            v.scale(1, 1, r / i),
-            Object.assign(v, {
+            m.scale(1, 1, r / i),
+            Object.assign(m, {
               userData: __assign(__assign({}, e), { type: 'CylinderGeometry' })
             })
           )
@@ -554,7 +365,7 @@ export function speRuntimeFactory (exports) {
     return new THREE.Vector2(e.y, -e.x)
   }
   var RoundedCylinderBufferGeometry = (function (e) {
-      function t(t, i, r, n, o, a, s, l, c, u, h, d, f) {
+      function t(t, i, r, n, a, o, s, l, c, h, u, d, f) {
         void 0 === f && (f = !1)
         var p = e.call(this) || this
         ;(p.type = 'RoundedCylinderBufferGeometry'),
@@ -562,200 +373,200 @@ export function speRuntimeFactory (exports) {
           (i = void 0 !== i ? i : 1),
           (r = r || 1),
           (n = Math.floor(n) || 8),
-          (o = Math.floor(o) || 1),
-          (a = void 0 !== a && a),
+          (a = Math.floor(a) || 1),
+          (o = void 0 !== o && o),
           (s = void 0 !== s ? s : 0),
           (l = void 0 !== l ? l : 2 * Math.PI),
-          a && ((c = 0), (u = 0))
-        var v = [],
-          m = [],
+          o && ((c = 0), (h = 0))
+        var m = [],
           g = [],
-          E = [],
-          y = 0,
+          v = [],
+          y = [],
+          E = 0,
           A = r / 2,
-          T = new THREE.Vector3(),
-          x = new THREE.Vector3()
-        f && 0 == t && (t = c), f && 0 == i && (i = u)
-        var _ = new THREE.Vector2(t, A),
-          w = new THREE.Vector2(i, -A),
+          x = new THREE.Vector3(),
+          T = new THREE.Vector3()
+        f && 0 == t && (t = c), f && 0 == i && (i = h)
+        var w = new THREE.Vector2(t, A),
+          b = new THREE.Vector2(i, -A),
           S = null,
-          b = null,
-          R = null,
           C = null,
-          O = _.clone().sub(w),
-          D = 0,
+          _ = null,
+          D = null,
+          O = w.clone().sub(b),
+          R = 0,
           M = 0,
           L = 0
-        d > 0 && ((D = Math.min(t, i) * (1 - d)), (M = t - D), (L = i - D))
-        var P = _.clone()
-        P.x -= D
-        var I = Math.PI - O.angle(),
-          B = O.angle(),
-          H = Math.tan(B / 2),
-          N = Math.tan(I / 2),
-          F = H + N,
-          G = d ? F : N,
-          U = d ? F : H
+        d > 0 && ((R = Math.min(t, i) * (1 - d)), (M = t - R), (L = i - R))
+        var B = w.clone()
+        B.x -= R
+        var P = Math.PI - O.angle(),
+          H = O.angle(),
+          I = Math.tan(H / 2),
+          N = Math.tan(P / 2),
+          F = I + N,
+          z = d ? F : N,
+          U = d ? F : I
         if (
-          ((c = Math.min(c, (t - M) / G, O.length() / F)),
-          (u = Math.min(u, (i - L) / U, O.length() / F)),
+          ((c = Math.min(c, (t - M) / z, O.length() / F)),
+          (h = Math.min(h, (i - L) / U, O.length() / F)),
           c > 0)
         ) {
-          var z = c / H
-          ;(S = _.clone().sub(new THREE.Vector2(z, c))),
-            d && ((R = S.clone()).x -= D - F * c),
-            _.sub(O.clone().setLength(z))
+          var G = c / I
+          ;(S = w.clone().sub(new THREE.Vector2(G, c))),
+            d && ((_ = S.clone()).x -= R - F * c),
+            w.sub(O.clone().setLength(G))
         }
-        if (u > 0) {
-          z = u / N
-          ;(b = w.clone().sub(new THREE.Vector2(z, -u))),
-            w.add(O.clone().setLength(z)),
+        if (h > 0) {
+          G = h / N
+          ;(C = b.clone().sub(new THREE.Vector2(G, -h))),
+            b.add(O.clone().setLength(G)),
             d &&
-              (((C = b.clone()).x -= D - F * u), P.sub(O.clone().setLength(z)))
+              (((D = C.clone()).x -= R - F * h), B.sub(O.clone().setLength(G)))
         }
         for (
-          var V = (O = _.clone().sub(w)).length() < 0.5, k = [], j = 0;
+          var V = (O = w.clone().sub(b)).length() < 0.5, k = [], j = 0;
           j <= n;
           j++
         ) {
           var Y = [],
-            $ = j / n,
-            Q = $ * l + s,
-            W = new THREE.Vector2(Math.sin(Q), Math.cos(Q))
+            Q = j / n,
+            W = Q * l + s,
+            $ = new THREE.Vector2(Math.sin(W), Math.cos(W))
           if (
-            (C && b
-              ? (oe(Y, $, W, I, u, C, -1, !0), oe(Y, $, W, B, u, b, -1, !1))
-              : b
-              ? (ae(Y, W, b.x, 0, -1), oe(Y, $, W, B, u, b, -1, !1))
-              : a || ae(Y, W, i, L, -1),
-            two2three(flip(O).normalize(), W, T),
+            (D && C
+              ? (ae(Y, Q, $, P, h, D, -1, !0), ae(Y, Q, $, H, h, C, -1, !1))
+              : C
+              ? (oe(Y, $, C.x, 0, -1), ae(Y, Q, $, H, h, C, -1, !1))
+              : o || oe(Y, $, i, L, -1),
+            two2three(flip(O).normalize(), $, x),
             !V)
           )
-            for (var X = 0; X <= o; X++) {
-              var J = X / o
-              two2three(O.clone().multiplyScalar(J).add(w), W, x),
-                m.push(x.x, x.y, x.z),
+            for (var J = 0; J <= a; J++) {
+              var X = J / a
+              two2three(O.clone().multiplyScalar(X).add(b), $, T),
                 g.push(T.x, T.y, T.z),
-                E.push($, 0.5 + x.y / r),
-                Y.push(y++)
+                v.push(x.x, x.y, x.z),
+                y.push(Q, 0.5 + T.y / r),
+                Y.push(E++)
             }
           if (
-            (R && S
-              ? (oe(Y, $, W, I, c, S, 1, !1), oe(Y, $, W, B, c, R, 1, !0))
+            (_ && S
+              ? (ae(Y, Q, $, P, c, S, 1, !1), ae(Y, Q, $, H, c, _, 1, !0))
               : S
-              ? (oe(Y, $, W, I, c, S, 1, !1), ae(Y, W, S.x, 0, 1))
-              : a || ae(Y, W, t, M, 1),
+              ? (ae(Y, Q, $, P, c, S, 1, !1), oe(Y, $, S.x, 0, 1))
+              : o || oe(Y, $, t, M, 1),
             d && !V)
           ) {
-            two2three(flip(O).multiplyScalar(-1).normalize(), W, T)
-            for (X = 0; X <= o; X++) {
-              J = X / o
-              two2three(O.clone().multiplyScalar(-J).add(P), W, x),
-                m.push(x.x, x.y, x.z),
+            two2three(flip(O).multiplyScalar(-1).normalize(), $, x)
+            for (J = 0; J <= a; J++) {
+              X = J / a
+              two2three(O.clone().multiplyScalar(-X).add(B), $, T),
                 g.push(T.x, T.y, T.z),
-                E.push($, 0.5 + x.y / r),
-                Y.push(y++)
+                v.push(x.x, x.y, x.z),
+                y.push(Q, 0.5 + T.y / r),
+                Y.push(E++)
             }
           }
-          d && !a && Y.push(Y[0]), k.push(Y)
+          d && !o && Y.push(Y[0]), k.push(Y)
         }
         for (var K = 0; K < k.length - 1; K++)
           for (var q = 0; q < k[0].length - 1; q++)
-            if (!a || !d || q != o) {
+            if (!o || !d || q != a) {
               var Z = k[K][q],
                 ee = k[K + 1][q],
                 te = k[K + 1][q + 1],
                 ie = k[K][q + 1],
-                re = m[3 * te + 0],
-                ne = m[3 * te + 2]
-              v.push(Z, ee, ie), (0 == re && 0 == ne) || v.push(ee, te, ie)
+                re = g[3 * te + 0],
+                ne = g[3 * te + 2]
+              m.push(Z, ee, ie), (0 == re && 0 == ne) || m.push(ee, te, ie)
             }
-        function oe(e, t, i, n, o, a, s, l) {
-          for (var c = 0; c < h + 1; c++) {
-            var u = c / h,
-              d = s < 0 ? u : 1 - u
+        function ae(e, t, i, n, a, o, s, l) {
+          for (var c = 0; c < u + 1; c++) {
+            var h = c / u,
+              d = s < 0 ? h : 1 - h
             l && (d -= 1), (d *= n)
             var f = new THREE.Vector2(Math.sin(d), Math.cos(d) * s)
-            two2three(f.clone().multiplyScalar(o).add(a), i, x),
-              m.push(x.x, x.y, x.z),
-              two2three(f, i, T),
+            two2three(f.clone().multiplyScalar(a).add(o), i, T),
               g.push(T.x, T.y, T.z),
-              E.push(t, 0.5 + x.y / r),
-              e.push(y++)
+              two2three(f, i, x),
+              v.push(x.x, x.y, x.z),
+              y.push(t, 0.5 + T.y / r),
+              e.push(E++)
           }
         }
-        function ae(e, t, i, r, n) {
-          var o,
-            a,
+        function oe(e, t, i, r, n) {
+          var a,
+            o,
             s = new THREE.Vector3(),
             l = new THREE.Vector2(),
             c = [i, r]
           n < 0 && c.reverse()
           try {
-            for (var u = __values(c), h = u.next(); !h.done; h = u.next()) {
-              var d = h.value
+            for (var h = __values(c), u = h.next(); !u.done; u = h.next()) {
+              var d = u.value
               l.set(d, A * n),
                 two2three(l, t, s),
-                m.push(s.x, s.y, s.z),
-                g.push(0, n, 0),
-                E.push(0.5, 0.5),
-                e.push(y++)
+                g.push(s.x, s.y, s.z),
+                v.push(0, n, 0),
+                y.push(0.5, 0.5),
+                e.push(E++)
             }
           } catch (e) {
-            o = { error: e }
+            a = { error: e }
           } finally {
             try {
-              h && !h.done && (a = u.return) && a.call(u)
+              u && !u.done && (o = h.return) && o.call(h)
             } finally {
-              if (o) throw o.error
+              if (a) throw a.error
             }
           }
         }
         function se(e, r, n) {
-          var o,
-            a,
+          var a,
+            o,
             s = new THREE.Vector2(Math.sin(n), Math.cos(n)),
             l = new THREE.Vector2(-Math.cos(n), Math.sin(n)),
             c = new THREE.Vector3(),
-            u =
+            h =
               e < 0
                 ? function (e, t, i) {
-                    return v.push(e, t, i)
+                    return m.push(e, t, i)
                   }
                 : function (e, t, i) {
-                    return v.push(e, i, t)
+                    return m.push(e, i, t)
                   }
           two2three(new THREE.Vector2((t + i + M + L) / 4, 0), s, c),
-            m.push(c.x, c.y, c.z),
-            g.push(l.x, 0, l.y),
-            E.push(0.5, 0.5)
-          var h = y++
+            g.push(c.x, c.y, c.z),
+            v.push(l.x, 0, l.y),
+            y.push(0.5, 0.5)
+          var u = E++
           try {
             for (var d = __values(r), f = d.next(); !f.done; f = d.next()) {
               var p = f.value,
-                A = m.slice(3 * p, 3 * p + 3)
-              m.push.apply(m, __spread(A)), g.push(l.x, 0, l.y)
-              var T = E.slice(2 * p, 2 * p + 2)
-              E.push.apply(E, __spread(T)), y++
+                A = g.slice(3 * p, 3 * p + 3)
+              g.push.apply(g, __spread(A)), v.push(l.x, 0, l.y)
+              var x = y.slice(2 * p, 2 * p + 2)
+              y.push.apply(y, __spread(x)), E++
             }
           } catch (e) {
-            o = { error: e }
+            a = { error: e }
           } finally {
             try {
-              f && !f.done && (a = d.return) && a.call(d)
+              f && !f.done && (o = d.return) && o.call(d)
             } finally {
-              if (o) throw o.error
+              if (a) throw a.error
             }
           }
-          for (var x = h + 1; x < y - 1; x++) u(h, x, x + 1)
-          u(h, y - 1, h + 1)
+          for (var T = u + 1; T < E - 1; T++) h(u, T, T + 1)
+          h(u, E - 1, u + 1)
         }
         return (
           l < 2 * Math.PI && (se(-1, k[0], s), se(1, k[k.length - 1], s + l)),
-          p.setIndex(v),
-          p.setAttribute('position', new THREE.Float32BufferAttribute(m, 3)),
-          p.setAttribute('normal', new THREE.Float32BufferAttribute(g, 3)),
-          p.setAttribute('uv', new THREE.Float32BufferAttribute(E, 2)),
+          p.setIndex(m),
+          p.setAttribute('position', new THREE.Float32BufferAttribute(g, 3)),
+          p.setAttribute('normal', new THREE.Float32BufferAttribute(v, 3)),
+          p.setAttribute('uv', new THREE.Float32BufferAttribute(y, 2)),
           p
         )
       }
@@ -771,7 +582,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -789,13 +600,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -805,34 +616,34 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = i.depth,
-            o = i.height,
-            a = i.radialSegments,
+            a = i.height,
+            o = i.radialSegments,
             s = i.heightSegments,
             l = i.openEnded,
             c = i.thetaStart,
-            u = i.thetaLength,
-            h = i.cornerRadiusTop,
+            h = i.thetaLength,
+            u = i.cornerRadiusTop,
             d = i.cornerRadiusBottom,
             f = i.cornerSegments
           return (
             (t =
-              h > 0 || d > 0 || u < 360
+              u > 0 || d > 0 || h < 360
                 ? new RoundedCylinderBufferGeometry(
                     0,
                     r / 2,
-                    o,
                     a,
+                    o,
                     s,
                     l,
                     c,
-                    (u * Math.PI) / 180,
-                    h,
+                    (h * Math.PI) / 180,
+                    u,
                     d,
                     f,
                     0,
                     !0
                   )
-                : new THREE.ConeBufferGeometry(r / 2, o, a, s, l)).scale(
+                : new THREE.ConeBufferGeometry(r / 2, a, o, s, l)).scale(
               1,
               1,
               n / r
@@ -855,7 +666,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -870,13 +681,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -886,17 +697,17 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = i.height,
-            o = i.depth,
-            a = i.widthSegments,
+            a = i.depth,
+            o = i.widthSegments,
             s = i.heightSegments,
             l = i.depthSegments,
             c = i.cornerRadius,
-            u = i.cornerSegments
+            h = i.cornerSegments
           return (
             (t =
               0 == c
-                ? new THREE.BoxBufferGeometry(r, n, o, a, s, l)
-                : new RoundedBoxBufferGeometry(r, n, o, a, s, l, c, u)),
+                ? new THREE.BoxBufferGeometry(r, n, a, o, s, l)
+                : new RoundedBoxBufferGeometry(r, n, a, o, s, l, c, h)),
             Object.assign(t, {
               userData: __assign(__assign({}, e), { type: 'CubeGeometry' })
             })
@@ -907,192 +718,192 @@ export function speRuntimeFactory (exports) {
     })(),
     pi2 = Math.PI / 2,
     RoundedBoxBufferGeometry = (function (e) {
-      function t(t, i, r, n, o, a, s, l) {
+      function t(t, i, r, n, a, o, s, l) {
         void 0 === t && (t = 1),
           void 0 === i && (i = 1),
           void 0 === r && (r = 1),
           void 0 === n && (n = 1),
-          void 0 === o && (o = 1),
           void 0 === a && (a = 1),
+          void 0 === o && (o = 1),
           void 0 === s && (s = 0),
           void 0 === l && (l = 4)
         var c = e.call(this) || this
         c.type = 'BoxBufferGeometry'
-        var u = c
+        var h = c
         ;(n = Math.floor(n)),
-          (o = Math.floor(o)),
           (a = Math.floor(a)),
+          (o = Math.floor(o)),
           (l = Math.floor(l)),
           (s = Math.min(s, t / 2, i / 2, r / 2))
-        var h = [],
+        var u = [],
           d = [],
           f = [],
           p = [],
-          v = 0,
-          m = 0
-        function g(e, t, i, r, n, o, a, l, c, g, E) {
+          m = 0,
+          g = 0
+        function v(e, t, i, r, n, a, o, l, c, v, y) {
           for (
-            var y = (o - 2 * s) / c,
-              A = (a - 2 * s) / g,
-              T = o / 2 - s,
+            var E = (a - 2 * s) / c,
+              A = (o - 2 * s) / v,
               x = a / 2 - s,
-              _ = l / 2,
-              w = c + 1,
-              S = g + 1,
-              b = 0,
-              R = 0,
-              C = new THREE.Vector3(),
+              T = o / 2 - s,
+              w = l / 2,
+              b = c + 1,
+              S = v + 1,
+              C = 0,
+              _ = 0,
+              D = new THREE.Vector3(),
               O = 0;
             O < S;
             O++
           )
-            for (var D = O * A - x, M = 0; M < w; M++) {
-              var L = M * y - T
-              ;(C[e] = L * r),
-                (C[t] = D * n),
-                (C[i] = _),
-                d.push(C.x, C.y, C.z),
-                (C[e] = 0),
-                (C[t] = 0),
-                (C[i] = l > 0 ? 1 : -1),
-                f.push(C.x, C.y, C.z),
+            for (var R = O * A - T, M = 0; M < b; M++) {
+              var L = M * E - x
+              ;(D[e] = L * r),
+                (D[t] = R * n),
+                (D[i] = w),
+                d.push(D.x, D.y, D.z),
+                (D[e] = 0),
+                (D[t] = 0),
+                (D[i] = l > 0 ? 1 : -1),
+                f.push(D.x, D.y, D.z),
                 p.push(M / c),
-                p.push(1 - O / g),
-                (b += 1)
+                p.push(1 - O / v),
+                (C += 1)
             }
-          for (O = 0; O < g; O++)
+          for (O = 0; O < v; O++)
             for (M = 0; M < c; M++) {
-              var P = v + M + w * O,
-                I = v + M + w * (O + 1),
-                B = v + (M + 1) + w * (O + 1),
-                H = v + (M + 1) + w * O
-              h.push(P, I, H), h.push(I, B, H), (R += 6)
+              var B = m + M + b * O,
+                P = m + M + b * (O + 1),
+                H = m + (M + 1) + b * (O + 1),
+                I = m + (M + 1) + b * O
+              u.push(B, P, I), u.push(P, H, I), (_ += 6)
             }
-          u.addGroup(m, R, E), (m += R), (v += b)
+          h.addGroup(g, _, y), (g += _), (m += C)
         }
-        function E(e, t, i, r, n, o, a, c, g, E, y) {
+        function y(e, t, i, r, n, a, o, c, v, y, E) {
           for (
-            var A = (a - 2 * s) / E,
-              T = a / 2 - s,
-              x = c / 2 - s,
-              _ = g / 2,
-              w = E + 1,
+            var A = (o - 2 * s) / y,
+              x = o / 2 - s,
+              T = c / 2 - s,
+              w = v / 2,
+              b = y + 1,
               S = 0,
-              b = 0,
-              R = new THREE.Vector3(),
-              C = new THREE.Vector3(),
+              C = 0,
+              _ = new THREE.Vector3(),
+              D = new THREE.Vector3(),
               O = 0;
             O < l + 1;
             O++
           ) {
-            var D = (O / l) * pi2,
-              M = Math.sin(D) * s,
-              L = (1 - Math.cos(D)) * s,
-              P = Math.sin(D),
-              I = Math.cos(D)
-            ;(R[t] = (x + M) * n),
-              (R[i] = (_ - L) * o),
-              (C[e] = 0),
-              (C[t] = P * Math.sign(R[t])),
-              (C[i] = I * Math.sign(R[i]))
-            for (var B = 0; B < w; B++) {
-              var H = B * A - T
-              ;(R[e] = H * r),
-                d.push(R.x, R.y, R.z),
-                f.push(C.x, C.y, C.z),
-                p.push(B / E),
+            var R = (O / l) * pi2,
+              M = Math.sin(R) * s,
+              L = (1 - Math.cos(R)) * s,
+              B = Math.sin(R),
+              P = Math.cos(R)
+            ;(_[t] = (T + M) * n),
+              (_[i] = (w - L) * a),
+              (D[e] = 0),
+              (D[t] = B * Math.sign(_[t])),
+              (D[i] = P * Math.sign(_[i]))
+            for (var H = 0; H < b; H++) {
+              var I = H * A - x
+              ;(_[e] = I * r),
+                d.push(_.x, _.y, _.z),
+                f.push(D.x, D.y, D.z),
+                p.push(H / y),
                 p.push(0),
                 (S += 1)
             }
           }
           for (O = 0; O < l; O++)
-            for (B = 0; B < E; B++) {
-              D = v + B + w * O
-              var N = v + B + w * (O + 1),
-                F = v + (B + 1) + w * (O + 1),
-                G = v + (B + 1) + w * O
-              h.push(D, N, G), h.push(N, F, G), (b += 6)
+            for (H = 0; H < y; H++) {
+              R = m + H + b * O
+              var N = m + H + b * (O + 1),
+                F = m + (H + 1) + b * (O + 1),
+                z = m + (H + 1) + b * O
+              u.push(R, N, z), u.push(N, F, z), (C += 6)
             }
-          u.addGroup(m, b, y), (m += b), (v += S)
+          h.addGroup(g, C, E), (g += C), (m += S)
         }
-        function y(e, n, o) {
-          var a = new THREE.Vector3(),
+        function E(e, n, a) {
+          var o = new THREE.Vector3(),
             c = new THREE.Vector3(t / 2, i / 2, r / 2)
           c.subScalar(s)
           for (
-            var u = [],
-              m =
-                e * n * o > 0
+            var h = [],
+              g =
+                e * n * a > 0
                   ? function (e, t, i) {
-                      return h.push(e, t, i)
+                      return u.push(e, t, i)
                     }
                   : function (e, t, i) {
-                      return h.push(e, i, t)
+                      return u.push(e, i, t)
                     },
-              g = 0;
-            g <= l;
-            g++
+              v = 0;
+            v <= l;
+            v++
           ) {
             for (
-              var E = [],
-                y = pi2 * (1 - g / l),
-                A = Math.cos(y),
-                T = Math.sin(y),
-                x = 0,
-                _ = 0;
-              _ <= g;
-              _++
+              var y = [],
+                E = pi2 * (1 - v / l),
+                A = Math.cos(E),
+                x = Math.sin(E),
+                T = 0,
+                w = 0;
+              w <= v;
+              w++
             ) {
-              var w = Math.cos(x),
-                S = Math.sin(x)
-              ;(a.x = A * w), (a.y = T), (a.z = A * S)
-              var b = c.clone().addScaledVector(a, s)
-              d.push(e * b.x, n * b.y, o * b.z),
-                f.push(e * a.x, n * a.y, o * a.z),
+              var b = Math.cos(T),
+                S = Math.sin(T)
+              ;(o.x = A * b), (o.y = x), (o.z = A * S)
+              var C = c.clone().addScaledVector(o, s)
+              d.push(e * C.x, n * C.y, a * C.z),
+                f.push(e * o.x, n * o.y, a * o.z),
                 p.push(0, 0),
-                E.push(v++),
-                (x += pi2 / g)
+                y.push(m++),
+                (T += pi2 / v)
             }
-            u.push(E)
+            h.push(y)
           }
-          for (var R = u.length - 1, C = 0; C < R; C++) {
-            var O = u[C],
-              D = u[C + 1],
+          for (var _ = h.length - 1, D = 0; D < _; D++) {
+            var O = h[D],
+              R = h[D + 1],
               M = O.length - 1
-            m(O[0], D[1], D[0])
+            g(O[0], R[1], R[0])
             for (var L = 1; L <= M; L++)
-              m(O[L - 1], O[L], D[L]), m(O[L], D[L + 1], D[L])
+              g(O[L - 1], O[L], R[L]), g(O[L], R[L + 1], R[L])
           }
         }
         return (
-          g('z', 'y', 'x', -1, -1, r, i, t, a, o, 0),
-          g('z', 'y', 'x', 1, -1, r, i, -t, a, o, 1),
-          g('x', 'z', 'y', 1, 1, t, r, i, n, a, 2),
-          g('x', 'z', 'y', 1, -1, t, r, -i, n, a, 3),
-          g('x', 'y', 'z', 1, -1, t, i, r, n, o, 4),
-          g('x', 'y', 'z', -1, -1, t, i, -r, n, o, 5),
+          v('z', 'y', 'x', -1, -1, r, i, t, o, a, 0),
+          v('z', 'y', 'x', 1, -1, r, i, -t, o, a, 1),
+          v('x', 'z', 'y', 1, 1, t, r, i, n, o, 2),
+          v('x', 'z', 'y', 1, -1, t, r, -i, n, o, 3),
+          v('x', 'y', 'z', 1, -1, t, i, r, n, a, 4),
+          v('x', 'y', 'z', -1, -1, t, i, -r, n, a, 5),
           s > 0 &&
-            (E('z', 'y', 'x', -1, -1, 1, r, i, t, a, 0),
-            E('z', 'y', 'x', 1, -1, -1, r, i, t, a, 1),
-            E('z', 'y', 'x', -1, 1, -1, r, i, t, a, 1),
-            E('z', 'y', 'x', 1, 1, 1, r, i, t, a, 0),
-            E('x', 'y', 'z', -1, -1, -1, t, i, r, n, 0),
-            E('x', 'y', 'z', 1, -1, 1, t, i, r, n, 1),
-            E('x', 'y', 'z', -1, 1, 1, t, i, r, n, 0),
-            E('x', 'y', 'z', 1, 1, -1, t, i, r, n, 1),
-            E('y', 'x', 'z', -1, -1, 1, i, t, r, o, 0),
-            E('y', 'x', 'z', 1, -1, -1, i, t, r, o, 1),
-            E('y', 'x', 'z', 1, 1, 1, i, t, r, o, 1),
-            E('y', 'x', 'z', -1, 1, -1, i, t, r, o, 0),
-            y(1, 1, 1),
-            y(-1, 1, 1),
-            y(1, -1, 1),
-            y(-1, -1, 1),
-            y(1, 1, -1),
-            y(-1, 1, -1),
-            y(1, -1, -1),
-            y(-1, -1, -1)),
-          c.setIndex(h),
+            (y('z', 'y', 'x', -1, -1, 1, r, i, t, o, 0),
+            y('z', 'y', 'x', 1, -1, -1, r, i, t, o, 1),
+            y('z', 'y', 'x', -1, 1, -1, r, i, t, o, 1),
+            y('z', 'y', 'x', 1, 1, 1, r, i, t, o, 0),
+            y('x', 'y', 'z', -1, -1, -1, t, i, r, n, 0),
+            y('x', 'y', 'z', 1, -1, 1, t, i, r, n, 1),
+            y('x', 'y', 'z', -1, 1, 1, t, i, r, n, 0),
+            y('x', 'y', 'z', 1, 1, -1, t, i, r, n, 1),
+            y('y', 'x', 'z', -1, -1, 1, i, t, r, a, 0),
+            y('y', 'x', 'z', 1, -1, -1, i, t, r, a, 1),
+            y('y', 'x', 'z', 1, 1, 1, i, t, r, a, 1),
+            y('y', 'x', 'z', -1, 1, -1, i, t, r, a, 0),
+            E(1, 1, 1),
+            E(-1, 1, 1),
+            E(1, -1, 1),
+            E(-1, -1, 1),
+            E(1, 1, -1),
+            E(-1, 1, -1),
+            E(1, -1, -1),
+            E(-1, -1, -1)),
+          c.setIndex(u),
           c.setAttribute('position', new THREE.Float32BufferAttribute(d, 3)),
           c.setAttribute('normal', new THREE.Float32BufferAttribute(f, 3)),
           c.setAttribute('uv', new THREE.Float32BufferAttribute(p, 2)),
@@ -1111,7 +922,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -1119,13 +930,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -1135,11 +946,11 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.depth,
-            o = t.detail,
-            a = new THREE.DodecahedronBufferGeometry(0.5 * i, o)
+            a = t.detail,
+            o = new THREE.DodecahedronBufferGeometry(0.5 * i, a)
           return (
-            a.scale(1, r / i, n / i),
-            Object.assign(a, {
+            o.scale(1, r / i, n / i),
+            Object.assign(o, {
               userData: __assign(__assign({}, e), {
                 type: 'DodecahedronGeometry'
               })
@@ -1153,59 +964,59 @@ export function speRuntimeFactory (exports) {
       var i = t.x - e.x,
         r = t.y - e.y,
         n = Math.sqrt(i * i + r * r),
-        o = i / n,
-        a = r / n
-      return { x: i, y: r, len: n, nx: o, ny: a, ang: Math.atan2(a, o) }
+        a = i / n,
+        o = r / n
+      return { x: i, y: r, len: n, nx: a, ny: o, ang: Math.atan2(o, a) }
     },
     roundShapePolygon = function (e, t, i) {
       var r,
         n,
-        o,
         a,
+        o,
         s,
         l,
         c,
-        u,
         h,
+        u,
         d,
         f,
         p,
-        v,
         m,
-        g = t.length
-      for (a = t[g - 2], e.curves = [], r = 1; r < g - 1; r++) {
-        ;(s = t[r % g]), (l = t[(r + 1) % g])
-        var E = asVec(s, a),
-          y = asVec(s, l)
-        ;(c = E.nx * y.ny - E.ny * y.nx),
-          (u = E.nx * y.nx - E.ny * -y.ny),
+        g,
+        v = t.length
+      for (o = t[v - 2], e.curves = [], r = 1; r < v - 1; r++) {
+        ;(s = t[r % v]), (l = t[(r + 1) % v])
+        var y = asVec(s, o),
+          E = asVec(s, l)
+        ;(c = y.nx * E.ny - y.ny * E.nx),
+          (h = y.nx * E.nx - y.ny * -E.ny),
           (f = Math.asin(c)),
-          (h = 1),
+          (u = 1),
           (d = !1),
-          u < 0
+          h < 0
             ? f < 0
               ? (f = Math.PI + f)
-              : ((f = Math.PI - f), (h = -1), (d = !0))
-            : f > 0 && ((h = -1), (d = !0)),
+              : ((f = Math.PI - f), (u = -1), (d = !0))
+            : f > 0 && ((u = -1), (d = !0)),
           (p = f / 2),
-          (m = Math.abs((Math.cos(p) * i) / Math.sin(p))) >
-          Math.min(E.len / 2, y.len / 2)
-            ? ((m = Math.min(E.len / 2, y.len / 2)),
-              (v = Math.abs((m * Math.sin(p)) / Math.cos(p))))
-            : (v = i),
-          (n = s.x + y.nx * m),
-          (o = s.y + y.ny * m),
-          (n += -y.ny * v * h),
-          (o += y.nx * v * h),
+          (g = Math.abs((Math.cos(p) * i) / Math.sin(p))) >
+          Math.min(y.len / 2, E.len / 2)
+            ? ((g = Math.min(y.len / 2, E.len / 2)),
+              (m = Math.abs((g * Math.sin(p)) / Math.cos(p))))
+            : (m = i),
+          (n = s.x + E.nx * g),
+          (a = s.y + E.ny * g),
+          (n += -E.ny * m * u),
+          (a += E.nx * m * u),
           e.absarc(
             n,
-            o,
-            v,
-            E.ang + (Math.PI / 2) * h,
-            y.ang - (Math.PI / 2) * h,
+            a,
+            m,
+            y.ang + (Math.PI / 2) * u,
+            E.ang - (Math.PI / 2) * u,
             d
           ),
-          (a = s),
+          (o = s),
           (s = l)
       }
       e.closePath()
@@ -1215,14 +1026,14 @@ export function speRuntimeFactory (exports) {
         r = t.height,
         n = t.depth
       ;(i = Math.abs(i)), (r = Math.abs(r)), (n = Math.abs(n))
-      var o,
-        a,
+      var a,
+        o,
         s,
         l = e.userData.parameters
-      0 === i ? ((i = l.width), (o = 1)) : (o = i / l.width),
-        0 === r ? ((r = l.height), (a = 1)) : (a = r / l.height),
+      0 === i ? ((i = l.width), (a = 1)) : (a = i / l.width),
+        0 === r ? ((r = l.height), (o = 1)) : (o = r / l.height),
         0 === n ? ((n = l.depth), (s = 1)) : (s = n / l.depth),
-        e.scale(o, a, s),
+        e.scale(a, o, s),
         (l.width = i),
         (l.height = r),
         (l.depth = n)
@@ -1231,9 +1042,9 @@ export function speRuntimeFactory (exports) {
       var r = e.getAttribute('uv')
       if (r)
         for (var n = 0; n < r.count; n++) {
-          var o = r.getX(n),
-            a = r.getY(n)
-          r.setXY(n, (o + t / 2) / t, 1 - ((a - i / 2) / i) * -1)
+          var a = r.getX(n),
+            o = r.getY(n)
+          r.setXY(n, (a + t / 2) / t, 1 - ((o - i / 2) / i) * -1)
         }
     },
     EllipseGeometry = (function () {
@@ -1272,8 +1083,8 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = i.height,
-            o = i.spikes,
-            a = i.angle,
+            a = i.spikes,
+            o = i.angle,
             s = i.innerRadius
           if (s > 0) {
             var l = 0.5 * r,
@@ -1281,27 +1092,27 @@ export function speRuntimeFactory (exports) {
             ;(t = new THREE.RingBufferGeometry(
               c,
               l,
-              o,
+              a,
               1,
               Math.PI / 2,
-              (a * Math.PI) / 180
+              (o * Math.PI) / 180
             )).scale(1, Math.abs(n) / Math.abs(r), 1)
           } else {
             for (
-              var u = 0.5 * r,
-                h = 0.5 * n,
-                d = (((a * Math.PI) / 180) * -1) / o,
+              var h = 0.5 * r,
+                u = 0.5 * n,
+                d = (((o * Math.PI) / 180) * -1) / a,
                 f = new THREE.Shape(),
                 p = 0;
-              p <= o;
+              p <= a;
               p++
             ) {
-              var v = d * p,
-                m = 0 + Math.sin(v) * u,
-                g = 0 + Math.cos(v) * h
-              f.lineTo(m, g)
+              var m = d * p,
+                g = 0 + Math.sin(m) * h,
+                v = 0 + Math.cos(m) * u
+              f.lineTo(g, v)
             }
-            360 === a && (f.curves = f.curves.slice(1)),
+            360 === o && (f.curves = f.curves.slice(1)),
               (t = new THREE.ShapeBufferGeometry(f)),
               fixUvs(t, r, n)
           }
@@ -1322,7 +1133,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -1338,19 +1149,19 @@ export function speRuntimeFactory (exports) {
                   },
               e.parameters
             ),
-            a = Math.abs(o.width),
-            s = Math.abs(null !== (r = o.height) && void 0 !== r ? r : a),
-            l = Math.abs(null !== (n = o.depth) && void 0 !== n ? n : a),
-            c = Math.abs(Math.min(a, l)) / 2
+            o = Math.abs(a.width),
+            s = Math.abs(null !== (r = a.height) && void 0 !== r ? r : o),
+            l = Math.abs(null !== (n = a.depth) && void 0 !== n ? n : o),
+            c = Math.abs(Math.min(o, l)) / 2
           return {
-            parameters: Object.assign(o, {
-              width: a,
+            parameters: Object.assign(a, {
+              width: o,
               height: s,
               depth: l,
               radius: c,
-              segments: Math.round(o.segments),
-              pathSegments: Math.round(o.pathSegments),
-              cornerSegments: Math.round(o.cornerSegments)
+              segments: Math.round(a.segments),
+              pathSegments: Math.round(a.pathSegments),
+              cornerSegments: Math.round(a.cornerSegments)
             })
           }
         }),
@@ -1359,15 +1170,15 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.depth,
-            o = t.radius,
-            a = t.revolutions,
+            a = t.radius,
+            o = t.revolutions,
             s = t.segments,
             l = t.pathRadius,
             c = t.pathType,
-            u = t.pathSegments,
-            h = t.cornerRadius,
+            h = t.pathSegments,
+            u = t.cornerRadius,
             d = t.cornerSegments,
-            f = new HelixBufferGeometry(!1, i, r, n, o, a, s, l, c, u, h, d)
+            f = new HelixBufferGeometry(!1, i, r, n, a, o, s, l, c, h, u, d)
           return Object.assign(f, {
             userData: __assign(__assign({}, e), { type: 'HelixGeometry' })
           })
@@ -1376,129 +1187,129 @@ export function speRuntimeFactory (exports) {
       )
     })(),
     HelixBufferGeometry = (function (e) {
-      function t(t, i, r, n, o, a, s, l, c, u, h, d) {
+      function t(t, i, r, n, a, o, s, l, c, h, u, d) {
         var f,
           p,
-          v,
           m,
           g,
-          E,
+          v,
           y,
+          E,
           A,
-          T = e.call(this) || this,
-          x = [],
-          _ = [],
+          x = e.call(this) || this,
+          T = [],
           w = [],
-          S = [],
           b = [],
-          R = [],
+          S = [],
           C = [],
+          _ = [],
+          D = [],
           O = new THREE.Vector3(),
-          D = new THREE.Vector3(),
+          R = new THREE.Vector3(),
           M = new THREE.Vector3(),
           L = new THREE.Vector3(),
-          P = new THREE.Vector3(),
-          I = new THREE.Vector3(),
           B = new THREE.Vector3(),
+          P = new THREE.Vector3(),
           H = new THREE.Vector3(),
+          I = new THREE.Vector3(),
           N = new THREE.Vector3(),
           F = new THREE.Vector3(),
-          G = new THREE.Vector3(),
-          U = o - l,
-          z = r - 2 * l + 0.001,
-          V = z / a,
-          k = Math.ceil(s * a),
-          j = z / k,
-          Y = -z / 2,
-          $ = (2 * Math.PI) / u,
-          Q = Math.PI / 2 / d,
-          W = Math.min((1 - h / 100) * l, l - 0.1),
-          X = l - W
-        function J(e, i) {
+          z = new THREE.Vector3(),
+          U = a - l,
+          G = r - 2 * l + 0.001,
+          V = G / o,
+          k = Math.ceil(s * o),
+          j = G / k,
+          Y = -G / 2,
+          Q = (2 * Math.PI) / h,
+          W = Math.PI / 2 / d,
+          $ = Math.min((1 - u / 100) * l, l - 0.1),
+          J = l - $
+        function X(e, i) {
           var r = Math.PI / 2
-          ;(E = i * j),
-            (A = (2 * Math.PI * (E % V)) / V + r),
-            (E += Y),
-            (y = Math.sin(A) * U),
-            (g = Math.cos(A) * U),
-            t ? e.set(g, y, E) : e.set(g, E, y)
+          ;(y = i * j),
+            (A = (2 * Math.PI * (y % V)) / V + r),
+            (y += Y),
+            (E = Math.sin(A) * U),
+            (v = Math.cos(A) * U),
+            t ? e.set(v, E, y) : e.set(v, y, E)
         }
-        J(M, -1), J(L, 0), P.copy(M)
+        X(M, -1), X(L, 0), B.copy(M)
         for (
-          var K = M.distanceTo(L), q = K * k + 2 * X, Z = q - X, ee = 0;
+          var K = M.distanceTo(L), q = K * k + 2 * J, Z = q - J, ee = 0;
           ee <= k;
           ee++
         ) {
-          J(O, ee),
-            G.subVectors(O, P).normalize(),
-            P.copy(O),
+          X(O, ee),
+            z.subVectors(O, B).normalize(),
+            B.copy(O),
             N.copy(O)
               .setComponent(+t + 1, 0)
               .normalize(),
-            F.crossVectors(G, N).normalize()
+            F.crossVectors(z, N).normalize()
           for (
-            var te = 0 == ee ? (3 * Math.PI) / 2 : Q,
+            var te = 0 == ee ? (3 * Math.PI) / 2 : W,
               ie = 0 == ee ? 0 : Z,
               re = 0,
               ne = 0;
-            re <= u;
-            ne = ++re * $
+            re <= h;
+            ne = ++re * Q
           ) {
             if (
-              (I.addVectors(
+              (P.addVectors(
                 M.copy(N).multiplyScalar(l * Math.cos(ne)),
                 L.copy(F).multiplyScalar(l * Math.sin(ne))
               ),
-              H.copy(I).normalize(),
+              I.copy(P).normalize(),
               0 == ee || ee == k)
             ) {
-              L.copy(H).multiplyScalar(W), D.addVectors(O, L)
-              for (var oe = 0, ae = te; oe < d; ae = ++oe * Q + te) {
-                B.addVectors(
-                  M.copy(G).multiplyScalar(X * Math.sin(ae)),
-                  L.copy(H).multiplyScalar(X * Math.cos(ae))
+              L.copy(I).multiplyScalar($), R.addVectors(O, L)
+              for (var ae = 0, oe = te; ae < d; oe = ++ae * W + te) {
+                H.addVectors(
+                  M.copy(z).multiplyScalar(J * Math.sin(oe)),
+                  L.copy(I).multiplyScalar(J * Math.cos(oe))
                 ),
-                  L.addVectors(D, B),
-                  B.normalize(),
-                  b.push(L.x, L.y, L.z),
-                  R.push(B.x, B.y, B.z)
-                var se = +(0 == ee) + Math.sin(ae)
-                C.push((ie + X * se) / q, re / u, 0)
+                  L.addVectors(R, H),
+                  H.normalize(),
+                  C.push(L.x, L.y, L.z),
+                  _.push(H.x, H.y, H.z)
+                var se = +(0 == ee) + Math.sin(oe)
+                D.push((ie + J * se) / q, re / h, 0)
               }
             }
-            L.addVectors(O, I),
-              _.push(L.x, L.y, L.z),
-              w.push(H.x, H.y, H.z),
-              S.push((X + ee * K) / q, re / u)
+            L.addVectors(O, P),
+              w.push(L.x, L.y, L.z),
+              b.push(I.x, I.y, I.z),
+              S.push((J + ee * K) / q, re / h)
           }
         }
-        var le = b.length / 2
+        var le = C.length / 2
         for (re = 0; re < d; re++)
-          for (oe = 0; oe <= u; oe++) {
-            var ce = le + 3 * (oe * d + re),
-              ue = 3 * ((u - oe) * d + d - re - 1)
-            _.push.apply(_, __spread(b.slice(ce, ce + 3))),
-              _.unshift.apply(_, __spread(b.slice(ue, ue + 3))),
-              w.push.apply(w, __spread(R.slice(ce, ce + 3))),
-              w.unshift.apply(w, __spread(R.slice(ue, ue + 3))),
-              S.push.apply(S, __spread(C.slice(ce, ce + 2))),
-              S.unshift.apply(S, __spread(C.slice(ue, ue + 2)))
+          for (ae = 0; ae <= h; ae++) {
+            var ce = le + 3 * (ae * d + re),
+              he = 3 * ((h - ae) * d + d - re - 1)
+            w.push.apply(w, __spread(C.slice(ce, ce + 3))),
+              w.unshift.apply(w, __spread(C.slice(he, he + 3))),
+              b.push.apply(b, __spread(_.slice(ce, ce + 3))),
+              b.unshift.apply(b, __spread(_.slice(he, he + 3))),
+              S.push.apply(S, __spread(D.slice(ce, ce + 2))),
+              S.unshift.apply(S, __spread(D.slice(he, he + 2)))
           }
-        var he = u + 1
+        var ue = h + 1
         for (re = 0; re < k + 2 * d; re++)
-          for (oe = 0; oe < he - 1; oe++)
-            (v = (f = re * he + oe) + he),
-              (m = (p = f + 1) + he),
-              x.push(f, p, v, p, m, v)
-        f = _.length / 3 - u - 1
-        for (re = 0; re < u - 2; re++)
-          x.push(f, f + re + 1, f + re + 2), x.push(0, re + 2, re + 1)
+          for (ae = 0; ae < ue - 1; ae++)
+            (m = (f = re * ue + ae) + ue),
+              (g = (p = f + 1) + ue),
+              T.push(f, p, m, p, g, m)
+        if (((f = w.length / 3 - h - 1), !t || o < 1))
+          for (re = 0; re < h - 2; re++)
+            T.push(f, f + re + 1, f + re + 2), T.push(0, re + 2, re + 1)
         return (
-          T.setIndex(x),
-          T.setAttribute('position', new THREE.Float32BufferAttribute(_, 3)),
-          T.setAttribute('normal', new THREE.Float32BufferAttribute(w, 3)),
-          T.setAttribute('uv', new THREE.Float32BufferAttribute(S, 2)),
-          T
+          x.setIndex(T),
+          x.setAttribute('position', new THREE.Float32BufferAttribute(w, 3)),
+          x.setAttribute('normal', new THREE.Float32BufferAttribute(b, 3)),
+          x.setAttribute('uv', new THREE.Float32BufferAttribute(S, 2)),
+          x
         )
       }
       return __extends(t, e), t
@@ -1513,7 +1324,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -1521,13 +1332,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -1537,11 +1348,11 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.depth,
-            o = t.detail,
-            a = new THREE.IcosahedronBufferGeometry(0.5 * i, o)
+            a = t.detail,
+            o = new THREE.IcosahedronBufferGeometry(0.5 * i, a)
           return (
-            a.scale(1, r / i, n / i),
-            Object.assign(a, {
+            o.scale(1, r / i, n / i),
+            Object.assign(o, {
               userData: __assign(__assign({}, e), {
                 type: 'IcosahedronGeometry'
               })
@@ -1561,7 +1372,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -1579,13 +1390,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -1595,13 +1406,13 @@ export function speRuntimeFactory (exports) {
             i = t.points,
             r = t.segments,
             n = t.verticalSegments,
-            o = new THREE.Shape()
-          o.moveTo(i[0].x, i[0].y),
-            o.bezierCurveTo(i[1].x, i[1].y, i[2].x, i[2].y, i[3].x, i[3].y)
-          var a = new THREE.LatheBufferGeometry(o.extractPoints(n).shape, r)
+            a = new THREE.Shape()
+          a.moveTo(i[0].x, i[0].y),
+            a.bezierCurveTo(i[1].x, i[1].y, i[2].x, i[2].y, i[3].x, i[3].y)
+          var o = new THREE.LatheBufferGeometry(a.extractPoints(n).shape, r)
           return (
-            a.rotateZ(Math.PI),
-            Object.assign(a, {
+            o.rotateZ(Math.PI),
+            Object.assign(o, {
               userData: __assign(__assign({}, e), { type: 'LatheGeometry' })
             })
           )
@@ -1625,23 +1436,23 @@ export function speRuntimeFactory (exports) {
     var r = Math.min(e, t) + '_' + Math.max(e, t)
     return i.get(r)
   }
-  function processEdge(e, t, i, r, n, o) {
-    var a,
+  function processEdge(e, t, i, r, n, a) {
+    var o,
       s = Math.min(e, t),
       l = Math.max(e, t),
       c = s + '_' + l
     r.has(c)
-      ? (a = r.get(c))
-      : ((a = { a: i[s], b: i[l], newEdge: null, faces: [] }), r.set(c, a))
-    a.faces.push(n), o[e].edges.push(a), o[t].edges.push(a)
+      ? (o = r.get(c))
+      : ((o = { a: i[s], b: i[l], newEdge: null, faces: [] }), r.set(c, o))
+    o.faces.push(n), a[e].edges.push(o), a[t].edges.push(o)
   }
   function generateLookups(e, t, i, r) {
-    var n, o, a
-    for (n = 0, o = e.length; n < o; n++) i[n] = { edges: [] }
-    for (n = 0, o = t.length; n < o; n++)
-      processEdge((a = t[n]).a, a.b, e, r, a, i),
-        processEdge(a.b, a.c, e, r, a, i),
-        processEdge(a.c, a.a, e, r, a, i)
+    var n, a, o
+    for (n = 0, a = e.length; n < a; n++) i[n] = { edges: [] }
+    for (n = 0, a = t.length; n < a; n++)
+      processEdge((o = t[n]).a, o.b, e, r, o, i),
+        processEdge(o.b, o.c, e, r, o, i),
+        processEdge(o.c, o.a, e, r, o, i)
   }
   function newFace(e, t, i, r, n) {
     e.push(new THREE.Face3(t, i, r, void 0, void 0, n))
@@ -1670,128 +1481,128 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n,
-            o,
             a,
+            o,
             s,
             l = new THREE.Vector3(),
             c = e.vertices,
-            u = e.faces,
-            h = e.faceVertexUvs[0],
-            d = void 0 !== h && h.length > 0,
+            h = e.faces,
+            u = e.faceVertexUvs[0],
+            d = void 0 !== u && u.length > 0,
             f = [],
             p = new Map()
-          generateLookups(c, u, f, p)
-          var v,
-            m,
+          generateLookups(c, h, f, p)
+          var m,
             g,
-            E,
+            v,
             y,
+            E,
             A,
-            T,
             x,
-            _,
+            T,
             w,
-            S,
             b,
-            R,
+            S,
             C,
+            _,
+            D,
             O = []
           try {
             for (
-              var D = __values(Array.from(p.keys())), M = D.next();
+              var R = __values(Array.from(p.keys())), M = R.next();
               !M.done;
-              M = D.next()
+              M = R.next()
             ) {
               var L = M.value
               for (
-                m = p.get(L),
-                  g = new THREE.Vector3(),
-                  y = 3 / 8,
+                g = p.get(L),
+                  v = new THREE.Vector3(),
+                  E = 3 / 8,
                   A = 1 / 8,
-                  2 != (T = m.faces.length) && ((y = 0.5), (A = 0)),
-                  g.addVectors(m.a, m.b).multiplyScalar(y),
+                  2 != (x = g.faces.length) && ((E = 0.5), (A = 0)),
+                  v.addVectors(g.a, g.b).multiplyScalar(E),
                   l.set(0, 0, 0),
-                  a = 0;
-                a < T;
-                a++
+                  o = 0;
+                o < x;
+                o++
               ) {
                 for (
-                  E = m.faces[a], s = 0;
+                  y = g.faces[o], s = 0;
                   s < 3 &&
-                  ((v = c[getFaceIndexByString(E, ABC[s])]) === m.a ||
-                    v === m.b);
+                  ((m = c[getFaceIndexByString(y, ABC[s])]) === g.a ||
+                    m === g.b);
                   s++
                 );
-                v && l.add(v)
+                m && l.add(m)
               }
-              l.multiplyScalar(A), g.add(l), (m.newEdge = O.length), O.push(g)
+              l.multiplyScalar(A), v.add(l), (g.newEdge = O.length), O.push(v)
             }
           } catch (e) {
             t = { error: e }
           } finally {
             try {
-              M && !M.done && (i = D.return) && i.call(D)
+              M && !M.done && (i = R.return) && i.call(R)
             } finally {
               if (t) throw t.error
             }
           }
-          var P = []
-          for (n = 0, o = c.length; n < o; n++) {
+          var B = []
+          for (n = 0, a = c.length; n < a; n++) {
             for (
-              R = c[n],
-                3 == (r = (b = f[n].edges).length)
-                  ? (x = 3 / 16)
-                  : r > 3 && (x = 3 / (8 * r)),
-                _ = 1 - r * Number(x),
-                w = x,
-                r <= 2 && 2 == r && ((_ = 3 / 4), (w = 1 / 8)),
-                C = R.clone().multiplyScalar(_),
+              _ = c[n],
+                3 == (r = (C = f[n].edges).length)
+                  ? (T = 3 / 16)
+                  : r > 3 && (T = 3 / (8 * r)),
+                w = 1 - r * Number(T),
+                b = T,
+                r <= 2 && 2 == r && ((w = 3 / 4), (b = 1 / 8)),
+                D = _.clone().multiplyScalar(w),
                 l.set(0, 0, 0),
-                a = 0;
-              a < r;
-              a++
+                o = 0;
+              o < r;
+              o++
             )
-              (v = (S = b[a]).a !== R ? S.a : S.b), l.add(v)
-            l.multiplyScalar(Number(w)), C.add(l), P.push(C)
+              (m = (S = C[o]).a !== _ ? S.a : S.b), l.add(m)
+            l.multiplyScalar(Number(b)), D.add(l), B.push(D)
           }
-          var I,
-            B,
+          var P,
             H,
+            I,
             N,
             F,
-            G,
+            z,
             U,
-            z = P.concat(O),
-            V = P.length,
+            G = B.concat(O),
+            V = B.length,
             k = [],
             j = [],
             Y = new THREE.Vector2(),
-            $ = new THREE.Vector2(),
-            Q = new THREE.Vector2()
-          for (n = 0, o = u.length; n < o; n++)
-            (E = u[n]),
+            Q = new THREE.Vector2(),
+            W = new THREE.Vector2()
+          for (n = 0, a = h.length; n < a; n++)
+            (y = h[n]),
               newFace(
                 k,
-                (I = Number(getEdge(E.a, E.b, p).newEdge) + V),
-                (B = Number(getEdge(E.b, E.c, p).newEdge) + V),
-                (H = Number(getEdge(E.c, E.a, p).newEdge) + V),
-                E.materialIndex
+                (P = Number(getEdge(y.a, y.b, p).newEdge) + V),
+                (H = Number(getEdge(y.b, y.c, p).newEdge) + V),
+                (I = Number(getEdge(y.c, y.a, p).newEdge) + V),
+                y.materialIndex
               ),
-              newFace(k, E.a, I, H, E.materialIndex),
-              newFace(k, E.b, B, I, E.materialIndex),
-              newFace(k, E.c, H, B, E.materialIndex),
+              newFace(k, y.a, P, I, y.materialIndex),
+              newFace(k, y.b, H, P, y.materialIndex),
+              newFace(k, y.c, I, H, y.materialIndex),
               d &&
-                ((F = (N = h[n])[0]),
-                (G = N[1]),
+                ((F = (N = u[n])[0]),
+                (z = N[1]),
                 (U = N[2]),
-                Y.set(midpoint(F.x, G.x), midpoint(F.y, G.y)),
-                $.set(midpoint(G.x, U.x), midpoint(G.y, U.y)),
-                Q.set(midpoint(F.x, U.x), midpoint(F.y, U.y)),
-                newUv(j, Y, $, Q),
-                newUv(j, F, Y, Q),
-                newUv(j, G, $, Y),
-                newUv(j, U, Q, $))
-          ;(e.vertices = z), (e.faces = k), d && (e.faceVertexUvs[0] = j)
+                Y.set(midpoint(F.x, z.x), midpoint(F.y, z.y)),
+                Q.set(midpoint(z.x, U.x), midpoint(z.y, U.y)),
+                W.set(midpoint(F.x, U.x), midpoint(F.y, U.y)),
+                newUv(j, Y, Q, W),
+                newUv(j, F, Y, W),
+                newUv(j, z, Q, Y),
+                newUv(j, U, W, Q))
+          ;(e.vertices = G), (e.faces = k), d && (e.faceVertexUvs[0] = j)
         }),
         e
       )
@@ -1807,7 +1618,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o =
+            a =
               null !==
                 (r =
                   null !== (i = e.geometry) && void 0 !== i
@@ -1820,8 +1631,8 @@ export function speRuntimeFactory (exports) {
                     new THREE.BoxBufferGeometry(100, 100, 100)
                   )
           void 0 === t
-            ? (o.computeBoundingBox(),
-              o.boundingBox.getSize(_size),
+            ? (a.computeBoundingBox(),
+              a.boundingBox.getSize(_size),
               (n = {
                 width: _size.x,
                 height: _size.y,
@@ -1829,15 +1640,15 @@ export function speRuntimeFactory (exports) {
                 subdivisions: 0
               }))
             : (n = t.parameters)
-          var a = __assign(__assign({}, n), e.parameters)
+          var o = __assign(__assign({}, n), e.parameters)
           return {
             parameters: {
-              width: Math.abs(a.width),
-              height: Math.abs(a.height),
-              depth: Math.abs(a.depth),
-              subdivisions: Math.abs(a.subdivisions)
+              width: Math.abs(o.width),
+              height: Math.abs(o.height),
+              depth: Math.abs(o.depth),
+              subdivisions: Math.abs(o.subdivisions)
             },
-            geometry: o
+            geometry: a
           }
         }),
         (e.build = function (e) {
@@ -1845,8 +1656,8 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = i.height,
-            o = i.depth,
-            a = i.subdivisions,
+            a = i.depth,
+            o = i.subdivisions,
             s =
               null !== (t = e.geometry) && void 0 !== t
                 ? t
@@ -1857,18 +1668,18 @@ export function speRuntimeFactory (exports) {
           void 0 === l
             ? (s.computeBoundingBox(), s.boundingBox.getSize(_size))
             : _size.set(l.width, l.height, l.depth),
-            (r === _size.x && n === _size.y && o === _size.z) ||
+            (r === _size.x && n === _size.y && a === _size.z) ||
               s.scale(
                 0 === _size.x ? 1 : r / _size.x,
                 0 === _size.y ? 1 : n / _size.y,
-                0 === _size.z ? 1 : o / _size.z
+                0 === _size.z ? 1 : a / _size.z
               )
           var c = s.originalGeometry
-          if (a > 0) {
-            if (void 0 === c || (null == l ? void 0 : l.subdivisions) !== a) {
+          if (o > 0) {
+            if (void 0 === c || (null == l ? void 0 : l.subdivisions) !== o) {
               void 0 === c && (c = s)
-              var u = new SubdivisionModifier(a)
-              s = new THREE.BufferGeometry().fromGeometry(u.modify(c))
+              var h = new SubdivisionModifier(o)
+              s = new THREE.BufferGeometry().fromGeometry(h.modify(c))
             }
           } else void 0 !== c && (s = c), (c = void 0)
           return (
@@ -1937,26 +1748,26 @@ export function speRuntimeFactory (exports) {
               i = e.parameters,
               r = i.width,
               n = i.height,
-              o = i.spikes,
-              a = i.cornerRadius,
+              a = i.spikes,
+              o = i.cornerRadius,
               s = i.extrudeDepth,
               l = i.extrudeBevelSize,
               c = i.extrudeBevelSegments,
-              u = 0.5 * r,
-              h = 0.5 * n,
-              d = (2 * Math.PI) / o,
+              h = 0.5 * r,
+              u = 0.5 * n,
+              d = (2 * Math.PI) / a,
               f = new THREE.Shape(),
               p = 0;
-            p <= o;
+            p <= a;
             p++
           ) {
-            var v = d * p,
-              m = 0 + Math.sin(v) * u,
-              g = 0 + Math.cos(v) * h
-            f.lineTo(m, g)
+            var m = d * p,
+              g = 0 + Math.sin(m) * h,
+              v = 0 + Math.cos(m) * u
+            f.lineTo(g, v)
           }
           return (
-            0 !== a && roundShapePolygon(f, f.getPoints(), a),
+            0 !== o && roundShapePolygon(f, f.getPoints(), o),
             (t =
               s > 0
                 ? new THREE.ExtrudeBufferGeometry(f, {
@@ -1989,7 +1800,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -2004,13 +1815,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -2020,15 +1831,15 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.depth,
-            o = t.radialSegments,
-            a = t.heightSegments,
+            a = t.radialSegments,
+            o = t.heightSegments,
             s = t.openEnded,
             l = t.cornerRadius,
             c = t.cornerSegments,
-            u = new RoundedPyramidBufferGeometry(0.5 * i, r, o, a, s, l, c)
+            h = new RoundedPyramidBufferGeometry(0.5 * i, r, a, o, s, l, c)
           return (
-            u.scale(1, 1, n / i),
-            Object.assign(u, {
+            h.scale(1, 1, n / i),
+            Object.assign(h, {
               userData: __assign(__assign({}, e), { type: 'PyramidGeometry' })
             })
           )
@@ -2039,18 +1850,18 @@ export function speRuntimeFactory (exports) {
   function two2three$1(e, t, i) {
     ;(i.x = e.x * t.x), (i.y = e.y), (i.z = e.x * t.y)
   }
-  function offset3d(e, t, i, r, n, o) {
-    var a = t.clone().sub(e),
+  function offset3d(e, t, i, r, n, a) {
+    var o = t.clone().sub(e),
       s = i.clone().sub(e),
-      l = a.angleTo(s)
-    if ((a.normalize(), s.normalize(), r === n)) {
-      var c = a.add(s).normalize()
-      o.copy(e).addScaledVector(c, r / Math.sin(l / 2))
+      l = o.angleTo(s)
+    if ((o.normalize(), s.normalize(), r === n)) {
+      var c = o.add(s).normalize()
+      a.copy(e).addScaledVector(c, r / Math.sin(l / 2))
     } else {
-      var u = a.angleTo(s)
-      o.copy(e),
-        o.addScaledVector(a, n / Math.sin(u)),
-        o.addScaledVector(s, r / Math.sin(u))
+      var h = o.angleTo(s)
+      a.copy(e),
+        a.addScaledVector(o, n / Math.sin(h)),
+        a.addScaledVector(s, r / Math.sin(h))
     }
   }
   function projectOntoLine(e, t, i) {
@@ -2059,257 +1870,256 @@ export function speRuntimeFactory (exports) {
     return r.projectOnVector(n), r.add(t)
   }
   var RoundedPyramidBufferGeometry = (function (e) {
-      function t(t, i, r, n, o, a, s) {
+      function t(t, i, r, n, a, o, s) {
         var l
         void 0 === t && (t = 0.5),
           void 0 === i && (i = 1),
           void 0 === r && (r = 4),
-          void 0 === o && (o = !1),
-          void 0 === a && (a = 0),
+          void 0 === a && (a = !1),
+          void 0 === o && (o = 0),
           void 0 === s && (s = 4)
         var c = e.call(this) || this
         ;(r = Math.floor(Math.max(3, r))), (s = Math.floor(s))
-        var u,
-          h = [],
+        var h,
+          u = [],
           d = [],
           f = [],
           p = [],
-          v = 0,
-          m = i / 2,
-          g = Math.PI / r,
-          E = t * Math.cos(Math.PI / r),
-          y = (2 * Math.PI) / r,
+          m = 0,
+          g = i / 2,
+          v = Math.PI / r,
+          y = t * Math.cos(Math.PI / r),
+          E = (2 * Math.PI) / r,
           A = ((r - 2) * Math.PI) / r,
-          T = Math.PI - A,
-          x = new THREE.Vector3(0, -m, 0),
-          _ = new THREE.Vector3(0, m, 0),
-          w = new THREE.Vector2(t, -m),
-          S = new THREE.Vector2(E, -m),
-          b = new THREE.Vector2(0, _.y).sub(S),
-          R = new THREE.Vector2(0, _.y).sub(w),
-          C = new THREE.Vector2(b.y, -b.x).normalize(),
-          O = new THREE.Vector2(R.y, -R.x).normalize(),
-          D =
-            t * Math.cos(Math.PI / r) * Math.tan((Math.PI - b.angle()) / 2) -
+          x = Math.PI - A,
+          T = new THREE.Vector3(0, -g, 0),
+          w = new THREE.Vector3(0, g, 0),
+          b = new THREE.Vector2(t, -g),
+          S = new THREE.Vector2(y, -g),
+          C = new THREE.Vector2(0, w.y).sub(S),
+          _ = new THREE.Vector2(0, w.y).sub(b),
+          D = new THREE.Vector2(C.y, -C.x).normalize(),
+          O = new THREE.Vector2(_.y, -_.x).normalize(),
+          R =
+            t * Math.cos(Math.PI / r) * Math.tan((Math.PI - C.angle()) / 2) -
             1e-8
-        a = Math.min(a, D)
-        var M = new THREE.Vector3(C.x, C.y, 0),
-          L = new THREE.Vector3(Math.cos(y) * M.x, M.y, Math.sin(y) * M.x)
-        u = M.angleTo(L)
-        var P = a / Math.tan((Math.PI - b.angle()) / 2),
-          I = a / Math.tan((Math.PI - u) / 2),
-          B = new THREE.Vector3()
-        if (!o) {
-          d.push(x.x, x.y, x.z), f.push(0, -1, 0), p.push(0, 0)
-          var H = v++,
+        o = Math.min(o, R)
+        var M = new THREE.Vector3(D.x, D.y, 0),
+          L = new THREE.Vector3(Math.cos(E) * M.x, M.y, Math.sin(E) * M.x)
+        h = M.angleTo(L)
+        var B = o / Math.tan((Math.PI - C.angle()) / 2),
+          P = o / Math.tan((Math.PI - h) / 2),
+          H = new THREE.Vector3()
+        if (!a) {
+          d.push(T.x, T.y, T.z), f.push(0, -1, 0), p.push(0, 0)
+          var I = m++,
             N = [],
-            F = w.clone(),
-            G = P / Math.cos(Math.PI / r)
-          F.x -= G
+            F = b.clone(),
+            z = B / Math.cos(Math.PI / r)
+          F.x -= z
           for (var U = 0; U < r; U++) {
-            var z = (U / r) * Math.PI * 2 + g
-            two2three$1(F, new THREE.Vector2(Math.sin(z), Math.cos(z)), B),
-              d.push(B.x, B.y, B.z),
+            var G = (U / r) * Math.PI * 2 + v
+            two2three$1(F, new THREE.Vector2(Math.sin(G), Math.cos(G)), H),
+              d.push(H.x, H.y, H.z),
               f.push(0, -1, 0),
               p.push(0, 0),
-              N.push(v++)
+              N.push(m++)
           }
-          for (U = 0; U < N.length; U++) h.push(N[U], H, N[(U + 1) % N.length])
+          for (U = 0; U < N.length; U++) u.push(N[U], I, N[(U + 1) % N.length])
         }
         M = new THREE.Vector3()
         var V = new THREE.Vector3(),
           k = new THREE.Vector3(),
           j = new THREE.Vector3(),
           Y = new THREE.Vector3(),
-          $ = new THREE.Vector3()
+          Q = new THREE.Vector3()
         for (U = 0; U < r; U++) {
-          var Q = (U / r) * Math.PI * 2 + g,
-            W = ((U + 0.5) / r) * Math.PI * 2 + g,
-            X = ((U + 1) / r) * Math.PI * 2 + g,
-            J = new THREE.Vector2(Math.sin(Q), Math.cos(Q)),
-            K = new THREE.Vector2(Math.sin(W), Math.cos(W)),
-            q = new THREE.Vector2(Math.sin(X), Math.cos(X))
-          two2three$1(w, J, V),
-            two2three$1(w, q, k),
-            two2three$1(C, K, M),
-            offset3d(_, V, k, I, I, j),
+          var W = (U / r) * Math.PI * 2 + v,
+            $ = ((U + 0.5) / r) * Math.PI * 2 + v,
+            J = ((U + 1) / r) * Math.PI * 2 + v,
+            X = new THREE.Vector2(Math.sin(W), Math.cos(W)),
+            K = new THREE.Vector2(Math.sin($), Math.cos($)),
+            q = new THREE.Vector2(Math.sin(J), Math.cos(J))
+          two2three$1(b, X, V),
+            two2three$1(b, q, k),
+            two2three$1(D, K, M),
+            offset3d(w, V, k, P, P, j),
             d.push(j.x, j.y, j.z),
-            offset3d(V, _, k, I, P, Y),
+            offset3d(V, w, k, P, B, Y),
             d.push(Y.x, Y.y, Y.z),
-            offset3d(k, V, _, P, I, $),
-            d.push($.x, $.y, $.z),
+            offset3d(k, V, w, B, P, Q),
+            d.push(Q.x, Q.y, Q.z),
             f.push(M.x, M.y, M.z),
             f.push(M.x, M.y, M.z),
             f.push(M.x, M.y, M.z),
             p.push(0, 0),
             p.push(0, 0),
             p.push(0, 0)
-          var Z = v++,
-            ee = v++,
-            te = v++
-          if ((h.push(Z, ee, te), a > 0)) {
-            H = V.clone().add(k).multiplyScalar(0.5)
-            var ie = _.clone().sub(H).normalize(),
-              re = x
-                .clone()
-                .sub(H)
+          var Z = m++,
+            ee = m++,
+            te = m++
+          if ((u.push(Z, ee, te), o > 0)) {
+            I = V.clone().add(k).multiplyScalar(0.5)
+            var ie = w.clone().sub(I).normalize(),
+              re = T.clone()
+                .sub(I)
                 .normalize()
                 .add(ie)
                 .normalize()
                 .multiplyScalar(-1)
-            Ce(H, $.clone().sub(Y), re, b.angle())
+            De(I, Q.clone().sub(Y), re, C.angle())
             var ne,
-              oe = void 0
+              ae = void 0
             two2three$1(O, q, (re = new THREE.Vector3())),
               (ne = (l = __read(
-                Ce(
-                  (H = projectOntoLine(
-                    (H = $.clone().add(j).multiplyScalar(0.5)),
+                De(
+                  (I = projectOntoLine(
+                    (I = Q.clone().add(j).multiplyScalar(0.5)),
                     k,
-                    _
+                    w
                   )),
-                  $.clone().sub(j),
+                  Q.clone().sub(j),
                   re,
-                  u,
+                  h,
                   j.y
                 ),
                 2
               ))[0]),
-              (oe = l[1])
-            var ae = (H = ne).clone().setY(0).normalize(),
+              (ae = l[1])
+            var oe = (I = ne).clone().setY(0).normalize(),
               se = new THREE.Vector3(0, -1, 0),
-              le = ae.clone().cross(se)
-            Oe(H, ae, se, le)
-            var ce = b.angle(),
-              ue = Math.PI - ce
-            ;(H = _.clone()).y -= a / Math.sin(ce - Math.PI / 2)
+              le = oe.clone().cross(se)
+            Oe(I, oe, se, le)
+            var ce = C.angle(),
+              he = Math.PI - ce
+            ;(I = w.clone()).y -= o / Math.sin(ce - Math.PI / 2)
             for (
-              var he = new THREE.Vector3(), de = [], fe = 0;
+              var ue = new THREE.Vector3(), de = [], fe = 0;
               fe < s;
               fe++
             ) {
               for (
                 var pe = [],
-                  ve = Math.PI / 2 - (ue * fe) / s,
-                  me = Math.cos(ve),
-                  ge = Math.sin(ve),
-                  Ee = W,
-                  ye = 0;
-                ye <= fe;
-                ye++
+                  me = Math.PI / 2 - (he * fe) / s,
+                  ge = Math.cos(me),
+                  ve = Math.sin(me),
+                  ye = $,
+                  Ee = 0;
+                Ee <= fe;
+                Ee++
               ) {
-                var Ae = Math.cos(Ee),
-                  Te = Math.sin(Ee)
-                ;(M.x = me * Te),
-                  (M.y = ge),
-                  (M.z = me * Ae),
-                  he.copy(H).addScaledVector(M, a),
-                  d.push(he.x, he.y, he.z),
+                var Ae = Math.cos(ye),
+                  xe = Math.sin(ye)
+                ;(M.x = ge * xe),
+                  (M.y = ve),
+                  (M.z = ge * Ae),
+                  ue.copy(I).addScaledVector(M, o),
+                  d.push(ue.x, ue.y, ue.z),
                   f.push(M.x, M.y, M.z),
                   p.push(0, 0),
-                  pe.push(v++),
-                  (Ee += (2 * Math.PI) / fe / r)
+                  pe.push(m++),
+                  (ye += (2 * Math.PI) / fe / r)
               }
               de.push(pe)
             }
-            oe.reverse(), de.push(oe)
-            for (var xe = de.length - 1, _e = 0; _e < xe; _e++) {
-              var we = de[_e],
-                Se = de[_e + 1],
-                be = we.length - 1
-              h.push(Se[1], we[0], Se[0])
-              for (var Re = 1; Re <= be; Re++)
-                h.push(we[Re], we[Re - 1], Se[Re]),
-                  h.push(Se[Re + 1], we[Re], Se[Re])
+            ae.reverse(), de.push(ae)
+            for (var Te = de.length - 1, we = 0; we < Te; we++) {
+              var be = de[we],
+                Se = de[we + 1],
+                Ce = be.length - 1
+              u.push(Se[1], be[0], Se[0])
+              for (var _e = 1; _e <= Ce; _e++)
+                u.push(be[_e], be[_e - 1], Se[_e]),
+                  u.push(Se[_e + 1], be[_e], Se[_e])
             }
           }
         }
-        function Ce(e, t, i, r, n) {
-          var o = -r / 2,
+        function De(e, t, i, r, n) {
+          var a = -r / 2,
             l = (Math.PI - r) / 2,
             c = t.clone().normalize().cross(i)
-          e.addScaledVector(i, -a / Math.sin(l))
+          e.addScaledVector(i, -o / Math.sin(l))
           for (
-            var u = new THREE.Vector3(),
-              m = new THREE.Vector3(),
-              g = v,
-              E = [],
-              y = 0;
-            y <= s;
-            y++
+            var h = new THREE.Vector3(),
+              g = new THREE.Vector3(),
+              v = m,
+              y = [],
+              E = 0;
+            E <= s;
+            E++
           ) {
-            var A = o + (y / s) * r
-            m.set(0, 0, 0),
-              m.addScaledVector(c, Math.sin(A)),
-              m.addScaledVector(i, Math.cos(A))
-            for (var T = 0; T <= 1; T++) {
-              var x = T / 1 - 0.5
+            var A = a + (E / s) * r
+            g.set(0, 0, 0),
+              g.addScaledVector(c, Math.sin(A)),
+              g.addScaledVector(i, Math.cos(A))
+            for (var x = 0; x <= 1; x++) {
+              var T = x / 1 - 0.5
               if (
-                (u.copy(e),
-                u.addScaledVector(t, x),
-                u.addScaledVector(m, a),
+                (h.copy(e),
+                h.addScaledVector(t, T),
+                h.addScaledVector(g, o),
                 null != n)
               ) {
-                var _ = Math.max(0, u.y - n)
-                u.addScaledVector(t, -_ / t.y)
+                var w = Math.max(0, h.y - n)
+                h.addScaledVector(t, -w / t.y)
               }
-              d.push(u.x, u.y, u.z),
-                f.push(m.x, m.y, m.z),
+              d.push(h.x, h.y, h.z),
+                f.push(g.x, g.y, g.z),
                 p.push(0, 0),
-                0 === T && E.push(v),
-                v++
+                0 === x && y.push(m),
+                m++
             }
           }
-          for (y = 0; y < s; y++)
-            for (T = 0; T < 1; T++) {
-              var w = (A = g + T + 2 * y) + 2,
-                S = w + 1,
-                b = A + 1
-              h.push(A, w, b), h.push(w, S, b)
+          for (E = 0; E < s; E++)
+            for (x = 0; x < 1; x++) {
+              var b = (A = v + x + 2 * E) + 2,
+                S = b + 1,
+                C = A + 1
+              u.push(A, b, C), u.push(b, S, C)
             }
-          return [e.clone().addScaledVector(t, 0.5), E]
+          return [e.clone().addScaledVector(t, 0.5), y]
         }
         function Oe(e, t, i, r) {
           for (
             var n = Math.PI / 2,
-              o = R.angle() - n,
+              a = _.angle() - n,
               l = [],
               c = new THREE.Vector3(),
-              u = new THREE.Vector3(),
-              m = 0;
-            m <= s;
-            m++
+              h = new THREE.Vector3(),
+              g = 0;
+            g <= s;
+            g++
           ) {
-            for (var g = [], E = m / s, y = 0; y <= m; y++) {
-              var A = ((m ? y / m : 0) - 0.5) * T,
-                x = Math.cos(A),
-                _ = Math.sin(A),
-                w = (n + Math.atan(Math.tan(o) * x)) * E,
-                S = Math.cos(w),
-                b = Math.sin(w)
+            for (var v = [], y = g / s, E = 0; E <= g; E++) {
+              var A = ((g ? E / g : 0) - 0.5) * x,
+                T = Math.cos(A),
+                w = Math.sin(A),
+                b = (n + Math.atan(Math.tan(a) * T)) * y,
+                S = Math.cos(b),
+                C = Math.sin(b)
               c.set(0, 0, 0),
-                c.addScaledVector(t, b * x),
+                c.addScaledVector(t, C * T),
                 c.addScaledVector(i, S),
-                c.addScaledVector(r, b * _),
-                u.copy(e).addScaledVector(c, a),
-                d.push(u.x, u.y, u.z),
+                c.addScaledVector(r, C * w),
+                h.copy(e).addScaledVector(c, o),
+                d.push(h.x, h.y, h.z),
                 f.push(c.x, c.y, c.z),
                 p.push(0, 0),
-                g.push(v++)
+                v.push(m++)
             }
-            l.push(g)
+            l.push(v)
           }
-          for (var C = l.length - 1, O = 0; O < C; O++) {
-            var D = l[O],
+          for (var D = l.length - 1, O = 0; O < D; O++) {
+            var R = l[O],
               M = l[O + 1],
-              L = D.length - 1
-            h.push(D[0], M[1], M[0])
-            for (var P = 1; P <= L; P++)
-              h.push(D[P - 1], D[P], M[P]), h.push(D[P], M[P + 1], M[P])
+              L = R.length - 1
+            u.push(R[0], M[1], M[0])
+            for (var B = 1; B <= L; B++)
+              u.push(R[B - 1], R[B], M[B]), u.push(R[B], M[B + 1], M[B])
           }
         }
         return (
-          c.setIndex(h),
+          c.setIndex(u),
           c.setAttribute('position', new THREE.Float32BufferAttribute(d, 3)),
           c.setAttribute('normal', new THREE.Float32BufferAttribute(f, 3)),
           c.setAttribute('uv', new THREE.Float32BufferAttribute(p, 2)),
@@ -2328,7 +2138,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -2343,20 +2153,20 @@ export function speRuntimeFactory (exports) {
                   },
               e.parameters
             ),
-            a = Object.assign(
+            o = Object.assign(
               null !== (r = null == t ? void 0 : t.ui) && void 0 !== r
                 ? r
                 : { enabledIndieCorners: !1 },
               e.ui
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (n = o.height) && void 0 !== n ? n : o.width
+                null !== (n = a.height) && void 0 !== n ? n : a.width
               )
             }),
-            ui: a
+            ui: o
           }
         }),
         (e.build = function (e) {
@@ -2364,13 +2174,13 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.cornerRadius,
-            o = t.cornerType,
-            a = t.extrudeDepth,
+            a = t.cornerType,
+            o = t.extrudeDepth,
             s = t.extrudeBevelSize,
             l = t.extrudeBevelSegments,
             c = { x: 0.5 * i, y: 0.5 * r },
-            u = { x: -c.x, y: -c.y },
-            h = { x: c.x, y: c.y }
+            h = { x: -c.x, y: -c.y },
+            u = { x: c.x, y: c.y }
           function d(e, t, n) {
             return t > i && n > r
               ? Math.min((e * i) / t, (e * r) / n)
@@ -2386,77 +2196,77 @@ export function speRuntimeFactory (exports) {
             (f[2] = 0 === n[2] ? 0 : d(n[2], n[2] + n[1], n[2] + n[3])),
             (f[3] = 0 === n[3] ? 0 : d(n[3], n[3] + n[0], n[3] + n[2]))
           var p,
-            v = u.x,
             m = h.x,
-            g = h.y,
-            E = u.y,
-            y = new THREE.Shape()
-          if ((y.moveTo(v, g - f[0]), 1 == o))
-            n[0] > 0 && y.quadraticCurveTo(v, g, v + f[0], g),
-              y.lineTo(m - f[1], g),
-              n[1] > 0 && y.quadraticCurveTo(m, g, m, g - f[1]),
-              y.lineTo(m, E + f[2]),
-              n[2] > 0 && y.quadraticCurveTo(m, E, m - f[2], E),
-              y.lineTo(v + f[3], E),
-              n[3] > 0 && y.quadraticCurveTo(v, E, v, E + f[3]),
-              y.lineTo(v, g - f[0])
+            g = u.x,
+            v = u.y,
+            y = h.y,
+            E = new THREE.Shape()
+          if ((E.moveTo(m, v - f[0]), 1 == a))
+            n[0] > 0 && E.quadraticCurveTo(m, v, m + f[0], v),
+              E.lineTo(g - f[1], v),
+              n[1] > 0 && E.quadraticCurveTo(g, v, g, v - f[1]),
+              E.lineTo(g, y + f[2]),
+              n[2] > 0 && E.quadraticCurveTo(g, y, g - f[2], y),
+              E.lineTo(m + f[3], y),
+              n[3] > 0 && E.quadraticCurveTo(m, y, m, y + f[3]),
+              E.lineTo(m, v - f[0])
           else {
             var A = (4 * (Math.SQRT2 - 1)) / 3
             n[0] > 0 &&
-              y.bezierCurveTo(
+              E.bezierCurveTo(
+                m,
+                v + f[0] * (A - 1),
+                m - f[0] * (A - 1),
                 v,
-                g + f[0] * (A - 1),
-                v - f[0] * (A - 1),
-                g,
-                v + f[0],
-                g
+                m + f[0],
+                v
               ),
-              y.lineTo(m - f[1], g),
+              E.lineTo(g - f[1], v),
               n[1] > 0 &&
-                y.bezierCurveTo(
-                  m + f[1] * (A - 1),
-                  g,
-                  m,
+                E.bezierCurveTo(
                   g + f[1] * (A - 1),
-                  m,
-                  g - f[1]
+                  v,
+                  g,
+                  v + f[1] * (A - 1),
+                  g,
+                  v - f[1]
                 ),
-              y.lineTo(m, E + f[2]),
+              E.lineTo(g, y + f[2]),
               n[2] > 0 &&
-                y.bezierCurveTo(
-                  m,
-                  E - f[2] * (A - 1),
-                  m + f[2] * (A - 1),
-                  E,
-                  m - f[2],
-                  E
+                E.bezierCurveTo(
+                  g,
+                  y - f[2] * (A - 1),
+                  g + f[2] * (A - 1),
+                  y,
+                  g - f[2],
+                  y
                 ),
-              y.lineTo(v + f[3], E),
+              E.lineTo(m + f[3], y),
               n[3] > 0 &&
-                y.bezierCurveTo(
-                  v - f[3] * (A - 1),
-                  E,
-                  v,
-                  E - f[3] * (A - 1),
-                  v,
-                  E + f[3]
+                E.bezierCurveTo(
+                  m - f[3] * (A - 1),
+                  y,
+                  m,
+                  y - f[3] * (A - 1),
+                  m,
+                  y + f[3]
                 )
           }
           return (
-            y.lineTo(v, g - f[0]),
+            E.lineTo(m, v - f[0]),
             (p =
-              a > 0
-                ? new THREE.ExtrudeBufferGeometry(y, {
+              o > 0
+                ? new THREE.ExtrudeBufferGeometry(E, {
                     curveSegments: 64,
                     steps: 1,
-                    depth: a,
+                    depth: o,
                     bevelEnabled: !0,
                     bevelThickness: s,
                     bevelSize: s,
                     bevelOffset: 0,
                     bevelSegments: l
                   })
-                : new THREE.ShapeBufferGeometry(y, 32)),
+                : new THREE.ShapeBufferGeometry(E, 32)),
             fixUvs(p, i, r),
             Object.assign(p, {
               userData: __assign(__assign({}, e), { type: 'RectangleGeometry' })
@@ -2476,7 +2286,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -2492,13 +2302,13 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
               depth: Math.abs(
-                null !== (n = o.depth) && void 0 !== n ? n : o.width
+                null !== (n = a.depth) && void 0 !== n ? n : a.width
               )
             })
           }
@@ -2508,21 +2318,21 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = void 0 === i ? 100 : i,
             n = t.height,
-            o = void 0 === n ? r : n,
-            a = t.depth,
-            s = void 0 === a ? r : a,
+            a = void 0 === n ? r : n,
+            o = t.depth,
+            s = void 0 === o ? r : o,
             l = t.widthSegments,
             c = void 0 === l ? 64 : l,
-            u = t.heightSegments,
-            h = void 0 === u ? 64 : u,
+            h = t.heightSegments,
+            u = void 0 === h ? 64 : h,
             d = t.phiStart,
             f = t.phiLength,
             p = t.thetaStart,
-            v = t.thetaLength,
-            m = new THREE.SphereBufferGeometry(0.5 * r, c, h, d, f, p, v)
+            m = t.thetaLength,
+            g = new THREE.SphereBufferGeometry(0.5 * r, c, u, d, f, p, m)
           return (
-            m.scale(1, o / r, s / r),
-            Object.assign(m, {
+            g.scale(1, a / r, s / r),
+            Object.assign(g, {
               userData: __assign(__assign({}, e), { type: 'SphereGeometry' })
             })
           )
@@ -2570,55 +2380,55 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = i.height,
-            o = i.innerRadiusPercent,
-            a = i.spikes,
+            a = i.innerRadiusPercent,
+            o = i.spikes,
             s = i.cornerRadius,
             l = i.angle,
             c = i.extrudeDepth,
-            u = i.extrudeBevelSize,
-            h = i.extrudeBevelSegments,
+            h = i.extrudeBevelSize,
+            u = i.extrudeBevelSegments,
             d = 0.5 * r,
             f = 0.5 * n,
-            p = (l * Math.PI) / 360 / a,
-            v = (Math.PI / 2) * 3 * -1,
-            m = (d * o) / 100,
-            g = (f * o) / 100,
-            E = new THREE.Shape()
-          if (3 == a && 50 == o) {
-            p = (2 * Math.PI) / a
-            for (var y = 0; y <= a; y++) {
-              var A = p * y,
-                T = 0 + Math.sin(A) * d,
-                x = 0 + Math.cos(A) * f
-              E.lineTo(T, x)
+            p = (l * Math.PI) / 360 / o,
+            m = (Math.PI / 2) * 3 * -1,
+            g = (d * a) / 100,
+            v = (f * a) / 100,
+            y = new THREE.Shape()
+          if (3 == o && 50 == a) {
+            p = (2 * Math.PI) / o
+            for (var E = 0; E <= o; E++) {
+              var A = p * E,
+                x = 0 + Math.sin(A) * d,
+                T = 0 + Math.cos(A) * f
+              y.lineTo(x, T)
             }
           } else {
-            E.moveTo(0, 0 + l == 360 ? f : 0)
-            for (y = 0; y < a; y++) {
-              ;(T = 0 + Math.cos(v) * d), (x = 0 + Math.sin(v) * f)
-              E.lineTo(T, x),
-                (v += p),
-                (T = 0 + Math.cos(v) * m),
-                (x = 0 + Math.sin(v) * g),
-                E.lineTo(T, x),
-                (v += p)
+            y.moveTo(0, 0 + l == 360 ? f : 0)
+            for (E = 0; E < o; E++) {
+              ;(x = 0 + Math.cos(m) * d), (T = 0 + Math.sin(m) * f)
+              y.lineTo(x, T),
+                (m += p),
+                (x = 0 + Math.cos(m) * g),
+                (T = 0 + Math.sin(m) * v),
+                y.lineTo(x, T),
+                (m += p)
             }
-            E.lineTo(0, 0 + l == 360 ? f : 0)
+            y.lineTo(0, 0 + l == 360 ? f : 0)
           }
           return (
-            0 !== s && roundShapePolygon(E, E.getPoints(), s),
+            0 !== s && roundShapePolygon(y, y.getPoints(), s),
             (t =
               c > 0
-                ? new THREE.ExtrudeBufferGeometry(E, {
+                ? new THREE.ExtrudeBufferGeometry(y, {
                     steps: 1,
                     depth: c,
                     bevelEnabled: !0,
-                    bevelThickness: u,
-                    bevelSize: u,
+                    bevelThickness: h,
+                    bevelSize: h,
                     bevelOffset: 0,
-                    bevelSegments: h
+                    bevelSegments: u
                   })
-                : new THREE.ShapeBufferGeometry(E)),
+                : new THREE.ShapeBufferGeometry(y)),
             fixUvs(t, r, n),
             Object.assign(t, {
               userData: __assign(__assign({}, e), { type: 'StarGeometry' })
@@ -2676,7 +2486,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -2690,13 +2500,13 @@ export function speRuntimeFactory (exports) {
                   },
               e.parameters
             ),
-            a = Math.abs(o.width),
-            s = Math.abs(null !== (r = o.height) && void 0 !== r ? r : o.width),
+            o = Math.abs(a.width),
+            s = Math.abs(null !== (r = a.height) && void 0 !== r ? r : a.width),
             l = Math.abs(
-              null !== (n = o.depth) && void 0 !== n ? n : 0.25 * o.width
+              null !== (n = a.depth) && void 0 !== n ? n : 0.25 * a.width
             )
           return {
-            parameters: Object.assign(o, { width: a, height: s, depth: l })
+            parameters: Object.assign(a, { width: o, height: s, depth: l })
           }
         }),
         (e.build = function (e) {
@@ -2704,18 +2514,18 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.height,
             n = t.depth,
-            o = t.radialSegments,
-            a = t.tubularSegments,
+            a = t.radialSegments,
+            o = t.tubularSegments,
             s = genTorus(
               i,
               r,
               n,
               0.5 * i,
               t.arc,
-              o,
-              0,
-              0,
               a,
+              0,
+              0,
+              o,
               t.cornerRadius,
               t.cornerSegments
             )
@@ -2729,14 +2539,14 @@ export function speRuntimeFactory (exports) {
         e
       )
     })()
-  function genTorus(e, t, i, r, n, o, a, s, l, c, u) {
-    var h
+  function genTorus(e, t, i, r, n, a, o, s, l, c, h) {
+    var u
     return (
-      (t = (h = __read([i, t], 2))[0]),
-      (i = h[1]),
-      (a = t / 2),
+      (t = (u = __read([i, t], 2))[0]),
+      (i = u[1]),
+      (o = t / 2),
       1 == (n /= 2 * Math.PI) && (c = 0),
-      new HelixBufferGeometry(!0, e, t, i, r, n, o, a, s, l, c, u)
+      new HelixBufferGeometry(!0, e, t, i, r, n, a, o, s, l, c, h)
     )
   }
   var TorusKnotGeometry = (function () {
@@ -2749,7 +2559,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -2765,12 +2575,12 @@ export function speRuntimeFactory (exports) {
               e.parameters
             )
           return {
-            parameters: Object.assign(o, {
-              width: Math.abs(o.width),
+            parameters: Object.assign(a, {
+              width: Math.abs(a.width),
               height: Math.abs(
-                null !== (r = o.height) && void 0 !== r ? r : o.width
+                null !== (r = a.height) && void 0 !== r ? r : a.width
               ),
-              depth: Math.abs(null !== (n = o.depth) && void 0 !== n ? n : 1)
+              depth: Math.abs(null !== (n = a.depth) && void 0 !== n ? n : 1)
             })
           }
         }),
@@ -2779,11 +2589,11 @@ export function speRuntimeFactory (exports) {
             i = t.width,
             r = t.tube,
             n = t.tubularSegments,
-            o = t.radialSegments,
-            a = t.p,
+            a = t.radialSegments,
+            o = t.p,
             s = t.q,
             l = 0.5 * i - r,
-            c = new THREE.TorusKnotBufferGeometry(l, r, n, o, a, s)
+            c = new THREE.TorusKnotBufferGeometry(l, r, n, a, o, s)
           return Object.assign(c, {
             userData: __assign(__assign({}, e), { type: 'TorusKnotGeometry' })
           })
@@ -2832,30 +2642,30 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.width,
             n = void 0 === r ? 100 : r,
-            o = i.height,
-            a = i.cornerRadius,
+            a = i.height,
+            o = i.cornerRadius,
             s = i.extrudeDepth,
             l = i.extrudeBevelSize,
             c = i.extrudeBevelSegments,
-            u = i.isRect,
-            h = new THREE.Shape()
-          if (u)
-            h.moveTo(0.5 * -n, 0.5 * o),
-              h.lineTo(0.5 * n, 0.5 * -o),
-              h.lineTo(0.5 * -n, 0.5 * -o),
-              h.lineTo(0.5 * -n, 0.5 * o)
+            h = i.isRect,
+            u = new THREE.Shape()
+          if (h)
+            u.moveTo(0.5 * -n, 0.5 * a),
+              u.lineTo(0.5 * n, 0.5 * -a),
+              u.lineTo(0.5 * -n, 0.5 * -a),
+              u.lineTo(0.5 * -n, 0.5 * a)
           else {
-            var d = { x: 0.5 * n, y: 0.5 * o }
-            h.moveTo(0, d.y),
-              h.lineTo(d.x, -d.y),
-              h.lineTo(-d.x, -d.y),
-              h.lineTo(0, d.y)
+            var d = { x: 0.5 * n, y: 0.5 * a }
+            u.moveTo(0, d.y),
+              u.lineTo(d.x, -d.y),
+              u.lineTo(-d.x, -d.y),
+              u.lineTo(0, d.y)
           }
           return (
-            0 !== a && roundShapePolygonTriangle(h, h.getPoints(), a),
+            0 !== o && roundShapePolygonTriangle(u, u.getPoints(), o),
             (t =
               s > 0
-                ? new THREE.ExtrudeBufferGeometry(h, {
+                ? new THREE.ExtrudeBufferGeometry(u, {
                     curveSegments: 64,
                     steps: 1,
                     depth: s,
@@ -2865,8 +2675,8 @@ export function speRuntimeFactory (exports) {
                     bevelOffset: 0,
                     bevelSegments: c
                   })
-                : new THREE.ShapeBufferGeometry(h, 32)),
-            fixUvs(t, n, o),
+                : new THREE.ShapeBufferGeometry(u, 32)),
+            fixUvs(t, n, a),
             Object.assign(t, {
               userData: __assign(__assign({}, e), { type: 'TriangleGeometry' })
             })
@@ -2878,60 +2688,60 @@ export function speRuntimeFactory (exports) {
   function roundShapePolygonTriangle(e, t, i) {
     var r,
       n,
-      o,
       a,
+      o,
       s,
       l,
       c,
-      u,
       h,
+      u,
       d,
       f,
       p,
-      v,
       m,
-      g = function (e, t) {
+      g,
+      v = function (e, t) {
         var i = t.x - e.x,
           r = t.y - e.y,
           n = Math.sqrt(i * i + r * r),
-          o = i / n,
-          a = r / n
-        return { x: i, y: r, len: n, nx: o, ny: a, ang: Math.atan2(a, o) }
+          a = i / n,
+          o = r / n
+        return { x: i, y: r, len: n, nx: a, ny: o, ang: Math.atan2(o, a) }
       },
-      E = t.length - 1
-    for (a = t[E - 1], e.curves = [], r = 0; r < E; r++) {
-      ;(s = t[r % E]), (l = t[(r + 1) % E])
-      var y = g(s, a),
-        A = g(s, l)
-      ;(c = y.nx * A.ny - y.ny * A.nx),
-        (u = y.nx * A.nx - y.ny * -A.ny),
+      y = t.length - 1
+    for (o = t[y - 1], e.curves = [], r = 0; r < y; r++) {
+      ;(s = t[r % y]), (l = t[(r + 1) % y])
+      var E = v(s, o),
+        A = v(s, l)
+      ;(c = E.nx * A.ny - E.ny * A.nx),
+        (h = E.nx * A.nx - E.ny * -A.ny),
         (f = Math.asin(c)),
-        (h = 1),
+        (u = 1),
         (d = !1),
-        u < 0
+        h < 0
           ? f < 0
             ? (f = Math.PI + f)
-            : ((f = Math.PI - f), (h = -1), (d = !0))
-          : f > 0 && ((h = -1), (d = !0)),
+            : ((f = Math.PI - f), (u = -1), (d = !0))
+          : f > 0 && ((u = -1), (d = !0)),
         (p = 0.5 * f),
-        (m = Math.abs((Math.cos(p) * i) / Math.sin(p))) >
-        Math.min(0.5 * y.len, 0.5 * A.len)
-          ? ((m = Math.min(0.5 * y.len, 0.5 * A.len)),
-            (v = Math.abs((m * Math.sin(p)) / Math.cos(p))))
-          : (v = i),
-        (n = s.x + A.nx * m),
-        (o = s.y + A.ny * m),
-        (n += -A.ny * v * h),
-        (o += A.nx * v * h),
+        (g = Math.abs((Math.cos(p) * i) / Math.sin(p))) >
+        Math.min(0.5 * E.len, 0.5 * A.len)
+          ? ((g = Math.min(0.5 * E.len, 0.5 * A.len)),
+            (m = Math.abs((g * Math.sin(p)) / Math.cos(p))))
+          : (m = i),
+        (n = s.x + A.nx * g),
+        (a = s.y + A.ny * g),
+        (n += -A.ny * m * u),
+        (a += A.nx * m * u),
         e.absarc(
           n,
-          o,
-          v,
-          y.ang + (Math.PI / 2) * h,
-          A.ang - (Math.PI / 2) * h,
+          a,
+          m,
+          E.ang + (Math.PI / 2) * u,
+          A.ang - (Math.PI / 2) * u,
           d
         ),
-        (a = s),
+        (o = s),
         (s = l)
     }
     e.closePath()
@@ -3053,73 +2863,73 @@ export function speRuntimeFactory (exports) {
   }
   function pointsToBuffer(e, t, i, r) {
     void 0 === i && (i = 12), void 0 === r && (r = !0)
-    for (var n, o = tempbV3.set(0, 0, 0), a = 0, s = 0; s < t.length; s++)
+    for (var n, a = tempbV3.set(0, 0, 0), o = 0, s = 0; s < t.length; s++)
       for (
-        var l = toTCurve(t[s]), c = tempV2, u = getCurveDivision(l, i), h = 0;
-        h <= u;
-        h++
+        var l = toTCurve(t[s]), c = tempV2, h = getCurveDivision(l, i), u = 0;
+        u <= h;
+        u++
       )
         if (
           l instanceof THREE.CubicBezierCurve ||
           l instanceof THREE.LineCurve
         ) {
           if (
-            (l.getPoint(h / u, c),
-            o.set(c.x, c.y, 0),
-            null == n ? void 0 : n.equals(o))
+            (l.getPoint(u / h, c),
+            a.set(c.x, c.y, 0),
+            null == n ? void 0 : n.equals(a))
           )
             continue
           void 0 === n && (n = tempaV3),
-            n.copy(o),
-            e.setXYZ(a, o.x, o.y, o.z),
-            a++
+            n.copy(a),
+            e.setXYZ(o, a.x, a.y, a.z),
+            o++
         }
     return (
       r &&
-        a > 1 &&
-        (e.getX(a - 1) !== e.getX(0) ||
-          e.getY(a - 1) !== e.getY(0) ||
-          e.getZ(a - 1) !== e.getZ(0)) &&
-        (e.setXYZ(a, e.getX(0), e.getY(0), e.getZ(0)), a++),
+        o > 1 &&
+        (e.getX(o - 1) !== e.getX(0) ||
+          e.getY(o - 1) !== e.getY(0) ||
+          e.getZ(o - 1) !== e.getZ(0)) &&
+        (e.setXYZ(o, e.getX(0), e.getY(0), e.getZ(0)), o++),
       e
     )
   }
   function pointsSegmentsToBuffer(e, t, i, r, n) {
     void 0 === r && (r = 12), void 0 === n && (n = !0)
-    for (var o = tempbV3.set(0, 0, 0), a = 0, s = [], l = 0; l < t.length; l++)
+    for (var a = tempbV3.set(0, 0, 0), o = 0, s = [], l = 0; l < t.length; l++)
       if (!1 !== i[l]) {
         var c = void 0,
-          u = toTCurve(t[l]),
-          h = tempV2,
-          d = getCurveDivision(u, r)
+          h = toTCurve(t[l]),
+          u = tempV2,
+          d = getCurveDivision(h, r)
         s.push(d)
         for (var f = 0; f <= d; f++)
           if (
-            u instanceof THREE.CubicBezierCurve ||
-            u instanceof THREE.LineCurve
+            h instanceof THREE.CubicBezierCurve ||
+            h instanceof THREE.LineCurve
           ) {
             if (
-              (u.getPoint(f / d, h),
-              o.set(h.x, h.y, 0),
-              null == c ? void 0 : c.equals(o))
+              (h.getPoint(f / d, u),
+              a.set(u.x, u.y, 0),
+              null == c ? void 0 : c.equals(a))
             )
               continue
             void 0 === c
               ? (c = tempaV3)
-              : (e.setXYZ(a, c.x, c.y, c.z),
-                a++,
-                e.setXYZ(a, o.x, o.y, o.z),
-                a++),
-              c.copy(o)
+              : (e.setXYZ(o, c.x, c.y, c.z),
+                o++,
+                e.setXYZ(o, a.x, a.y, a.z),
+                o++),
+              c.copy(a)
           }
       }
     return (
       n &&
-        a > 1 &&
-        (e.getX(a - 1) !== e.getX(0) ||
-          e.getY(a - 1) !== e.getY(0) ||
-          e.getZ(a - 1) !== e.getZ(0)) &&
-        (e.setXYZ(a, e.getX(0), e.getY(0), e.getZ(0)), a++),
+        o > 1 &&
+        (e.getX(o - 1) !== e.getX(0) ||
+          e.getY(o - 1) !== e.getY(0) ||
+          e.getZ(o - 1) !== e.getZ(0)) &&
+        (e.setXYZ(o, e.getX(0), e.getY(0), e.getZ(0)), o++),
       s
     )
   }
@@ -3144,24 +2954,24 @@ export function speRuntimeFactory (exports) {
   function pointsToFlatArray(e, t, i, r) {
     var n
     void 0 === i && (i = 12), void 0 === r && (r = !0)
-    for (var o = 0, a = 0; a < t.length; a++)
+    for (var a = 0, o = 0; o < t.length; o++)
       for (
-        var s = toTCurve(t[a]), l = getCurveDivision(s, i), c = tempV2, u = 0;
-        u <= l;
-        u++
+        var s = toTCurve(t[o]), l = getCurveDivision(s, i), c = tempV2, h = 0;
+        h <= l;
+        h++
       )
         if (
           s instanceof THREE.CubicBezierCurve ||
           s instanceof THREE.LineCurve
         ) {
-          if ((s.getPoint(u / l, c), null == n ? void 0 : n.equals(c))) continue
-          void 0 === n && (n = tempbV2), n.copy(c), e.push(c.x, c.y), o++
+          if ((s.getPoint(h / l, c), null == n ? void 0 : n.equals(c))) continue
+          void 0 === n && (n = tempbV2), n.copy(c), e.push(c.x, c.y), a++
         }
     return (
       r &&
-        o > 1 &&
-        (e[o - 1] !== e[1] || e[o - 2] !== e[0]) &&
-        (e.push(e[0], e[1]), o++),
+        a > 1 &&
+        (e[a - 1] !== e[1] || e[a - 2] !== e[0]) &&
+        (e.push(e[0], e[1]), a++),
       e
     )
   }
@@ -3215,10 +3025,10 @@ export function speRuntimeFactory (exports) {
             r < n;
             r++
           ) {
-            var o = this.points[r]
-            o.position.multiply(i),
-              o.controls[0].position.multiply(i),
-              o.controls[1].position.multiply(i)
+            var a = this.points[r]
+            a.position.multiply(i),
+              a.controls[0].position.multiply(i),
+              a.controls[1].position.multiply(i)
           }
           this.update()
         }),
@@ -3248,17 +3058,17 @@ export function speRuntimeFactory (exports) {
           var r = this.points.indexOf(e),
             n = this.points.indexOf(t)
           if (r < 0 || n < 0) return null
-          var o = isStraightLine(e, t),
-            a = new THREE.Vector2(),
-            s = new BezierPoint(a)
-          if (o)
-            a
+          var a = isStraightLine(e, t),
+            o = new THREE.Vector2(),
+            s = new BezierPoint(o)
+          if (a)
+            o
               .subVectors(t.position, e.position)
               .multiplyScalar(i)
               .add(e.position),
-              s.position.copy(a),
-              s.controls[0].position.copy(a),
-              s.controls[1].position.copy(a)
+              s.position.copy(o),
+              s.controls[0].position.copy(o),
+              s.controls[1].position.copy(o)
           else {
             var l = ts1V2
                 .subVectors(e.controls[1].position, e.position)
@@ -3268,19 +3078,19 @@ export function speRuntimeFactory (exports) {
                 .subVectors(t.controls[0].position, e.controls[1].position)
                 .multiplyScalar(i)
                 .add(e.controls[1].position),
-              u = ts3V2
+              h = ts3V2
                 .subVectors(t.position, t.controls[0].position)
                 .multiplyScalar(i)
                 .add(t.controls[0].position),
-              h = l,
+              u = l,
               d = ts4V2.subVectors(c, l).multiplyScalar(i).add(l),
-              f = ts5V2.subVectors(u, c).multiplyScalar(i).add(c),
-              p = u
-            a.subVectors(f, d).multiplyScalar(i).add(d),
-              s.position.copy(a),
+              f = ts5V2.subVectors(h, c).multiplyScalar(i).add(c),
+              p = h
+            o.subVectors(f, d).multiplyScalar(i).add(d),
+              s.position.copy(o),
               s.controls[0].position.copy(d),
               s.controls[1].position.copy(f),
-              e.controls[1].position.copy(h),
+              e.controls[1].position.copy(u),
               t.controls[0].position.copy(p)
           }
           return this.points.splice(r + 1, 0, s), this._update(), s
@@ -3333,14 +3143,14 @@ export function speRuntimeFactory (exports) {
         (t.prototype.getCurveT = function (e, t, i) {
           var r = this.points[e],
             n = this.points[e >= this.points.length - 1 ? 0 : e + 1],
-            o = this.curveDivisions,
-            a = o[e]
+            a = this.curveDivisions,
+            o = a[e]
           if (isStraightLine(r, n)) {
             var s = r.position.distanceTo(n.position)
             return r.position.distanceTo(ts1V2.set(i.x, i.y)) / s
           }
-          for (var l = 0, c = 0; c < e; c++) l += o[c]
-          return (t - l + 1) / a
+          for (var l = 0, c = 0; c < e; c++) l += a[c]
+          return (t - l + 1) / o
         }),
         (t.prototype.dispose = function () {
           this.eventDispatcher = null
@@ -3404,17 +3214,17 @@ export function speRuntimeFactory (exports) {
           for (var t = e.points.length / 7, i = 0; i < t; i++) {
             var r = 7 * i,
               n = e.points[r + 0],
-              o = e.points[r + 1],
-              a = e.points[r + 2],
+              a = e.points[r + 1],
+              o = e.points[r + 2],
               s = e.points[r + 3],
               l = e.points[r + 4],
               c = e.points[r + 5],
-              u = e.points[r + 6],
-              h = new BezierPoint(new THREE.Vector2(n, o))
-            h.controls[0].position.set(a, s),
-              h.controls[1].position.set(l, c),
-              (h.roundness = u),
-              this.points.push(h)
+              h = e.points[r + 6],
+              u = new BezierPoint(new THREE.Vector2(n, a))
+            u.controls[0].position.set(o, s),
+              u.controls[1].position.set(l, c),
+              (u.roundness = h),
+              this.points.push(u)
           }
           return (this.isClosed = e.isClosed), this._update(), this
         }),
@@ -3462,34 +3272,34 @@ export function speRuntimeFactory (exports) {
         (e.edgeEval = function (t, i, r) {
           assert(e.vertLeq(t, i) && e.vertLeq(i, r))
           var n = i.s - t.s,
-            o = r.s - i.s
-          return n + o > 0
-            ? n < o
-              ? i.t - t.t + (t.t - r.t) * (n / (n + o))
-              : i.t - r.t + (r.t - t.t) * (o / (n + o))
+            a = r.s - i.s
+          return n + a > 0
+            ? n < a
+              ? i.t - t.t + (t.t - r.t) * (n / (n + a))
+              : i.t - r.t + (r.t - t.t) * (a / (n + a))
             : 0
         }),
         (e.edgeSign = function (t, i, r) {
           assert(e.vertLeq(t, i) && e.vertLeq(i, r))
           var n = i.s - t.s,
-            o = r.s - i.s
-          return n + o > 0 ? (i.t - r.t) * n + (i.t - t.t) * o : 0
+            a = r.s - i.s
+          return n + a > 0 ? (i.t - r.t) * n + (i.t - t.t) * a : 0
         }),
         (e.transEval = function (t, i, r) {
           assert(e.transLeq(t, i) && e.transLeq(i, r))
           var n = i.t - t.t,
-            o = r.t - i.t
-          return n + o > 0
-            ? n < o
-              ? i.s - t.s + (t.s - r.s) * (n / (n + o))
-              : i.s - r.s + (r.s - t.s) * (o / (n + o))
+            a = r.t - i.t
+          return n + a > 0
+            ? n < a
+              ? i.s - t.s + (t.s - r.s) * (n / (n + a))
+              : i.s - r.s + (r.s - t.s) * (a / (n + a))
             : 0
         }),
         (e.transSign = function (t, i, r) {
           assert(e.transLeq(t, i) && e.transLeq(i, r))
           var n = i.t - t.t,
-            o = r.t - i.t
-          return n + o > 0 ? (i.s - r.s) * n + (i.s - t.s) * o : 0
+            a = r.t - i.t
+          return n + a > 0 ? (i.s - r.s) * n + (i.s - t.s) * a : 0
         }),
         (e.vertCCW = function (e, t, i) {
           return e.s * (t.t - i.t) + t.s * (i.t - e.t) + i.s * (e.t - t.t) >= 0
@@ -3501,34 +3311,34 @@ export function speRuntimeFactory (exports) {
               : t + (e / (e + i)) * (r - t)
             : r + (i / (e + i)) * (t - r)
         }),
-        (e.intersect = function (t, i, r, n, o) {
-          var a, s, l
+        (e.intersect = function (t, i, r, n, a) {
+          var o, s, l
           e.vertLeq(t, i) || ((l = t), (t = i), (i = l)),
             e.vertLeq(r, n) || ((l = r), (r = n), (n = l)),
             e.vertLeq(t, r) ||
               ((l = t), (t = r), (r = l), (l = i), (i = n), (n = l)),
             e.vertLeq(r, i)
               ? e.vertLeq(i, n)
-                ? ((a = e.edgeEval(t, r, i)) + (s = e.edgeEval(r, i, n)) < 0 &&
-                    ((a = -a), (s = -s)),
-                  (o.s = e.interpolate(a, r.s, s, i.s)))
-                : ((a = e.edgeSign(t, r, i)) + (s = -e.edgeSign(t, n, i)) < 0 &&
-                    ((a = -a), (s = -s)),
-                  (o.s = e.interpolate(a, r.s, s, n.s)))
-              : (o.s = (r.s + i.s) / 2),
+                ? ((o = e.edgeEval(t, r, i)) + (s = e.edgeEval(r, i, n)) < 0 &&
+                    ((o = -o), (s = -s)),
+                  (a.s = e.interpolate(o, r.s, s, i.s)))
+                : ((o = e.edgeSign(t, r, i)) + (s = -e.edgeSign(t, n, i)) < 0 &&
+                    ((o = -o), (s = -s)),
+                  (a.s = e.interpolate(o, r.s, s, n.s)))
+              : (a.s = (r.s + i.s) / 2),
             e.transLeq(t, i) || ((l = t), (t = i), (i = l)),
             e.transLeq(r, n) || ((l = r), (r = n), (n = l)),
             e.transLeq(t, r) ||
               ((l = t), (t = r), (r = l), (l = i), (i = n), (n = l)),
             e.transLeq(r, i)
               ? e.transLeq(i, n)
-                ? ((a = e.transEval(t, r, i)) + (s = e.transEval(r, i, n)) <
-                    0 && ((a = -a), (s = -s)),
-                  (o.t = e.interpolate(a, r.t, s, i.t)))
-                : ((a = e.transSign(t, r, i)) + (s = -e.transSign(t, n, i)) <
-                    0 && ((a = -a), (s = -s)),
-                  (o.t = e.interpolate(a, r.t, s, n.t)))
-              : (o.t = (r.t + i.t) / 2)
+                ? ((o = e.transEval(t, r, i)) + (s = e.transEval(r, i, n)) <
+                    0 && ((o = -o), (s = -s)),
+                  (a.t = e.interpolate(o, r.t, s, i.t)))
+                : ((o = e.transSign(t, r, i)) + (s = -e.transSign(t, n, i)) <
+                    0 && ((o = -o), (s = -s)),
+                  (a.t = e.interpolate(o, r.t, s, n.t)))
+              : (a.t = (r.t + i.t) / 2)
         }),
         e
       )
@@ -3709,10 +3519,10 @@ export function speRuntimeFactory (exports) {
             (r.next = i),
             (i.prev = r),
             (r.anEdge = t)
-          var o = t
+          var a = t
           do {
-            ;(o.Org = r), (o = o.Onext)
-          } while (o !== t)
+            ;(a.Org = r), (a = a.Onext)
+          } while (a !== t)
         }),
         (e.prototype.makeFace_ = function (e, t, i) {
           var r = e
@@ -3726,10 +3536,10 @@ export function speRuntimeFactory (exports) {
             (r.trail = null),
             (r.marked = !1),
             (r.inside = i.inside)
-          var o = t
+          var a = t
           do {
-            ;(o.Lface = r), (o = o.Lnext)
-          } while (o !== t)
+            ;(a.Lface = r), (a = a.Lnext)
+          } while (a !== t)
         }),
         (e.prototype.killEdge_ = function (e) {
           e.Sym.side < e.side && (e = e.Sym)
@@ -3744,8 +3554,8 @@ export function speRuntimeFactory (exports) {
             ;(r.Org = t), (r = r.Onext)
           } while (r !== i)
           var n = e.prev,
-            o = e.next
-          ;(o.prev = n), (n.next = o)
+            a = e.next
+          ;(a.prev = n), (n.next = a)
         }),
         (e.prototype.killFace_ = function (e, t) {
           var i = e.anEdge,
@@ -3754,8 +3564,8 @@ export function speRuntimeFactory (exports) {
             ;(r.Lface = t), (r = r.Lnext)
           } while (r !== i)
           var n = e.prev,
-            o = e.next
-          ;(o.prev = n), (n.next = o)
+            a = e.next
+          ;(a.prev = n), (n.next = a)
         }),
         (e.prototype.makeEdge = function () {
           var e = new TESSvertex(),
@@ -3784,8 +3594,8 @@ export function speRuntimeFactory (exports) {
               this.makeVertex_(n, t, e.Org), (e.Org.anEdge = e)
             }
             if (!i) {
-              var o = new TESSface()
-              this.makeFace_(o, t, e.Lface), (e.Lface.anEdge = e)
+              var a = new TESSface()
+              this.makeFace_(a, t, e.Lface), (e.Lface.anEdge = e)
             }
           }
         }),
@@ -3849,8 +3659,8 @@ export function speRuntimeFactory (exports) {
             (e.Lface.anEdge = n),
             !i)
           ) {
-            var o = new TESSface()
-            this.makeFace_(o, r, e.Lface)
+            var a = new TESSface()
+            this.makeFace_(a, r, e.Lface)
           }
           return r
         }),
@@ -3859,9 +3669,9 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n,
-            o,
-            a = e.anEdge
-          i = a.Lnext
+            a,
+            o = e.anEdge
+          i = o.Lnext
           do {
             ;(i = (t = i).Lnext),
               (t.Lface = null),
@@ -3873,8 +3683,8 @@ export function speRuntimeFactory (exports) {
                   ? this.killVertex_(r.Org, null)
                   : ((r.Org.anEdge = r.Onext), this.splice_(r, r.Oprev)),
                 this.killEdge_(t))
-          } while (t != a)
-          ;(n = e.prev), ((o = e.next).prev = n), (n.next = o)
+          } while (t != o)
+          ;(n = e.prev), ((a = e.next).prev = n), (n.next = a)
         }),
         (e.prototype.countFaceVerts_ = function (e) {
           var t = e.anEdge,
@@ -3885,11 +3695,11 @@ export function speRuntimeFactory (exports) {
           return i
         }),
         (e.prototype.mergeConvexFaces = function (e) {
-          var t, i, r, n, o
+          var t, i, r, n, a
           for (t = this.fHead.next; t !== this.fHead; t = t.next)
             if (t.inside)
               for (
-                o = (i = t.anEdge).Org;
+                a = (i = t.anEdge).Org;
                 (r = i.Lnext),
                   (n = i.Sym) &&
                     n.Lface &&
@@ -3901,7 +3711,7 @@ export function speRuntimeFactory (exports) {
                     Geom.vertCCW(i.Lprev.Org, i.Org, n.Lnext.Lnext.Org) &&
                     Geom.vertCCW(n.Lprev.Org, n.Org, i.Lnext.Lnext.Org) &&
                     ((r = n.Lnext), this.delete(n), (i = null), (n = null)),
-                  !i || i.Lnext.Org !== o;
+                  !i || i.Lnext.Org !== a;
 
               )
                 i = r
@@ -3913,11 +3723,11 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n,
-            o,
-            a = this.fHead,
+            a,
+            o = this.fHead,
             s = this.vHead,
             l = this.eHead
-          for (t = a, t = a; (e = t.next) !== a; t = e) {
+          for (t = o, t = o; (e = t.next) !== o; t = e) {
             assert(e.prev === t), (n = e.anEdge)
             do {
               assert(n.Sym !== n),
@@ -3944,11 +3754,11 @@ export function speRuntimeFactory (exports) {
             } while (n !== i.anEdge)
           }
           for (
-            assert(i.prev === r && null === i.anEdge), o = l, o = l;
-            (n = o.next) !== l;
-            o = n
+            assert(i.prev === r && null === i.anEdge), a = l, a = l;
+            (n = a.next) !== l;
+            a = n
           )
-            assert(n.Sym.next === o.Sym),
+            assert(n.Sym.next === a.Sym),
               assert(n.Sym !== n),
               assert(n.Sym.Sym === n),
               assert(null !== n.Org),
@@ -3956,7 +3766,7 @@ export function speRuntimeFactory (exports) {
               assert(n.Lnext.Onext.Sym === n),
               assert(n.Onext.Sym.Lnext === n)
           assert(
-            n.Sym.next === o.Sym &&
+            n.Sym.next === a.Sym &&
               n.Sym === this.eHeadSym &&
               n.Sym.Sym === n &&
               null === n.Org &&
@@ -3998,20 +3808,20 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n = this.nodes,
-            o = this.handles
+            a = this.handles
           for (t = n[e].handle; ; ) {
             if (
               ((r = e << 1) < this.size &&
-                this.leq(o[n[r + 1].handle].key, o[n[r].handle].key) &&
+                this.leq(a[n[r + 1].handle].key, a[n[r].handle].key) &&
                 ++r,
               assert(r <= this.max),
               (i = n[r].handle),
-              r > this.size || this.leq(o[t].key, o[i].key))
+              r > this.size || this.leq(a[t].key, a[i].key))
             ) {
-              ;(n[e].handle = t), (o[t].node = e)
+              ;(n[e].handle = t), (a[t].node = e)
               break
             }
-            ;(n[e].handle = i), (o[i].node = e), (e = r)
+            ;(n[e].handle = i), (a[i].node = e), (e = r)
           }
         }),
         (e.prototype.floatUp_ = function (e) {
@@ -4019,16 +3829,16 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n = this.nodes,
-            o = this.handles
+            a = this.handles
           for (t = n[e].handle; ; ) {
             if (
               ((i = n[(r = e >> 1)].handle),
-              0 === r || this.leq(o[i].key, o[t].key))
+              0 === r || this.leq(a[i].key, a[t].key))
             ) {
-              ;(n[e].handle = t), (o[t].node = e)
+              ;(n[e].handle = t), (a[t].node = e)
               break
             }
-            ;(n[e].handle = i), (o[i].node = e), (e = r)
+            ;(n[e].handle = i), (a[i].node = e), (e = r)
           }
         }),
         (e.prototype.init = function () {
@@ -4180,16 +3990,16 @@ export function speRuntimeFactory (exports) {
         (e.edgeLeq = function (e, t, i) {
           var r = e.event,
             n = t.eUp,
-            o = i.eUp
+            a = i.eUp
           return n.Dst === r
-            ? o.Dst === r
-              ? Geom.vertLeq(n.Org, o.Org)
-                ? Geom.edgeSign(o.Dst, n.Org, o.Org) <= 0
-                : Geom.edgeSign(n.Dst, o.Org, n.Org) >= 0
-              : Geom.edgeSign(o.Dst, r, o.Org) <= 0
-            : o.Dst === r
+            ? a.Dst === r
+              ? Geom.vertLeq(n.Org, a.Org)
+                ? Geom.edgeSign(a.Dst, n.Org, a.Org) <= 0
+                : Geom.edgeSign(n.Dst, a.Org, n.Org) >= 0
+              : Geom.edgeSign(a.Dst, r, a.Org) <= 0
+            : a.Dst === r
             ? Geom.edgeSign(n.Dst, r, n.Org) >= 0
-            : Geom.edgeEval(n.Dst, r, n.Org) >= Geom.edgeEval(o.Dst, r, o.Org)
+            : Geom.edgeEval(n.Dst, r, n.Org) >= Geom.edgeEval(a.Dst, r, a.Org)
         }),
         (e.deleteRegion = function (e, t) {
           t.fixUpperEdge && assert(0 === t.eUp.winding),
@@ -4263,30 +4073,30 @@ export function speRuntimeFactory (exports) {
           ;(n.inside = i.inside), (n.anEdge = r), e.deleteRegion(t, i)
         }),
         (e.finishLeftRegions = function (t, i, r) {
-          for (var n, o = null, a = i, s = i.eUp; a !== r; ) {
+          for (var n, a = null, o = i, s = i.eUp; o !== r; ) {
             if (
-              ((a.fixUpperEdge = !1),
-              (n = (o = e.regionBelow(a)).eUp).Org != s.Org)
+              ((o.fixUpperEdge = !1),
+              (n = (a = e.regionBelow(o)).eUp).Org != s.Org)
             ) {
-              if (!o.fixUpperEdge) {
-                e.finishRegion(t, a)
+              if (!a.fixUpperEdge) {
+                e.finishRegion(t, o)
                 break
               }
-              ;(n = t.mesh.connect(s.Lprev, n.Sym)), e.fixUpperEdge(t, o, n)
+              ;(n = t.mesh.connect(s.Lprev, n.Sym)), e.fixUpperEdge(t, a, n)
             }
             s.Onext !== n && (t.mesh.splice(n.Oprev, n), t.mesh.splice(s, n)),
-              e.finishRegion(t, a),
-              (s = o.eUp),
-              (a = o)
+              e.finishRegion(t, o),
+              (s = a.eUp),
+              (o = a)
           }
           return s
         }),
-        (e.addRightEdges = function (t, i, r, n, o, a) {
+        (e.addRightEdges = function (t, i, r, n, a, o) {
           var s,
             l,
             c,
-            u,
-            h = !0
+            h,
+            u = !0
           c = r
           do {
             assert(Geom.vertLeq(c.Org, c.Dst)),
@@ -4294,24 +4104,24 @@ export function speRuntimeFactory (exports) {
               (c = c.Onext)
           } while (c !== n)
           for (
-            null === o && (o = e.regionBelow(i).eUp.Rprev), l = i, u = o;
-            (c = (s = e.regionBelow(l)).eUp.Sym).Org === u.Org;
+            null === a && (a = e.regionBelow(i).eUp.Rprev), l = i, h = a;
+            (c = (s = e.regionBelow(l)).eUp.Sym).Org === h.Org;
 
           )
-            c.Onext !== u &&
-              (t.mesh.splice(c.Oprev, c), t.mesh.splice(u.Oprev, c)),
+            c.Onext !== h &&
+              (t.mesh.splice(c.Oprev, c), t.mesh.splice(h.Oprev, c)),
               (s.windingNumber = l.windingNumber - c.winding),
               (s.inside = e.isWindingInside(t, s.windingNumber)),
               (l.dirty = !0),
-              !h &&
+              !u &&
                 e.checkForRightSplice(t, l) &&
-                (e.addWinding(c, u), e.deleteRegion(t, l), t.mesh.delete(u)),
-              (h = !1),
+                (e.addWinding(c, h), e.deleteRegion(t, l), t.mesh.delete(h)),
+              (u = !1),
               (l = s),
-              (u = c)
+              (h = c)
           ;(l.dirty = !0),
             assert(l.windingNumber - c.winding === s.windingNumber),
-            a && e.walkDirtyRegions(t, l)
+            o && e.walkDirtyRegions(t, l)
         }),
         (e.spliceMergeVertices = function (e, t, i) {
           e.mesh.splice(t, i)
@@ -4319,57 +4129,57 @@ export function speRuntimeFactory (exports) {
         (e.vertexWeights = function (e, t, i) {
           var r = Geom.vertL1dist(t, e),
             n = Geom.vertL1dist(i, e),
-            o = (0.5 * n) / (r + n),
-            a = (0.5 * r) / (r + n)
-          ;(e.coords[0] += o * t.coords[0] + a * i.coords[0]),
-            (e.coords[1] += o * t.coords[1] + a * i.coords[1]),
-            (e.coords[2] += o * t.coords[2] + a * i.coords[2])
+            a = (0.5 * n) / (r + n),
+            o = (0.5 * r) / (r + n)
+          ;(e.coords[0] += a * t.coords[0] + o * i.coords[0]),
+            (e.coords[1] += a * t.coords[1] + o * i.coords[1]),
+            (e.coords[2] += a * t.coords[2] + o * i.coords[2])
         }),
-        (e.getIntersectData = function (t, i, r, n, o, a) {
+        (e.getIntersectData = function (t, i, r, n, a, o) {
           ;(i.coords[0] = i.coords[1] = i.coords[2] = 0),
             (i.idx = -1),
             e.vertexWeights(i, r, n),
-            e.vertexWeights(i, o, a)
+            e.vertexWeights(i, a, o)
         }),
         (e.checkForRightSplice = function (t, i) {
           var r = e.regionBelow(i),
             n = i.eUp,
-            o = r.eUp
-          if (Geom.vertLeq(n.Org, o.Org)) {
-            if (Geom.edgeSign(o.Dst, n.Org, o.Org) > 0) return !1
-            Geom.vertEq(n.Org, o.Org)
-              ? n.Org !== o.Org &&
+            a = r.eUp
+          if (Geom.vertLeq(n.Org, a.Org)) {
+            if (Geom.edgeSign(a.Dst, n.Org, a.Org) > 0) return !1
+            Geom.vertEq(n.Org, a.Org)
+              ? n.Org !== a.Org &&
                 (t.pq.delete(n.Org.pqHandle),
-                e.spliceMergeVertices(t, o.Oprev, n))
-              : (t.mesh.splitEdge(o.Sym),
-                t.mesh.splice(n, o.Oprev),
+                e.spliceMergeVertices(t, a.Oprev, n))
+              : (t.mesh.splitEdge(a.Sym),
+                t.mesh.splice(n, a.Oprev),
                 (i.dirty = r.dirty = !0))
           } else {
-            if (Geom.edgeSign(n.Dst, o.Org, n.Org) < 0) return !1
+            if (Geom.edgeSign(n.Dst, a.Org, n.Org) < 0) return !1
             ;(e.regionAbove(i).dirty = i.dirty = !0),
               t.mesh.splitEdge(n.Sym),
-              t.mesh.splice(o.Oprev, n)
+              t.mesh.splice(a.Oprev, n)
           }
           return !0
         }),
         (e.checkForLeftSplice = function (t, i) {
           var r,
             n = e.regionBelow(i),
-            o = i.eUp,
-            a = n.eUp
+            a = i.eUp,
+            o = n.eUp
           if (
-            (assert(!Geom.vertEq(o.Dst, a.Dst)), Geom.vertLeq(o.Dst, a.Dst))
+            (assert(!Geom.vertEq(a.Dst, o.Dst)), Geom.vertLeq(a.Dst, o.Dst))
           ) {
-            if (Geom.edgeSign(o.Dst, a.Dst, o.Org) < 0) return !1
+            if (Geom.edgeSign(a.Dst, o.Dst, a.Org) < 0) return !1
             ;(e.regionAbove(i).dirty = i.dirty = !0),
-              (r = t.mesh.splitEdge(o)),
-              t.mesh.splice(a.Sym, r),
+              (r = t.mesh.splitEdge(a)),
+              t.mesh.splice(o.Sym, r),
               (r.Lface.inside = i.inside)
           } else {
-            if (Geom.edgeSign(a.Dst, o.Dst, a.Org) > 0) return !1
+            if (Geom.edgeSign(o.Dst, a.Dst, o.Org) > 0) return !1
             ;(i.dirty = n.dirty = !0),
-              (r = t.mesh.splitEdge(a)),
-              t.mesh.splice(o.Lnext, a.Sym),
+              (r = t.mesh.splitEdge(o)),
+              t.mesh.splice(a.Lnext, o.Sym),
               (r.Rface.inside = i.inside)
           }
           return !0
@@ -4377,110 +4187,110 @@ export function speRuntimeFactory (exports) {
         (e.checkForIntersect = function (t, i) {
           var r,
             n,
-            o = e.regionBelow(i),
-            a = i.eUp,
-            s = o.eUp,
-            l = a.Org,
+            a = e.regionBelow(i),
+            o = i.eUp,
+            s = a.eUp,
+            l = o.Org,
             c = s.Org,
-            u = a.Dst,
-            h = s.Dst,
+            h = o.Dst,
+            u = s.Dst,
             d = new TESSvertex()
           if (
-            (assert(!Geom.vertEq(h, u)),
-            assert(Geom.edgeSign(u, t.event, l) <= 0),
-            assert(Geom.edgeSign(h, t.event, c) >= 0),
+            (assert(!Geom.vertEq(u, h)),
+            assert(Geom.edgeSign(h, t.event, l) <= 0),
+            assert(Geom.edgeSign(u, t.event, c) >= 0),
             assert(l !== t.event && c !== t.event),
-            assert(!i.fixUpperEdge && !o.fixUpperEdge),
+            assert(!i.fixUpperEdge && !a.fixUpperEdge),
             l === c)
           )
             return !1
-          if (Math.min(l.t, u.t) > Math.max(c.t, h.t)) return !1
+          if (Math.min(l.t, h.t) > Math.max(c.t, u.t)) return !1
           if (Geom.vertLeq(l, c)) {
-            if (Geom.edgeSign(h, l, c) > 0) return !1
-          } else if (Geom.edgeSign(u, c, l) < 0) return !1
+            if (Geom.edgeSign(u, l, c) > 0) return !1
+          } else if (Geom.edgeSign(h, c, l) < 0) return !1
           return (
             e.debugEvent(t),
-            Geom.intersect(u, l, h, c, d),
-            assert(Math.min(l.t, u.t) <= d.t),
-            assert(d.t <= Math.max(c.t, h.t)),
-            assert(Math.min(h.s, u.s) <= d.s),
+            Geom.intersect(h, l, u, c, d),
+            assert(Math.min(l.t, h.t) <= d.t),
+            assert(d.t <= Math.max(c.t, u.t)),
+            assert(Math.min(u.s, h.s) <= d.s),
             assert(d.s <= Math.max(c.s, l.s)),
             Geom.vertLeq(d, t.event) && ((d.s = t.event.s), (d.t = t.event.t)),
             (r = Geom.vertLeq(l, c) ? l : c),
             Geom.vertLeq(r, d) && ((d.s = r.s), (d.t = r.t)),
             Geom.vertEq(d, l) || Geom.vertEq(d, c)
               ? (e.checkForRightSplice(t, i), !1)
-              : (!Geom.vertEq(u, t.event) &&
-                  Geom.edgeSign(u, t.event, d) >= 0) ||
-                (!Geom.vertEq(h, t.event) && Geom.edgeSign(h, t.event, d) <= 0)
-              ? h === t.event
-                ? (t.mesh.splitEdge(a.Sym),
-                  t.mesh.splice(s.Sym, a),
+              : (!Geom.vertEq(h, t.event) &&
+                  Geom.edgeSign(h, t.event, d) >= 0) ||
+                (!Geom.vertEq(u, t.event) && Geom.edgeSign(u, t.event, d) <= 0)
+              ? u === t.event
+                ? (t.mesh.splitEdge(o.Sym),
+                  t.mesh.splice(s.Sym, o),
                   (i = e.topLeftRegion(t, i)),
-                  (a = e.regionBelow(i).eUp),
-                  e.finishLeftRegions(t, e.regionBelow(i), o),
-                  e.addRightEdges(t, i, a.Oprev, a, a, !0),
+                  (o = e.regionBelow(i).eUp),
+                  e.finishLeftRegions(t, e.regionBelow(i), a),
+                  e.addRightEdges(t, i, o.Oprev, o, o, !0),
                   !0)
-                : u === t.event
+                : h === t.event
                 ? (t.mesh.splitEdge(s.Sym),
-                  t.mesh.splice(a.Lnext, s.Oprev),
-                  (o = i),
+                  t.mesh.splice(o.Lnext, s.Oprev),
+                  (a = i),
                   (i = e.topRightRegion(i)),
                   (n = e.regionBelow(i).eUp.Rprev),
-                  (o.eUp = s.Oprev),
-                  (s = e.finishLeftRegions(t, o, null)),
-                  e.addRightEdges(t, i, s.Onext, a.Rprev, n, !0),
+                  (a.eUp = s.Oprev),
+                  (s = e.finishLeftRegions(t, a, null)),
+                  e.addRightEdges(t, i, s.Onext, o.Rprev, n, !0),
                   !0)
-                : (Geom.edgeSign(u, t.event, d) >= 0 &&
+                : (Geom.edgeSign(h, t.event, d) >= 0 &&
                     ((e.regionAbove(i).dirty = i.dirty = !0),
-                    t.mesh.splitEdge(a.Sym),
-                    (a.Org.s = t.event.s),
-                    (a.Org.t = t.event.t)),
-                  Geom.edgeSign(h, t.event, d) <= 0 &&
-                    ((i.dirty = o.dirty = !0),
+                    t.mesh.splitEdge(o.Sym),
+                    (o.Org.s = t.event.s),
+                    (o.Org.t = t.event.t)),
+                  Geom.edgeSign(u, t.event, d) <= 0 &&
+                    ((i.dirty = a.dirty = !0),
                     t.mesh.splitEdge(s.Sym),
                     (s.Org.s = t.event.s),
                     (s.Org.t = t.event.t)),
                   !1)
-              : (t.mesh.splitEdge(a.Sym),
+              : (t.mesh.splitEdge(o.Sym),
                 t.mesh.splitEdge(s.Sym),
-                t.mesh.splice(s.Oprev, a),
-                (a.Org.s = d.s),
-                (a.Org.t = d.t),
-                (a.Org.pqHandle = t.pq.insert(a.Org)),
-                e.getIntersectData(t, a.Org, l, u, c, h),
-                (e.regionAbove(i).dirty = i.dirty = o.dirty = !0),
+                t.mesh.splice(s.Oprev, o),
+                (o.Org.s = d.s),
+                (o.Org.t = d.t),
+                (o.Org.pqHandle = t.pq.insert(o.Org)),
+                e.getIntersectData(t, o.Org, l, h, c, u),
+                (e.regionAbove(i).dirty = i.dirty = a.dirty = !0),
                 !1)
           )
         }),
         (e.walkDirtyRegions = function (t, i) {
-          for (var r, n, o = e.regionBelow(i); ; ) {
-            for (; o.dirty; ) (i = o), (o = e.regionBelow(o))
+          for (var r, n, a = e.regionBelow(i); ; ) {
+            for (; a.dirty; ) (i = a), (a = e.regionBelow(a))
             if (
               !i.dirty &&
-              ((o = i), null === (i = e.regionAbove(i)) || !i.dirty)
+              ((a = i), null === (i = e.regionAbove(i)) || !i.dirty)
             )
               return
             if (
               ((i.dirty = !1),
               (r = i.eUp),
-              (n = o.eUp),
+              (n = a.eUp),
               r.Dst !== n.Dst &&
                 e.checkForLeftSplice(t, i) &&
-                (o.fixUpperEdge
-                  ? (e.deleteRegion(t, o),
+                (a.fixUpperEdge
+                  ? (e.deleteRegion(t, a),
                     t.mesh.delete(n),
-                    (n = (o = e.regionBelow(i)).eUp))
+                    (n = (a = e.regionBelow(i)).eUp))
                   : i.fixUpperEdge &&
                     (e.deleteRegion(t, i),
                     t.mesh.delete(r),
-                    (r = (i = e.regionAbove(o)).eUp))),
+                    (r = (i = e.regionAbove(a)).eUp))),
               r.Org !== n.Org)
             )
               if (
                 r.Dst === n.Dst ||
                 i.fixUpperEdge ||
-                o.fixUpperEdge ||
+                a.fixUpperEdge ||
                 (r.Dst !== t.event && n.Dst !== t.event)
               )
                 e.checkForRightSplice(t, i)
@@ -4490,29 +4300,29 @@ export function speRuntimeFactory (exports) {
               (e.addWinding(n, r),
               e.deleteRegion(t, i),
               t.mesh.delete(r),
-              (i = e.regionAbove(o)))
+              (i = e.regionAbove(a)))
           }
         }),
         (e.connectRightVertex = function (t, i, r) {
           var n,
-            o = r.Onext,
-            a = e.regionBelow(i),
+            a = r.Onext,
+            o = e.regionBelow(i),
             s = i.eUp,
-            l = a.eUp,
+            l = o.eUp,
             c = !1
           s.Dst !== l.Dst && e.checkForIntersect(t, i),
             Geom.vertEq(s.Org, t.event) &&
-              (t.mesh.splice(o.Oprev, s),
+              (t.mesh.splice(a.Oprev, s),
               (i = e.topLeftRegion(t, i)),
-              (o = e.regionBelow(i).eUp),
-              e.finishLeftRegions(t, e.regionBelow(i), a),
+              (a = e.regionBelow(i).eUp),
+              e.finishLeftRegions(t, e.regionBelow(i), o),
               (c = !0)),
             Geom.vertEq(l.Org, t.event) &&
               (t.mesh.splice(r, l.Oprev),
-              (r = e.finishLeftRegions(t, a, null)),
+              (r = e.finishLeftRegions(t, o, null)),
               (c = !0)),
             c
-              ? e.addRightEdges(t, i, r.Onext, o, o, !0)
+              ? e.addRightEdges(t, i, r.Onext, a, a, !0)
               : ((n = Geom.vertLeq(l.Org, s.Org) ? l.Oprev : s),
                 (n = t.mesh.connect(r.Lprev, n)),
                 e.addRightEdges(t, i, n, n.Onext, n.Onext, !1),
@@ -4520,7 +4330,7 @@ export function speRuntimeFactory (exports) {
                 e.walkDirtyRegions(t, i))
         }),
         (e.connectLeftDegenerate = function (t, i, r) {
-          var n, o, a, s, l
+          var n, a, o, s, l
           return (
             (n = i.eUp),
             Geom.vertEq(n.Org, r)
@@ -4528,15 +4338,15 @@ export function speRuntimeFactory (exports) {
               : Geom.vertEq(n.Dst, r)
               ? (assert(!1),
                 (i = e.topRightRegion(i)),
-                (o = s = (a = (l = e.regionBelow(i)).eUp.Sym).Onext),
+                (a = s = (o = (l = e.regionBelow(i)).eUp.Sym).Onext),
                 l.fixUpperEdge &&
-                  (assert(o !== a),
+                  (assert(a !== o),
                   e.deleteRegion(t, l),
-                  t.mesh.delete(a),
-                  (a = o.Oprev)),
-                t.mesh.splice(r.anEdge, a),
-                Geom.edgeGoesLeft(o) || (o = null),
-                void e.addRightEdges(t, i, a.Onext, s, o, !0))
+                  t.mesh.delete(o),
+                  (o = a.Oprev)),
+                t.mesh.splice(r.anEdge, o),
+                Geom.edgeGoesLeft(a) || (a = null),
+                void e.addRightEdges(t, i, o.Onext, s, a, !0))
               : (t.mesh.splitEdge(n.Sym),
                 i.fixUpperEdge &&
                   (t.mesh.delete(n.Onext), (i.fixUpperEdge = !1)),
@@ -4547,8 +4357,8 @@ export function speRuntimeFactory (exports) {
         (e.connectLeftVertex = function (t, i) {
           var r,
             n,
-            o,
             a,
+            o,
             s,
             l,
             c = new ActiveRegion()
@@ -4558,16 +4368,16 @@ export function speRuntimeFactory (exports) {
             (n = e.regionBelow(r)))
           )
             if (
-              ((a = r.eUp), (s = n.eUp), 0 !== Geom.edgeSign(a.Dst, i, a.Org))
+              ((o = r.eUp), (s = n.eUp), 0 !== Geom.edgeSign(o.Dst, i, o.Org))
             )
               if (
-                ((o = Geom.vertLeq(s.Dst, a.Dst) ? r : n),
-                r.inside || o.fixUpperEdge)
+                ((a = Geom.vertLeq(s.Dst, o.Dst) ? r : n),
+                r.inside || a.fixUpperEdge)
               ) {
-                if (o === r) l = t.mesh.connect(i.anEdge.Sym, a.Lnext)
+                if (a === r) l = t.mesh.connect(i.anEdge.Sym, o.Lnext)
                 else l = t.mesh.connect(s.Dnext, i.anEdge).Sym
-                o.fixUpperEdge
-                  ? e.fixUpperEdge(t, o, l)
+                a.fixUpperEdge
+                  ? e.fixUpperEdge(t, a, l)
                   : e.computeWinding(t, e.addRegionBelow(t, r, l)),
                   e.sweepEvent(t, i)
               } else e.addRightEdges(t, r, i.anEdge, i.anEdge, null, !0)
@@ -4580,22 +4390,22 @@ export function speRuntimeFactory (exports) {
               return void e.connectLeftVertex(t, i)
           var n = e.topLeftRegion(t, r.activeRegion)
           assert(null !== n)
-          var o = e.regionBelow(n),
-            a = o.eUp,
-            s = e.finishLeftRegions(t, o, null)
-          s.Onext === a
+          var a = e.regionBelow(n),
+            o = a.eUp,
+            s = e.finishLeftRegions(t, a, null)
+          s.Onext === o
             ? e.connectRightVertex(t, n, s)
-            : e.addRightEdges(t, n, s.Onext, a, a, !0)
+            : e.addRightEdges(t, n, s.Onext, o, o, !0)
         }),
         (e.addSentinel = function (e, t, i, r) {
           var n = new ActiveRegion(),
-            o = e.mesh.makeEdge()
-          ;(o.Org.s = i),
-            (o.Org.t = r),
-            (o.Dst.s = t),
-            (o.Dst.t = r),
-            (e.event = o.Dst),
-            (n.eUp = o),
+            a = e.mesh.makeEdge()
+          ;(a.Org.s = i),
+            (a.Org.t = r),
+            (a.Dst.s = t),
+            (a.Dst.t = r),
+            (e.event = a.Dst),
+            (n.eUp = a),
             (n.windingNumber = 0),
             (n.inside = !1),
             (n.fixUpperEdge = !1),
@@ -4608,10 +4418,10 @@ export function speRuntimeFactory (exports) {
           var i = t.bmax[0] - t.bmin[0],
             r = t.bmax[1] - t.bmin[1],
             n = t.bmin[0] - i,
-            o = t.bmax[0] + i,
-            a = t.bmin[1] - r,
+            a = t.bmax[0] + i,
+            o = t.bmin[1] - r,
             s = t.bmax[1] + r
-          e.addSentinel(t, n, o, a), e.addSentinel(t, n, o, s)
+          e.addSentinel(t, n, a, o), e.addSentinel(t, n, a, s)
         }),
         (e.doneEdgeDict = function (t) {
           for (var i, r = 0; null !== (i = t.dict.min().key); )
@@ -4623,8 +4433,8 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = t.mesh.eHead
-          for (i = o.next; i !== o; i = r)
+            a = t.mesh.eHead
+          for (i = a.next; i !== a; i = r)
             (r = i.next),
               (n = i.Lnext),
               Geom.vertEq(i.Org, i.Dst) &&
@@ -4658,12 +4468,12 @@ export function speRuntimeFactory (exports) {
           e.pq = null
         }),
         (e.removeDegenerateFaces = function (t, i) {
-          var r, n, o
+          var r, n, a
           for (r = i.fHead.next; r !== i.fHead; r = n)
             (n = r.next),
-              assert((o = r.anEdge).Lnext !== o),
-              o.Lnext.Lnext === o &&
-                (e.addWinding(o.Onext, o), t.mesh.delete(o))
+              assert((a = r.anEdge).Lnext !== a),
+              a.Lnext.Lnext === a &&
+                (e.addWinding(a.Onext, a), t.mesh.delete(a))
           return !0
         }),
         (e.computeInterior = function (t, i) {
@@ -4732,34 +4542,34 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n,
-            o,
             a,
+            o,
             s = [0, 0, 0],
             l = [0, 0, 0],
             c = [0, 0, 0],
-            u = [0, 0, 0],
             h = [0, 0, 0],
+            u = [0, 0, 0],
             d = [null, null, null],
             f = [null, null, null],
             p = this.mesh.vHead
           t = p.next
-          for (var v = 0; v < 3; ++v)
-            (n = t.coords[v]), (l[v] = n), (f[v] = t), (s[v] = n), (d[v] = t)
+          for (var m = 0; m < 3; ++m)
+            (n = t.coords[m]), (l[m] = n), (f[m] = t), (s[m] = n), (d[m] = t)
           for (t = p.next; t !== p; t = t.next)
-            for (var m = 0; m < 3; ++m)
-              (n = t.coords[m]) < l[m] && ((l[m] = n), (f[m] = t)),
-                n > s[m] && ((s[m] = n), (d[m] = t))
-          var g = 0
+            for (var g = 0; g < 3; ++g)
+              (n = t.coords[g]) < l[g] && ((l[g] = n), (f[g] = t)),
+                n > s[g] && ((s[g] = n), (d[g] = t))
+          var v = 0
           if (
-            (s[1] - l[1] > s[0] - l[0] && (g = 1),
-            s[2] - l[2] > s[g] - l[g] && (g = 2),
-            l[g] >= s[g])
+            (s[1] - l[1] > s[0] - l[0] && (v = 1),
+            s[2] - l[2] > s[v] - l[v] && (v = 2),
+            l[v] >= s[v])
           )
             return (e[0] = 0), (e[1] = 0), void (e[2] = 1)
           for (
-            a = 0,
-              i = f[g],
-              r = d[g],
+            o = 0,
+              i = f[v],
+              r = d[v],
               c[0] = i.coords[0] - r.coords[0],
               c[1] = i.coords[1] - r.coords[1],
               c[2] = i.coords[2] - r.coords[2],
@@ -4767,15 +4577,15 @@ export function speRuntimeFactory (exports) {
             t !== p;
             t = t.next
           )
-            (u[0] = t.coords[0] - r.coords[0]),
-              (u[1] = t.coords[1] - r.coords[1]),
-              (u[2] = t.coords[2] - r.coords[2]),
-              (h[0] = c[1] * u[2] - c[2] * u[1]),
-              (h[1] = c[2] * u[0] - c[0] * u[2]),
-              (h[2] = c[0] * u[1] - c[1] * u[0]),
-              (o = h[0] * h[0] + h[1] * h[1] + h[2] * h[2]) > a &&
-                ((a = o), (e[0] = h[0]), (e[1] = h[1]), (e[2] = h[2]))
-          a <= 0 && ((e[0] = e[1] = e[2] = 0), (e[this.longAxis_(c)] = 1))
+            (h[0] = t.coords[0] - r.coords[0]),
+              (h[1] = t.coords[1] - r.coords[1]),
+              (h[2] = t.coords[2] - r.coords[2]),
+              (u[0] = c[1] * h[2] - c[2] * h[1]),
+              (u[1] = c[2] * h[0] - c[0] * h[2]),
+              (u[2] = c[0] * h[1] - c[1] * h[0]),
+              (a = u[0] * u[0] + u[1] * u[1] + u[2] * u[2]) > o &&
+                ((o = a), (e[0] = u[0]), (e[1] = u[1]), (e[2] = u[2]))
+          o <= 0 && ((e[0] = e[1] = e[2] = 0), (e[this.longAxis_(c)] = 1))
         }),
         (e.prototype.checkOrientation_ = function () {
           for (
@@ -4784,14 +4594,14 @@ export function speRuntimeFactory (exports) {
               i = this.mesh.fHead,
               r = this.mesh.vHead,
               n = 0,
-              o = i.next;
-            o !== i;
-            o = o.next
+              a = i.next;
+            a !== i;
+            a = a.next
           )
-            if (!((t = o.anEdge).winding <= 0))
+            if (!((t = a.anEdge).winding <= 0))
               do {
                 ;(n += (t.Org.s - t.Dst.s) * (t.Org.t + t.Dst.t)), (t = t.Lnext)
-              } while (t !== o.anEdge)
+              } while (t !== a.anEdge)
           if (n < 0) {
             for (e = r.next; e !== r; e = e.next) e.t = -e.t
             ;(this.tUnit[0] = -this.tUnit[0]),
@@ -4811,15 +4621,15 @@ export function speRuntimeFactory (exports) {
             r[0] || r[1] || r[2] || (this.computeNormal_(r), (n = !0)),
             (e = this.sUnit),
             (t = this.tUnit)
-          var o = this.longAxis_(r)
-          ;(e[o] = 0),
-            (e[(o + 1) % 3] = 1),
-            (e[(o + 2) % 3] = 0),
-            (t[o] = 0),
-            (t[(o + 1) % 3] = 0),
-            (t[(o + 2) % 3] = r[o] > 0 ? 1 : -1)
-          for (var a = i.next; a !== i; a = a.next)
-            (a.s = this.dot_(a.coords, e)), (a.t = this.dot_(a.coords, t))
+          var a = this.longAxis_(r)
+          ;(e[a] = 0),
+            (e[(a + 1) % 3] = 1),
+            (e[(a + 2) % 3] = 0),
+            (t[a] = 0),
+            (t[(a + 1) % 3] = 0),
+            (t[(a + 2) % 3] = r[a] > 0 ? 1 : -1)
+          for (var o = i.next; o !== i; o = o.next)
+            (o.s = this.dot_(o.coords, e)), (o.t = this.dot_(o.coords, t))
           n && this.checkOrientation_()
           for (var s = !0, l = i.next; l !== i; l = l.next)
             s
@@ -4891,24 +4701,24 @@ export function speRuntimeFactory (exports) {
         }),
         (e.prototype.outputPolymesh_ = function (e, t, i, r) {
           var n,
-            o,
-            a = 0,
+            a,
+            o = 0,
             s = 0
           i > 3 && e.mergeConvexFaces(i)
           for (var l = e.vHead.next; l !== e.vHead; l = l.next) l.n = -1
           for (var c = e.fHead.next; c !== e.fHead; c = c.next)
             if (((c.n = -1), c.inside)) {
-              ;(n = c.anEdge), (o = 0)
+              ;(n = c.anEdge), (a = 0)
               do {
-                ;-1 === (l = n.Org).n && ((l.n = s), s++), o++, (n = n.Lnext)
+                ;-1 === (l = n.Org).n && ((l.n = s), s++), a++, (n = n.Lnext)
               } while (n !== c.anEdge)
-              if (o > i) throw 'Face vertex greater that support polygon'
-              ;(c.n = a), ++a
+              if (a > i) throw 'Face vertex greater that support polygon'
+              ;(c.n = o), ++o
             }
-          ;(this.elementCount = a),
-            t === ELEMENT.CONNECTED_POLYGONS && (a *= 2),
+          ;(this.elementCount = o),
+            t === ELEMENT.CONNECTED_POLYGONS && (o *= 2),
             (this.elements = []),
-            (this.elements.length = a * i),
+            (this.elements.length = o * i),
             (this.vertexCount = s),
             (this.vertices = []),
             (this.vertices.length = s * r),
@@ -4916,28 +4726,28 @@ export function speRuntimeFactory (exports) {
             (this.vertexIndices.length = s)
           for (l = e.vHead.next; l !== e.vHead; l = l.next)
             if (-1 !== l.n) {
-              var u = l.n * r
-              ;(this.vertices[u + 0] = l.coords[0]),
-                (this.vertices[u + 1] = l.coords[1]),
-                r > 2 && (this.vertices[u + 2] = l.coords[2]),
+              var h = l.n * r
+              ;(this.vertices[h + 0] = l.coords[0]),
+                (this.vertices[h + 1] = l.coords[1]),
+                r > 2 && (this.vertices[h + 2] = l.coords[2]),
                 (this.vertexIndices[l.n] = l.idx)
             }
-          var h = 0
+          var u = 0
           for (c = e.fHead.next; c !== e.fHead; c = c.next)
             if (c.inside) {
-              ;(n = c.anEdge), (o = 0)
+              ;(n = c.anEdge), (a = 0)
               do {
                 l = n.Org
-                ;(this.elements[h++] = l.n), o++, (n = n.Lnext)
+                ;(this.elements[u++] = l.n), a++, (n = n.Lnext)
               } while (n !== c.anEdge)
-              for (var d = o; d < i; ++d) this.elements[h++] = -1
+              for (var d = a; d < i; ++d) this.elements[u++] = -1
               if (t === ELEMENT.CONNECTED_POLYGONS) {
                 n = c.anEdge
                 do {
-                  ;(this.elements[h++] = this.getNeighbourFace_(n)),
+                  ;(this.elements[u++] = this.getNeighbourFace_(n)),
                     (n = n.Lnext)
                 } while (n !== c.anEdge)
-                for (var f = o; f < i; ++f) this.elements[h++] = -1
+                for (var f = a; f < i; ++f) this.elements[u++] = -1
               }
             }
         }),
@@ -4945,11 +4755,11 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n = 0,
-            o = 0
+            a = 0
           ;(this.vertexCount = 0), (this.elementCount = 0)
-          for (var a = e.fHead.next; a !== e.fHead; a = a.next)
-            if (a.inside) {
-              r = i = a.anEdge
+          for (var o = e.fHead.next; o !== e.fHead; o = o.next)
+            if (o.inside) {
+              r = i = o.anEdge
               do {
                 this.vertexCount++, (i = i.Lnext)
               } while (i !== r)
@@ -4965,18 +4775,18 @@ export function speRuntimeFactory (exports) {
             l = 0,
             c = 0
           n = 0
-          for (a = e.fHead.next; a !== e.fHead; a = a.next)
-            if (a.inside) {
-              ;(o = 0), (r = i = a.anEdge)
+          for (o = e.fHead.next; o !== e.fHead; o = o.next)
+            if (o.inside) {
+              ;(a = 0), (r = i = o.anEdge)
               do {
                 ;(this.vertices[s++] = i.Org.coords[0]),
                   (this.vertices[s++] = i.Org.coords[1]),
                   t > 2 && (this.vertices[s++] = i.Org.coords[2]),
                   (this.vertexIndices[l++] = i.Org.idx),
-                  o++,
+                  a++,
                   (i = i.Lnext)
               } while (i !== r)
-              ;(this.elements[c++] = n), (this.elements[c++] = o), (n += o)
+              ;(this.elements[c++] = n), (this.elements[c++] = a), (n += a)
             }
         }),
         (e.prototype.addContour = function (e, t) {
@@ -4994,11 +4804,11 @@ export function speRuntimeFactory (exports) {
               (i.winding = 1),
               (i.Sym.winding = -1)
         }),
-        (e.prototype.tesselate = function (e, t, i, r, n, o) {
+        (e.prototype.tesselate = function (e, t, i, r, n, a) {
           if (
             (void 0 === e && (e = WINDING.ODD),
             void 0 === t && (t = ELEMENT.POLYGONS),
-            void 0 === o && (o = !0),
+            void 0 === a && (a = !0),
             (this.vertices = []),
             (this.elements = []),
             (this.vertexIndices = []),
@@ -5013,16 +4823,16 @@ export function speRuntimeFactory (exports) {
             !this.mesh)
           )
             return !1
-          this.projectPolygon_(), Sweep.computeInterior(this, o)
-          var a = this.mesh
+          this.projectPolygon_(), Sweep.computeInterior(this, a)
+          var o = this.mesh
           return (
             t === ELEMENT.BOUNDARY_CONTOURS
-              ? this.setWindingNumber_(a, 1, !0)
-              : this.tessellateInterior_(a),
-            o && a.check(),
+              ? this.setWindingNumber_(o, 1, !0)
+              : this.tessellateInterior_(o),
+            a && o.check(),
             t === ELEMENT.BOUNDARY_CONTOURS
-              ? this.outputContours_(a, r)
-              : this.outputPolymesh_(a, t, i, r),
+              ? this.outputContours_(o, r)
+              : this.outputPolymesh_(o, t, i, r),
             !0
           )
         }),
@@ -5034,31 +4844,31 @@ export function speRuntimeFactory (exports) {
       i = void 0 === t ? WINDING.ODD : t,
       r = e.elementType,
       n = void 0 === r ? ELEMENT.POLYGONS : r,
-      o = e.polySize,
-      a = void 0 === o ? 3 : o,
+      a = e.polySize,
+      o = void 0 === a ? 3 : a,
       s = e.vertexSize,
       l = void 0 === s ? 2 : s,
       c = e.normal,
-      u = void 0 === c ? [0, 0, 1] : c,
-      h = e.contours,
-      d = void 0 === h ? [] : h,
+      h = void 0 === c ? [0, 0, 1] : c,
+      u = e.contours,
+      d = void 0 === u ? [] : u,
       f = e.strict,
       p = void 0 === f || f,
-      v = e.debug,
-      m = void 0 !== v && v
+      m = e.debug,
+      g = void 0 !== m && m
     if (!d && p) throw new Error("Contours can't be empty")
     if (d) {
-      for (var g = new Tesselator(), E = 0; E < d.length; E++)
-        g.addContour(l || 2, d[E])
+      for (var v = new Tesselator(), y = 0; y < d.length; y++)
+        v.addContour(l || 2, d[y])
       return (
-        g.tesselate(i, n, a, l, u, p),
+        v.tesselate(i, n, o, l, h, p),
         {
-          vertices: g.vertices,
-          vertexIndices: g.vertexIndices,
-          vertexCount: g.vertexCount,
-          elements: g.elements,
-          elementCount: g.elementCount,
-          mesh: m ? g.mesh : void 0
+          vertices: v.vertices,
+          vertexIndices: v.vertexIndices,
+          vertexCount: v.vertexCount,
+          elements: v.elements,
+          elementCount: v.elementCount,
+          mesh: g ? v.mesh : void 0
         }
       )
     }
@@ -5076,20 +4886,20 @@ export function speRuntimeFactory (exports) {
         void 0 === i && (i = 12),
           void 0 === r && (r = 100),
           void 0 === n && (n = {})
-        var o = e.call(this) || this
+        var a = e.call(this) || this
         return (
-          (o.type = 'ShapeGeometry'),
-          (o.windingRule = WINDING.ODD),
-          (o.elementType = ELEMENT.POLYGONS),
-          (o.polySize = 3),
-          (o.vertexSize = 2),
-          (o.strict = !0),
-          (o._drawCount = 0),
-          (o._shape = t),
-          (o._curveSegments = i),
-          (o._maxCount = r),
-          (o._maxDrawCount = 3 * r),
-          (o._triangulationOptions = Object.assign(
+          (a.type = 'ShapeGeometry'),
+          (a.windingRule = WINDING.ODD),
+          (a.elementType = ELEMENT.POLYGONS),
+          (a.polySize = 3),
+          (a.vertexSize = 2),
+          (a.strict = !0),
+          (a._drawCount = 0),
+          (a._shape = t),
+          (a._curveSegments = i),
+          (a._maxCount = r),
+          (a._maxDrawCount = 3 * r),
+          (a._triangulationOptions = Object.assign(
             {
               windingRule: WINDING.ODD,
               elementType: ELEMENT.POLYGONS,
@@ -5099,28 +4909,28 @@ export function speRuntimeFactory (exports) {
             },
             n
           )),
-          (o._positionAttribute = new THREE.BufferAttribute(
+          (a._positionAttribute = new THREE.BufferAttribute(
             new Float32Array(3 * r),
             3
           )),
-          (o._normalAttribute = new THREE.BufferAttribute(
+          (a._normalAttribute = new THREE.BufferAttribute(
             new Float32Array(3 * r),
             3
           )),
-          (o._uvAttribute = new THREE.BufferAttribute(
+          (a._uvAttribute = new THREE.BufferAttribute(
             new Float32Array(2 * r),
             2
           )),
-          (o._indexAttribute = new THREE.BufferAttribute(
+          (a._indexAttribute = new THREE.BufferAttribute(
             new Uint32Array(3 * r),
             1
           )),
-          o.setAttribute('position', o._positionAttribute),
-          o.setAttribute('normal', o._normalAttribute),
-          o.setAttribute('uv', o._uvAttribute),
-          o.setIndex(o._indexAttribute),
-          o.updateFromShape(),
-          o
+          a.setAttribute('position', a._positionAttribute),
+          a.setAttribute('normal', a._normalAttribute),
+          a.setAttribute('uv', a._uvAttribute),
+          a.setIndex(a._indexAttribute),
+          a.updateFromShape(),
+          a
         )
       }
       return (
@@ -5165,54 +4975,75 @@ export function speRuntimeFactory (exports) {
           configurable: !0
         }),
         (t.prototype.updateFromShape = function () {
-          var e = tesselate({
-            contours: [
-              this._shape.extractShapePointsToFlatArray([], this._curveSegments)
-            ],
-            windingRule: this._triangulationOptions.windingRule,
-            elementType: this._triangulationOptions.elementType,
-            polySize: this._triangulationOptions.polySize,
-            vertexSize: this._triangulationOptions.vertexSize,
-            strict: this._triangulationOptions.strict
-          })
-          if (e) {
+          for (
+            var e,
+              t,
+              i,
+              r = this._shape.extractShapePointsToFlatArray(
+                [],
+                this._curveSegments
+              ),
+              n = !0,
+              a = !0,
+              o = 0,
+              s = r.length / 2;
+            o < s;
+            o++
+          ) {
+            var l = r[(p = 2 * o) + 0],
+              c = r[p + 1]
+            if (
+              (void 0 !== t && l !== t && (n = !1),
+              void 0 !== i && c !== i && (a = !1),
+              (t = l),
+              (i = c),
+              !n && !a)
+            )
+              break
+          }
+          if (
+            (n ||
+              a ||
+              (e = tesselate({
+                contours: [r],
+                windingRule: this._triangulationOptions.windingRule,
+                elementType: this._triangulationOptions.elementType,
+                polySize: this._triangulationOptions.polySize,
+                vertexSize: this._triangulationOptions.vertexSize,
+                strict: this._triangulationOptions.strict
+              })),
+            e)
+          ) {
             this._drawCount = 0
-            for (
-              var t = 1 / 0,
-                i = -1 / 0,
-                r = 1 / 0,
-                n = -1 / 0,
-                o = 0,
-                a = e.vertexCount;
-              o < a;
-              o++
-            ) {
-              var s = 2 * o
-              ;(u = e.vertices[s + 0]) < t && (t = u),
-                u > i && (i = u),
-                (h = e.vertices[s + 1]) < r && (r = h),
-                h > n && (n = h)
+            var h = 1 / 0,
+              u = -1 / 0,
+              d = 1 / 0,
+              f = -1 / 0
+            for (o = 0, s = e.vertexCount; o < s; o++) {
+              var p = 2 * o
+              ;(l = e.vertices[p + 0]) < h && (h = l),
+                l > u && (u = l),
+                (c = e.vertices[p + 1]) < d && (d = c),
+                c > f && (f = c)
             }
-            var l = i - t,
-              c = n - r
-            for (o = 0, a = e.vertexCount; o < a; o++) {
-              s = 2 * o
-              var u,
-                h,
-                d = ((u = e.vertices[s + 0]) - t) / l,
-                f = ((h = e.vertices[s + 1]) - r) / c
-              this._positionAttribute.setXYZ(o, u, h, 0),
+            var m = u - h,
+              g = f - d
+            for (o = 0, s = e.vertexCount; o < s; o++) {
+              p = 2 * o
+              var v = ((l = e.vertices[p + 0]) - h) / m,
+                y = ((c = e.vertices[p + 1]) - d) / g
+              this._positionAttribute.setXYZ(o, l, c, 0),
                 this._normalAttribute.setXYZ(o, 0, 0, 1),
-                this._uvAttribute.setXY(o, d, f)
+                this._uvAttribute.setXY(o, v, y)
             }
-            for (o = 0, a = e.elementCount; o < a; o++) {
-              var p = 3 * o,
-                v = e.elements[p + 0],
-                m = e.elements[p + 1],
-                g = e.elements[p + 2]
-              this._indexAttribute.setX(p + 0, v),
-                this._indexAttribute.setX(p + 1, m),
-                this._indexAttribute.setX(p + 2, g),
+            for (o = 0, s = e.elementCount; o < s; o++) {
+              var E = 3 * o,
+                A = e.elements[E + 0],
+                x = e.elements[E + 1],
+                T = e.elements[E + 2]
+              this._indexAttribute.setX(E + 0, A),
+                this._indexAttribute.setX(E + 1, x),
+                this._indexAttribute.setX(E + 2, T),
                 (this._drawCount += 3)
             }
             ;(this._positionAttribute.needsUpdate = !0),
@@ -5235,141 +5066,141 @@ export function speRuntimeFactory (exports) {
       function t(t, i, r) {
         var n
         void 0 === r && (r = 12)
-        var o = e.call(this) || this
-        ;(o.type = 'ShapeGeometry'),
-          (o._vertCount = 0),
-          (o.vertCache = {}),
-          (o._shape = t),
-          (o._depth = i)
-        var a = o._shape.extractShapePointsToFlatArray([], r),
+        var a = e.call(this) || this
+        ;(a.type = 'ShapeGeometry'),
+          (a._vertCount = 0),
+          (a.vertCache = {}),
+          (a._shape = t),
+          (a._depth = i)
+        var o = a._shape.extractShapePointsToFlatArray([], r),
           s = tesselate({
             windingRule: WINDING.ODD,
             elementType: ELEMENT.POLYGONS,
             polySize: 3,
             vertexSize: 2,
             strict: !0,
-            contours: [a]
+            contours: [o]
           })
         if (!s) throw new Error('error generating geometry')
         for (
           var l = 1 / 0,
             c = -1 / 0,
-            u = 1 / 0,
-            h = -1 / 0,
+            h = 1 / 0,
+            u = -1 / 0,
             d = 0,
             f = s.vertexCount;
           d < f;
           d++
         ) {
           var p = 2 * d
-          ;(E = s.vertices[p + 0]) < l && (l = E),
-            E > c && (c = E),
-            (y = s.vertices[p + 1]) < u && (u = y),
-            y > h && (h = y)
+          ;(y = s.vertices[p + 0]) < l && (l = y),
+            y > c && (c = y),
+            (E = s.vertices[p + 1]) < h && (h = E),
+            E > u && (u = E)
         }
-        ;(o._minX = l), (o._minY = u), (o._width = c - l), (o._height = h - u)
-        var v = 2 * s.vertexCount + 4 * s.vertexCount + 4 * s.vertexCount
-        ;(o._positions = new Float32Array(3 * v)),
-          (o._normals = new Float32Array(3 * v)),
-          (o._uvs = new Float32Array(2 * v)),
-          (o._indices = new Uint32Array(3 * v))
-        var m = 0,
-          g = []
+        ;(a._minX = l), (a._minY = h), (a._width = c - l), (a._height = u - h)
+        var m = 2 * s.vertexCount + 4 * s.vertexCount + 4 * s.vertexCount
+        ;(a._positions = new Float32Array(3 * m)),
+          (a._normals = new Float32Array(3 * m)),
+          (a._uvs = new Float32Array(2 * m)),
+          (a._indices = new Uint32Array(3 * m))
+        var g = 0,
+          v = []
         for (d = 0, f = s.vertexCount; d < f; d++) {
-          var E = s.vertices[2 * d + 0],
-            y = s.vertices[2 * d + 1],
-            A = 3 * (o._vertCount + 0),
-            T = 3 * (o._vertCount + 1),
-            x = 2 * (o._vertCount + 0),
-            _ = 2 * (o._vertCount + 1)
-          ;(o._positions[A + 0] = E),
-            (o._positions[A + 1] = y),
-            (o._positions[A + 2] = i),
-            (o._normals[A + 0] = 0),
-            (o._normals[A + 1] = 0),
-            (o._normals[A + 2] = 1),
-            (o._uvs[x + 0] = (E - l) / o._width),
-            (o._uvs[x + 1] = (y - u) / o._height),
-            (o._positions[T + 0] = E),
-            (o._positions[T + 1] = y),
-            (o._positions[T + 2] = 0),
-            (o._normals[T + 0] = 0),
-            (o._normals[T + 1] = 0),
-            (o._normals[T + 2] = -1),
-            (o._uvs[_ + 0] = (E - l) / o._width),
-            (o._uvs[_ + 1] = (y - u) / o._height),
-            (g[d] = o._vertCount),
-            (o._vertCount += 2)
+          var y = s.vertices[2 * d + 0],
+            E = s.vertices[2 * d + 1],
+            A = 3 * (a._vertCount + 0),
+            x = 3 * (a._vertCount + 1),
+            T = 2 * (a._vertCount + 0),
+            w = 2 * (a._vertCount + 1)
+          ;(a._positions[A + 0] = y),
+            (a._positions[A + 1] = E),
+            (a._positions[A + 2] = i),
+            (a._normals[A + 0] = 0),
+            (a._normals[A + 1] = 0),
+            (a._normals[A + 2] = 1),
+            (a._uvs[T + 0] = (y - l) / a._width),
+            (a._uvs[T + 1] = (E - h) / a._height),
+            (a._positions[x + 0] = y),
+            (a._positions[x + 1] = E),
+            (a._positions[x + 2] = 0),
+            (a._normals[x + 0] = 0),
+            (a._normals[x + 1] = 0),
+            (a._normals[x + 2] = -1),
+            (a._uvs[w + 0] = (y - l) / a._width),
+            (a._uvs[w + 1] = (E - h) / a._height),
+            (v[d] = a._vertCount),
+            (a._vertCount += 2)
         }
         for (d = 0, f = s.elementCount; d < f; d++) {
-          var w = 3 * d,
-            S = s.elements[w + 0],
-            b = s.elements[w + 1],
-            R = s.elements[w + 2]
-          ;(o._indices[m + 0] = g[S] + 0),
-            (o._indices[m + 1] = g[b] + 0),
-            (o._indices[m + 2] = g[R] + 0),
-            (o._indices[m + 3] = g[R] + 1),
-            (o._indices[m + 4] = g[b] + 1),
-            (o._indices[m + 5] = g[S] + 1),
-            (m += 6)
+          var b = 3 * d,
+            S = s.elements[b + 0],
+            C = s.elements[b + 1],
+            _ = s.elements[b + 2]
+          ;(a._indices[g + 0] = v[S] + 0),
+            (a._indices[g + 1] = v[C] + 0),
+            (a._indices[g + 2] = v[_] + 0),
+            (a._indices[g + 3] = v[_] + 1),
+            (a._indices[g + 4] = v[C] + 1),
+            (a._indices[g + 5] = v[S] + 1),
+            (g += 6)
         }
-        var C = tesselate({
+        var D = tesselate({
           windingRule: WINDING.ODD,
           elementType: ELEMENT.BOUNDARY_CONTOURS,
           vertexSize: 2,
           strict: !0,
-          contours: [a]
+          contours: [o]
         })
-        if (!C) throw new Error('error generating geometry')
+        if (!D) throw new Error('error generating geometry')
         var O = !1
-        O = 1 === C.elementCount ? !isCW(a) : C.elementCount % 2 == 1
-        for (d = 0, f = C.elementCount; d < f; d++) {
+        O = 1 === D.elementCount ? !isCW(o) : D.elementCount % 2 == 1
+        for (d = 0, f = D.elementCount; d < f; d++) {
           p = 2 * d
-          var D = C.elements[p + 0],
-            M = C.elements[p + 1],
-            L = D + M,
-            P = L - 2,
-            I = L - 1,
-            B = D,
-            H = D + 1
+          var R = D.elements[p + 0],
+            M = D.elements[p + 1],
+            L = R + M,
+            B = L - 2,
+            P = L - 1,
+            H = R,
+            I = R + 1
           do {
-            var N = o.buildVert(C, [P, I, B], 'pre', O),
-              F = o.buildVert(C, [I, B, H], 'post', O)
-            ;(o._indices[m + 0] = F.bottom),
-              (o._indices[m + 1] = F.top),
-              (o._indices[m + 2] = N.bottom),
-              (o._indices[m + 3] = F.top),
-              (o._indices[m + 4] = N.top),
-              (o._indices[m + 5] = N.bottom),
-              (m += 6),
-              (P = (n = __read([I, B, H, H + 1], 4))[0]),
-              (I = n[1]),
-              (B = n[2]),
-              (H = n[3]) >= L && (H -= M)
-          } while (B !== D)
+            var N = a.buildVert(D, [B, P, H], 'pre', O),
+              F = a.buildVert(D, [P, H, I], 'post', O)
+            ;(a._indices[g + 0] = F.bottom),
+              (a._indices[g + 1] = F.top),
+              (a._indices[g + 2] = N.bottom),
+              (a._indices[g + 3] = F.top),
+              (a._indices[g + 4] = N.top),
+              (a._indices[g + 5] = N.bottom),
+              (g += 6),
+              (B = (n = __read([P, H, I, I + 1], 4))[0]),
+              (P = n[1]),
+              (H = n[2]),
+              (I = n[3]) >= L && (I -= M)
+          } while (H !== R)
           O = !O
         }
-        var G = new THREE.BufferAttribute(
-            o._positions.slice(0, 3 * o._vertCount),
+        var z = new THREE.BufferAttribute(
+            a._positions.slice(0, 3 * a._vertCount),
             3
           ),
           U = new THREE.BufferAttribute(
-            o._normals.slice(0, 3 * o._vertCount),
+            a._normals.slice(0, 3 * a._vertCount),
             3
           ),
-          z = new THREE.BufferAttribute(o._uvs.slice(0, 2 * o._vertCount), 2),
-          V = new THREE.BufferAttribute(o._indices.slice(0, m), 1)
+          G = new THREE.BufferAttribute(a._uvs.slice(0, 2 * a._vertCount), 2),
+          V = new THREE.BufferAttribute(a._indices.slice(0, g), 1)
         return (
-          (G.needsUpdate = !0),
-          (U.needsUpdate = !0),
           (z.needsUpdate = !0),
+          (U.needsUpdate = !0),
+          (G.needsUpdate = !0),
           (V.needsUpdate = !0),
-          o.setAttribute('position', G),
-          o.setAttribute('normal', U),
-          o.setAttribute('uv', z),
-          o.setIndex(V),
-          o
+          a.setAttribute('position', z),
+          a.setAttribute('normal', U),
+          a.setAttribute('uv', G),
+          a.setIndex(V),
+          a
         )
       }
       return (
@@ -5377,71 +5208,71 @@ export function speRuntimeFactory (exports) {
         (t.prototype.buildVert = function (e, t, i, r) {
           var n = 1
           r && (t.reverse(), (i = 'pre' === i ? 'post' : 'pre'), (n = -1))
-          var o,
-            a = __read(t, 3),
-            s = a[0],
-            l = a[1],
-            c = a[2],
-            u = e.vertexIndices[l],
-            h = e.vertices[2 * l + 0],
+          var a,
+            o = __read(t, 3),
+            s = o[0],
+            l = o[1],
+            c = o[2],
+            h = e.vertexIndices[l],
+            u = e.vertices[2 * l + 0],
             d = e.vertices[2 * l + 1]
-          if (u < 0)
+          if (h < 0)
             if ('post' === i) {
               var f = e.vertices[2 * s + 0],
                 p = e.vertices[2 * s + 1]
-              o = new THREE.Vector2(f - h, p - d).normalize()
+              a = new THREE.Vector2(f - u, p - d).normalize()
             } else {
-              var v = e.vertices[2 * c + 0],
-                m = e.vertices[2 * c + 1]
-              o = new THREE.Vector2(h - v, d - m).normalize()
+              var m = e.vertices[2 * c + 0],
+                g = e.vertices[2 * c + 1]
+              a = new THREE.Vector2(u - m, d - g).normalize()
             }
           else {
-            var g = __read(this._shape.getCurveIndexFromVertexId(u - 1), 2),
-              E = g[0],
-              y = g[1],
+            var v = __read(this._shape.getCurveIndexFromVertexId(h - 1), 2),
+              y = v[0],
+              E = v[1],
               A = this._shape.curves.length,
-              T = y > 0 && y < 1
-            0 === y && 'pre' === i
-              ? ((E = (E - 1 + A) % A), (y = 1))
-              : 1 === y && 'post' === i && ((E = (E + 1) % A), (y = 0))
-            var x = 'pre' === i ? 'post' : 'pre',
-              _ = this.vertCache['' + l + x]
-            if (_ && T) return _
+              x = E > 0 && E < 1
+            0 === E && 'pre' === i
+              ? ((y = (y - 1 + A) % A), (E = 1))
+              : 1 === E && 'post' === i && ((y = (y + 1) % A), (E = 0))
+            var T = 'pre' === i ? 'post' : 'pre',
+              w = this.vertCache['' + l + T]
+            if (w && x) return w
             if (
-              ((o = this._shape.curves[E].getTangent(y)),
-              _ && o.dot(_.tangent) > 0.9)
+              ((a = this._shape.curves[y].getTangent(E)),
+              w && a.dot(w.tangent) > 0.9)
             )
-              return _
+              return w
           }
-          var w = {
+          var b = {
               top: this._vertCount + 0,
               bottom: this._vertCount + 1,
-              tangent: o
+              tangent: a
             },
             S = 3 * (this._vertCount + 0),
-            b = 3 * (this._vertCount + 1),
-            R = 2 * (this._vertCount + 0),
-            C = 2 * (this._vertCount + 1)
+            C = 3 * (this._vertCount + 1),
+            _ = 2 * (this._vertCount + 0),
+            D = 2 * (this._vertCount + 1)
           return (
-            (this._positions[S + 0] = h),
+            (this._positions[S + 0] = u),
             (this._positions[S + 1] = d),
             (this._positions[S + 2] = this._depth),
-            (this._normals[S + 0] = -o.y * n),
-            (this._normals[S + 1] = o.x * n),
+            (this._normals[S + 0] = -a.y * n),
+            (this._normals[S + 1] = a.x * n),
             (this._normals[S + 2] = 0),
-            (this._uvs[R + 0] = (h - this._minX) / this._width),
-            (this._uvs[R + 1] = (d - this._minY) / this._height),
-            (this._positions[b + 0] = h),
-            (this._positions[b + 1] = d),
-            (this._positions[b + 2] = 0),
-            (this._normals[b + 0] = -o.y * n),
-            (this._normals[b + 1] = o.x * n),
-            (this._normals[b + 2] = 0),
-            (this._uvs[C + 0] = (h - this._minX) / this._width),
-            (this._uvs[C + 1] = (d - this._minY) / this._height),
+            (this._uvs[_ + 0] = (u - this._minX) / this._width),
+            (this._uvs[_ + 1] = (d - this._minY) / this._height),
+            (this._positions[C + 0] = u),
+            (this._positions[C + 1] = d),
+            (this._positions[C + 2] = 0),
+            (this._normals[C + 0] = -a.y * n),
+            (this._normals[C + 1] = a.x * n),
+            (this._normals[C + 2] = 0),
+            (this._uvs[D + 0] = (u - this._minX) / this._width),
+            (this._uvs[D + 1] = (d - this._minY) / this._height),
             (this._vertCount += 2),
-            (this.vertCache['' + l + i] = w),
-            w
+            (this.vertCache['' + l + i] = b),
+            b
           )
         }),
         t
@@ -5457,7 +5288,7 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o = Object.assign(
+            a = Object.assign(
               {},
               null !== (i = null == t ? void 0 : t.parameters) && void 0 !== i
                 ? i
@@ -5470,8 +5301,8 @@ export function speRuntimeFactory (exports) {
                   },
               e.parameters
             ),
-            a = Math.abs(o.width),
-            s = Math.abs(null !== (r = o.height) && void 0 !== r ? r : o.width),
+            o = Math.abs(a.width),
+            s = Math.abs(null !== (r = a.height) && void 0 !== r ? r : a.width),
             l =
               null !== (n = e.shape) && void 0 !== n
                 ? n
@@ -5480,11 +5311,11 @@ export function speRuntimeFactory (exports) {
                 : t.shape
           void 0 !== l &&
             (l instanceof VectorShape
-              ? (l.width === a && l.height === s) || l.applySize(a, s)
-              : (l = new VectorShape(a, s).fromJSON(l)))
-          var c = null != l ? l : new VectorShape(a, s)
+              ? (l.width === o && l.height === s) || l.applySize(o, s)
+              : (l = new VectorShape(o, s).fromJSON(l)))
+          var c = null != l ? l : new VectorShape(o, s)
           return {
-            parameters: Object.assign(o, { width: a, height: s }),
+            parameters: Object.assign(a, { width: o, height: s }),
             shape: c
           }
         }),
@@ -5493,11 +5324,11 @@ export function speRuntimeFactory (exports) {
             i = e.parameters,
             r = i.extrudeDepth,
             n = i.subdivisions,
-            o = i.surfaceMaxCount
+            a = i.surfaceMaxCount
           return (
             (t =
               r <= 0
-                ? new VectorSurfaceGeometry(e.shape, n, o)
+                ? new VectorSurfaceGeometry(e.shape, n, a)
                 : new VectorExtrusionGeometry(e.shape, r, n)),
             Object.assign(t, {
               userData: __assign(__assign({}, e), { type: 'VectorGeometry' })
@@ -5583,15 +5414,15 @@ export function speRuntimeFactory (exports) {
     _traverseSetFromObjectSize = function (e, t, i, r) {
       if (isMeshEntity(e)) {
         var n = e.geometry.userData.parameters,
-          o = e.geometry.getAttribute('position')
-        _box3.setFromArray(o.array),
+          a = e.geometry.getAttribute('position')
+        _box3.setFromArray(a.array),
           _box3.getCenter(_center),
           e.forceComputeSize
             ? _box3.getSize(_halfSize).multiplyScalar(0.5)
             : _halfSize.set(n.width, n.height, n.depth).multiplyScalar(0.5)
       } else if (isHelperableEntity(e) && !0 === r) {
-        o = e.geometryHelper.getAttribute('position')
-        _box3.setFromArray(o.array),
+        a = e.geometryHelper.getAttribute('position')
+        _box3.setFromArray(a.array),
           _box3.getCenter(_center),
           _box3.getSize(_halfSize).multiplyScalar(0.5)
       } else _center.setScalar(0), _halfSize.setScalar(0)
@@ -5794,27 +5625,27 @@ export function speRuntimeFactory (exports) {
     if (1 === r) return i.copy(t)
     var n = e.w * t.w + e.x * t.x + e.y * t.y + e.z * t.z
     if (n >= 1) return i.copy(e)
-    var o = 1 - n * n
-    if (o <= Number.EPSILON) {
-      var a = 1 - r
+    var a = 1 - n * n
+    if (a <= Number.EPSILON) {
+      var o = 1 - r
       return (
-        (i.w = a * e.w + r * t.w),
-        (i.x = a * e.x + r * t.x),
-        (i.y = a * e.y + r * t.y),
-        (i.z = a * e.z + r * t.z),
+        (i.w = o * e.w + r * t.w),
+        (i.x = o * e.x + r * t.x),
+        (i.y = o * e.y + r * t.y),
+        (i.z = o * e.z + r * t.z),
         i.normalize(),
         i
       )
     }
-    var s = Math.sqrt(o),
+    var s = Math.sqrt(a),
       l = Math.atan2(s, n),
       c = Math.sin((1 - r) * l) / s,
-      u = Math.sin(r * l) / s
+      h = Math.sin(r * l) / s
     return (
-      (i.w = e.w * c + t.w * u),
-      (i.x = e.x * c + t.x * u),
-      (i.y = e.y * c + t.y * u),
-      (i.z = e.z * c + t.z * u),
+      (i.w = e.w * c + t.w * h),
+      (i.x = e.x * c + t.x * h),
+      (i.y = e.y * c + t.y * h),
+      (i.z = e.z * c + t.z * h),
       i
     )
   }
@@ -6345,10 +6176,10 @@ export function speRuntimeFactory (exports) {
               this.uniforms[`f${this.id}_colorC`].value.set(r)
               let n = e.uniforms[`f${this.id}_colorD`].value
               this.uniforms[`f${this.id}_colorD`].value.set(n)
-              let o = e.uniforms[`f${this.id}_distortion`].value
-              this.uniforms[`f${this.id}_distortion`].value.set(o.x, o.y)
-              let a = e.uniforms[`f${this.id}_fA`].value
-              this.uniforms[`f${this.id}_fA`].value.set(a.x, a.y)
+              let a = e.uniforms[`f${this.id}_distortion`].value
+              this.uniforms[`f${this.id}_distortion`].value.set(a.x, a.y)
+              let o = e.uniforms[`f${this.id}_fA`].value
+              this.uniforms[`f${this.id}_fA`].value.set(o.x, o.y)
               let s = e.uniforms[`f${this.id}_fB`].value
               return this.uniforms[`f${this.id}_fB`].value.set(s.x, s.y), this
             })
@@ -6462,14 +6293,14 @@ export function speRuntimeFactory (exports) {
               let r = e.uniforms[`f${this.id}_morph`].value
               this.uniforms[`f${this.id}_morph`].value.set(r.x, r.y)
               let n = e.uniforms[`f${t}_colors`].value,
-                o = this.uniforms[`f${t}_colors`].value
+                a = this.uniforms[`f${t}_colors`].value
               for (let e = 0; e < n.length; e++) {
                 let t = n[e]
-                o[e].set(t.x, t.y, t.z, t.w)
+                a[e].set(t.x, t.y, t.z, t.w)
               }
-              let a = e.uniforms[`f${t}_steps`].value,
+              let o = e.uniforms[`f${t}_steps`].value,
                 s = this.uniforms[`f${t}_steps`].value
-              for (let e = 0; e < a.length; e++) s[e] = a[e]
+              for (let e = 0; e < o.length; e++) s[e] = o[e]
               return this
             })
           break
@@ -6568,7 +6399,7 @@ export function speRuntimeFactory (exports) {
         if (((e[i] = {}), Array.isArray(r.value))) {
           const t = r.value.length
           e[i] = new Array(t)
-          for (let n = 0, o = t; n < o; n++) {
+          for (let n = 0, a = t; n < a; n++) {
             const t = r.value[n]
             e[i][n] = void 0 !== t.clone ? t.clone() : t
           }
@@ -6603,7 +6434,7 @@ export function speRuntimeFactory (exports) {
             const t = e.uniforms[r].value.length
             this.uniforms[i].value = new Array(t)
             let n = this.uniforms[i].value
-            for (let i = 0, o = t; i < o; i++) {
+            for (let i = 0, a = t; i < a; i++) {
               const t = e.uniforms[r].value[i]
               n[i] = void 0 !== t.clone ? t.clone() : t
             }
@@ -6854,10 +6685,11 @@ export function speRuntimeFactory (exports) {
       i && this.updateLayerUniformByLayer(i, t)
     },
     updateLayerUniformByLayer: function (e, t) {
-      this.shader.uniforms[t]
-        ? (this.shader.uniforms[t].value = e.uniforms[t].value)
-        : (this.shader.uniforms[t] = { value: e.uniforms[t].value }),
-        (this.uuid = THREE.Math.generateUUID())
+      this.shader &&
+        (this.shader.uniforms[t]
+          ? (this.shader.uniforms[t].value = e.uniforms[t].value)
+          : (this.shader.uniforms[t] = { value: e.uniforms[t].value }),
+        (this.uuid = THREE.Math.generateUUID()))
     },
     copy: function (e) {
       ;(this.id = e.id),
@@ -7097,25 +6929,25 @@ export function speRuntimeFactory (exports) {
           if ('material' in e) {
             var r = e.material
             if (r instanceof Array)
-              for (var n = 0, o = (c = this.material).length; n < o; ++n) {
+              for (var n = 0, a = (c = this.material).length; n < a; ++n) {
                 for (
-                  var a = r[n].layersList.head, s = c[n].layersList, l = 0;
-                  a;
+                  var o = r[n].layersList.head, s = c[n].layersList, l = 0;
+                  o;
 
                 )
-                  a.copy(s[l++]), (a = a.next)
+                  o.copy(s[l++]), (o = o.next)
                 r[n].dispose()
               }
             else {
               var c
               for (
                 n = 0,
-                  a = r.layersList.head,
+                  o = r.layersList.head,
                   s = (c = this.material).layersList;
-                a;
+                o;
 
               )
-                a.copyUniforms(s[n++]), (a = a.next)
+                o.copyUniforms(s[n++]), (o = o.next)
               r.dispose()
             }
           }
@@ -7363,33 +7195,33 @@ export function speRuntimeFactory (exports) {
     var i = parseEasingParameters(e),
       r = minMax(is.und(i[0]) ? 1 : i[0], 0.1, 100),
       n = minMax(is.und(i[1]) ? 100 : i[1], 0.1, 100),
-      o = minMax(is.und(i[2]) ? 10 : i[2], 0.1, 100),
-      a = minMax(is.und(i[3]) ? 0 : i[3], 0.1, 100),
+      a = minMax(is.und(i[2]) ? 10 : i[2], 0.1, 100),
+      o = minMax(is.und(i[3]) ? 0 : i[3], 0.1, 100),
       s = Math.sqrt(n / r),
-      l = o / (2 * Math.sqrt(n * r)),
+      l = a / (2 * Math.sqrt(n * r)),
       c = l < 1 ? s * Math.sqrt(1 - l * l) : 0,
-      u = l < 1 ? (l * s - a) / c : -a + s
-    function h(e) {
+      h = l < 1 ? (l * s - o) / c : -o + s
+    function u(e) {
       var i = t ? (t * e) / 1e3 : e
       return (
         (i =
           l < 1
-            ? Math.exp(-i * l * s) * (1 * Math.cos(c * i) + u * Math.sin(c * i))
-            : (1 + u * i) * Math.exp(-i * s)),
+            ? Math.exp(-i * l * s) * (1 * Math.cos(c * i) + h * Math.sin(c * i))
+            : (1 + h * i) * Math.exp(-i * s)),
         0 === e || 1 === e ? e : 1 - i
       )
     }
     return t
-      ? h
+      ? u
       : function () {
           var t = cache.springs[e]
           if (t) return t
           for (var i = 1 / 6, r = 0, n = 0; ; )
-            if (1 === h((r += i))) {
+            if (1 === u((r += i))) {
               if (++n >= 16) break
             } else n = 0
-          var o = r * i * 1e3
-          return (cache.springs[e] = o), o
+          var a = r * i * 1e3
+          return (cache.springs[e] = a), a
         }
   }
   function steps(e) {
@@ -7411,50 +7243,50 @@ export function speRuntimeFactory (exports) {
       function r(e) {
         return 3 * e
       }
-      function n(e, n, o) {
-        return ((t(n, o) * e + i(n, o)) * e + r(n)) * e
+      function n(e, n, a) {
+        return ((t(n, a) * e + i(n, a)) * e + r(n)) * e
       }
-      function o(e, n, o) {
-        return 3 * t(n, o) * e * e + 2 * i(n, o) * e + r(n)
+      function a(e, n, a) {
+        return 3 * t(n, a) * e * e + 2 * i(n, a) * e + r(n)
       }
-      return function (t, i, r, a) {
+      return function (t, i, r, o) {
         if (0 <= t && t <= 1 && 0 <= r && r <= 1) {
           var s = new Float32Array(11)
-          if (t !== i || r !== a)
+          if (t !== i || r !== o)
             for (var l = 0; l < 11; ++l) s[l] = n(l * e, t, r)
           return function (e) {
-            return (t === i && r === a) || 0 === e || 1 === e
+            return (t === i && r === o) || 0 === e || 1 === e
               ? e
-              : n(c(e), i, a)
+              : n(c(e), i, o)
           }
         }
         function c(i) {
-          for (var a = 0, l = 1; 10 !== l && s[l] <= i; ++l) a += e
+          for (var o = 0, l = 1; 10 !== l && s[l] <= i; ++l) o += e
           --l
-          var c = a + ((i - s[l]) / (s[l + 1] - s[l])) * e,
-            u = o(c, t, r)
-          return u >= 0.001
+          var c = o + ((i - s[l]) / (s[l + 1] - s[l])) * e,
+            h = a(c, t, r)
+          return h >= 0.001
             ? (function (e, t, i, r) {
-                for (var a = 0; a < 4; ++a) {
-                  var s = o(t, i, r)
+                for (var o = 0; o < 4; ++o) {
+                  var s = a(t, i, r)
                   if (0 === s) return t
                   t -= (n(t, i, r) - e) / s
                 }
                 return t
               })(i, c, t, r)
-            : 0 === u
+            : 0 === h
             ? c
-            : (function (e, t, i, r, o) {
-                var a,
+            : (function (e, t, i, r, a) {
+                var o,
                   s,
                   l = 0
                 do {
-                  ;(a = n((s = t + (i - t) / 2), r, o) - e) > 0
+                  ;(o = n((s = t + (i - t) / 2), r, a) - e) > 0
                     ? (i = s)
                     : (t = s)
-                } while (Math.abs(a) > 1e-7 && ++l < 10)
+                } while (Math.abs(o) > 1e-7 && ++l < 10)
                 return s
-              })(i, a, a + e, t, r)
+              })(i, o, o + e, t, r)
         }
       }
     })(),
@@ -7560,13 +7392,13 @@ export function speRuntimeFactory (exports) {
       var i = e.length,
         r = arguments.length >= 2 ? arguments[1] : void 0,
         n = [],
-        o = 0;
-      o < i;
-      o++
+        a = 0;
+      a < i;
+      a++
     )
-      if (o in e) {
-        var a = e[o]
-        t.call(r, a, o, e) && n.push(a)
+      if (a in e) {
+        var o = e[a]
+        t.call(r, o, a, e) && n.push(o)
       }
     return n
   }
@@ -7632,8 +7464,8 @@ export function speRuntimeFactory (exports) {
       n =
         /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(e) ||
         /hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)\)/g.exec(e),
-      o = parseInt(n[1], 10) / 360,
-      a = parseInt(n[2], 10) / 100,
+      a = parseInt(n[1], 10) / 360,
+      o = parseInt(n[2], 10) / 100,
       s = parseInt(n[3], 10) / 100,
       l = n[4] || 1
     function c(e, t, i) {
@@ -7649,11 +7481,11 @@ export function speRuntimeFactory (exports) {
           : e
       )
     }
-    if (0 == a) t = i = r = s
+    if (0 == o) t = i = r = s
     else {
-      var u = s < 0.5 ? s * (1 + a) : s + a - s * a,
-        h = 2 * s - u
-      ;(t = c(h, u, o + 1 / 3)), (i = c(h, u, o)), (r = c(h, u, o - 1 / 3))
+      var h = s < 0.5 ? s * (1 + o) : s + o - s * o,
+        u = 2 * s - h
+      ;(t = c(u, h, a + 1 / 3)), (i = c(u, h, a)), (r = c(u, h, a - 1 / 3))
     }
     return 'rgba(' + 255 * t + ',' + 255 * i + ',' + 255 * r + ',' + l + ')'
   }
@@ -7691,12 +7523,12 @@ export function speRuntimeFactory (exports) {
     var r = cache.CSS[t + i]
     if (!is.und(r)) return r
     var n = document.createElement(e.tagName),
-      o =
+      a =
         e.parentNode && e.parentNode !== document ? e.parentNode : document.body
-    o.appendChild(n), (n.style.position = 'absolute'), (n.style.width = 100 + i)
-    var a = 100 / n.offsetWidth
-    o.removeChild(n)
-    var s = a * parseFloat(t)
+    a.appendChild(n), (n.style.position = 'absolute'), (n.style.width = 100 + i)
+    var o = 100 / n.offsetWidth
+    a.removeChild(n)
+    var s = o * parseFloat(t)
     return (cache.CSS[t + i] = s), s
   }
   function getCSSValue(e, t, i) {
@@ -7735,10 +7567,10 @@ export function speRuntimeFactory (exports) {
   }
   function getTransformValue(e, t, i, r) {
     var n = stringContains(t, 'scale') ? 1 : 0 + getTransformUnit(t),
-      o = getElementTransforms(e).get(t) || n
+      a = getElementTransforms(e).get(t) || n
     return (
-      i && (i.transforms.list.set(t, o), (i.transforms.last = t)),
-      r ? convertPxToUnit(e, o, r) : o
+      i && (i.transforms.list.set(t, a), (i.transforms.last = t)),
+      r ? convertPxToUnit(e, a, r) : a
     )
   }
   function getOriginalTargetValue(e, t, i, r) {
@@ -7758,14 +7590,14 @@ export function speRuntimeFactory (exports) {
     if (!i) return e
     var r = getUnit(e) || 0,
       n = parseFloat(t),
-      o = parseFloat(e.replace(i[0], ''))
+      a = parseFloat(e.replace(i[0], ''))
     switch (i[0][0]) {
       case '+':
-        return n + o + r
+        return n + a + r
       case '-':
-        return n - o + r
+        return n - a + r
       case '*':
-        return n * o + r
+        return n * a + r
     }
   }
   function validateValue(e, t) {
@@ -7792,8 +7624,8 @@ export function speRuntimeFactory (exports) {
   }
   function getPolylineLength(e) {
     for (var t, i = e.points, r = 0, n = 0; n < i.numberOfItems; n++) {
-      var o = i.getItem(n)
-      n > 0 && (r += getDistance(t, o)), (t = o)
+      var a = i.getItem(n)
+      n > 0 && (r += getDistance(t, a)), (t = a)
     }
     return r
   }
@@ -7832,16 +7664,16 @@ export function speRuntimeFactory (exports) {
     var i = t || {},
       r = i.el || getParentSvgEl(e),
       n = r.getBoundingClientRect(),
-      o = getAttribute(r, 'viewBox'),
-      a = n.width,
+      a = getAttribute(r, 'viewBox'),
+      o = n.width,
       s = n.height,
-      l = i.viewBox || (o ? o.split(' ') : [0, 0, a, s])
+      l = i.viewBox || (a ? a.split(' ') : [0, 0, o, s])
     return {
       el: r,
       viewBox: l,
       x: l[0] / 1,
       y: l[1] / 1,
-      w: a / l[2],
+      w: o / l[2],
       h: s / l[3]
     }
   }
@@ -7865,15 +7697,15 @@ export function speRuntimeFactory (exports) {
     }
     var r = getParentSvg(e.el, e.svg),
       n = i(),
-      o = i(-1),
-      a = i(1)
+      a = i(-1),
+      o = i(1)
     switch (e.property) {
       case 'x':
         return (n.x - r.x) * r.w
       case 'y':
         return (n.y - r.y) * r.h
       case 'angle':
-        return (180 * Math.atan2(a.y - o.y, a.x - o.x)) / Math.PI
+        return (180 * Math.atan2(o.y - a.y, o.x - a.x)) / Math.PI
     }
   }
   function decomposeValue(e, t) {
@@ -7987,22 +7819,22 @@ export function speRuntimeFactory (exports) {
     var i
     return e.tweens.map(function (r) {
       var n = normalizeTweenValues(r, t),
-        o = n.value,
-        a = is.arr(o) ? o[1] : o,
-        s = getUnit(a),
+        a = n.value,
+        o = is.arr(a) ? a[1] : a,
+        s = getUnit(o),
         l = getOriginalTargetValue(t.target, e.name, s, t),
         c = i ? i.to.original : l,
-        u = is.arr(o) ? o[0] : c,
-        h = getUnit(u) || getUnit(l),
-        d = s || h
+        h = is.arr(a) ? a[0] : c,
+        u = getUnit(h) || getUnit(l),
+        d = s || u
       return (
-        is.und(a) && (a = c),
-        (n.from = decomposeValue(u, d)),
-        (n.to = decomposeValue(getRelativeValue(a, u), d)),
+        is.und(o) && (o = c),
+        (n.from = decomposeValue(h, d)),
+        (n.to = decomposeValue(getRelativeValue(o, h), d)),
         (n.start = i ? i.end : 0),
         (n.end = n.start + n.delay + n.duration + n.endDelay),
         (n.easing = parseEasings(n.easing, n.duration)),
-        (n.isPath = is.pth(o)),
+        (n.isPath = is.pth(a)),
         (n.isColor = is.col(n.from.original)),
         n.isColor && (n.round = 1),
         (i = n),
@@ -8022,11 +7854,11 @@ export function speRuntimeFactory (exports) {
     },
     transform: function (e, t, i, r, n) {
       if ((r.list.set(t, i), t === r.last || n)) {
-        var o = ''
+        var a = ''
         r.list.forEach(function (e, t) {
-          o += t + '(' + e + ') '
+          a += t + '(' + e + ') '
         }),
-          (e.style.transform = o)
+          (e.style.transform = a)
       }
     }
   }
@@ -8035,9 +7867,9 @@ export function speRuntimeFactory (exports) {
       for (var i in t) {
         var r = getFunctionValue(t[i], e),
           n = e.target,
-          o = getUnit(r),
-          a = getOriginalTargetValue(n, i, o, e),
-          s = getRelativeValue(validateValue(r, o || getUnit(a)), a),
+          a = getUnit(r),
+          o = getOriginalTargetValue(n, i, a, e),
+          s = getRelativeValue(validateValue(r, a || getUnit(o)), o),
           l = getAnimationType(n, i)
         setProgressValue[l](n, i, s, e.transforms, !0)
       }
@@ -8114,8 +7946,8 @@ export function speRuntimeFactory (exports) {
       i = replaceObjectProps(defaultTweenSettings, e),
       r = getProperties(i, e),
       n = getAnimatables(e.targets),
-      o = getAnimations(n, r),
-      a = getInstanceTimings(o, i),
+      a = getAnimations(n, r),
+      o = getInstanceTimings(a, i),
       s = instanceID
     return (
       instanceID++,
@@ -8123,10 +7955,10 @@ export function speRuntimeFactory (exports) {
         id: s,
         children: [],
         animatables: n,
-        animations: o,
-        duration: a.duration,
-        delay: a.delay,
-        endDelay: a.endDelay
+        animations: a,
+        duration: o.duration,
+        delay: o.delay,
+        endDelay: o.endDelay
       })
     )
   }
@@ -8143,9 +7975,9 @@ export function speRuntimeFactory (exports) {
           for (var r = 0; r < i; ) {
             var n = activeInstances[r]
             if (n.paused) {
-              var o = activeInstances.indexOf(n)
-              o > -1 &&
-                (activeInstances.splice(o, 1), (i = activeInstances.length))
+              var a = activeInstances.indexOf(n)
+              a > -1 &&
+                (activeInstances.splice(a, 1), (i = activeInstances.length))
             } else n.tick(t)
             r++
           }
@@ -8171,13 +8003,13 @@ export function speRuntimeFactory (exports) {
       i = 0,
       r = 0,
       n = 0,
-      o = 0,
-      a = null
+      a = 0,
+      o = null
     function s(e) {
       var t =
         window.Promise &&
         new Promise(function (e) {
-          return (a = e)
+          return (o = e)
         })
       return (e.finished = t), t
     }
@@ -8192,11 +8024,11 @@ export function speRuntimeFactory (exports) {
           return (e.reversed = l.reversed)
         })
     }
-    function u(e) {
+    function h(e) {
       return l.reversed ? l.duration - e : e
     }
-    function h() {
-      ;(i = 0), (r = u(l.currentTime) * (1 / anime.speed))
+    function u() {
+      ;(i = 0), (r = h(l.currentTime) * (1 / anime.speed))
     }
     function d(e, t) {
       t && t.seek(e - t.timelineOffset)
@@ -8211,86 +8043,86 @@ export function speRuntimeFactory (exports) {
 
       ) {
         var n = i[t],
-          o = n.animatable,
-          a = n.tweens,
-          s = a.length - 1,
-          c = a[s]
+          a = n.animatable,
+          o = n.tweens,
+          s = o.length - 1,
+          c = o[s]
         s &&
           (c =
-            filterArray(a, function (t) {
+            filterArray(o, function (t) {
               return e < t.end
             })[0] || c)
         for (
-          var u = minMax(e - c.start - c.delay, 0, c.duration) / c.duration,
-            h = isNaN(u) ? 1 : c.easing(u),
+          var h = minMax(e - c.start - c.delay, 0, c.duration) / c.duration,
+            u = isNaN(h) ? 1 : c.easing(h),
             d = c.to.strings,
             f = c.round,
             p = [],
-            v = c.to.numbers.length,
-            m = void 0,
-            g = 0;
-          g < v;
-          g++
+            m = c.to.numbers.length,
+            g = void 0,
+            v = 0;
+          v < m;
+          v++
         ) {
-          var E = void 0
+          var y = void 0
           if (!0 === l.reversePlayback && !1 === l.rewind)
-            var y = c.to.numbers[g],
-              A = c.from.numbers[g] || 0
-          else (A = c.to.numbers[g]), (y = c.from.numbers[g] || 0)
-          ;(E = c.isPath ? getPathProgress(c.value, h * A) : y + h * (A - y)),
-            f && ((c.isColor && g > 2) || (E = Math.round(E * f) / f)),
-            p.push(E)
+            var E = c.to.numbers[v],
+              A = c.from.numbers[v] || 0
+          else (A = c.to.numbers[v]), (E = c.from.numbers[v] || 0)
+          ;(y = c.isPath ? getPathProgress(c.value, u * A) : E + u * (A - E)),
+            f && ((c.isColor && v > 2) || (y = Math.round(y * f) / f)),
+            p.push(y)
         }
-        var T = d.length
-        if (T) {
-          m = d[0]
-          for (var x = 0; x < T; x++) {
-            d[x]
-            var _ = d[x + 1],
-              w = p[x]
-            isNaN(w) || (m += _ ? w + _ : w + ' ')
+        var x = d.length
+        if (x) {
+          g = d[0]
+          for (var T = 0; T < x; T++) {
+            d[T]
+            var w = d[T + 1],
+              b = p[T]
+            isNaN(b) || (g += w ? b + w : b + ' ')
           }
-        } else m = p[0]
-        setProgressValue[n.type](o.target, n.property, m, o.transforms),
-          (n.currentValue = m),
+        } else g = p[0]
+        setProgressValue[n.type](a.target, n.property, g, a.transforms),
+          (n.currentValue = g),
           t++
       }
     }
     function p(e) {
       l[e] && !l.passThrough && l[e](l)
     }
-    function v(e) {
-      var h = l.duration,
-        v = l.delay,
-        m = h - l.endDelay,
-        g = u(e)
-      ;(l.progress = minMax((g / h) * 100, 0, 100)),
-        (l.reversePlayback = g < l.currentTime),
+    function m(e) {
+      var u = l.duration,
+        m = l.delay,
+        g = u - l.endDelay,
+        v = h(e)
+      ;(l.progress = minMax((v / u) * 100, 0, 100)),
+        (l.reversePlayback = v < l.currentTime),
         t &&
           (function (e) {
-            if (l.reversePlayback) for (var i = o; i--; ) d(e, t[i])
-            else for (var r = 0; r < o; r++) d(e, t[r])
-          })(g),
+            if (l.reversePlayback) for (var i = a; i--; ) d(e, t[i])
+            else for (var r = 0; r < a; r++) d(e, t[r])
+          })(v),
         !l.began && l.currentTime > 0 && ((l.began = !0), p('begin')),
         !l.loopBegan &&
           l.currentTime > 0 &&
           ((l.loopBegan = !0), p('loopBegin')),
-        g <= v && 0 !== l.currentTime && f(0),
-        ((g >= m && l.currentTime !== h) || !h) && f(h),
-        g > v && g < m
+        v <= m && 0 !== l.currentTime && f(0),
+        ((v >= g && l.currentTime !== u) || !u) && f(u),
+        v > m && v < g
           ? (l.changeBegan ||
               ((l.changeBegan = !0),
               (l.changeCompleted = !1),
               p('changeBegin')),
             p('change'),
-            f(g))
+            f(v))
           : l.changeBegan &&
             ((l.changeCompleted = !0),
             (l.changeBegan = !1),
             p('changeComplete')),
-        (l.currentTime = minMax(g, 0, h)),
+        (l.currentTime = minMax(v, 0, u)),
         l.began && p('update'),
-        e >= h &&
+        e >= u &&
           ((r = 0),
           l.remaining && !0 !== l.remaining && l.remaining--,
           l.remaining
@@ -8303,7 +8135,7 @@ export function speRuntimeFactory (exports) {
                 ((l.completed = !0),
                 p('loopComplete'),
                 p('complete'),
-                !l.passThrough && 'Promise' in window && (a(), s(l)))))
+                !l.passThrough && 'Promise' in window && (o(), s(l)))))
     }
     return (
       (l.reset = function () {
@@ -8321,7 +8153,7 @@ export function speRuntimeFactory (exports) {
           (l.reversed = 'reverse' === e),
           (l.remaining = l.loop),
           (t = l.children)
-        for (var i = (o = t.length); i--; ) l.children[i].reset()
+        for (var i = (a = t.length); i--; ) l.children[i].reset()
         ;((l.reversed && !0 !== l.loop) ||
           ('alternate' === e && 1 === l.loop)) &&
           l.remaining++,
@@ -8331,24 +8163,24 @@ export function speRuntimeFactory (exports) {
         return setTargetsValue(e, t), l
       }),
       (l.tick = function (e) {
-        ;(n = e), i || (i = n), v((n + (r - i)) * anime.speed)
+        ;(n = e), i || (i = n), m((n + (r - i)) * anime.speed)
       }),
       (l.seek = function (e) {
-        v(u(e))
+        m(h(e))
       }),
       (l.pause = function () {
-        ;(l.paused = !0), h()
+        ;(l.paused = !0), u()
       }),
       (l.play = function () {
         l.paused &&
           (l.completed && l.reset(),
           (l.paused = !1),
           activeInstances.push(l),
-          h(),
+          u(),
           raf || engine())
       }),
       (l.reverse = function () {
-        c(), (l.completed = !l.reversed), h()
+        c(), (l.completed = !l.reversed), u()
       }),
       (l.restart = function () {
         l.reset(), l.play()
@@ -8366,15 +8198,15 @@ export function speRuntimeFactory (exports) {
     for (var t = parseTargets(e), i = activeInstances.length; i--; ) {
       var r = activeInstances[i],
         n = r.animations,
-        o = r.children
+        a = r.children
       removeTargetsFromAnimations(t, n)
-      for (var a = o.length; a--; ) {
-        var s = o[a],
+      for (var o = a.length; o--; ) {
+        var s = a[o],
           l = s.animations
         removeTargetsFromAnimations(t, l),
-          l.length || s.children.length || o.splice(a, 1)
+          l.length || s.children.length || a.splice(o, 1)
       }
-      n.length || o.length || r.pause()
+      n.length || a.length || r.pause()
     }
   }
   function stagger(e, t) {
@@ -8382,41 +8214,41 @@ export function speRuntimeFactory (exports) {
     var i = t.direction || 'normal',
       r = t.easing ? parseEasings(t.easing) : null,
       n = t.grid,
-      o = t.axis,
-      a = t.from || 0,
-      s = 'first' === a,
-      l = 'center' === a,
-      c = 'last' === a,
-      u = is.arr(e),
-      h = u ? parseFloat(e[0]) : parseFloat(e),
-      d = u ? parseFloat(e[1]) : 0,
-      f = getUnit(u ? e[1] : e) || 0,
-      p = t.start || 0 + (u ? h : 0),
-      v = [],
-      m = 0
-    return function (e, t, g) {
-      if ((s && (a = 0), l && (a = (g - 1) / 2), c && (a = g - 1), !v.length)) {
-        for (var E = 0; E < g; E++) {
+      a = t.axis,
+      o = t.from || 0,
+      s = 'first' === o,
+      l = 'center' === o,
+      c = 'last' === o,
+      h = is.arr(e),
+      u = h ? parseFloat(e[0]) : parseFloat(e),
+      d = h ? parseFloat(e[1]) : 0,
+      f = getUnit(h ? e[1] : e) || 0,
+      p = t.start || 0 + (h ? u : 0),
+      m = [],
+      g = 0
+    return function (e, t, v) {
+      if ((s && (o = 0), l && (o = (v - 1) / 2), c && (o = v - 1), !m.length)) {
+        for (var y = 0; y < v; y++) {
           if (n) {
-            var y = l ? (n[0] - 1) / 2 : a % n[0],
-              A = l ? (n[1] - 1) / 2 : Math.floor(a / n[0]),
-              T = y - (E % n[0]),
-              x = A - Math.floor(E / n[0]),
-              _ = Math.sqrt(T * T + x * x)
-            'x' === o && (_ = -T), 'y' === o && (_ = -x), v.push(_)
-          } else v.push(Math.abs(a - E))
-          m = Math.max.apply(Math, v)
+            var E = l ? (n[0] - 1) / 2 : o % n[0],
+              A = l ? (n[1] - 1) / 2 : Math.floor(o / n[0]),
+              x = E - (y % n[0]),
+              T = A - Math.floor(y / n[0]),
+              w = Math.sqrt(x * x + T * T)
+            'x' === a && (w = -x), 'y' === a && (w = -T), m.push(w)
+          } else m.push(Math.abs(o - y))
+          g = Math.max.apply(Math, m)
         }
         r &&
-          (v = v.map(function (e) {
-            return r(e / m) * m
+          (m = m.map(function (e) {
+            return r(e / g) * g
           })),
           'reverse' === i &&
-            (v = v.map(function (e) {
-              return o ? (e < 0 ? -1 * e : -e) : Math.abs(m - e)
+            (m = m.map(function (e) {
+              return a ? (e < 0 ? -1 * e : -e) : Math.abs(g - e)
             }))
       }
-      return p + (u ? (d - h) / m : h) * (Math.round(100 * v[t]) / 100) + f
+      return p + (h ? (d - u) / g : u) * (Math.round(100 * m[t]) / 100) + f
     }
   }
   function timeline(e) {
@@ -8426,28 +8258,28 @@ export function speRuntimeFactory (exports) {
       (t.duration = 0),
       (t.add = function (i, r) {
         var n = activeInstances.indexOf(t),
-          o = t.children
-        function a(e) {
+          a = t.children
+        function o(e) {
           e.passThrough = !0
         }
         n > -1 && activeInstances.splice(n, 1)
-        for (var s = 0; s < o.length; s++) a(o[s])
+        for (var s = 0; s < a.length; s++) o(a[s])
         var l = mergeObjects(i, replaceObjectProps(defaultTweenSettings, e))
         l.targets = l.targets || e.targets
         var c = t.duration
         ;(l.autoplay = !1),
           (l.direction = t.direction),
           (l.timelineOffset = is.und(r) ? c : getRelativeValue(r, c)),
-          a(t),
+          o(t),
           (l.rewind = t.rewind),
           t.seek(l.timelineOffset)
-        var u = anime(l)
-        a(u), o.push(u)
-        var h = getInstanceTimings(o, e)
+        var h = anime(l)
+        o(h), a.push(h)
+        var u = getInstanceTimings(a, e)
         return (
-          (t.delay = h.delay),
-          (t.endDelay = h.endDelay),
-          (t.duration = h.duration),
+          (t.delay = u.delay),
+          (t.endDelay = u.endDelay),
+          (t.duration = u.duration),
           t.seek(0),
           t.reset(),
           t.autoplay && t.play(),
@@ -8500,13 +8332,13 @@ export function speRuntimeFactory (exports) {
         var i = new THREE.Matrix4(),
           r = new THREE.Matrix4()
         e.updateWorldMatrix(!0, !1), r.getInverse(e.matrixWorld)
-        for (var n = 0, o = this.i.states.length; n < o; ++n) {
-          var a = this.i.states[n]
+        for (var n = 0, a = this.i.states.length; n < a; ++n) {
+          var o = this.i.states[n]
           i.copy(r),
             null !== this.i.object.parent &&
               (this.i.object.parent.updateWorldMatrix(!0, !1),
               i.multiply(this.i.object.parent.matrixWorld)),
-            a.hiddenMatrix.premultiply(i)
+            o.hiddenMatrix.premultiply(i)
         }
       }),
       (e.prototype.updateMaterialLayer = function (e) {
@@ -8531,17 +8363,17 @@ export function speRuntimeFactory (exports) {
             var i = t.selectedMaterial
             if (void 0 !== i)
               for (var r = 0, n = this.i.states.length; r < n; ++r) {
-                var o = e.clone()
+                var a = e.clone()
                 this.i.selectedState !== r &&
-                  (o.uniforms['f' + o.id + '_alpha'].value = 0),
-                  this.i.states[r].material[i].layersList.push(o)
+                  (a.uniforms['f' + a.id + '_alpha'].value = 0),
+                  this.i.states[r].material[i].layersList.push(a)
               }
           } else
             for (r = 0, n = this.i.states.length; r < n; ++r) {
-              o = e.clone()
+              a = e.clone()
               this.i.selectedState !== r &&
-                (o.uniforms['f' + o.id + '_alpha'].value = 0),
-                this.i.states[r].material.layersList.push(o)
+                (a.uniforms['f' + a.id + '_alpha'].value = 0),
+                this.i.states[r].material.layersList.push(a)
             }
         }
       }),
@@ -8567,16 +8399,16 @@ export function speRuntimeFactory (exports) {
           i = []
         if (t.material instanceof Array)
           for (var r = 0, n = this.i.states.length; r < n; ++r) {
-            var o = t.selectedMaterial
-            if (void 0 !== o) {
-              var a = this.i.states[r].material[o]
-              i.push({ layer: a.layersList[e] }), a.layersList.splice(e, 1)
+            var a = t.selectedMaterial
+            if (void 0 !== a) {
+              var o = this.i.states[r].material[a]
+              i.push({ layer: o.layersList[e] }), o.layersList.splice(e, 1)
             }
           }
         else
           for (r = 0, n = this.i.states.length; r < n; ++r) {
-            a = this.i.states[r].material
-            i.push({ layer: a.layersList[e] }), a.layersList.splice(e, 1)
+            o = this.i.states[r].material
+            i.push({ layer: o.layersList[e] }), o.layersList.splice(e, 1)
           }
         return { states: i, pos: e }
       }),
@@ -8613,49 +8445,49 @@ export function speRuntimeFactory (exports) {
           var n = t.selectedMaterial
           if (void 0 !== n) {
             for (
-              var o = 0,
-                a = (c =
+              var a = 0,
+                o = (c =
                   this.i.states[Number(this.i.selectedState)].material[n]
                     .layersList).length;
-              o < a;
-              ++o
+              a < o;
+              ++a
             )
-              if (c[o].id === e.id) {
-                r = o
+              if (c[a].id === e.id) {
+                r = a
                 break
               }
-            for (o = 0, a = this.i.states.length; o < a; ++o) {
-              var s = this.i.states[o].material[n].layersList[r],
+            for (a = 0, o = this.i.states.length; a < o; ++a) {
+              var s = this.i.states[a].material[n].layersList[r],
                 l = e.clone()
-              this.i.selectedState !== o &&
+              this.i.selectedState !== a &&
                 (l.uniforms['f' + l.id + '_alpha'].value = Number(
                   s.uniforms['f' + s.id + '_alpha'].value
                 )),
-                (this.i.states[o].material[n].layersList[r] = l),
+                (this.i.states[a].material[n].layersList[r] = l),
                 i.push({ layer: s })
             }
           }
         } else {
           var c
           for (
-            o = 0,
-              a = (c =
+            a = 0,
+              o = (c =
                 this.i.states[Number(this.i.selectedState)].material.layersList)
                 .length;
-            o < a;
-            ++o
+            a < o;
+            ++a
           )
-            if (c[o].id === e.id) {
-              r = o
+            if (c[a].id === e.id) {
+              r = a
               break
             }
-          for (o = 0, a = this.i.states.length; o < a; ++o) {
-            ;(s = this.i.states[o].material.layersList[r]), (l = e.clone())
-            this.i.selectedState !== o &&
+          for (a = 0, o = this.i.states.length; a < o; ++a) {
+            ;(s = this.i.states[a].material.layersList[r]), (l = e.clone())
+            this.i.selectedState !== a &&
               (l.uniforms['f' + l.id + '_alpha'].value = Number(
                 s.uniforms['f' + s.id + '_alpha'].value
               )),
-              (this.i.states[o].material.layersList[r] = l),
+              (this.i.states[a].material.layersList[r] = l),
               i.push({ layer: s })
           }
         }
@@ -8681,15 +8513,15 @@ export function speRuntimeFactory (exports) {
           if (i.material instanceof Array) {
             var r = i.selectedMaterial
             if (void 0 !== r)
-              for (var n = 0, o = this.i.states.length; n < o; ++n) {
-                var a = (s = this.i.states[n].material[r].layersList)[e]
-                ;(s[e] = s[t]), (s[t] = a)
+              for (var n = 0, a = this.i.states.length; n < a; ++n) {
+                var o = (s = this.i.states[n].material[r].layersList)[e]
+                ;(s[e] = s[t]), (s[t] = o)
               }
           } else
-            for (n = 0, o = this.i.states.length; n < o; ++n) {
+            for (n = 0, a = this.i.states.length; n < a; ++n) {
               var s
-              a = (s = this.i.states[n].material.layersList)[e]
-              ;(s[e] = s[t]), (s[t] = a)
+              o = (s = this.i.states[n].material.layersList)[e]
+              ;(s[e] = s[t]), (s[t] = o)
             }
         }
       }),
@@ -8702,20 +8534,20 @@ export function speRuntimeFactory (exports) {
         if (t.material instanceof Array) {
           var r = t.selectedMaterial
           if (void 0 !== r)
-            for (var n = 0, o = this.i.states.length; n < o; ++n) {
-              var a = this.i.states[n].material[r]
-              i.push({ layersList: a.layersList })
+            for (var n = 0, a = this.i.states.length; n < a; ++n) {
+              var o = this.i.states[n].material[r]
+              i.push({ layersList: o.layersList })
               var s = e.head
-              for (a.layersList = []; void 0 !== s; )
-                a.layersList.push(s.clone()), (s = s.next)
+              for (o.layersList = []; void 0 !== s; )
+                o.layersList.push(s.clone()), (s = s.next)
             }
         } else
-          for (n = 0, o = this.i.states.length; n < o; ++n) {
-            a = this.i.states[n].material
-            i.push({ layersList: a.layersList })
+          for (n = 0, a = this.i.states.length; n < a; ++n) {
+            o = this.i.states[n].material
+            i.push({ layersList: o.layersList })
             s = e.head
-            for (a.layersList = []; void 0 !== s; )
-              a.layersList.push(s.clone()), (s = s.next)
+            for (o.layersList = []; void 0 !== s; )
+              o.layersList.push(s.clone()), (s = s.next)
           }
         return { states: i }
       }),
@@ -8863,13 +8695,13 @@ export function speRuntimeFactory (exports) {
             this.addState(e.states[t].clone(), t)
           for (t = 0, i = e.events.length; t < i; ++t) {
             this.addEvent(e.events[t].clone(), t)
-            for (var r = e.events[t].targets, n = 0, o = r.length; n < o; ++n) {
-              var a = r[n].clone()
+            for (var r = e.events[t].targets, n = 0, a = r.length; n < a; ++n) {
+              var o = r[n].clone()
               r[n].object === e.object
-                ? ((a.object = this.object),
-                  (a.state = this.states[e.states.indexOf(r[n].state)]))
-                : ((a.object = r[n].object), (a.state = r[n].state)),
-                this.events[t].addTarget(a, n)
+                ? ((o.object = this.object),
+                  (o.state = this.states[e.states.indexOf(r[n].state)]))
+                : ((o.object = r[n].object), (o.state = r[n].state)),
+                this.events[t].addTarget(o, n)
             }
           }
           return this
@@ -8988,21 +8820,21 @@ export function speRuntimeFactory (exports) {
             var e = this.object.material
             if (e instanceof Array)
               for (var t = 0, i = e.length; t < i; ++t)
-                for (var r = (o = e[t].layersList).head; r; )
+                for (var r = (a = e[t].layersList).head; r; )
                   if (r.backLayer) {
                     delete r.backLayer
                     var n = r.next
-                    o.removeLayer(r.id), (r = n)
+                    a.removeLayer(r.id), (r = n)
                   } else
                     r.isBack ? (delete r.isBack, (r = r.next)) : (r = r.next)
             else {
-              var o
-              for (r = (o = e.layersList).head; r; )
+              var a
+              for (r = (a = e.layersList).head; r; )
                 for (; r; )
                   if (r.backLayer) {
                     delete r.backLayer
                     n = r.next
-                    o.removeLayer(r.id), (r = n)
+                    a.removeLayer(r.id), (r = n)
                   } else
                     r.isBack ? (delete r.isBack, (r = r.next)) : (r = r.next)
             }
@@ -9050,8 +8882,8 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o,
             a,
+            o,
             s,
             l = this
           if (this._currentState === e) {
@@ -9068,8 +8900,8 @@ export function speRuntimeFactory (exports) {
                       : r.currentTime) && void 0 !== n
                   ? n
                   : 0
-              null === (o = this._animation) || void 0 === o || o.reset(),
-                null === (a = this._animation) || void 0 === a || a.seek(c),
+              null === (a = this._animation) || void 0 === a || a.reset(),
+                null === (o = this._animation) || void 0 === o || o.seek(c),
                 null === (s = this._animation) || void 0 === s || s.play()
             }
           } else
@@ -9141,9 +8973,9 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n,
-            o = this
+            a = this
           if (!1 === this.object.position.equals(e.position)) {
-            var a = this.object.position.clone(),
+            var o = this.object.position.clone(),
               s = { t: 0 }
             null === (t = this._animation) ||
               void 0 === t ||
@@ -9152,7 +8984,7 @@ export function speRuntimeFactory (exports) {
                   targets: s,
                   t: 1,
                   update: function () {
-                    o.object.position.lerpVectors(a, e.position, s.t)
+                    a.object.position.lerpVectors(o, e.position, s.t)
                   }
                 },
                 0
@@ -9168,15 +9000,15 @@ export function speRuntimeFactory (exports) {
                   targets: c,
                   t: 1,
                   update: function () {
-                    o.object.scale.lerpVectors(l, e.scale, c.t)
+                    a.object.scale.lerpVectors(l, e.scale, c.t)
                   }
                 },
                 0
               )
           }
           if (!1 === this.object.rotation.equals(e.rotation)) {
-            var u = this.object.quaternion.clone(),
-              h = { t: 0 },
+            var h = this.object.quaternion.clone(),
+              u = { t: 0 },
               d = {
                 x: this.object.rotation.x - e.rotation.x,
                 y: this.object.rotation.y - e.rotation.y,
@@ -9184,67 +9016,67 @@ export function speRuntimeFactory (exports) {
               },
               f = e.rotation.clone(),
               p = 0.01 * THREE.MathUtils.DEG2RAD,
-              v = 359.99 * THREE.MathUtils.DEG2RAD
+              m = 359.99 * THREE.MathUtils.DEG2RAD
             d.x === 2 * Math.PI
               ? 0 === f.x
                 ? (f.x = p)
-                : f.x === 2 * Math.PI && (f.x = v)
+                : f.x === 2 * Math.PI && (f.x = m)
               : d.x === 2 * -Math.PI &&
-                (0 === f.x ? (f.x = -p) : f.x === 2 * Math.PI && (f.x = -v)),
+                (0 === f.x ? (f.x = -p) : f.x === 2 * Math.PI && (f.x = -m)),
               d.y === 2 * Math.PI
                 ? 0 === f.y
                   ? (f.y = p)
-                  : f.y === 2 * Math.PI && (f.y = v)
+                  : f.y === 2 * Math.PI && (f.y = m)
                 : d.y === 2 * -Math.PI &&
-                  (0 === f.y ? (f.y = -p) : f.y === 2 * Math.PI && (f.y = -v)),
+                  (0 === f.y ? (f.y = -p) : f.y === 2 * Math.PI && (f.y = -m)),
               d.z === 2 * Math.PI
                 ? 0 === f.z
                   ? (f.z = p)
-                  : f.z === 2 * Math.PI && (f.z = v)
+                  : f.z === 2 * Math.PI && (f.z = m)
                 : d.z === 2 * -Math.PI &&
-                  (0 === f.z ? (f.z = -p) : f.z === 2 * Math.PI && (f.z = -v))
-            var m = new THREE.Quaternion().setFromEuler(f)
+                  (0 === f.z ? (f.z = -p) : f.z === 2 * Math.PI && (f.z = -m))
+            var g = new THREE.Quaternion().setFromEuler(f)
             null === (r = this._animation) ||
               void 0 === r ||
               r.add(
                 {
-                  targets: h,
+                  targets: u,
                   t: 1,
                   update: function () {
-                    slerp(u, m, o.object.quaternion, h.t)
+                    slerp(h, g, a.object.quaternion, u.t)
                   }
                 },
                 0
               )
           }
-          var g = new THREE.Vector3(),
-            E = new THREE.Quaternion(),
-            y = new THREE.Vector3(),
+          var v = new THREE.Vector3(),
+            y = new THREE.Quaternion(),
+            E = new THREE.Vector3(),
             A = new THREE.Vector3(),
-            T = new THREE.Quaternion(),
-            x = new THREE.Vector3(),
-            _ = new THREE.Vector3(),
-            w = new THREE.Quaternion(),
+            x = new THREE.Quaternion(),
+            T = new THREE.Vector3(),
+            w = new THREE.Vector3(),
+            b = new THREE.Quaternion(),
             S = new THREE.Vector3()
           if (
-            (e.hiddenMatrix.decompose(A, T, x),
+            (e.hiddenMatrix.decompose(A, x, T),
             'hiddenMatrix' in this.object &&
-              (this.object.hiddenMatrix.decompose(g, E, y),
+              (this.object.hiddenMatrix.decompose(v, y, E),
               !1 === this.object.hiddenMatrix.equals(e.hiddenMatrix)))
           ) {
-            var b = { t: 0 },
-              R = this.object.hiddenMatrix
+            var C = { t: 0 },
+              _ = this.object.hiddenMatrix
             null === (n = this._animation) ||
               void 0 === n ||
               n.add(
                 {
-                  targets: b,
+                  targets: C,
                   t: 1,
                   update: function () {
-                    THREE.Quaternion.slerp(E, T, w, b.t),
-                      _.lerpVectors(g, A, b.t),
-                      S.lerpVectors(y, x, b.t),
-                      R.compose(_, w, S)
+                    THREE.Quaternion.slerp(y, x, b, C.t),
+                      w.lerpVectors(v, A, C.t),
+                      S.lerpVectors(E, T, C.t),
+                      _.compose(w, b, S)
                   }
                 },
                 0
@@ -9289,36 +9121,36 @@ export function speRuntimeFactory (exports) {
           var t = this
           if ('material' in this.object) {
             var i = function (e, i, r, n) {
-                var o, a, s, l, c
+                var a, o, s, l, c
                 void 0 === n && (n = i.paramNames)
                 for (
-                  var u = e.layersList,
-                    h = function (e, c) {
-                      var h = n[e],
-                        d = 'f' + i.id + '_' + h,
-                        f = 'f' + r.id + '_' + h,
+                  var h = e.layersList,
+                    u = function (e, c) {
+                      var u = n[e],
+                        d = 'f' + i.id + '_' + u,
+                        f = 'f' + r.id + '_' + u,
                         p = i.uniforms[d],
-                        v = r.uniforms[f]
-                      if ('mode' === h || 'boolean' == typeof p.value)
+                        m = r.uniforms[f]
+                      if ('mode' === u || 'boolean' == typeof p.value)
                         return (
-                          p.value !== v.value &&
+                          p.value !== m.value &&
                             ('boolean' == typeof p.value
-                              ? (p.value = v.value)
-                              : (p.value = Number(v.value)),
-                            u.updateLayerUniformByLayer(i, d)),
+                              ? (p.value = m.value)
+                              : (p.value = Number(m.value)),
+                            h.updateLayerUniformByLayer(i, d)),
                           'continue'
                         )
                       if ('number' == typeof p.value)
                         return (
-                          p.value !== v.value &&
-                            (null === (o = t._animation) ||
-                              void 0 === o ||
-                              o.add(
+                          p.value !== m.value &&
+                            (null === (a = t._animation) ||
+                              void 0 === a ||
+                              a.add(
                                 {
                                   targets: p,
-                                  value: Number(v.value),
+                                  value: Number(m.value),
                                   update: function () {
-                                    u.updateLayerUniformByLayer(i, d)
+                                    h.updateLayerUniformByLayer(i, d)
                                   }
                                 },
                                 0
@@ -9326,18 +9158,18 @@ export function speRuntimeFactory (exports) {
                           'continue'
                         )
                       if (('isVector2' in p.value)) {
-                        var m = v.value
+                        var g = m.value
                         return (
-                          !1 === (g = p.value).equals(m) &&
-                            (null === (a = t._animation) ||
-                              void 0 === a ||
-                              a.add(
+                          !1 === (v = p.value).equals(g) &&
+                            (null === (o = t._animation) ||
+                              void 0 === o ||
+                              o.add(
                                 {
-                                  targets: g,
-                                  x: m.x,
-                                  y: m.y,
+                                  targets: v,
+                                  x: g.x,
+                                  y: g.y,
                                   update: function () {
-                                    u.updateLayerUniformByLayer(i, d)
+                                    h.updateLayerUniformByLayer(i, d)
                                   }
                                 },
                                 0
@@ -9346,19 +9178,19 @@ export function speRuntimeFactory (exports) {
                         )
                       }
                       if (('isVector3' in p.value)) {
-                        m = v.value
+                        g = m.value
                         return (
-                          !1 === (g = p.value).equals(m) &&
+                          !1 === (v = p.value).equals(g) &&
                             (null === (s = t._animation) ||
                               void 0 === s ||
                               s.add(
                                 {
-                                  targets: g,
-                                  x: m.x,
-                                  y: m.y,
-                                  z: m.z,
+                                  targets: v,
+                                  x: g.x,
+                                  y: g.y,
+                                  z: g.z,
                                   update: function () {
-                                    u.updateLayerUniformByLayer(i, d)
+                                    h.updateLayerUniformByLayer(i, d)
                                   }
                                 },
                                 0
@@ -9367,20 +9199,20 @@ export function speRuntimeFactory (exports) {
                         )
                       }
                       if (('isColor' in p.value)) {
-                        var g
-                        m = v.value
+                        var v
+                        g = m.value
                         return (
-                          !1 === (g = p.value).equals(m) &&
+                          !1 === (v = p.value).equals(g) &&
                             (null === (l = t._animation) ||
                               void 0 === l ||
                               l.add(
                                 {
-                                  targets: g,
-                                  r: m.r,
-                                  g: m.g,
-                                  b: m.b,
+                                  targets: v,
+                                  r: g.r,
+                                  g: g.g,
+                                  b: g.b,
                                   update: function () {
-                                    u.updateLayerUniformByLayer(i, d)
+                                    h.updateLayerUniformByLayer(i, d)
                                   }
                                 },
                                 0
@@ -9394,19 +9226,19 @@ export function speRuntimeFactory (exports) {
                   d < f;
                   ++d
                 )
-                  h(d)
+                  u(d)
                 if (i.backLayer) {
                   var p = i.backLayer.id,
-                    v = 'f' + p + '_alpha',
-                    m = i.backLayer.uniforms[v]
+                    m = 'f' + p + '_alpha',
+                    g = i.backLayer.uniforms[m]
                   null === (c = t._animation) ||
                     void 0 === c ||
                     c.add(
                       {
-                        targets: m,
+                        targets: g,
                         value: 0,
                         update: function () {
-                          u.updateLayerUniform(p, v)
+                          h.updateLayerUniform(p, m)
                         }
                       },
                       0
@@ -9415,18 +9247,18 @@ export function speRuntimeFactory (exports) {
               },
               r = function (e, i, r) {
                 var n,
-                  o = e.layersList
+                  a = e.layersList
                 if (void 0 === i.backLayer) {
-                  var a = r.getValues()
-                  ;(a.alpha = 0),
-                    (i.backLayer = o.addLayerBeforeAt(a, i)),
+                  var o = r.getValues()
+                  ;(o.alpha = 0),
+                    (i.backLayer = a.addLayerBeforeAt(o, i)),
                     (i.backLayer.isBack = !0),
                     e.dispose()
                 }
                 var s = 'f' + i.id + '_alpha',
                   l = 'f' + i.backLayer.id + '_alpha',
                   c = i.uniforms[s],
-                  u = i.backLayer.uniforms[l]
+                  h = i.backLayer.uniforms[l]
                 null === (n = t._animation) ||
                   void 0 === n ||
                   n
@@ -9435,63 +9267,63 @@ export function speRuntimeFactory (exports) {
                         targets: c,
                         value: 0,
                         update: function () {
-                          o.updateLayerUniformByLayer(i, s)
+                          a.updateLayerUniformByLayer(i, s)
                         }
                       },
                       0
                     )
                     .add(
                       {
-                        targets: u,
+                        targets: h,
                         value: Number(r.uniforms['f' + r.id + '_alpha'].value),
                         update: function () {
                           i.backLayer &&
-                            o.updateLayerUniformByLayer(i.backLayer, l)
+                            a.updateLayerUniformByLayer(i.backLayer, l)
                         }
                       },
                       0
                     )
               },
               n = function (e, r, n) {
-                var o,
-                  a = e.layersList,
+                var a,
+                  o = e.layersList,
                   s = 'f' + r.id + '_mat',
                   l = 'f' + r.id + '_texture',
                   c = r.uniforms[l].value,
-                  u = n.uniforms['f' + n.id + '_texture'].value,
-                  h = r.uniforms['f' + r.id + '_crop'],
+                  h = n.uniforms['f' + n.id + '_texture'].value,
+                  u = r.uniforms['f' + r.id + '_crop'],
                   d = n.uniforms['f' + n.id + '_crop']
-                h.value !== d.value &&
-                  ((h.value = Number(d.value)),
-                  a.updateLayerUniformByLayer(r, 'f' + r.id + '_crop')),
-                  (c.wrapS === u.wrapS && c.wrapT === u.wrapT) ||
-                    ((c.wrapS = u.wrapS),
-                    (c.wrapT = u.wrapT),
+                u.value !== d.value &&
+                  ((u.value = Number(d.value)),
+                  o.updateLayerUniformByLayer(r, 'f' + r.id + '_crop')),
+                  (c.wrapS === h.wrapS && c.wrapT === h.wrapT) ||
+                    ((c.wrapS = h.wrapS),
+                    (c.wrapT = h.wrapT),
                     (c.needsUpdate = !0),
-                    a.updateLayerUniformByLayer(r, l))
+                    o.updateLayerUniformByLayer(r, l))
                 var f = c.matrix,
-                  p = u.matrix
+                  p = h.matrix
                 if (!1 === f.equals(p)) {
-                  var v = {
+                  var m = {
                     repeatX: c.repeat.x,
                     repeatY: c.repeat.y,
                     offsetX: c.offset.x,
                     offsetY: c.offset.y
                   }
-                  null === (o = t._animation) ||
-                    void 0 === o ||
-                    o.add(
+                  null === (a = t._animation) ||
+                    void 0 === a ||
+                    a.add(
                       {
-                        targets: v,
-                        repeatX: u.repeat.x,
-                        repeatY: u.repeat.y,
-                        offsetX: u.offset.x,
-                        offsetY: u.offset.y,
+                        targets: m,
+                        repeatX: h.repeat.x,
+                        repeatY: h.repeat.y,
+                        offsetX: h.offset.x,
+                        offsetY: h.offset.y,
                         update: function () {
-                          c.repeat.set(v.repeatX, v.repeatY),
-                            c.offset.set(v.offsetX, v.offsetY),
+                          c.repeat.set(m.repeatX, m.repeatY),
+                            c.offset.set(m.offsetX, m.offsetY),
                             c.updateMatrix(),
-                            a.updateLayerUniformByLayer(r, s)
+                            o.updateLayerUniformByLayer(r, s)
                         }
                       },
                       0
@@ -9499,70 +9331,70 @@ export function speRuntimeFactory (exports) {
                 }
                 i(e, r, n, ['alpha', 'mode'])
               },
-              o = function (e, r, n) {
-                var o,
-                  a = e.layersList,
+              a = function (e, r, n) {
+                var a,
+                  o = e.layersList,
                   s = r.uniforms['f' + r.id + '_num'],
                   l = n.uniforms['f' + n.id + '_num'],
                   c = 'f' + r.id + '_steps',
-                  u = 'f' + n.id + '_steps',
-                  h = r.uniforms[c],
-                  d = n.uniforms[u],
+                  h = 'f' + n.id + '_steps',
+                  u = r.uniforms[c],
+                  d = n.uniforms[h],
                   f = 'f' + r.id + '_colors',
                   p = 'f' + n.id + '_colors',
-                  v = r.uniforms[f],
-                  m = n.uniforms[p]
+                  m = r.uniforms[f],
+                  g = n.uniforms[p]
                 if (s.value <= l.value) {
                   for (
-                    var g = v.value[s.value - 1], E = Number(s.value);
-                    E < l.value;
-                    ++E
+                    var v = m.value[s.value - 1], y = Number(s.value);
+                    y < l.value;
+                    ++y
                   )
-                    (h.value[E] = 1),
-                      a.updateLayerUniformByLayer(r, f),
-                      v.value[E].set(g.x, g.y, g.z, g.w),
-                      a.updateLayerUniformByLayer(r, c)
+                    (u.value[y] = 1),
+                      o.updateLayerUniformByLayer(r, f),
+                      m.value[y].set(v.x, v.y, v.z, v.w),
+                      o.updateLayerUniformByLayer(r, c)
                   s.value !== l.value &&
                     ((s.value = Number(l.value)),
-                    a.updateLayerUniformByLayer(r, 'f' + r.id + '_num'))
-                  var y = function (e) {
-                    var i = v.value[e],
-                      n = m.value[e],
-                      s = h.value[e],
+                    o.updateLayerUniformByLayer(r, 'f' + r.id + '_num'))
+                  var E = function (e) {
+                    var i = m.value[e],
+                      n = g.value[e],
+                      s = u.value[e],
                       l = d.value[e]
                     if (s !== l || !1 === i.equals(n)) {
-                      var u = { value: s }
-                      null === (o = t._animation) ||
-                        void 0 === o ||
-                        o.add(
+                      var h = { value: s }
+                      null === (a = t._animation) ||
+                        void 0 === a ||
+                        a.add(
                           {
-                            targets: [u, i],
+                            targets: [h, i],
                             value: l,
                             x: n.x,
                             y: n.y,
                             z: n.z,
                             w: n.w,
                             update: function () {
-                              ;(h.value[e] = u.value),
-                                a.updateLayerUniformByLayer(r, c),
-                                a.updateLayerUniformByLayer(r, f)
+                              ;(u.value[e] = h.value),
+                                o.updateLayerUniformByLayer(r, c),
+                                o.updateLayerUniformByLayer(r, f)
                             }
                           },
                           0
                         )
                     }
                   }
-                  for (E = 0; E < l.value; ++E) y(E)
+                  for (y = 0; y < l.value; ++y) E(y)
                 } else {
                   var A = [],
-                    T = function (e) {
-                      var i = v.value[e],
-                        n = m.value[e]
-                      ;(h.value[e] === d.value[e] && !1 !== i.equals(n)) ||
+                    x = function (e) {
+                      var i = m.value[e],
+                        n = g.value[e]
+                      ;(u.value[e] === d.value[e] && !1 !== i.equals(n)) ||
                         A.push(
-                          new Promise(function (o) {
+                          new Promise(function (a) {
                             var s,
-                              l = { value: h.value[e] }
+                              l = { value: u.value[e] }
                             null === (s = t._animation) ||
                               void 0 === s ||
                               s.add(
@@ -9574,12 +9406,12 @@ export function speRuntimeFactory (exports) {
                                   z: n.z,
                                   w: n.w,
                                   update: function () {
-                                    ;(h.value[e] = l.value),
-                                      a.updateLayerUniformByLayer(r, c),
-                                      a.updateLayerUniformByLayer(r, f)
+                                    ;(u.value[e] = l.value),
+                                      o.updateLayerUniformByLayer(r, c),
+                                      o.updateLayerUniformByLayer(r, f)
                                   },
                                   complete: function () {
-                                    o(e)
+                                    a(e)
                                   }
                                 },
                                 0
@@ -9587,29 +9419,29 @@ export function speRuntimeFactory (exports) {
                           })
                         )
                     }
-                  for (E = 0; E < l.value; ++E) T(E)
-                  var x = m.value[l.value - 1],
-                    _ = function (e) {
-                      var i = v.value[e]
-                      ;(h.value[e] === d.value[e] && !1 !== i.equals(x)) ||
+                  for (y = 0; y < l.value; ++y) x(y)
+                  var T = g.value[l.value - 1],
+                    w = function (e) {
+                      var i = m.value[e]
+                      ;(u.value[e] === d.value[e] && !1 !== i.equals(T)) ||
                         A.push(
                           new Promise(function (n) {
-                            var o,
-                              s = { value: h.value[e] }
-                            null === (o = t._animation) ||
-                              void 0 === o ||
-                              o.add(
+                            var a,
+                              s = { value: u.value[e] }
+                            null === (a = t._animation) ||
+                              void 0 === a ||
+                              a.add(
                                 {
                                   targets: [s, i],
                                   value: 1,
-                                  x: x.x,
-                                  y: x.y,
-                                  z: x.z,
-                                  w: x.w,
+                                  x: T.x,
+                                  y: T.y,
+                                  z: T.z,
+                                  w: T.w,
                                   update: function () {
-                                    ;(h.value[e] = s.value),
-                                      a.updateLayerUniformByLayer(r, c),
-                                      a.updateLayerUniformByLayer(r, f)
+                                    ;(u.value[e] = s.value),
+                                      o.updateLayerUniformByLayer(r, c),
+                                      o.updateLayerUniformByLayer(r, f)
                                   },
                                   complete: function () {
                                     n(e)
@@ -9620,11 +9452,11 @@ export function speRuntimeFactory (exports) {
                           })
                         )
                     }
-                  for (E = Number(l.value); E < s.value; ++E) _(E)
+                  for (y = Number(l.value); y < s.value; ++y) w(y)
                   Promise.all(A).then(
                     function () {
                       ;(s.value = Number(l.value)),
-                        a.updateLayerUniformByLayer(r, 'f' + r.id + '_num')
+                        o.updateLayerUniformByLayer(r, 'f' + r.id + '_num')
                     },
                     function () {}
                   )
@@ -9640,27 +9472,27 @@ export function speRuntimeFactory (exports) {
                 ])
               }
             if (this.object.material instanceof Array)
-              for (var a = 0, s = this.object.material.length; a < s; ++a)
-                l(this.object.material[a], e.material[a])
+              for (var o = 0, s = this.object.material.length; o < s; ++o)
+                l(this.object.material[o], e.material[o])
             else l(this.object.material, e.material)
           }
           function l(e, t) {
-            for (var a = e.layersList.head, s = 0; a; )
-              if (!0 !== a.isBack) {
+            for (var o = e.layersList.head, s = 0; o; )
+              if (!0 !== o.isBack) {
                 var l = t.layersList[s++]
-                if ('texture' === a.type) {
-                  var c = a.uniforms['f' + a.id + '_texture'].value,
-                    u = l.uniforms['f' + l.id + '_texture'].value
-                  c.image === u.image ? n(e, a, l) : r(e, a, l)
+                if ('texture' === o.type) {
+                  var c = o.uniforms['f' + o.id + '_texture'].value,
+                    h = l.uniforms['f' + l.id + '_texture'].value
+                  c.image === h.image ? n(e, o, l) : r(e, o, l)
                 } else
-                  'gradient' === a.type
-                    ? a.uniforms['f' + a.id + '_gl_type'].value ===
+                  'gradient' === o.type
+                    ? o.uniforms['f' + o.id + '_gl_type'].value ===
                       l.uniforms['f' + l.id + '_gl_type'].value
-                      ? o(e, a, l)
-                      : r(e, a, l)
-                    : i(e, a, l)
-                a = a.next
-              } else a = a.next
+                      ? a(e, o, l)
+                      : r(e, o, l)
+                    : i(e, o, l)
+                o = o.next
+              } else o = o.next
           }
         }),
         (e.prototype.animateCamera = function (e) {
@@ -9737,36 +9569,36 @@ export function speRuntimeFactory (exports) {
                 type: 'Object',
                 generator: 'Object3D.toJSON'
               }))
-            var o = { uuid: this.uuid, objectType: this.type }
+            var a = { uuid: this.uuid, objectType: this.type }
             if (
-              ('' !== this.name && (o.name = this.name),
-              (o.matrix = this.matrix.toArray()),
-              !0 === this.castShadow && (o.castShadow = !0),
-              !0 === this.receiveShadow && (o.receiveShadow = !0),
-              !1 === this.visible && (o.visible = !1),
-              !1 === this.frustumCulled && (o.frustumCulled = !1),
-              0 !== this.renderOrder && (o.renderOrder = this.renderOrder),
-              (o.layers = this.layers.mask),
+              ('' !== this.name && (a.name = this.name),
+              (a.matrix = this.matrix.toArray()),
+              !0 === this.castShadow && (a.castShadow = !0),
+              !0 === this.receiveShadow && (a.receiveShadow = !0),
+              !1 === this.visible && (a.visible = !1),
+              !1 === this.frustumCulled && (a.frustumCulled = !1),
+              0 !== this.renderOrder && (a.renderOrder = this.renderOrder),
+              (a.layers = this.layers.mask),
               '{}' !== JSON.stringify(this.userData) &&
-                (o.userData = this.userData),
+                (a.userData = this.userData),
               this.children.length > 0)
             ) {
-              o.children = []
+              a.children = []
               try {
                 for (
-                  var a = __values(this.children), s = a.next();
+                  var o = __values(this.children), s = o.next();
                   !s.done;
-                  s = a.next()
+                  s = o.next()
                 ) {
                   var l = s.value
                   ;(isEntity(l) || l instanceof THREE.Light) &&
-                    o.children.push(l.toJSON(e).object)
+                    a.children.push(l.toJSON(e).object)
                 }
               } catch (e) {
                 t = { error: e }
               } finally {
                 try {
-                  s && !s.done && (i = a.return) && i.call(a)
+                  s && !s.done && (i = o.return) && i.call(o)
                 } finally {
                   if (t) throw t.error
                 }
@@ -9774,17 +9606,17 @@ export function speRuntimeFactory (exports) {
             }
             if (r) {
               var c = extractFromCache(e.geometries),
-                u = extractFromCache(e.materials),
-                h = extractFromCache(e.textures),
+                h = extractFromCache(e.materials),
+                u = extractFromCache(e.textures),
                 d = extractFromCache(e.images),
                 f = extractFromCache(e.interactionStates)
               c.length > 0 && (n.geometries = c),
-                u.length > 0 && (n.materials = u),
-                h.length > 0 && (n.textures = h),
+                h.length > 0 && (n.materials = h),
+                u.length > 0 && (n.textures = u),
                 d.length > 0 && (n.images = d),
                 f.length > 0 && (n.interactionStates = f)
             }
-            return (n.object = o), n
+            return (n.object = a), n
           }),
           (t.prototype.fromJSON = function (e) {
             return (
@@ -9860,9 +9692,9 @@ export function speRuntimeFactory (exports) {
                   !n.done;
                   n = r.next()
                 ) {
-                  var o = n.value
-                  isEntity$1(o) &&
-                    o.traverseEntity(function (t) {
+                  var a = n.value
+                  isEntity$1(a) &&
+                    a.traverseEntity(function (t) {
                       isHelperableEntity$1(t) &&
                         t.visible &&
                         (t.objectHelper.visible = e)
@@ -9901,8 +9733,8 @@ export function speRuntimeFactory (exports) {
                 !n.done;
                 n = r.next()
               ) {
-                var o = n.value
-                isEntity$1(o) && o.traverseEntity(e)
+                var a = n.value
+                isEntity$1(a) && a.traverseEntity(e)
               }
             } catch (e) {
               t = { error: e }
@@ -9989,17 +9821,17 @@ export function speRuntimeFactory (exports) {
             )
               try {
                 for (
-                  var o = __values(this.children), a = o.next();
-                  !a.done;
-                  a = o.next()
+                  var a = __values(this.children), o = a.next();
+                  !o.done;
+                  o = a.next()
                 ) {
-                  a.value.updateWorldMatrix(!1, !0)
+                  o.value.updateWorldMatrix(!1, !0)
                 }
               } catch (e) {
                 i = { error: e }
               } finally {
                 try {
-                  a && !a.done && (r = o.return) && r.call(o)
+                  o && !o.done && (r = a.return) && r.call(a)
                 } finally {
                   if (i) throw i.error
                 }
@@ -10011,11 +9843,11 @@ export function speRuntimeFactory (exports) {
           (t.prototype.shallowCopy = function (t, i) {
             var r, n
             void 0 === i && (i = !0)
-            var o = t.children
+            var a = t.children
             if (
               ((t.children = []),
               e.prototype.copy.call(this, t),
-              (t.children = o),
+              (t.children = a),
               (this.raycastLock = t.raycastLock),
               (this.scaleLock = t.scaleLock),
               this.hiddenMatrix.copy(t.hiddenMatrix),
@@ -10023,7 +9855,7 @@ export function speRuntimeFactory (exports) {
               !0 === i)
             )
               try {
-                for (var a = __values(o), s = a.next(); !s.done; s = a.next()) {
+                for (var o = __values(a), s = o.next(); !s.done; s = o.next()) {
                   var l = s.value
                   isEntity$1(l) && this.add(l.shallowClone())
                 }
@@ -10031,7 +9863,7 @@ export function speRuntimeFactory (exports) {
                 r = { error: e }
               } finally {
                 try {
-                  s && !s.done && (n = a.return) && n.call(a)
+                  s && !s.done && (n = o.return) && n.call(o)
                 } finally {
                   if (r) throw r.error
                 }
@@ -10044,11 +9876,11 @@ export function speRuntimeFactory (exports) {
           (t.prototype.copy = function (t, i) {
             var r, n
             void 0 === i && (i = !0)
-            var o = t.children
+            var a = t.children
             if (
               ((t.children = []),
               e.prototype.copy.call(this, t),
-              (t.children = o),
+              (t.children = a),
               (this.raycastLock = t.raycastLock),
               (this.scaleLock = t.scaleLock),
               this.hiddenMatrix.copy(t.hiddenMatrix),
@@ -10056,7 +9888,7 @@ export function speRuntimeFactory (exports) {
               !0 === i)
             )
               try {
-                for (var a = __values(o), s = a.next(); !s.done; s = a.next()) {
+                for (var o = __values(a), s = o.next(); !s.done; s = o.next()) {
                   var l = s.value
                   isEntity$1(l) && this.add(l.clone())
                 }
@@ -10064,7 +9896,7 @@ export function speRuntimeFactory (exports) {
                 r = { error: e }
               } finally {
                 try {
-                  s && !s.done && (n = a.return) && n.call(a)
+                  s && !s.done && (n = o.return) && n.call(o)
                 } finally {
                   if (r) throw r.error
                 }
@@ -10081,18 +9913,18 @@ export function speRuntimeFactory (exports) {
               i.multiply(r)
             try {
               for (
-                var n = __values(this.children), o = n.next();
-                !o.done;
-                o = n.next()
+                var n = __values(this.children), a = n.next();
+                !a.done;
+                a = n.next()
               ) {
-                var a = o.value
-                isEntity$1(a) && a.hiddenMatrix.premultiply(i)
+                var o = a.value
+                isEntity$1(o) && o.hiddenMatrix.premultiply(i)
               }
             } catch (t) {
               e = { error: t }
             } finally {
               try {
-                o && !o.done && (t = n.return) && t.call(n)
+                a && !a.done && (t = n.return) && t.call(n)
               } finally {
                 if (e) throw e.error
               }
@@ -10143,7 +9975,7 @@ export function speRuntimeFactory (exports) {
         var r = e.call(this) || this
         ;(r.object = t), t.computeComplexBoundingBox(!0)
         var n = t.complexBoundingBox.getSize(new THREE.Vector3()),
-          o = 0.1
+          a = 0.1
         return (
           (r.parameters = {
             type: void 0 !== i.type ? i.type : 'radial',
@@ -10178,7 +10010,7 @@ export function speRuntimeFactory (exports) {
             li_position:
               void 0 !== i.li_position
                 ? i.li_position.clone()
-                : new THREE.Vector3(n.x + n.x * o, 0, 0).round(),
+                : new THREE.Vector3(n.x + n.x * a, 0, 0).round(),
             gr_count:
               void 0 !== i.gr_count
                 ? i.gr_count.clone()
@@ -10187,9 +10019,9 @@ export function speRuntimeFactory (exports) {
               void 0 !== i.gr_size
                 ? i.gr_size.clone()
                 : new THREE.Vector3(
-                    n.x + n.x * o,
-                    n.y + n.y * o,
-                    n.z + n.z * o
+                    n.x + n.x * a,
+                    n.y + n.y * a,
+                    n.z + n.z * a
                   ).round(),
             gr_fromCenter: void 0 === i.gr_fromCenter || i.gr_fromCenter
           }),
@@ -10222,7 +10054,7 @@ export function speRuntimeFactory (exports) {
             }
         }),
         (t.prototype.setHideBase = function (e) {
-          var t, i, r, n, o, a, s, l, c, u, h, d
+          var t, i, r, n, a, o, s, l, c, h, u, d
           if ('material' in this.object) {
             if (Array.isArray(this.object.material)) {
               if (this.children.length > 0) {
@@ -10232,7 +10064,7 @@ export function speRuntimeFactory (exports) {
                     !p.done;
                     p = f.next()
                   ) {
-                    ;(x = p.value).visible = !0
+                    ;(T = p.value).visible = !0
                   }
                 } catch (e) {
                   t = { error: e }
@@ -10244,22 +10076,22 @@ export function speRuntimeFactory (exports) {
                   }
                 }
                 if (e) {
-                  var v = this.object.material.map(function (e) {
+                  var m = this.object.material.map(function (e) {
                     return e.clone()
                   })
                   try {
                     for (
-                      var m = __values(this.children), g = m.next();
-                      !g.done;
-                      g = m.next()
+                      var g = __values(this.children), v = g.next();
+                      !v.done;
+                      v = g.next()
                     ) {
-                      g.value.material = v
+                      v.value.material = m
                     }
                   } catch (e) {
                     r = { error: e }
                   } finally {
                     try {
-                      g && !g.done && (n = m.return) && n.call(m)
+                      v && !v.done && (n = g.return) && n.call(g)
                     } finally {
                       if (r) throw r.error
                     }
@@ -10267,35 +10099,35 @@ export function speRuntimeFactory (exports) {
                 } else
                   try {
                     for (
-                      var E = __values(this.children), y = E.next();
-                      !y.done;
-                      y = E.next()
+                      var y = __values(this.children), E = y.next();
+                      !E.done;
+                      E = y.next()
                     ) {
-                      y.value.material = this.object.material
+                      E.value.material = this.object.material
                     }
                   } catch (e) {
-                    o = { error: e }
+                    a = { error: e }
                   } finally {
                     try {
-                      y && !y.done && (a = E.return) && a.call(E)
+                      E && !E.done && (o = y.return) && o.call(y)
                     } finally {
-                      if (o) throw o.error
+                      if (a) throw a.error
                     }
                   }
               }
               try {
                 for (
-                  var A = __values(this.object.material), T = A.next();
-                  !T.done;
-                  T = A.next()
+                  var A = __values(this.object.material), x = A.next();
+                  !x.done;
+                  x = A.next()
                 ) {
-                  ;(x = T.value).visible = !e
+                  ;(T = x.value).visible = !e
                 }
               } catch (e) {
                 s = { error: e }
               } finally {
                 try {
-                  T && !T.done && (l = A.return) && l.call(A)
+                  x && !x.done && (l = A.return) && l.call(A)
                 } finally {
                   if (s) throw s.error
                 }
@@ -10303,20 +10135,20 @@ export function speRuntimeFactory (exports) {
             } else {
               if (this.children.length > 0)
                 if (((this.object.material.visible = !0), e)) {
-                  var x = this.object.material.clone()
+                  var T = this.object.material.clone()
                   try {
                     for (
-                      var _ = __values(this.children), w = _.next();
-                      !w.done;
-                      w = _.next()
+                      var w = __values(this.children), b = w.next();
+                      !b.done;
+                      b = w.next()
                     ) {
-                      w.value.material = x
+                      b.value.material = T
                     }
                   } catch (e) {
                     c = { error: e }
                   } finally {
                     try {
-                      w && !w.done && (u = _.return) && u.call(_)
+                      b && !b.done && (h = w.return) && h.call(w)
                     } finally {
                       if (c) throw c.error
                     }
@@ -10324,19 +10156,19 @@ export function speRuntimeFactory (exports) {
                 } else
                   try {
                     for (
-                      var S = __values(this.children), b = S.next();
-                      !b.done;
-                      b = S.next()
+                      var S = __values(this.children), C = S.next();
+                      !C.done;
+                      C = S.next()
                     ) {
-                      b.value.material = this.object.material
+                      C.value.material = this.object.material
                     }
                   } catch (e) {
-                    h = { error: e }
+                    u = { error: e }
                   } finally {
                     try {
-                      b && !b.done && (d = S.return) && d.call(S)
+                      C && !C.done && (d = S.return) && d.call(S)
                     } finally {
-                      if (h) throw h.error
+                      if (u) throw u.error
                     }
                   }
               this.object.material.visible = !e
@@ -10380,8 +10212,8 @@ export function speRuntimeFactory (exports) {
             i,
             r,
             n = e.ra_startAngle * THREE.MathUtils.DEG2RAD,
-            o = n - e.ra_endAngle * THREE.MathUtils.DEG2RAD,
-            a = new THREE.Euler(
+            a = n - e.ra_endAngle * THREE.MathUtils.DEG2RAD,
+            o = new THREE.Euler(
               e.ra_rotation.x * THREE.MathUtils.DEG2RAD,
               e.ra_rotation.y * THREE.MathUtils.DEG2RAD,
               e.ra_rotation.z * THREE.MathUtils.DEG2RAD
@@ -10403,31 +10235,31 @@ export function speRuntimeFactory (exports) {
               l = s.next()
             ) {
               var c = __read(l.value, 2),
-                u = c[0],
-                h = c[1]
-              h.hiddenMatrix.identity(),
-                (h.scale.x = e.ra_scale.x + 1),
-                (h.scale.y = e.ra_scale.y + 1),
-                (h.scale.z = e.ra_scale.z + 1),
-                h.position.setScalar(0)
-              var d = (o / e.count) * u - n
+                h = c[0],
+                u = c[1]
+              u.hiddenMatrix.identity(),
+                (u.scale.x = e.ra_scale.x + 1),
+                (u.scale.y = e.ra_scale.y + 1),
+                (u.scale.z = e.ra_scale.z + 1),
+                u.position.setScalar(0)
+              var d = (a / e.count) * h - n
               switch (e.ra_axis) {
                 case 'x':
-                  h.rotation.set(0, d, 0)
+                  u.rotation.set(0, d, 0)
                   break
                 case 'y':
-                  h.rotation.set(0, 0, d)
+                  u.rotation.set(0, 0, d)
                   break
                 case 'z':
-                  h.rotation.set(d, 0, 0)
+                  u.rotation.set(d, 0, 0)
               }
-              h.translateOnAxis(r, e.ra_radius),
-                h.position.add(e.ra_position),
+              u.translateOnAxis(r, e.ra_radius),
+                u.position.add(e.ra_position),
                 !0 === e.ra_align
-                  ? ((h.rotation.x += a.x),
-                    (h.rotation.y += a.y),
-                    (h.rotation.z += a.z))
-                  : h.rotation.copy(a)
+                  ? ((u.rotation.x += o.x),
+                    (u.rotation.y += o.y),
+                    (u.rotation.z += o.z))
+                  : u.rotation.copy(o)
             }
           } catch (e) {
             t = { error: e }
@@ -10449,13 +10281,13 @@ export function speRuntimeFactory (exports) {
           )
           try {
             for (
-              var n = __values(this.children.entries()), o = n.next();
-              !o.done;
-              o = n.next()
+              var n = __values(this.children.entries()), a = n.next();
+              !a.done;
+              a = n.next()
             ) {
-              var a = __read(o.value, 2),
-                s = a[0],
-                l = a[1]
+              var o = __read(a.value, 2),
+                s = o[0],
+                l = o[1]
               l.hiddenMatrix.identity(),
                 (l.scale.x = e.li_scale.x * s + 1),
                 (l.scale.y = e.li_scale.y * s + 1),
@@ -10471,7 +10303,7 @@ export function speRuntimeFactory (exports) {
             t = { error: e }
           } finally {
             try {
-              o && !o.done && (i = n.return) && i.call(n)
+              a && !a.done && (i = n.return) && i.call(n)
             } finally {
               if (t) throw t.error
             }
@@ -10495,26 +10327,26 @@ export function speRuntimeFactory (exports) {
               n < e.gr_count.x;
               n++
             )
-              for (var o = 0; o < e.gr_count.y; o++)
-                for (var a = 0; a < e.gr_count.z; a++) {
+              for (var a = 0; a < e.gr_count.y; a++)
+                for (var o = 0; o < e.gr_count.z; o++) {
                   ;(s = this.children[t++]).hiddenMatrix.identity(),
                     s.scale.setScalar(1),
                     s.rotation.set(0, 0, 0),
                     (s.position.x = e.gr_size.x * n - r.x),
-                    (s.position.y = e.gr_size.y * o - r.y),
-                    (s.position.z = e.gr_size.z * a - r.z)
+                    (s.position.y = e.gr_size.y * a - r.y),
+                    (s.position.z = e.gr_size.z * o - r.z)
                 }
           else
             for (n = 0; n < e.gr_count.x; n++)
-              for (o = 0; o < e.gr_count.y; o++)
-                for (a = 0; a < e.gr_count.z; a++) {
+              for (a = 0; a < e.gr_count.y; a++)
+                for (o = 0; o < e.gr_count.z; o++) {
                   var s
                   ;(s = this.children[t++]).hiddenMatrix.identity(),
                     s.scale.setScalar(1),
                     s.rotation.set(0, 0, 0),
                     (s.position.x = e.gr_size.x * n),
-                    (s.position.y = -e.gr_size.y * o),
-                    (s.position.z = -e.gr_size.z * a)
+                    (s.position.y = -e.gr_size.y * a),
+                    (s.position.z = -e.gr_size.z * o)
                 }
         }),
         (t.prototype.toJSON = function () {
@@ -10646,8 +10478,8 @@ export function speRuntimeFactory (exports) {
             (r.geometry = serializeGeometry(t.geometries, this.geometry)),
             Array.isArray(this.material))
           ) {
-            for (var n = [], o = 0, a = this.material.length; o < a; o++)
-              n.push(serialize(t.materials, this.material[o], t))
+            for (var n = [], a = 0, o = this.material.length; a < o; a++)
+              n.push(serialize(t.materials, this.material[a], t))
             r.material = n
           } else r.material = serialize(t.materials, this.material, t)
           return i
@@ -10683,56 +10515,56 @@ export function speRuntimeFactory (exports) {
     _inverseMatrix$1 = new THREE.Matrix4(),
     helperRaycast = function (e, t, i, r) {
       var n = t,
-        o = e.matrixWorld
+        a = e.matrixWorld
       if (
         (null === n.boundingSphere && n.computeBoundingSphere(),
         _sphere$1.copy(n.boundingSphere),
-        _sphere$1.applyMatrix4(o),
+        _sphere$1.applyMatrix4(a),
         !1 !== i.ray.intersectsSphere(_sphere$1) &&
-          (_inverseMatrix$1.getInverse(o),
+          (_inverseMatrix$1.getInverse(a),
           _ray$1.copy(i.ray).applyMatrix4(_inverseMatrix$1),
           null === n.boundingBox || !1 !== _ray$1.intersectsBox(n.boundingBox)))
       ) {
-        var a,
+        var o,
           s,
           l,
           c,
-          u,
           h,
+          u,
           d = n.index,
           f = n.attributes.position,
           p = n.drawRange
         for (
-          u = Math.max(0, p.start), h = Math.min(d.count, p.start + p.count);
-          u < h;
-          u += 3
+          h = Math.max(0, p.start), u = Math.min(d.count, p.start + p.count);
+          h < u;
+          h += 3
         )
           if (
-            ((s = d.getX(u)),
-            (l = d.getX(u + 1)),
-            (c = d.getX(u + 2)),
-            (a = v(e, i, _ray$1, f, s, l, c)))
+            ((s = d.getX(h)),
+            (l = d.getX(h + 1)),
+            (c = d.getX(h + 2)),
+            (o = m(e, i, _ray$1, f, s, l, c)))
           )
-            return (a.faceIndex = Math.floor(u / 3)), void r.push(a)
+            return (o.faceIndex = Math.floor(h / 3)), void r.push(o)
       }
-      function v(e, t, i, r, n, o, a) {
+      function m(e, t, i, r, n, a, o) {
         var s = new THREE.Vector3(),
           l = new THREE.Vector3(),
           c = new THREE.Vector3(),
-          u = new THREE.Vector3(),
-          h = new THREE.Vector3()
+          h = new THREE.Vector3(),
+          u = new THREE.Vector3()
         if (
           (s.fromBufferAttribute(r, n),
-          l.fromBufferAttribute(r, o),
-          c.fromBufferAttribute(r, a),
-          null === i.intersectTriangle(s, l, c, !1, u))
+          l.fromBufferAttribute(r, a),
+          c.fromBufferAttribute(r, o),
+          null === i.intersectTriangle(s, l, c, !1, h))
         )
           return null
-        h.copy(u), h.applyMatrix4(e.matrixWorld)
-        var d = t.ray.origin.distanceTo(h)
+        u.copy(h), u.applyMatrix4(e.matrixWorld)
+        var d = t.ray.origin.distanceTo(u)
         return d < t.near || d > t.far
           ? null
-          : { faceIndex: 1, distance: d, point: h.clone(), object: e }
+          : { faceIndex: 1, distance: d, point: u.clone(), object: e }
       }
     },
     CombinedCameraHelper = (function (e) {
@@ -10745,9 +10577,9 @@ export function speRuntimeFactory (exports) {
             fog: !1,
             toneMapped: !1
           }),
-          o = new THREE.Mesh(r, n)
+          a = new THREE.Mesh(r, n)
         return (
-          i.add(o),
+          i.add(a),
           (i.object = t),
           (i.name = 'CombinedCameraHelper: ' + t.uuid),
           i
@@ -10832,8 +10664,8 @@ export function speRuntimeFactory (exports) {
               this.cone.lookAt(e)
             var n = void 0 !== this.color ? this.color : this.light.color
             if (this.cone.material instanceof Array)
-              for (var o = 0, a = this.cone.material.length; o < a; o++)
-                this.cone.material[o].color.set(n)
+              for (var a = 0, o = this.cone.material.length; a < o; a++)
+                this.cone.material[a].color.set(n)
             else this.cone.material.color.set(n)
           }
         }),
@@ -10922,41 +10754,41 @@ export function speRuntimeFactory (exports) {
           var i = this.geometry,
             r = this.matrixWorld,
             n = this,
-            o = n._mouseThreshold,
-            a = n.scale,
+            a = n._mouseThreshold,
+            o = n.scale,
             s = n.drawCount
           if (
             (null === i.boundingSphere && i.computeBoundingSphere(),
             _sphere$2.copy(i.boundingSphere),
             _sphere$2.applyMatrix4(r),
-            (_sphere$2.radius += o),
+            (_sphere$2.radius += a),
             !1 === e.ray.intersectsSphere(_sphere$2))
           )
             return t
           _inverseMatrix$2.getInverse(r), _ray$2.copy(e.ray)
           for (
-            var l = o / ((a.x + a.y + a.z) / 3),
+            var l = a / ((o.x + o.y + o.z) / 3),
               c = l * l,
-              u = this.positionAttribute,
-              h = 0,
+              h = this.positionAttribute,
+              u = 0,
               d = s;
-            h < d;
-            h++
+            u < d;
+            u++
           )
-            _position.fromBufferAttribute(u, h).applyMatrix4(r),
-              this._testPoint(_position, h, c, r, e, t)
+            _position.fromBufferAttribute(h, u).applyMatrix4(r),
+              this._testPoint(_position, u, c, r, e, t)
           return t
         }),
-        (t.prototype._testPoint = function (e, t, i, r, n, o) {
-          var a = _ray$2.distanceSqToPoint(e)
-          if (a < i) {
+        (t.prototype._testPoint = function (e, t, i, r, n, a) {
+          var o = _ray$2.distanceSqToPoint(e)
+          if (o < i) {
             var s = new THREE.Vector3()
             _ray$2.closestPointToPoint(e, s), s.applyMatrix4(r)
             var l = n.ray.origin.distanceTo(s)
             if (l < n.near || l > n.far) return
-            o.push({
+            a.push({
               distance: l,
-              distanceToRay: Math.sqrt(a),
+              distanceToRay: Math.sqrt(o),
               point: s,
               index: t,
               face: null,
@@ -11084,12 +10916,12 @@ export function speRuntimeFactory (exports) {
         (t.prototype.update = function (e, t) {
           for (var i = [], r = 0, n = e.points.length; r < n; r++)
             i.push(this.selection.indexOf(r) >= 0)
-          var o = e.extractFilteredShapePointsToBuffer(
+          var a = e.extractFilteredShapePointsToBuffer(
             this.geometry.positions,
             i,
             t
           )
-          ;(this.geometry.drawCount = o),
+          ;(this.geometry.drawCount = a),
             (this.geometry.positions.needsUpdate = !0),
             this.geometry.computeBoundingSphere()
         }),
@@ -11339,19 +11171,19 @@ export function speRuntimeFactory (exports) {
           void 0 === t && (t = !1)
           var r = Math.floor(e / 3),
             n = e % 3,
-            o =
+            a =
               null === (i = this.object) || void 0 === i
                 ? void 0
                 : i.shape.points[r]
-          if (o) {
-            var a = o.controlsMoved()
-            return t || a
+          if (a) {
+            var o = a.controlsMoved()
+            return t || o
               ? n > 0
-                ? o.controls[n - 1]
-                : t && !a
-                ? o.controls[0]
-                : o
-              : o
+                ? a.controls[n - 1]
+                : t && !o
+                ? a.controls[0]
+                : a
+              : a
           }
           return null
         }),
@@ -11399,17 +11231,17 @@ export function speRuntimeFactory (exports) {
               this.matrix.copy(this.matrixWorld)
             try {
               for (
-                var n = __values(this.children), o = n.next();
-                !o.done;
-                o = n.next()
+                var n = __values(this.children), a = n.next();
+                !a.done;
+                a = n.next()
               ) {
-                o.value.matrixWorld.copy(this.matrixWorld)
+                a.value.matrixWorld.copy(this.matrixWorld)
               }
             } catch (t) {
               e = { error: t }
             } finally {
               try {
-                o && !o.done && (t = n.return) && t.call(n)
+                a && !a.done && (t = n.return) && t.call(n)
               } finally {
                 if (e) throw e.error
               }
@@ -11420,57 +11252,57 @@ export function speRuntimeFactory (exports) {
         (t.prototype.snap = function (e, t, i, r) {
           var n
           if (((t.x = e.x), (t.y = e.y), !this._snapEnabled)) return t
-          var o = tempV2a.set(e.x, e.y),
-            a = null === (n = this.object) || void 0 === n ? void 0 : n.shape
-          if (void 0 === a) return t
+          var a = tempV2a.set(e.x, e.y),
+            o = null === (n = this.object) || void 0 === n ? void 0 : n.shape
+          if (void 0 === o) return t
           for (
             var s,
               l,
               c = !1,
-              u = !1,
-              h = o.x,
-              d = o.y,
+              h = !1,
+              u = a.x,
+              d = a.y,
               f = 0,
-              p = a.points.length;
+              p = o.points.length;
             f < p;
             f++
           ) {
-            var v = a.points[f]
-            if (void 0 === i || v !== i) {
-              var m = v.position
-              Math.abs(m.x - o.x) < this._snapThreshold &&
-                ((h = m.x), (s = v.position), (c = !0)),
-                Math.abs(m.y - o.y) < this._snapThreshold &&
-                  ((d = m.y), (l = v.position), (u = !0))
+            var m = o.points[f]
+            if (void 0 === i || m !== i) {
+              var g = m.position
+              Math.abs(g.x - a.x) < this._snapThreshold &&
+                ((u = g.x), (s = m.position), (c = !0)),
+                Math.abs(g.y - a.y) < this._snapThreshold &&
+                  ((d = g.y), (l = m.position), (h = !0))
             }
           }
           if (this.useAngleSnapping && void 0 !== r) {
-            var g = tempV2b.set(r.x, r.y)
-            o.set(h, d)
-            var E = g.distanceTo(o),
-              y = tempV2c.subVectors(g, o).angle() + Math.PI,
-              A = (Math.round(y / quarterPI) * quarterPI) % (2 * Math.PI)
+            var v = tempV2b.set(r.x, r.y)
+            a.set(u, d)
+            var y = v.distanceTo(a),
+              E = tempV2c.subVectors(v, a).angle() + Math.PI,
+              A = (Math.round(E / quarterPI) * quarterPI) % (2 * Math.PI)
             if (!0 === c && A !== halfPI && A !== 1.5 * Math.PI) {
-              var T = h - g.x
-              ;(d = g.y + Math.tan(A) * T), (l = g)
-            } else if (!0 === u && 0 !== A && A !== Math.PI) {
-              var x = d - g.y
-              ;(h = g.x - x / Math.tan(Math.PI - A)), (s = g)
+              var x = u - v.x
+              ;(d = v.y + Math.tan(A) * x), (l = v)
+            } else if (!0 === h && 0 !== A && A !== Math.PI) {
+              var T = d - v.y
+              ;(u = v.x - T / Math.tan(Math.PI - A)), (s = v)
             } else
-              (h = g.x + Math.cos(A) * E),
-                (d = g.y + Math.sin(A) * E),
-                (s = g),
+              (u = v.x + Math.cos(A) * y),
+                (d = v.y + Math.sin(A) * y),
+                (s = v),
                 (l = void 0)
-            ;(c = !0), (u = !0)
+            ;(c = !0), (h = !0)
           }
           return (
-            c && (t.x = h),
-            u && (t.y = d),
+            c && (t.x = u),
+            h && (t.y = d),
             this.setSnapLines(
               c ? t : null,
               c ? s : null,
-              u ? t : null,
-              u ? l : null
+              h ? t : null,
+              h ? l : null
             ),
             t
           )
@@ -11488,12 +11320,12 @@ export function speRuntimeFactory (exports) {
             var i = null == t ? void 0 : t.x,
               r = null == t ? void 0 : t.y,
               n = this.nextLine.getX(0),
-              o = this.nextLine.getY(0)
-            this.nextLine.setXYZ(1, null != i ? i : n, null != r ? r : o),
+              a = this.nextLine.getY(0)
+            this.nextLine.setXYZ(1, null != i ? i : n, null != r ? r : a),
               this.nextLine.update(),
-              this.nextPoint.setXYZ(0, null != i ? i : n, null != r ? r : o, 0),
+              this.nextPoint.setXYZ(0, null != i ? i : n, null != r ? r : a, 0),
               this.nextPoint.update(),
-              this.nextPointDest.set(null != i ? i : n, null != r ? r : o, 0)
+              this.nextPointDest.set(null != i ? i : n, null != r ? r : a, 0)
           }
         }),
         (t.prototype.setSplitPointDest = function (e, t, i) {
@@ -11510,25 +11342,25 @@ export function speRuntimeFactory (exports) {
               n < r;
               n++
             ) {
-              var o = 0 === n ? r - 1 : n - 1,
-                a = n === r - 1 ? 0 : n + 1,
+              var a = 0 === n ? r - 1 : n - 1,
+                o = n === r - 1 ? 0 : n + 1,
                 s = this.object.shape.points[n],
                 l = s.controls[0],
                 c = s.controls[1],
-                u = s.position.distanceTo(l.position),
-                h = s.position.distanceTo(c.position),
+                h = s.position.distanceTo(l.position),
+                u = s.position.distanceTo(c.position),
                 d =
                   this.showAllControls ||
                   this.points.getSelection(n) ||
-                  this.points.getSelection(o) ||
-                  this.points.getSelection(a)
+                  this.points.getSelection(a) ||
+                  this.points.getSelection(o)
               this.points.setPositionAt(e, s.position),
                 e++,
                 this.controls.setPositionAt(t, l.position),
-                this.controls.setVisibility(t, d && u > this._snapThreshold),
+                this.controls.setVisibility(t, d && h > this._snapThreshold),
                 t++,
                 this.controls.setPositionAt(t, c.position),
-                this.controls.setVisibility(t, d && h > this._snapThreshold),
+                this.controls.setVisibility(t, d && u > this._snapThreshold),
                 t++,
                 d &&
                   (this.controlLines.setPositionAt(i + 0, s.position),
@@ -11610,9 +11442,9 @@ export function speRuntimeFactory (exports) {
                 !n.done;
                 n = r.next()
               ) {
-                var o = n.value
-                isEntity$1(o) &&
-                  o.traverseEntity(function (t) {
+                var a = n.value
+                isEntity$1(a) &&
+                  a.traverseEntity(function (t) {
                     isHelperableEntity$1(t) &&
                       t.visible &&
                       (t.objectHelper.visible = e)
@@ -11657,41 +11489,41 @@ export function speRuntimeFactory (exports) {
       })(e)
     },
     CombinedCamera = (function (e) {
-      function t(t, i, r, n, o) {
+      function t(t, i, r, n, a) {
         void 0 === t && (t = 100),
           void 0 === i && (i = 100),
           void 0 === r && (r = 45),
           void 0 === n && (n = 50),
-          void 0 === o && (o = 5e4)
-        var a = e.call(this) || this
+          void 0 === a && (a = 5e4)
+        var o = e.call(this) || this
         return (
-          (a.objectType = 'CombinedCamera'),
-          (a.width = window.innerWidth),
-          (a.height = window.innerHeight),
-          (a.orthoCamera = new THREE.OrthographicCamera(
+          (o.objectType = 'CombinedCamera'),
+          (o.width = window.innerWidth),
+          (o.height = window.innerHeight),
+          (o.orthoCamera = new THREE.OrthographicCamera(
             -0.5 * t,
             0.5 * t,
             0.5 * i,
             -0.5 * i,
             n,
-            o
+            a
           )),
-          (a.perspCamera = new THREE.PerspectiveCamera(r, t / i, n, o)),
-          (a._cameraType = 'OrthographicCamera'),
-          (a.left = a.orthoCamera.left),
-          (a.right = a.orthoCamera.right),
-          (a.top = a.orthoCamera.top),
-          (a.bottom = a.orthoCamera.bottom),
-          (a.far = a.orthoCamera.far),
-          (a.view = a.orthoCamera.view),
-          (a.aspect = a.perspCamera.aspect),
-          (a.fov = a.perspCamera.fov),
-          (a.focus = a.perspCamera.focus),
-          (a.filmGauge = a.perspCamera.filmGauge),
-          (a.filmOffset = a.perspCamera.filmOffset),
-          (a.targetOffset = 1e3),
-          a.toOrthographic(!0),
-          a
+          (o.perspCamera = new THREE.PerspectiveCamera(r, t / i, n, a)),
+          (o._cameraType = 'OrthographicCamera'),
+          (o.left = o.orthoCamera.left),
+          (o.right = o.orthoCamera.right),
+          (o.top = o.orthoCamera.top),
+          (o.bottom = o.orthoCamera.bottom),
+          (o.far = o.orthoCamera.far),
+          (o.view = o.orthoCamera.view),
+          (o.aspect = o.perspCamera.aspect),
+          (o.fov = o.perspCamera.fov),
+          (o.focus = o.perspCamera.focus),
+          (o.filmGauge = o.perspCamera.filmGauge),
+          (o.filmOffset = o.perspCamera.filmOffset),
+          (o.targetOffset = 1e3),
+          o.toOrthographic(!0),
+          o
         )
       }
       return (
@@ -11812,11 +11644,11 @@ export function speRuntimeFactory (exports) {
         (t.prototype.getFilmHeight = function () {
           return this.perspCamera.getFilmHeight()
         }),
-        (t.prototype.setViewOffset = function (e, t, i, r, n, o) {
+        (t.prototype.setViewOffset = function (e, t, i, r, n, a) {
           'PerspectiveCamera' === this._cameraType
-            ? (this.perspCamera.setViewOffset(e, t, i, r, n, o),
+            ? (this.perspCamera.setViewOffset(e, t, i, r, n, a),
               this.toPerspective())
-            : (this.orthoCamera.setViewOffset(e, t, i, r, n, o),
+            : (this.orthoCamera.setViewOffset(e, t, i, r, n, a),
               this.toOrthographic())
         }),
         (t.prototype.clearViewOffset = function () {
@@ -11957,15 +11789,15 @@ export function speRuntimeFactory (exports) {
           (r.shadow.mapSize.width = 1024),
           (r.shadow.mapSize.height = 1024)
         var n = r.shadow,
-          o = n.camera
-        ;(o.top = 1250),
-          (o.bottom = -1250),
-          (o.right = 1250),
-          (o.left = -1250),
-          (o.near = 1),
-          (o.far = 2500)
-        var a = new THREE.CameraHelper(r.shadow.camera)
-        return (a.visible = !1), (r._gizmos.shadowmap = a), r.update(), r
+          a = n.camera
+        ;(a.top = 1250),
+          (a.bottom = -1250),
+          (a.right = 1250),
+          (a.left = -1250),
+          (a.near = 1),
+          (a.far = 2500)
+        var o = new THREE.CameraHelper(r.shadow.camera)
+        return (o.visible = !1), (r._gizmos.shadowmap = o), r.update(), r
       }
       return (
         __extends(t, e),
@@ -12049,19 +11881,19 @@ export function speRuntimeFactory (exports) {
           (r.shadow.mapSize.width = 1024),
           (r.shadow.mapSize.height = 1024)
         var n = r.shadow,
-          o = n.camera
-        ;(o.fov = 90), (o.aspect = 1), (o.near = 100), (o.far = 2500)
-        var a = new THREE.Vector3(
-            -o.far + r.position.x,
-            -o.far + r.position.y,
-            -o.far + r.position.z
+          a = n.camera
+        ;(a.fov = 90), (a.aspect = 1), (a.near = 100), (a.far = 2500)
+        var o = new THREE.Vector3(
+            -a.far + r.position.x,
+            -a.far + r.position.y,
+            -a.far + r.position.z
           ),
           s = new THREE.Vector3(
-            o.far + r.position.x,
-            o.far + r.position.y,
-            o.far + r.position.z
+            a.far + r.position.x,
+            a.far + r.position.y,
+            a.far + r.position.z
           ),
-          l = new THREE.Box3(a, s),
+          l = new THREE.Box3(o, s),
           c = new THREE.Box3Helper(l, new THREE.Color(16755200))
         return (c.visible = !1), (r._gizmos.shadowmap = c), r.update(), r
       }
@@ -12166,13 +11998,13 @@ export function speRuntimeFactory (exports) {
           (r.shadow.mapSize.width = 1024),
           (r.shadow.mapSize.height = 1024)
         var n = r.shadow,
-          o = n.camera
-        ;(o.fov = 2 * THREE.MathUtils.RAD2DEG * r.angle),
-          (o.aspect = 1),
-          (o.near = 100),
-          (o.far = 2500)
-        var a = new THREE.CameraHelper(r.shadow.camera)
-        return (a.visible = !1), (r._gizmos.shadowmap = a), r.update(), r
+          a = n.camera
+        ;(a.fov = 2 * THREE.MathUtils.RAD2DEG * r.angle),
+          (a.aspect = 1),
+          (a.near = 100),
+          (a.far = 2500)
+        var o = new THREE.CameraHelper(r.shadow.camera)
+        return (o.visible = !1), (r._gizmos.shadowmap = o), r.update(), r
       }
       return (
         __extends(t, e),
@@ -12644,7 +12476,14 @@ export function speRuntimeFactory (exports) {
       super.dispose(), this.userData.layers.dispose()
     }
   }
-  var isVideoElement = function (e) {
+  var speMaterials = {
+      BasicMaterial: BasicMaterial,
+      PhongMaterial: PhongMaterial$1,
+      LambertMaterial: LambertMaterial,
+      PhysicalMaterial: PhysicalMaterial,
+      ToonMaterial: ToonMaterial
+    },
+    isVideoElement = function (e) {
       return 'VIDEO' === e.tagName
     },
     TextureUtils = (function () {
@@ -12654,11 +12493,11 @@ export function speRuntimeFactory (exports) {
           var r,
             n = e / t
           if (i.image) {
-            var o = i.image
+            var a = i.image
             n >
-              (r = isVideoElement(o)
-                ? o.videoWidth / o.videoHeight
-                : o.width / o.height) &&
+              (r = isVideoElement(a)
+                ? a.videoWidth / a.videoHeight
+                : a.width / a.height) &&
               ('WEBCAM' == i.imageType
                 ? i.repeat.set(-1, (1 * r) / n)
                 : i.repeat.set(1, (1 * r) / n)),
@@ -12675,23 +12514,23 @@ export function speRuntimeFactory (exports) {
         (e.resizeTextureLayer = function (e, t, i) {
           var r,
             n = e / t,
-            o = i.image.width / i.image.height
+            a = i.image.width / i.image.height
           ;(r =
-            n > o
-              ? { x: 1, y: o / n }
-              : n < o
-              ? { x: n / o, y: 1 }
+            n > a
+              ? { x: 1, y: a / n }
+              : n < a
+              ? { x: n / a, y: 1 }
               : { x: 1, y: 1 }),
             i.repeat.set(r.x, r.y),
             i.updateMatrix()
         }),
         (e.resizeTextureLayers = function (t, i, r) {
           for (
-            var n = r.userData.layers, o = n.getLayers(), a = 0;
-            a < o.length;
-            a++
+            var n = r.userData.layers, a = n.getLayers(), o = 0;
+            o < a.length;
+            o++
           ) {
-            var s = o[a]
+            var s = a[o]
             if ('texture' === s.type) {
               var l = s.id
               e.resizeTextureLayer(
@@ -12705,33 +12544,33 @@ export function speRuntimeFactory (exports) {
         }),
         (e.resizeComplex = function (e, t, i, r) {
           var n,
-            o = e / t,
-            a = i.image
-          ;(n = isVideoElement(a)
-            ? a.videoWidth / a.videoHeight
-            : a.width / a.height),
+            a = e / t,
+            o = i.image
+          ;(n = isVideoElement(o)
+            ? o.videoWidth / o.videoHeight
+            : o.width / o.height),
             r.geometry.type.includes('Shape')
-              ? (o > n &&
+              ? (a > n &&
                   ('WEBCAM' == i.imageType
-                    ? i.repeat.set((1 / e) * -1, ((1 / t) * n) / o)
-                    : i.repeat.set(1 / e, ((1 / t) * n) / o)),
-                o < n &&
+                    ? i.repeat.set((1 / e) * -1, ((1 / t) * n) / a)
+                    : i.repeat.set(1 / e, ((1 / t) * n) / a)),
+                a < n &&
                   ('WEBCAM' == i.imageType
-                    ? i.repeat.set((((1 / e) * o) / n) * -1, 1 / t)
-                    : i.repeat.set(((1 / e) * o) / n, 1 / t)),
-                o == n &&
+                    ? i.repeat.set((((1 / e) * a) / n) * -1, 1 / t)
+                    : i.repeat.set(((1 / e) * a) / n, 1 / t)),
+                a == n &&
                   ('WEBCAM' == i.imageType
                     ? i.repeat.set((1 / e) * -1, 1 / t)
                     : i.repeat.set(1 / e, 1 / t)))
-              : (o > n &&
+              : (a > n &&
                   ('WEBCAM' == i.imageType
-                    ? i.repeat.set(-1, (1 * n) / o)
-                    : i.repeat.set(1, (1 * n) / o)),
-                o < n &&
+                    ? i.repeat.set(-1, (1 * n) / a)
+                    : i.repeat.set(1, (1 * n) / a)),
+                a < n &&
                   ('WEBCAM' == i.imageType
-                    ? i.repeat.set(((1 * o) / n) * -1, 1)
-                    : i.repeat.set((1 * o) / n, 1)),
-                o == n &&
+                    ? i.repeat.set(((1 * a) / n) * -1, 1)
+                    : i.repeat.set((1 * a) / n, 1)),
+                a == n &&
                   ('WEBCAM' == i.imageType
                     ? i.repeat.set(-1, 1)
                     : i.repeat.set(1, 1)))
@@ -12780,10 +12619,10 @@ export function speRuntimeFactory (exports) {
             var n = e.image
             ;(i = 0.5 * n.videoWidth), (r = 0.5 * n.videoHeight)
           } else {
-            var o = e.image
-            ;(i = 0.5 * o.width), (r = 0.5 * o.height)
+            var a = e.image
+            ;(i = 0.5 * a.width), (r = 0.5 * a.height)
           }
-          var a = RectangleGeometry.create({
+          var o = RectangleGeometry.create({
               parameters: { width: i, height: r }
             }),
             s = new BasicMaterial()
@@ -12791,7 +12630,7 @@ export function speRuntimeFactory (exports) {
             s.layersList.changeLayer(0, { type: 'texture', texture: e }),
             s.layersList.moveLayer(0, 1),
             s.dispose(),
-            new t(a, s)
+            new t(o, s)
           )
         }),
         t
@@ -12920,25 +12759,25 @@ export function speRuntimeFactory (exports) {
                 t.interaction.start()
                 try {
                   for (
-                    var n = __values(t.interaction.events), o = n.next();
-                    !o.done;
-                    o = n.next()
+                    var n = __values(t.interaction.events), a = n.next();
+                    !a.done;
+                    a = n.next()
                   ) {
-                    var a = o.value.type
-                    ;(e._enableEvent[a] = !0),
-                      (a !== INTERACTION_EVENT.KEY_DOWN &&
-                        a !== INTERACTION_EVENT.KEY_UP &&
-                        a !== INTERACTION_EVENT.START &&
-                        a !== INTERACTION_EVENT.LOOK_AT &&
-                        a !== INTERACTION_EVENT.FOLLOW) ||
-                        (void 0 === e._map[a] && (e._map[a] = []),
-                        e._map[a].push(t))
+                    var o = a.value.type
+                    ;(e._enableEvent[o] = !0),
+                      (o !== INTERACTION_EVENT.KEY_DOWN &&
+                        o !== INTERACTION_EVENT.KEY_UP &&
+                        o !== INTERACTION_EVENT.START &&
+                        o !== INTERACTION_EVENT.LOOK_AT &&
+                        o !== INTERACTION_EVENT.FOLLOW) ||
+                        (void 0 === e._map[o] && (e._map[o] = []),
+                        e._map[o].push(t))
                   }
                 } catch (e) {
                   i = { error: e }
                 } finally {
                   try {
-                    o && !o.done && (r = n.return) && r.call(n)
+                    a && !a.done && (r = n.return) && r.call(n)
                   } finally {
                     if (i) throw i.error
                   }
@@ -13106,10 +12945,10 @@ export function speRuntimeFactory (exports) {
           ) {
             var n = void 0
             if (!e) {
-              var o = this._raycastMesh(this._raycaster).find(function (e) {
+              var a = this._raycastMesh(this._raycaster).find(function (e) {
                 return !e.object.interactionCache.follow
               })
-              n = o ? o.object : void 0
+              n = a ? a.object : void 0
             }
             if (this._prevObject !== n) {
               void 0 !== this._prevObject &&
@@ -13120,24 +12959,24 @@ export function speRuntimeFactory (exports) {
                   (null === (i = n.interactionCache.mouseHover) ||
                     void 0 === i ||
                     i.dispatch())
-              var a = []
+              var o = []
               null == n ||
                 n.traverseAncestors(function (e) {
                   e instanceof EmptyObject &&
                     e.interactionCache.mouseHover &&
-                    a.push(e)
+                    o.push(e)
                 }),
                 this._prevAncestors.filter(function (e) {
                   var t
                   return (
-                    !a.includes(e) &&
+                    !o.includes(e) &&
                     (null === (t = e.interactionCache.mouseHover) ||
                       void 0 === t ||
                       t.dispatchReverse(),
                     !0)
                   )
                 })
-              var s = a.filter(function (e) {
+              var s = o.filter(function (e) {
                   var t
                   return (
                     !r._prevAncestors.includes(e) &&
@@ -13148,7 +12987,7 @@ export function speRuntimeFactory (exports) {
                   )
                 }),
                 l = this._prevAncestors.filter(function (e) {
-                  return a.includes(e)
+                  return o.includes(e)
                 })
               this._prevAncestors = __spread(l, s)
             }
@@ -13219,12 +13058,12 @@ export function speRuntimeFactory (exports) {
         (e.prototype._raycastMesh = function (e) {
           var t = [],
             i = function (r) {
-              var n, o
+              var n, a
               try {
                 for (
-                  var a = __values(r.children), s = a.next();
+                  var o = __values(r.children), s = o.next();
                   !s.done;
-                  s = a.next()
+                  s = o.next()
                 ) {
                   var l = s.value
                   isEntity$1(l) &&
@@ -13236,7 +13075,7 @@ export function speRuntimeFactory (exports) {
                 n = { error: e }
               } finally {
                 try {
-                  s && !s.done && (o = a.return) && o.call(a)
+                  s && !s.done && (a = o.return) && a.call(o)
                 } finally {
                   if (n) throw n.error
                 }
@@ -13247,7 +13086,559 @@ export function speRuntimeFactory (exports) {
         e
       )
     })(),
-    ColorChannel = { RED: 0, GREEN: 1, BLUE: 2, ALPHA: 3 },
+    OrbitControls = function (e, t) {
+      var i, r, n, a, o
+      void 0 === t &&
+        console.warn(
+          'THREE.OrbitControls: The second parameter "domElement" is now mandatory.'
+        ),
+        t === document &&
+          console.error(
+            'THREE.OrbitControls: "document" should not be used as the target "domElement". Please use "renderer.domElement" instead.'
+          ),
+        (this.object = e),
+        (this.domElement = t),
+        (this.enabled = !0),
+        (this.target = new THREE.Vector3()),
+        (this.minDistance = 0),
+        (this.maxDistance = 1 / 0),
+        (this.minZoom = 0),
+        (this.maxZoom = 1 / 0),
+        (this.minPolarAngle = 0),
+        (this.maxPolarAngle = Math.PI),
+        (this.minAzimuthAngle = -1 / 0),
+        (this.maxAzimuthAngle = 1 / 0),
+        (this.enableDamping = !1),
+        (this.dampingFactor = 0.05),
+        (this.enableZoom = !0),
+        (this.zoomSpeed = 1),
+        (this.enableRotate = !0),
+        (this.rotateSpeed = 1),
+        (this.enablePan = !0),
+        (this.panSpeed = 1),
+        (this.screenSpacePanning = !1),
+        (this.keyPanSpeed = 7),
+        (this.autoRotate = !1),
+        (this.autoRotateSpeed = 2),
+        (this.enableKeys = !0),
+        (this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 }),
+        (this.mouseButtons = {
+          LEFT: THREE.MOUSE.ROTATE,
+          MIDDLE: THREE.MOUSE.DOLLY,
+          RIGHT: THREE.MOUSE.PAN
+        }),
+        (this.touches = {
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_PAN
+        }),
+        (this.target0 = this.target.clone()),
+        (this.position0 = this.object.position.clone()),
+        (this.zoom0 = this.object.zoom),
+        (this.getPolarAngle = function () {
+          return p.phi
+        }),
+        (this.getAzimuthalAngle = function () {
+          return p.theta
+        }),
+        (this.saveState = function () {
+          s.target0.copy(s.target),
+            s.position0.copy(s.object.position),
+            (s.zoom0 = s.object.zoom)
+        }),
+        (this.reset = function () {
+          s.target.copy(s.target0),
+            s.object.position.copy(s.position0),
+            (s.object.zoom = s.zoom0),
+            s.object.updateProjectionMatrix(),
+            s.dispatchEvent(l),
+            s.update(),
+            (d = u.NONE)
+        }),
+        (this.update =
+          ((i = new THREE.Vector3()),
+          (r = new THREE.Quaternion().setFromUnitVectors(
+            e.up,
+            new THREE.Vector3(0, 1, 0)
+          )),
+          (n = r.clone().inverse()),
+          (a = new THREE.Vector3()),
+          (o = new THREE.Quaternion()),
+          function () {
+            var e = s.object.position
+            return (
+              i.copy(e).sub(s.target),
+              i.applyQuaternion(r),
+              p.setFromVector3(i),
+              s.autoRotate &&
+                d === u.NONE &&
+                O(((2 * Math.PI) / 60 / 60) * s.autoRotateSpeed),
+              s.enableDamping
+                ? ((p.theta += m.theta * s.dampingFactor),
+                  (p.phi += m.phi * s.dampingFactor))
+                : ((p.theta += m.theta), (p.phi += m.phi)),
+              (p.theta = Math.max(
+                s.minAzimuthAngle,
+                Math.min(s.maxAzimuthAngle, p.theta)
+              )),
+              (p.phi = Math.max(
+                s.minPolarAngle,
+                Math.min(s.maxPolarAngle, p.phi)
+              )),
+              p.makeSafe(),
+              (p.radius *= g),
+              (p.radius = Math.max(
+                s.minDistance,
+                Math.min(s.maxDistance, p.radius)
+              )),
+              !0 === s.enableDamping
+                ? s.target.addScaledVector(v, s.dampingFactor)
+                : s.target.add(v),
+              i.setFromSpherical(p),
+              i.applyQuaternion(n),
+              e.copy(s.target).add(i),
+              s.object.lookAt(s.target),
+              !0 === s.enableDamping
+                ? ((m.theta *= 1 - s.dampingFactor),
+                  (m.phi *= 1 - s.dampingFactor),
+                  v.multiplyScalar(1 - s.dampingFactor))
+                : (m.set(0, 0, 0), v.set(0, 0, 0)),
+              (g = 1),
+              !!(
+                y ||
+                a.distanceToSquared(s.object.position) > f ||
+                8 * (1 - o.dot(s.object.quaternion)) > f
+              ) &&
+                (s.dispatchEvent(l),
+                a.copy(s.object.position),
+                o.copy(s.object.quaternion),
+                (y = !1),
+                !0)
+            )
+          })),
+        (this.dispose = function () {
+          s.domElement.removeEventListener('contextmenu', q, !1),
+            s.domElement.removeEventListener('mousedown', j, !1),
+            s.domElement.removeEventListener('wheel', W, !1),
+            s.domElement.removeEventListener('touchstart', J, !1),
+            s.domElement.removeEventListener('touchend', K, !1),
+            s.domElement.removeEventListener('touchmove', X, !1),
+            document.removeEventListener('mousemove', Y, !1),
+            document.removeEventListener('mouseup', Q, !1),
+            s.domElement.removeEventListener('keydown', $, !1)
+        })
+      var s = this,
+        l = { type: 'change' },
+        c = { type: 'start' },
+        h = { type: 'end' },
+        u = {
+          NONE: -1,
+          ROTATE: 0,
+          DOLLY: 1,
+          PAN: 2,
+          TOUCH_ROTATE: 3,
+          TOUCH_PAN: 4,
+          TOUCH_DOLLY_PAN: 5,
+          TOUCH_DOLLY_ROTATE: 6
+        },
+        d = u.NONE,
+        f = 1e-6,
+        p = new THREE.Spherical(),
+        m = new THREE.Spherical(),
+        g = 1,
+        v = new THREE.Vector3(),
+        y = !1,
+        E = new THREE.Vector2(),
+        A = new THREE.Vector2(),
+        x = new THREE.Vector2(),
+        T = new THREE.Vector2(),
+        w = new THREE.Vector2(),
+        b = new THREE.Vector2(),
+        S = new THREE.Vector2(),
+        C = new THREE.Vector2(),
+        _ = new THREE.Vector2()
+      function D() {
+        return Math.pow(0.95, s.zoomSpeed)
+      }
+      function O(e) {
+        m.theta -= e
+      }
+      function R(e) {
+        m.phi -= e
+      }
+      var M = (function () {
+          var e = new THREE.Vector3()
+          return function (t, i) {
+            e.setFromMatrixColumn(i, 0), e.multiplyScalar(-t), v.add(e)
+          }
+        })(),
+        L = (function () {
+          var e = new THREE.Vector3()
+          return function (t, i) {
+            !0 === s.screenSpacePanning
+              ? e.setFromMatrixColumn(i, 1)
+              : (e.setFromMatrixColumn(i, 0), e.crossVectors(s.object.up, e)),
+              e.multiplyScalar(t),
+              v.add(e)
+          }
+        })(),
+        B = (function () {
+          var e = new THREE.Vector3()
+          return function (t, i) {
+            var r = s.domElement
+            if ('PerspectiveCamera' === s.object.cameraType) {
+              var n = s.object.position
+              e.copy(n).sub(s.target)
+              var a = e.length()
+              ;(a *= Math.tan(((s.object.fov / 2) * Math.PI) / 180)),
+                M((2 * t * a) / r.clientHeight, s.object.matrix),
+                L((2 * i * a) / r.clientHeight, s.object.matrix)
+            } else
+              'OrthographicCamera' === s.object.cameraType
+                ? (M(
+                    (t * (s.object.right - s.object.left)) /
+                      s.object.zoom /
+                      r.clientWidth,
+                    s.object.matrix
+                  ),
+                  L(
+                    (i * (s.object.top - s.object.bottom)) /
+                      s.object.zoom /
+                      r.clientHeight,
+                    s.object.matrix
+                  ))
+                : (console.warn(
+                    'WARNING: OrbitControls.js encountered an unknown camera type - pan disabled.'
+                  ),
+                  (s.enablePan = !1))
+          }
+        })()
+      function P(e) {
+        'PerspectiveCamera' === s.object.cameraType
+          ? (g /= e)
+          : 'OrthographicCamera' === s.object.cameraType
+          ? ((s.object.zoom = Math.max(
+              s.minZoom,
+              Math.min(s.maxZoom, s.object.zoom * e)
+            )),
+            s.object.updateProjectionMatrix(),
+            (y = !0))
+          : (console.warn(
+              'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'
+            ),
+            (s.enableZoom = !1))
+      }
+      function H(e) {
+        'PerspectiveCamera' === s.object.cameraType
+          ? (g *= e)
+          : 'OrthographicCamera' === s.object.cameraType
+          ? ((s.object.zoom = Math.max(
+              s.minZoom,
+              Math.min(s.maxZoom, s.object.zoom / e)
+            )),
+            s.object.updateProjectionMatrix(),
+            (y = !0))
+          : (console.warn(
+              'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'
+            ),
+            (s.enableZoom = !1))
+      }
+      function I(e) {
+        E.set(e.clientX, e.clientY)
+      }
+      function N(e) {
+        T.set(e.clientX, e.clientY)
+      }
+      function F(e) {
+        if (1 == e.touches.length) E.set(e.touches[0].pageX, e.touches[0].pageY)
+        else {
+          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
+            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
+          E.set(t, i)
+        }
+      }
+      function z(e) {
+        if (1 == e.touches.length) T.set(e.touches[0].pageX, e.touches[0].pageY)
+        else {
+          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
+            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
+          T.set(t, i)
+        }
+      }
+      function U(e) {
+        var t = e.touches[0].pageX - e.touches[1].pageX,
+          i = e.touches[0].pageY - e.touches[1].pageY,
+          r = Math.sqrt(t * t + i * i)
+        S.set(0, r)
+      }
+      function G(e) {
+        if (1 == e.touches.length) A.set(e.touches[0].pageX, e.touches[0].pageY)
+        else {
+          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
+            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
+          A.set(t, i)
+        }
+        x.subVectors(A, E).multiplyScalar(s.rotateSpeed)
+        var r = s.domElement
+        O((2 * Math.PI * x.x) / r.clientHeight),
+          R((2 * Math.PI * x.y) / r.clientHeight),
+          E.copy(A)
+      }
+      function V(e) {
+        if (1 == e.touches.length) w.set(e.touches[0].pageX, e.touches[0].pageY)
+        else {
+          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
+            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
+          w.set(t, i)
+        }
+        b.subVectors(w, T).multiplyScalar(s.panSpeed), B(b.x, b.y), T.copy(w)
+      }
+      function k(e) {
+        var t = e.touches[0].pageX - e.touches[1].pageX,
+          i = e.touches[0].pageY - e.touches[1].pageY,
+          r = Math.sqrt(t * t + i * i)
+        C.set(0, r),
+          _.set(0, Math.pow(C.y / S.y, s.zoomSpeed)),
+          P(_.y),
+          S.copy(C)
+      }
+      function j(e) {
+        if (!1 !== s.enabled) {
+          var t
+          switch (
+            (e.preventDefault(),
+            s.domElement.focus ? s.domElement.focus() : window.focus(),
+            e.button)
+          ) {
+            case 0:
+              t = s.mouseButtons.LEFT
+              break
+            case 1:
+              t = s.mouseButtons.MIDDLE
+              break
+            case 2:
+              t = s.mouseButtons.RIGHT
+              break
+            default:
+              t = -1
+          }
+          switch (t) {
+            case THREE.MOUSE.DOLLY:
+              if (!1 === s.enableZoom) return
+              !(function (e) {
+                S.set(e.clientX, e.clientY)
+              })(e),
+                (d = u.DOLLY)
+              break
+            case THREE.MOUSE.ROTATE:
+              if (e.ctrlKey || e.metaKey || e.shiftKey) {
+                if (!1 === s.enablePan) return
+                N(e), (d = u.PAN)
+              } else {
+                if (!1 === s.enableRotate) return
+                I(e), (d = u.ROTATE)
+              }
+              break
+            case THREE.MOUSE.PAN:
+              if (e.ctrlKey || e.metaKey || e.shiftKey) {
+                if (!1 === s.enableRotate) return
+                I(e), (d = u.ROTATE)
+              } else {
+                if (!1 === s.enablePan) return
+                N(e), (d = u.PAN)
+              }
+              break
+            default:
+              d = u.NONE
+          }
+          d !== u.NONE &&
+            (document.addEventListener('mousemove', Y, !1),
+            document.addEventListener('mouseup', Q, !1),
+            s.dispatchEvent(c))
+        }
+      }
+      function Y(e) {
+        if (!1 !== s.enabled)
+          switch ((e.preventDefault(), d)) {
+            case u.ROTATE:
+              if (!1 === s.enableRotate) return
+              !(function (e) {
+                A.set(e.clientX, e.clientY),
+                  x.subVectors(A, E).multiplyScalar(s.rotateSpeed)
+                var t = s.domElement
+                O((2 * Math.PI * x.x) / t.clientHeight),
+                  R((2 * Math.PI * x.y) / t.clientHeight),
+                  E.copy(A),
+                  s.update()
+              })(e)
+              break
+            case u.DOLLY:
+              if (!1 === s.enableZoom) return
+              !(function (e) {
+                C.set(e.clientX, e.clientY),
+                  _.subVectors(C, S),
+                  _.y > 0 ? P(D()) : _.y < 0 && H(D()),
+                  S.copy(C),
+                  s.update()
+              })(e)
+              break
+            case u.PAN:
+              if (!1 === s.enablePan) return
+              !(function (e) {
+                w.set(e.clientX, e.clientY),
+                  b.subVectors(w, T).multiplyScalar(s.panSpeed),
+                  B(b.x, b.y),
+                  T.copy(w),
+                  s.update()
+              })(e)
+          }
+      }
+      function Q(e) {
+        !1 !== s.enabled &&
+          (document.removeEventListener('mousemove', Y, !1),
+          document.removeEventListener('mouseup', Q, !1),
+          s.dispatchEvent(h),
+          (d = u.NONE))
+      }
+      function W(e) {
+        !1 === s.enabled ||
+          !1 === s.enableZoom ||
+          (d !== u.NONE && d !== u.ROTATE) ||
+          (e.preventDefault(),
+          e.stopPropagation(),
+          s.dispatchEvent(c),
+          (function (e) {
+            e.deltaY < 0 ? H(D()) : e.deltaY > 0 && P(D()), s.update()
+          })(e),
+          s.dispatchEvent(h))
+      }
+      function $(e) {
+        !1 !== s.enabled &&
+          !1 !== s.enableKeys &&
+          !1 !== s.enablePan &&
+          (function (e) {
+            var t = !1
+            switch (e.keyCode) {
+              case s.keys.UP:
+                B(0, s.keyPanSpeed), (t = !0)
+                break
+              case s.keys.BOTTOM:
+                B(0, -s.keyPanSpeed), (t = !0)
+                break
+              case s.keys.LEFT:
+                B(s.keyPanSpeed, 0), (t = !0)
+                break
+              case s.keys.RIGHT:
+                B(-s.keyPanSpeed, 0), (t = !0)
+            }
+            t && (e.preventDefault(), s.update())
+          })(e)
+      }
+      function J(e) {
+        if (!1 !== s.enabled) {
+          switch ((e.preventDefault(), e.touches.length)) {
+            case 1:
+              switch (s.touches.ONE) {
+                case THREE.TOUCH.ROTATE:
+                  if (!1 === s.enableRotate) return
+                  F(e), (d = u.TOUCH_ROTATE)
+                  break
+                case THREE.TOUCH.PAN:
+                  if (!1 === s.enablePan) return
+                  z(e), (d = u.TOUCH_PAN)
+                  break
+                default:
+                  d = u.NONE
+              }
+              break
+            case 2:
+              switch (s.touches.TWO) {
+                case THREE.TOUCH.DOLLY_PAN:
+                  if (!1 === s.enableZoom && !1 === s.enablePan) return
+                  !(function (e) {
+                    s.enableZoom && U(e), s.enablePan && z(e)
+                  })(e),
+                    (d = u.TOUCH_DOLLY_PAN)
+                  break
+                case THREE.TOUCH.DOLLY_ROTATE:
+                  if (!1 === s.enableZoom && !1 === s.enableRotate) return
+                  !(function (e) {
+                    s.enableZoom && U(e), s.enableRotate && F(e)
+                  })(e),
+                    (d = u.TOUCH_DOLLY_ROTATE)
+                  break
+                default:
+                  d = u.NONE
+              }
+              break
+            default:
+              d = u.NONE
+          }
+          d !== u.NONE && s.dispatchEvent(c)
+        }
+      }
+      function X(e) {
+        if (!1 !== s.enabled)
+          switch ((e.preventDefault(), e.stopPropagation(), d)) {
+            case u.TOUCH_ROTATE:
+              if (!1 === s.enableRotate) return
+              G(e), s.update()
+              break
+            case u.TOUCH_PAN:
+              if (!1 === s.enablePan) return
+              V(e), s.update()
+              break
+            case u.TOUCH_DOLLY_PAN:
+              if (!1 === s.enableZoom && !1 === s.enablePan) return
+              !(function (e) {
+                s.enableZoom && k(e), s.enablePan && V(e)
+              })(e),
+                s.update()
+              break
+            case u.TOUCH_DOLLY_ROTATE:
+              if (!1 === s.enableZoom && !1 === s.enableRotate) return
+              !(function (e) {
+                s.enableZoom && k(e), s.enableRotate && G(e)
+              })(e),
+                s.update()
+              break
+            default:
+              d = u.NONE
+          }
+      }
+      function K(e) {
+        !1 !== s.enabled && (s.dispatchEvent(h), (d = u.NONE))
+      }
+      function q(e) {
+        !1 !== s.enabled && e.preventDefault()
+      }
+      s.domElement.addEventListener('contextmenu', q, !1),
+        s.domElement.addEventListener('mousedown', j, !1),
+        s.domElement.addEventListener('wheel', W, !1),
+        s.domElement.addEventListener('touchstart', J, !1),
+        s.domElement.addEventListener('touchend', K, !1),
+        s.domElement.addEventListener('touchmove', X, !1),
+        s.domElement.addEventListener('keydown', $, !1),
+        -1 === s.domElement.tabIndex && (s.domElement.tabIndex = 0),
+        this.update()
+    }
+  ;(OrbitControls.prototype = Object.create(THREE.EventDispatcher.prototype)),
+    (OrbitControls.prototype.constructor = OrbitControls)
+  var MapControls = function (e, t) {
+    OrbitControls.call(this, e, t),
+      (this.mouseButtons.LEFT = THREE.MOUSE.PAN),
+      (this.mouseButtons.RIGHT = THREE.MOUSE.ROTATE),
+      (this.touches.ONE = THREE.TOUCH.PAN),
+      (this.touches.TWO = THREE.TOUCH.DOLLY_ROTATE)
+  }
+  ;(MapControls.prototype = Object.create(THREE.EventDispatcher.prototype)),
+    (MapControls.prototype.constructor = MapControls)
+  /**
+   * postprocessing v6.21.1 build Mon Mar 08 2021
+   * https://github.com/vanruesc/postprocessing
+   * Copyright 2021 Raoul van RÃ¼schen
+   * @license Zlib
+   */
+  var ColorChannel = { RED: 0, GREEN: 1, BLUE: 2, ALPHA: 3 },
     shader_default2 =
       'varying vec2 vUv;void main(){vUv=position.xy*0.5+0.5;gl_Position=vec4(position.xy,1.0,1.0);}',
     shader_default3 =
@@ -13281,21 +13672,21 @@ export function speRuntimeFactory (exports) {
         let i = 0,
           r = 0
         for (let n = 0; n < 80; ++n) {
-          const o = 2.39996323 * n,
-            a = Math.sqrt(n) / Math.sqrt(80),
-            s = a * Math.cos(o),
-            l = a * Math.sin(o)
+          const a = 2.39996323 * n,
+            o = Math.sqrt(n) / Math.sqrt(80),
+            s = o * Math.cos(a),
+            l = o * Math.sin(a)
           n % 5 == 0
             ? ((t[r++] = s), (t[r++] = l))
             : ((e[i++] = s), (e[i++] = l))
         }
         const n = [],
-          o = []
+          a = []
         for (let t = 0; t < 128; )
           n.push(new THREE.Vector4(e[t++], e[t++], e[t++], e[t++]))
         for (let e = 0; e < 32; )
-          o.push(new THREE.Vector4(t[e++], t[e++], t[e++], t[e++]))
-        ;(this.uniforms.kernel64.value = n), (this.uniforms.kernel16.value = o)
+          a.push(new THREE.Vector4(t[e++], t[e++], t[e++], t[e++]))
+        ;(this.uniforms.kernel64.value = n), (this.uniforms.kernel16.value = a)
       }
       setTexelSize(e, t) {
         this.uniforms.texelSize.value.set(e, t)
@@ -13939,32 +14330,32 @@ export function speRuntimeFactory (exports) {
         this.resolution.scale = e
       }
       render(e, t, i, r, n) {
-        const o = this.scene,
-          a = this.camera,
+        const a = this.scene,
+          o = this.camera,
           s = this.renderTargetA,
           l = this.renderTargetB
         let c = this.convolutionMaterial,
-          u = c.uniforms
-        const h = c.getKernel()
+          h = c.uniforms
+        const u = c.getKernel()
         let d,
           f,
           p,
-          v = t
-        for (this.setFullscreenMaterial(c), f = 0, p = h.length - 1; f < p; ++f)
+          m = t
+        for (this.setFullscreenMaterial(c), f = 0, p = u.length - 1; f < p; ++f)
           (d = 0 == (1 & f) ? s : l),
-            (u.kernel.value = h[f]),
-            (u.inputBuffer.value = v.texture),
+            (h.kernel.value = u[f]),
+            (h.inputBuffer.value = m.texture),
             e.setRenderTarget(d),
-            e.render(o, a),
-            (v = d)
+            e.render(a, o),
+            (m = d)
         this.dithering &&
           ((c = this.ditheredConvolutionMaterial),
-          (u = c.uniforms),
+          (h = c.uniforms),
           this.setFullscreenMaterial(c)),
-          (u.kernel.value = h[f]),
-          (u.inputBuffer.value = v.texture),
+          (h.kernel.value = u[f]),
+          (h.inputBuffer.value = m.texture),
           e.setRenderTarget(this.renderToScreen ? null : i),
-          e.render(o, a)
+          e.render(a, o)
       }
       setSize(e, t) {
         const i = this.resolution
@@ -13994,8 +14385,8 @@ export function speRuntimeFactory (exports) {
         super('ClearMaskPass', null, null), (this.needsSwap = !1)
       }
       render(e, t, i, r, n) {
-        const o = e.state.buffers.stencil
-        o.setLocked(!1), o.setTest(!1)
+        const a = e.state.buffers.stencil
+        a.setLocked(!1), a.setTest(!1)
       }
     },
     color = new THREE.Color(),
@@ -14010,14 +14401,14 @@ export function speRuntimeFactory (exports) {
           (this.overrideClearAlpha = -1)
       }
       render(e, t, i, r, n) {
-        const o = this.overrideClearColor,
-          a = this.overrideClearAlpha,
+        const a = this.overrideClearColor,
+          o = this.overrideClearAlpha,
           s = e.getClearAlpha(),
-          l = null !== o,
-          c = a >= 0
+          l = null !== a,
+          c = o >= 0
         l
-          ? (color.copy(e.getClearColor(color)), e.setClearColor(o, c ? a : s))
-          : c && e.setClearAlpha(a),
+          ? (color.copy(e.getClearColor(color)), e.setClearColor(a, c ? o : s))
+          : c && e.setClearAlpha(o),
           e.setRenderTarget(this.renderToScreen ? null : t),
           e.clear(this.color, this.depth, this.stencil),
           l ? e.setClearColor(color, s) : c && e.setClearAlpha(s)
@@ -14152,18 +14543,18 @@ export function speRuntimeFactory (exports) {
         return this.clearPass
       }
       render(e, t, i, r, n) {
-        const o = this.scene,
-          a = this.camera,
-          s = o.background,
+        const a = this.scene,
+          o = this.camera,
+          s = a.background,
           l = this.renderToScreen ? null : t
         this.clear &&
-          (null !== this.clearPass.overrideClearColor && (o.background = null),
+          (null !== this.clearPass.overrideClearColor && (a.background = null),
           this.clearPass.render(e, t)),
           e.setRenderTarget(l),
           null !== this.overrideMaterialManager
-            ? this.overrideMaterialManager.render(e, o, a)
-            : e.render(o, a),
-          o.background !== s && (o.background = s)
+            ? this.overrideMaterialManager.render(e, a, o)
+            : e.render(a, o),
+          a.background !== s && (a.background = s)
       }
     },
     DepthPass = class extends Pass {
@@ -14174,7 +14565,7 @@ export function speRuntimeFactory (exports) {
           resolutionScale: i = 1,
           width: r = Resizer.AUTO_SIZE,
           height: n = Resizer.AUTO_SIZE,
-          renderTarget: o
+          renderTarget: a
         } = {}
       ) {
         super('DepthPass'),
@@ -14186,10 +14577,10 @@ export function speRuntimeFactory (exports) {
               depthPacking: THREE.RGBADepthPacking
             })
           ))
-        const a = this.renderPass.getClearPass()
-        ;(a.overrideClearColor = new THREE.Color(16777215)),
-          (a.overrideClearAlpha = 1),
-          (this.renderTarget = o),
+        const o = this.renderPass.getClearPass()
+        ;(o.overrideClearColor = new THREE.Color(16777215)),
+          (o.overrideClearAlpha = 1),
+          (this.renderTarget = a),
           void 0 === this.renderTarget &&
             ((this.renderTarget = new THREE.WebGLRenderTarget(1, 1, {
               minFilter: THREE.NearestFilter,
@@ -14210,8 +14601,8 @@ export function speRuntimeFactory (exports) {
           this.setSize(this.resolution.base.x, this.resolution.base.y)
       }
       render(e, t, i, r, n) {
-        const o = this.renderToScreen ? null : this.renderTarget
-        this.renderPass.render(e, o)
+        const a = this.renderToScreen ? null : this.renderTarget
+        this.renderPass.render(e, a)
       }
       setSize(e, t) {
         const i = this.resolution
@@ -14320,8 +14711,8 @@ export function speRuntimeFactory (exports) {
           attributes: i = EffectAttribute.NONE,
           blendFunction: r = BlendFunction.SCREEN,
           defines: n = new Map(),
-          uniforms: o = new Map(),
-          extensions: a = null,
+          uniforms: a = new Map(),
+          extensions: o = null,
           vertexShader: s = null
         } = {}
       ) {
@@ -14331,8 +14722,8 @@ export function speRuntimeFactory (exports) {
           (this.fragmentShader = t),
           (this.vertexShader = s),
           (this.defines = n),
-          (this.uniforms = o),
-          (this.extensions = a),
+          (this.uniforms = a),
+          (this.extensions = o),
           (this.blendMode = new BlendMode(r)),
           this.blendMode.addEventListener('change', (e) => this.setChanged())
       }
@@ -14380,58 +14771,58 @@ export function speRuntimeFactory (exports) {
   }
   function prefixSubstrings(e, t, i) {
     let r, n
-    for (const o of t) {
-      ;(r = '$1' + e + o.charAt(0).toUpperCase() + o.slice(1)),
-        (n = new RegExp('([^\\.])(\\b' + o + '\\b)', 'g'))
+    for (const a of t) {
+      ;(r = '$1' + e + a.charAt(0).toUpperCase() + a.slice(1)),
+        (n = new RegExp('([^\\.])(\\b' + a + '\\b)', 'g'))
       for (const e of i.entries())
         null !== e[1] && i.set(e[0], e[1].replace(n, r))
     }
   }
-  function integrateEffect(e, t, i, r, n, o, a) {
+  function integrateEffect(e, t, i, r, n, a, o) {
     const s = /(?:\w+\s+(\w+)\([\w\s,]*\)\s*{[^}]+})/g,
       l = /(?:varying\s+\w+\s+(\w*))/g,
       c = t.blendMode,
-      u = new Map([
+      h = new Map([
         ['fragment', t.getFragmentShader()],
         ['vertex', t.getVertexShader()]
       ]),
-      h = void 0 !== u.get('fragment') && /mainImage/.test(u.get('fragment')),
-      d = void 0 !== u.get('fragment') && /mainUv/.test(u.get('fragment'))
+      u = void 0 !== h.get('fragment') && /mainImage/.test(h.get('fragment')),
+      d = void 0 !== h.get('fragment') && /mainUv/.test(h.get('fragment'))
     let f = [],
       p = [],
-      v = !1,
-      m = !1
-    if (void 0 === u.get('fragment'))
+      m = !1,
+      g = !1
+    if (void 0 === h.get('fragment'))
       console.error('Missing fragment shader', t)
-    else if (d && 0 != (a & EffectAttribute.CONVOLUTION))
+    else if (d && 0 != (o & EffectAttribute.CONVOLUTION))
       console.error(
         'Effects that transform UV coordinates are incompatible with convolution effects',
         t
       )
-    else if (h || d) {
+    else if (u || d) {
       if (
         (d &&
           (i.set(
             Section.FRAGMENT_MAIN_UV,
             i.get(Section.FRAGMENT_MAIN_UV) + '\t' + e + 'MainUv(UV);\n'
           ),
-          (v = !0)),
-        null !== u.get('vertex') && /mainSupport/.test(u.get('vertex')))
+          (m = !0)),
+        null !== h.get('vertex') && /mainSupport/.test(h.get('vertex')))
       ) {
         let t = '\t' + e + 'MainSupport('
-        ;/mainSupport *\([\w\s]*?uv\s*?\)/.test(u.get('vertex')) &&
+        ;/mainSupport *\([\w\s]*?uv\s*?\)/.test(h.get('vertex')) &&
           (t += 'vUv'),
           (t += ');\n'),
           i.set(
             Section.VERTEX_MAIN_SUPPORT,
             i.get(Section.VERTEX_MAIN_SUPPORT) + t
           ),
-          (f = f.concat(findSubstrings(l, u.get('vertex')))),
-          (p = p.concat(f).concat(findSubstrings(s, u.get('vertex'))))
+          (f = f.concat(findSubstrings(l, h.get('vertex')))),
+          (p = p.concat(f).concat(findSubstrings(s, h.get('vertex'))))
       }
       if (
         ((p = p
-          .concat(findSubstrings(s, u.get('fragment')))
+          .concat(findSubstrings(s, h.get('fragment')))
           .concat(
             Array.from(t.defines.keys()).map((e) =>
               e.replace(/\([\w\s,]*\)/g, '')
@@ -14439,24 +14830,24 @@ export function speRuntimeFactory (exports) {
           )
           .concat(Array.from(t.uniforms.keys()))),
         t.uniforms.forEach((t, i) =>
-          o.set(e + i.charAt(0).toUpperCase() + i.slice(1), t)
+          a.set(e + i.charAt(0).toUpperCase() + i.slice(1), t)
         ),
         t.defines.forEach((t, i) =>
           n.set(e + i.charAt(0).toUpperCase() + i.slice(1), t)
         ),
         prefixSubstrings(e, p, n),
-        prefixSubstrings(e, p, u),
+        prefixSubstrings(e, p, h),
         r.set(c.blendFunction, c),
-        h)
+        u)
       ) {
         const t = /MainImage *\([\w\s,]*?depth[\w\s,]*?\)/
         let r = e + 'MainImage(color0, UV, '
-        0 != (a & EffectAttribute.DEPTH) &&
-          t.test(u.get('fragment')) &&
-          ((r += 'depth, '), (m = !0)),
+        0 != (o & EffectAttribute.DEPTH) &&
+          t.test(h.get('fragment')) &&
+          ((r += 'depth, '), (g = !0)),
           (r += 'color1);\n\t')
         const n = e + 'BlendOpacity'
-        o.set(n, c.opacity),
+        a.set(n, c.opacity),
           (r +=
             'color0 = blend' +
             c.getBlendFunction() +
@@ -14474,19 +14865,19 @@ export function speRuntimeFactory (exports) {
       }
       i.set(
         Section.FRAGMENT_HEAD,
-        i.get(Section.FRAGMENT_HEAD) + u.get('fragment') + '\n'
+        i.get(Section.FRAGMENT_HEAD) + h.get('fragment') + '\n'
       ),
-        null !== u.get('vertex') &&
+        null !== h.get('vertex') &&
           i.set(
             Section.VERTEX_HEAD,
-            i.get(Section.VERTEX_HEAD) + u.get('vertex') + '\n'
+            i.get(Section.VERTEX_HEAD) + h.get('vertex') + '\n'
           )
     } else
       console.error(
         'The fragment shader contains neither a mainImage nor a mainUv function',
         t
       )
-    return { varyings: f, transformedUv: v, readDepth: m }
+    return { varyings: f, transformedUv: m, readDepth: g }
   }
   var EffectPass = class extends Pass {
       constructor(e, ...t) {
@@ -14549,13 +14940,13 @@ export function speRuntimeFactory (exports) {
           i = new Map(),
           r = new Map(),
           n = new Map(),
-          o = new Set()
-        let a,
+          a = new Set()
+        let o,
           s = 0,
           l = 0,
           c = 0,
-          u = !1,
-          h = !1
+          h = !1,
+          u = !1
         for (const e of this.effects)
           if (e.blendMode.getBlendFunction() === BlendFunction.SKIP)
             c |= e.getAttributes() & EffectAttribute.DEPTH
@@ -14566,13 +14957,13 @@ export function speRuntimeFactory (exports) {
             console.error('Convolution effects cannot be merged', e)
           else if (
             ((c |= e.getAttributes()),
-            (a = integrateEffect('e' + s++, e, t, i, r, n, c)),
-            (l += a.varyings.length),
-            (u = u || a.transformedUv),
-            (h = h || a.readDepth),
+            (o = integrateEffect('e' + s++, e, t, i, r, n, c)),
+            (l += o.varyings.length),
+            (h = h || o.transformedUv),
+            (u = u || o.readDepth),
             null !== e.extensions)
           )
-            for (const t of e.extensions) o.add(t)
+            for (const t of e.extensions) a.add(t)
         for (const r of i.values())
           t.set(
             Section.FRAGMENT_HEAD,
@@ -14581,7 +14972,7 @@ export function speRuntimeFactory (exports) {
               '\n'
           )
         0 != (c & EffectAttribute.DEPTH)
-          ? (h &&
+          ? (u &&
               t.set(
                 Section.FRAGMENT_MAIN_IMAGE,
                 'float depth = readDepth(UV);\n\n\t' +
@@ -14589,7 +14980,7 @@ export function speRuntimeFactory (exports) {
               ),
             (this.needsDepthTexture = null === this.getDepthTexture()))
           : (this.needsDepthTexture = !1),
-          u
+          h
             ? (t.set(
                 Section.FRAGMENT_MAIN_UV,
                 'vec2 transformedUv = vUv;\n' + t.get(Section.FRAGMENT_MAIN_UV)
@@ -14605,9 +14996,9 @@ export function speRuntimeFactory (exports) {
         if (
           (d.setShaderParts(t).setDefines(r).setUniforms(n),
           (d.extensions = {}),
-          o.size > 0)
+          a.size > 0)
         )
-          for (const e of o) d.extensions[e] = !0
+          for (const e of a) d.extensions[e] = !0
         this.needsUpdate = !1
       }
       recompile(e) {
@@ -14624,13 +15015,13 @@ export function speRuntimeFactory (exports) {
         for (const i of this.effects) i.setDepthTexture(e, t)
       }
       render(e, t, i, r, n) {
-        const o = this.getFullscreenMaterial(),
-          a = o.uniforms.time.value + r
+        const a = this.getFullscreenMaterial(),
+          o = a.uniforms.time.value + r
         this.needsUpdate && this.recompile(e)
         for (const i of this.effects) i.update(e, t, r)
         ;(this.skipRendering && !this.renderToScreen) ||
-          ((o.uniforms.inputBuffer.value = t.texture),
-          (o.uniforms.time.value = a <= this.maxTime ? a : this.minTime),
+          ((a.uniforms.inputBuffer.value = t.texture),
+          (a.uniforms.time.value = o <= this.maxTime ? o : this.minTime),
           e.setRenderTarget(this.renderToScreen ? null : i),
           e.render(this.scene, this.camera))
       }
@@ -14707,22 +15098,22 @@ export function speRuntimeFactory (exports) {
         this.clearPass.enabled = e
       }
       render(e, t, i, r, n) {
-        const o = e.getContext(),
-          a = e.state.buffers,
+        const a = e.getContext(),
+          o = e.state.buffers,
           s = this.scene,
           l = this.camera,
           c = this.clearPass,
-          u = this.inverse ? 0 : 1,
-          h = 1 - u
-        a.color.setMask(!1),
-          a.depth.setMask(!1),
-          a.color.setLocked(!0),
-          a.depth.setLocked(!0),
-          a.stencil.setTest(!0),
-          a.stencil.setOp(o.REPLACE, o.REPLACE, o.REPLACE),
-          a.stencil.setFunc(o.ALWAYS, u, 4294967295),
-          a.stencil.setClear(h),
-          a.stencil.setLocked(!0),
+          h = this.inverse ? 0 : 1,
+          u = 1 - h
+        o.color.setMask(!1),
+          o.depth.setMask(!1),
+          o.color.setLocked(!0),
+          o.depth.setLocked(!0),
+          o.stencil.setTest(!0),
+          o.stencil.setOp(a.REPLACE, a.REPLACE, a.REPLACE),
+          o.stencil.setFunc(a.ALWAYS, h, 4294967295),
+          o.stencil.setClear(u),
+          o.stencil.setLocked(!0),
           this.clear &&
             (this.renderToScreen
               ? c.render(e, null)
@@ -14733,12 +15124,12 @@ export function speRuntimeFactory (exports) {
               e.render(s, l),
               e.setRenderTarget(i),
               e.render(s, l)),
-          a.color.setLocked(!1),
-          a.depth.setLocked(!1),
-          a.stencil.setLocked(!1),
-          a.stencil.setFunc(o.EQUAL, 1, 4294967295),
-          a.stencil.setOp(o.KEEP, o.KEEP, o.KEEP),
-          a.stencil.setLocked(!0)
+          o.color.setLocked(!1),
+          o.depth.setLocked(!1),
+          o.stencil.setLocked(!1),
+          o.stencil.setFunc(a.EQUAL, 1, 4294967295),
+          o.stencil.setOp(a.KEEP, a.KEEP, a.KEEP),
+          o.stencil.setLocked(!0)
       }
     },
     ShaderPass = class extends Pass {
@@ -14823,13 +15214,13 @@ export function speRuntimeFactory (exports) {
         if (null !== i && i !== e) {
           const r = i.getSize(new THREE.Vector2()),
             n = e.getSize(new THREE.Vector2()),
-            o = i.domElement.parentNode
+            a = i.domElement.parentNode
           ;(this.renderer = e),
             (this.renderer.autoClear = !1),
             r.equals(n) || this.setSize(),
             t &&
-              null !== o &&
-              (o.removeChild(i.domElement), o.appendChild(e.domElement)),
+              null !== a &&
+              (a.removeChild(i.domElement), a.appendChild(e.domElement)),
             this.enableExtensions()
         }
         return i
@@ -14857,7 +15248,7 @@ export function speRuntimeFactory (exports) {
       }
       createBuffer(e, t, i, r) {
         const n = this.renderer.getDrawingBufferSize(new THREE.Vector2()),
-          o = {
+          a = {
             format:
               this.renderer.getContext().getContextAttributes().alpha ||
               i !== THREE.UnsignedByteType
@@ -14869,26 +15260,26 @@ export function speRuntimeFactory (exports) {
             depthBuffer: e,
             type: i
           },
-          a =
+          o =
             r > 0
-              ? new THREE.WebGLMultisampleRenderTarget(n.width, n.height, o)
-              : new THREE.WebGLRenderTarget(n.width, n.height, o)
+              ? new THREE.WebGLMultisampleRenderTarget(n.width, n.height, a)
+              : new THREE.WebGLRenderTarget(n.width, n.height, a)
         return (
-          r > 0 && (a.samples = r),
-          (a.texture.name = 'EffectComposer.Buffer'),
-          (a.texture.generateMipmaps = !1),
-          a
+          r > 0 && (o.samples = r),
+          (o.texture.name = 'EffectComposer.Buffer'),
+          (o.texture.generateMipmaps = !1),
+          o
         )
       }
       addPass(e, t) {
         const i = this.passes,
           r = this.renderer,
           n = r.getDrawingBufferSize(new THREE.Vector2()),
-          o = r.getContext().getContextAttributes().alpha,
-          a = this.inputBuffer.texture.type
+          a = r.getContext().getContextAttributes().alpha,
+          o = this.inputBuffer.texture.type
         if (
           (e.setSize(n.width, n.height),
-          e.initialize(r, o, a),
+          e.initialize(r, a, o),
           this.autoRenderToScreen &&
             (i.length > 0 && (i[i.length - 1].renderToScreen = !1),
             e.renderToScreen && (this.autoRenderToScreen = !1)),
@@ -14930,24 +15321,24 @@ export function speRuntimeFactory (exports) {
           i = this.copyPass
         let r,
           n,
-          o,
-          a = this.inputBuffer,
+          a,
+          o = this.inputBuffer,
           s = this.outputBuffer,
           l = !1
         for (const c of this.passes)
           c.enabled &&
-            (c.render(t, a, s, e, l),
+            (c.render(t, o, s, e, l),
             c.needsSwap &&
               (l &&
                 ((i.renderToScreen = c.renderToScreen),
                 (r = t.getContext()),
                 (n = t.state.buffers.stencil),
                 n.setFunc(r.NOTEQUAL, 1, 4294967295),
-                i.render(t, a, s, e, l),
+                i.render(t, o, s, e, l),
                 n.setFunc(r.EQUAL, 1, 4294967295)),
-              (o = a),
-              (a = s),
-              (s = o)),
+              (a = o),
+              (o = s),
+              (s = a)),
             c instanceof MaskPass
               ? (l = !0)
               : c instanceof ClearMaskPass && (l = !1))
@@ -14984,8 +15375,8 @@ export function speRuntimeFactory (exports) {
         luminanceSmoothing: i = 0.025,
         resolutionScale: r = 0.5,
         intensity: n = 1,
-        width: o = Resizer.AUTO_SIZE,
-        height: a = Resizer.AUTO_SIZE,
+        width: a = Resizer.AUTO_SIZE,
+        height: o = Resizer.AUTO_SIZE,
         kernelSize: s = KernelSize.LARGE
       } = {}) {
         super('BloomEffect', shader_default46, {
@@ -15006,8 +15397,8 @@ export function speRuntimeFactory (exports) {
           (this.uniforms.get('texture').value = this.renderTarget.texture),
           (this.blurPass = new BlurPass({
             resolutionScale: r,
-            width: o,
-            height: a,
+            width: a,
+            height: o,
             kernelSize: s
           })),
           (this.blurPass.resolution.resizable = this),
@@ -15160,8 +15551,8 @@ export function speRuntimeFactory (exports) {
           focusDistance: i = 0,
           focalLength: r = 0.1,
           bokehScale: n = 1,
-          width: o = Resizer.AUTO_SIZE,
-          height: a = Resizer.AUTO_SIZE
+          width: a = Resizer.AUTO_SIZE,
+          height: o = Resizer.AUTO_SIZE
         } = {}
       ) {
         super('DepthOfFieldEffect', shader_default54, {
@@ -15205,8 +15596,8 @@ export function speRuntimeFactory (exports) {
         ;(s.uniforms.focusDistance.value = i),
           (s.uniforms.focalLength.value = r),
           (this.blurPass = new BlurPass({
-            width: o,
-            height: a,
+            width: a,
+            height: o,
             kernelSize: KernelSize.MEDIUM
           })),
           (this.blurPass.resolution.resizable = this),
@@ -15259,28 +15650,28 @@ export function speRuntimeFactory (exports) {
       update(e, t, i) {
         const r = this.renderTarget,
           n = this.renderTargetCoC,
-          o = this.renderTargetCoCBlurred,
-          a = this.renderTargetMasked,
+          a = this.renderTargetCoCBlurred,
+          o = this.renderTargetMasked,
           s = this.bokehFarBasePass,
           l = this.bokehFarFillPass,
           c = s.getFullscreenMaterial().uniforms,
-          u = l.getFullscreenMaterial().uniforms,
-          h = this.bokehNearBasePass,
+          h = l.getFullscreenMaterial().uniforms,
+          u = this.bokehNearBasePass,
           d = this.bokehNearFillPass,
-          f = h.getFullscreenMaterial().uniforms,
+          f = u.getFullscreenMaterial().uniforms,
           p = d.getFullscreenMaterial().uniforms
         if (null !== this.target) {
           const e = this.calculateFocusDistance(this.target)
           this.circleOfConfusionMaterial.uniforms.focusDistance.value = e
         }
         this.cocPass.render(e, null, n),
-          this.blurPass.render(e, n, o),
-          this.maskPass.render(e, t, a),
-          (c.cocBuffer.value = u.cocBuffer.value = n.texture),
-          s.render(e, a, r),
+          this.blurPass.render(e, n, a),
+          this.maskPass.render(e, t, o),
+          (c.cocBuffer.value = h.cocBuffer.value = n.texture),
+          s.render(e, o, r),
           l.render(e, r, this.renderTargetFar),
-          (f.cocBuffer.value = p.cocBuffer.value = o.texture),
-          h.render(e, t, r),
+          (f.cocBuffer.value = p.cocBuffer.value = a.texture),
+          u.render(e, t, r),
           d.render(e, r, this.renderTargetNear)
       }
       setSize(e, t) {
@@ -15297,20 +15688,20 @@ export function speRuntimeFactory (exports) {
         r.push(this.renderTargetCoC, this.renderTargetMasked),
           r.forEach((i) => i.setSize(e, t))
         const n = i.width,
-          o = i.height
+          a = i.height
         ;(r = [
           this.renderTarget,
           this.renderTargetNear,
           this.renderTargetFar,
           this.renderTargetCoCBlurred
         ]),
-          r.forEach((e) => e.setSize(n, o))
+          r.forEach((e) => e.setSize(n, a))
         ;[
           this.bokehNearBasePass,
           this.bokehNearFillPass,
           this.bokehFarBasePass,
           this.bokehFarFillPass
-        ].forEach((e) => e.getFullscreenMaterial().setTexelSize(1 / n, 1 / o))
+        ].forEach((e) => e.getFullscreenMaterial().setTexelSize(1 / n, 1 / a))
       }
       initialize(e, t, i) {
         ;[
@@ -15455,16 +15846,16 @@ export function speRuntimeFactory (exports) {
           (n.generateMipmaps = !1),
           (n.needsUpdate = !0),
           (n.flipY = !0)
-        const o = new THREE.Texture(t)
-        ;(o.name = 'SMAA.Area'),
-          (o.minFilter = THREE.LinearFilter),
-          (o.format = THREE.RGBAFormat),
-          (o.generateMipmaps = !1),
-          (o.needsUpdate = !0),
-          (o.flipY = !1)
-        const a = this.weightsPass.getFullscreenMaterial()
-        ;(a.uniforms.searchTexture.value = n),
-          (a.uniforms.areaTexture.value = o),
+        const a = new THREE.Texture(t)
+        ;(a.name = 'SMAA.Area'),
+          (a.minFilter = THREE.LinearFilter),
+          (a.format = THREE.RGBAFormat),
+          (a.generateMipmaps = !1),
+          (a.needsUpdate = !0),
+          (a.flipY = !1)
+        const o = this.weightsPass.getFullscreenMaterial()
+        ;(o.uniforms.searchTexture.value = n),
+          (o.uniforms.areaTexture.value = a),
           this.applyPreset(i)
       }
       get edgeDetectionMaterial() {
@@ -15592,26 +15983,26 @@ export function speRuntimeFactory (exports) {
             ((e = arguments[1]), (t = null))
         const i = this.manager,
           r = new THREE.LoadingManager()
-        return new Promise((n, o) => {
-          const a = new Image(),
+        return new Promise((n, a) => {
+          const o = new Image(),
             s = new Image()
           ;(r.onError = (e) => {
             i.itemError(e),
               null !== t
                 ? (t(`Failed to load ${e}`), n())
-                : o(`Failed to load ${e}`)
+                : a(`Failed to load ${e}`)
           }),
             (r.onLoad = () => {
-              const t = [a, s]
+              const t = [o, s]
               e(t), n(t)
             }),
-            a.addEventListener('error', (e) => {
+            o.addEventListener('error', (e) => {
               r.itemError('smaa-search')
             }),
             s.addEventListener('error', (e) => {
               r.itemError('smaa-area')
             }),
-            a.addEventListener('load', () => {
+            o.addEventListener('load', () => {
               i.itemEnd('smaa-search'), r.itemEnd('smaa-search')
             }),
             s.addEventListener('load', () => {
@@ -15621,7 +16012,7 @@ export function speRuntimeFactory (exports) {
             i.itemStart('smaa-area'),
             r.itemStart('smaa-search'),
             r.itemStart('smaa-area'),
-            (a.src = searchImageDataURL_default),
+            (o.src = searchImageDataURL_default),
             (s.src = areaImageDataURL_default)
         })
       }
@@ -15698,8 +16089,8 @@ export function speRuntimeFactory (exports) {
             r = Object.getPrototypeOf(this),
             n = Object.getOwnPropertyNames(r)
           try {
-            for (var o = __values(n), a = o.next(); !a.done; a = o.next()) {
-              var s = a.value,
+            for (var a = __values(n), o = a.next(); !o.done; o = a.next()) {
+              var s = o.value,
                 l = Object.getOwnPropertyDescriptor(r, s)
               l && 'function' == typeof l.get && (i[s] = this[s])
             }
@@ -15707,7 +16098,7 @@ export function speRuntimeFactory (exports) {
             e = { error: t }
           } finally {
             try {
-              a && !a.done && (t = o.return) && t.call(o)
+              o && !o.done && (t = a.return) && t.call(a)
             } finally {
               if (e) throw e.error
             }
@@ -16112,6 +16503,7 @@ export function speRuntimeFactory (exports) {
         var t = e.call(this) || this
         return (
           (t.objectType = 'Scene'),
+          (t.postprocessing = new Post()),
           (t.alpha = 1),
           (t.backupFog = new THREE.Fog(16777215, 100, 1e3)),
           (t.fogUseBGColor = !1),
@@ -16179,8 +16571,7 @@ export function speRuntimeFactory (exports) {
             (this.directionalLight.name = 'Default Directional Light'),
             this.directionalLight.position.set(85e4, 13e5, 1e6),
             (this.activeCamera = this.camera),
-            this.activeCamera.add(this.directionalLight),
-            (this.postprocessing = new Post())
+            this.activeCamera.add(this.directionalLight)
         }),
         (t.prototype.initFromObjectLoader = function (e) {
           var t = this
@@ -16209,12 +16600,12 @@ export function speRuntimeFactory (exports) {
         (t.prototype.raycast = function (e) {
           var t = [],
             i = function (r) {
-              var n, o
+              var n, a
               try {
                 for (
-                  var a = __values(r.children), s = a.next();
+                  var o = __values(r.children), s = o.next();
                   !s.done;
-                  s = a.next()
+                  s = o.next()
                 ) {
                   var l = s.value
                   isEntity$1(l) &&
@@ -16229,7 +16620,7 @@ export function speRuntimeFactory (exports) {
                 n = { error: e }
               } finally {
                 try {
-                  s && !s.done && (o = a.return) && o.call(a)
+                  s && !s.done && (a = o.return) && a.call(o)
                 } finally {
                   if (n) throw n.error
                 }
@@ -16245,8 +16636,8 @@ export function speRuntimeFactory (exports) {
               !n.done;
               n = r.next()
             ) {
-              var o = n.value
-              isEntity$1(o) && this.camera !== o && o.traverseEntity(e)
+              var a = n.value
+              isEntity$1(a) && this.camera !== a && a.traverseEntity(e)
             }
           } catch (e) {
             t = { error: e }
@@ -16262,65 +16653,68 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n,
-            o,
             a,
-            s = e.prototype.toJSON.call(this, t),
-            l = s.object
+            o,
+            s,
+            l = e.prototype.toJSON.call(this, t),
+            c = l.object
           return (
-            (l.objectType = 'Scene'),
-            (l.activeCamera =
+            (c.objectType = 'Scene'),
+            (c.activeCamera =
               null === (i = this.activeCamera) || void 0 === i
                 ? void 0
                 : i.uuid),
-            (l.camera =
+            (c.camera =
               null === (r = this.camera) || void 0 === r ? void 0 : r.uuid),
-            (l.directionalLight =
+            (c.directionalLight =
               null === (n = this.directionalLight) || void 0 === n
                 ? void 0
                 : n.uuid),
-            (l.ambientLight =
-              null === (o = this.ambientLight) || void 0 === o
+            (c.ambientLight =
+              null === (a = this.ambientLight) || void 0 === a
                 ? void 0
-                : o.uuid),
-            (l.color = this.color.toArray()),
-            (l.alpha = this.alpha),
+                : a.uuid),
+            (c.color = this.color.toArray()),
+            (c.alpha = this.alpha),
             null !== this.background &&
               'toJSON' in this.background &&
-              (l.background = this.background.toJSON(t)),
+              (c.background = this.background.toJSON(t)),
             null !== this.environment &&
-              (l.environment = this.environment.toJSON(t)),
-            null !== this.fog && (l.fog = this.fog.toJSON()),
-            !0 === this.enableFog && (l.enableFog = !0),
-            !0 === this.fogUseBGColor && (l.fogUseBGColor = !0),
-            !0 === this.directionalLightState && (l.directionalLightState = !0),
-            !0 === this.ambientLightState && (l.ambientLightState = !0),
-            !0 === this.wireframeState && (l.wireframeState = !0),
-            (l.canvas = {
+              (c.environment = this.environment.toJSON(t)),
+            null !== this.fog && (c.fog = this.fog.toJSON()),
+            !0 === this.enableFog && (c.enableFog = !0),
+            !0 === this.fogUseBGColor && (c.fogUseBGColor = !0),
+            !0 === this.directionalLightState && (c.directionalLightState = !0),
+            !0 === this.ambientLightState && (c.ambientLightState = !0),
+            !0 === this.wireframeState && (c.wireframeState = !0),
+            (c.canvas = {
               mode: this.canvas.mode,
               size: {
                 width: this.canvas.size.width,
                 height: this.canvas.size.height
               }
             }),
-            !0 === this.canvas.fullScreen && (l.canvas.fullScreen = !0),
-            (l.postprocessing =
-              null === (a = this.postprocessing) || void 0 === a
-                ? void 0
-                : a.toJSON()),
-            s
+            !0 === this.canvas.fullScreen && (c.canvas.fullScreen = !0),
+            (null === (o = this.postprocessing) || void 0 === o
+              ? void 0
+              : o.enabled) &&
+              (c.postprocessing =
+                null === (s = this.postprocessing) || void 0 === s
+                  ? void 0
+                  : s.toJSON()),
+            l
           )
         }),
         (t.prototype.fromJSON = function (t) {
-          var i, r, n, o, a, s
+          var i, r, n, a, o, s
           return (
             e.prototype.fromJSON.call(this, t),
-            (this.postprocessing = new Post()),
             this.color.fromArray(t.color),
             (this.alpha = t.alpha),
             void 0 !== t.background &&
               Number.isInteger(t.background) &&
               (t.background = new THREE.Color(t.background)),
-            this.postprocessing.fromJSON(t.postprocessing),
+            t.postprocessing && this.postprocessing.fromJSON(t.postprocessing),
             void 0 !== t.fog &&
               ('Fog' === t.fog.type
                 ? (this.backupFog = new THREE.Fog(
@@ -16339,9 +16733,9 @@ export function speRuntimeFactory (exports) {
             (this.directionalLightState =
               null !== (n = t.directionalLightState) && void 0 !== n && n),
             (this.ambientLightState =
-              null !== (o = t.ambientLightState) && void 0 !== o && o),
+              null !== (a = t.ambientLightState) && void 0 !== a && a),
             (this.wireframeState =
-              null !== (a = t.wireframeState) && void 0 !== a && a),
+              null !== (o = t.wireframeState) && void 0 !== o && o),
             (this.canvas.mode = t.canvas.mode),
             (this.canvas.fullScreen =
               null !== (s = t.canvas.fullScreen) && void 0 !== s && s),
@@ -16355,294 +16749,6 @@ export function speRuntimeFactory (exports) {
         t
       )
     })(Object3DMixin(THREE.Scene)),
-    normal = new THREE.Vector3(0, 0, 1),
-    worldNormal = new THREE.Vector3(),
-    coplanarPoint = new THREE.Vector3(),
-    normalMatrix = new THREE.Matrix3(),
-    VectorObject = (function (e) {
-      function t(t, i) {
-        var r
-        void 0 === t && (t = VectorGeometry.create({})),
-          void 0 === i && (i = new BasicMaterial({ side: THREE.DoubleSide }))
-        var n = e.call(this, t, i) || this
-        return (
-          (n.recursiveSelection = !1),
-          (n.objectType = 'VectorObject'),
-          (n.eventDispatcher = new THREE.EventDispatcher()),
-          (n._onShapeUpdate = function () {
-            if (
-              (n.computeSingleBoundingBox(),
-              n.geometry.computeBoundingSphere(),
-              n.geometry.computeBoundingBox(),
-              n.geometry instanceof VectorSurfaceGeometry)
-            ) {
-              if (n.geometry.updateFromShape()) {
-                var e = n.geometry.drawCount,
-                  t = n.geometry.userData
-                n.updateGeometry(
-                  Object.assign(n.geometry.userData, {
-                    parameters: Object.assign(t.parameters, {
-                      surfaceMaxCount: e + 1e3
-                    })
-                  })
-                )
-              }
-            } else n.updateGeometry({})
-          }),
-          (n.castShadow = !0),
-          (n.receiveShadow = !0),
-          (n.forceComputeSize = !0),
-          (n.shape = t.userData.shape),
-          null === (r = n.shape.eventDispatcher) ||
-            void 0 === r ||
-            r.addEventListener('update', n._onShapeUpdate),
-          n
-        )
-      }
-      return (
-        __extends(t, e),
-        (t.prototype.toJSON = function (t) {
-          var i = e.prototype.toJSON.call(this, t)
-          return (i.object.objectType = 'VectorObject'), i
-        }),
-        (t.prototype.setHelperVisibility = function () {}),
-        (t.prototype.updateGeometry = function (t) {
-          if (
-            (e.prototype.updateGeometry.call(this, t),
-            'userData' in this.geometry)
-          ) {
-            var i = this.geometry.userData.parameters
-            this.eventDispatcher.dispatchEvent({
-              type: 'geometryUpdate',
-              parameters: i
-            })
-          }
-        }),
-        (t.prototype.updateWorldMatrix = function (t, i) {
-          e.prototype.updateWorldMatrix.call(this, t, i),
-            normalMatrix.getNormalMatrix(this.matrixWorld),
-            worldNormal.copy(normal).applyMatrix3(normalMatrix).normalize(),
-            this.getWorldPosition(coplanarPoint),
-            this.shape.plane.setFromNormalAndCoplanarPoint(
-              worldNormal,
-              coplanarPoint
-            )
-        }),
-        (t.prototype.clone = function (e) {
-          var i = this.shape.clone(),
-            r = this.material.clone(),
-            n = this.geometry.userData,
-            o = new t(
-              VectorGeometry.create(Object.assign({}, n, { shape: i })),
-              r
-            ).copy(this, e)
-          return i.update(), o
-        }),
-        (t.prototype.raycast = function (e, t) {
-          AbstractMesh.prototype.raycast.call(this, e, t)
-        }),
-        t
-      )
-    })(AbstractMesh),
-    Char3D = (function (e) {
-      function t(i, r) {
-        var n = i.char,
-          o = i.originalChar,
-          a = i.fontFamily,
-          s = i.letterSpacing,
-          l = i.fontSize,
-          c = i.LOD,
-          u = void 0 === c ? 16 : c
-        void 0 === r &&
-          (r = new THREE.MeshBasicMaterial({
-            color: 0,
-            opacity: 1,
-            visible: !0,
-            transparent: !0,
-            side: THREE.DoubleSide
-          }))
-        var h = this,
-          d = t.loadChar(n, a, u)
-        return (
-          ((h = e.call(this, d.geometry, r) || this).char = n),
-          (h.originalChar = null != o ? o : n),
-          (h.fontFamily = a),
-          (h.letterSpacing = s),
-          (h.fontSize = l),
-          (h.LOD = u),
-          (h.resolution = d.resolution),
-          (h.glyphsHa = d.glyphsHa),
-          (h.localPosition = new THREE.Vector2()),
-          (h.charSize = 0),
-          (h.geometry.userData = {
-            type: 'CharacterGeometry',
-            parameters: {
-              char: h.char,
-              fontFamily: h.fontFamily,
-              letterSpacing: h.letterSpacing,
-              fontSize: h.fontSize,
-              lod: h.LOD,
-              resolution: h.resolution,
-              charSize: h.charSize,
-              localPosition: h.localPosition
-            }
-          }),
-          h.updateFontSize(h.fontSize),
-          h
-        )
-      }
-      return (
-        __extends(t, e),
-        Object.defineProperty(t, 'FONTS_PATH', {
-          get: function () {
-            return '_assets/_fonts/'
-          },
-          enumerable: !1,
-          configurable: !0
-        }),
-        (t.prototype.updatePosition = function (e, t) {
-          this.localPosition.copy(e)
-          var i = new THREE.Vector3(
-            this.localPosition.x,
-            -this.localPosition.y,
-            0
-          )
-          this.position.copy(i).add(t)
-        }),
-        (t.prototype.updateFontSize = function (e) {
-          var t = e / this.resolution
-          ;(this.fontSize = e),
-            this.scale.set(this.fontSize, this.fontSize, 1),
-            (this.charSize = this.glyphsHa * t * this.letterSpacing)
-        }),
-        (t.prototype.updateFontFamily = function (e) {
-          if (this.fontFamily !== e) {
-            this.fontFamily = e
-            var i = t.loadChar(this.char, e, this.LOD)
-            ;(this.geometry = i.geometry),
-              (this.resolution = i.resolution),
-              (this.glyphsHa = i.glyphsHa),
-              (this.geometry.userData = {
-                type: 'CharacterGeometry',
-                parameters: {
-                  char: this.char,
-                  fontFamily: this.fontFamily,
-                  letterSpacing: this.letterSpacing,
-                  fontSize: this.fontSize,
-                  lod: this.LOD,
-                  resolution: this.resolution,
-                  charSize: this.charSize,
-                  localPosition: this.localPosition
-                }
-              }),
-              this.updateFontSize(this.fontSize)
-          }
-        }),
-        (t.prototype.updateChar = function (e) {
-          if (this.char !== e) {
-            this.char = e
-            var i = t.loadChar(e, this.fontFamily, this.LOD)
-            ;(this.geometry = i.geometry),
-              (this.resolution = i.resolution),
-              (this.glyphsHa = i.glyphsHa),
-              (this.geometry.userData = {
-                type: 'CharacterGeometry',
-                parameters: {
-                  char: this.char,
-                  fontFamily: this.fontFamily,
-                  letterSpacing: this.letterSpacing,
-                  fontSize: this.fontSize,
-                  lod: this.LOD,
-                  resolution: this.resolution,
-                  charSize: this.charSize,
-                  localPosition: this.localPosition
-                }
-              }),
-              this.updateFontSize(this.fontSize)
-          }
-        }),
-        (t.prototype.updateLetterSpacing = function (e) {
-          this.letterSpacing !== e &&
-            ((this.letterSpacing = e), this.updateFontSize(this.fontSize))
-        }),
-        (t.prototype.updateLOD = function (e) {
-          if (this.LOD !== e) {
-            this.LOD = e
-            var i = t.loadChar(this.char, this.fontFamily, this.LOD)
-            ;(this.geometry = i.geometry),
-              (this.resolution = i.resolution),
-              (this.glyphsHa = i.glyphsHa),
-              (this.geometry.userData = {
-                type: 'CharacterGeometry',
-                parameters: {
-                  char: this.char,
-                  fontFamily: this.fontFamily,
-                  letterSpacing: this.letterSpacing,
-                  fontSize: this.fontSize,
-                  lod: this.LOD,
-                  resolution: this.resolution,
-                  charSize: this.charSize,
-                  localPosition: this.localPosition
-                }
-              }),
-              this.updateFontSize(this.fontSize)
-          }
-        }),
-        (t.prototype.clone = function () {
-          return new t({
-            char: this.char,
-            originalChar: this.originalChar,
-            fontFamily: this.fontFamily,
-            letterSpacing: this.letterSpacing,
-            fontSize: this.fontSize,
-            LOD: this.LOD
-          }).copy(this)
-        }),
-        (t.loadFont = function (e) {
-          return new Promise(function (i, r) {
-            t.fontCache[e]
-              ? i(t.fontCache[e])
-              : new THREE.FontLoader().load(
-                  t.FONTS_PATH + e + '.json',
-                  function (r) {
-                    ;(t.fontCache[e] = r), i(r)
-                  },
-                  void 0,
-                  r
-                )
-          })
-        }),
-        (t.loadChar = function (e, i, r) {
-          if (t.charCache[e]) {
-            if (t.charCache[e][r] && t.charCache[e][r].fontFamily === i)
-              return t.charCache[e][r]
-          } else t.charCache[e] = {}
-          var n = t.fontCache[i],
-            o = n.generateShapes(e, 1)
-          return (
-            (t.charCache[e][r] = {
-              geometry: new THREE.ShapeBufferGeometry(o, r),
-              fontFamily: i,
-              resolution: n.data.resolution,
-              glyphsHa: n.data.glyphs[e].ha
-            }),
-            t.charCache[e][r]
-          )
-        }),
-        (t.charCache = {}),
-        (t.fontCache = {}),
-        t
-      )
-    })(THREE.Mesh),
-    DIACRITICS
-  !(function (e) {
-    ;(e.ACUTE = 'Â´'),
-      (e.GRAVE = '`'),
-      (e.CIRCUMFLEX = '^'),
-      (e.DIAERESIS = 'Â¨'),
-      (e.TILDE = '~')
-  })(DIACRITICS || (DIACRITICS = {}))
-  var DIACRITICS_VALUES = Object.values(DIACRITICS),
     TEXT_TRANSFORM,
     VERTICAL_ALIGN,
     HORIZONTAL_ALIGN,
@@ -16870,11 +16976,11 @@ export function speRuntimeFactory (exports) {
           else {
             var r = this.countSpaces()
             if (0 !== r)
-              for (var n = e / r, o = 0, a = 0; a < this.message.length; a++)
-                ' ' === this.message[a].char && (o += n),
-                  TEMPV2.set(o, i),
-                  this.message[a].updatePosition(
-                    this.message[a].localPosition.add(TEMPV2),
+              for (var n = e / r, a = 0, o = 0; o < this.message.length; o++)
+                ' ' === this.message[o].char && (a += n),
+                  TEMPV2.set(a, i),
+                  this.message[o].updatePosition(
+                    this.message[o].localPosition.add(TEMPV2),
                     t
                   )
             else this.offsetCharacters(t, 0, i)
@@ -16892,6 +16998,196 @@ export function speRuntimeFactory (exports) {
         e
       )
     })(),
+    Char3D = (function (e) {
+      function t(i, r) {
+        var n = i.char,
+          a = i.originalChar,
+          o = i.fontFamily,
+          s = i.letterSpacing,
+          l = i.fontSize,
+          c = i.LOD,
+          h = void 0 === c ? 16 : c
+        void 0 === r &&
+          (r = new THREE.MeshBasicMaterial({
+            color: 0,
+            opacity: 1,
+            visible: !0,
+            transparent: !0,
+            side: THREE.DoubleSide
+          }))
+        var u = this,
+          d = t.loadChar(n, o, h)
+        return (
+          ((u = e.call(this, d.geometry, r) || this).char = n),
+          (u.originalChar = null != a ? a : n),
+          (u.fontFamily = o),
+          (u.letterSpacing = s),
+          (u.fontSize = l),
+          (u.LOD = h),
+          (u.resolution = d.resolution),
+          (u.glyphsHa = d.glyphsHa),
+          (u.localPosition = new THREE.Vector2()),
+          (u.charSize = 0),
+          (u.geometry.userData = {
+            type: 'CharacterGeometry',
+            parameters: {
+              char: u.char,
+              fontFamily: u.fontFamily,
+              letterSpacing: u.letterSpacing,
+              fontSize: u.fontSize,
+              lod: u.LOD,
+              resolution: u.resolution,
+              charSize: u.charSize,
+              localPosition: u.localPosition
+            }
+          }),
+          u.updateFontSize(u.fontSize),
+          u
+        )
+      }
+      return (
+        __extends(t, e),
+        Object.defineProperty(t, 'FONTS_PATH', {
+          get: function () {
+            return '_assets/_fonts/'
+          },
+          enumerable: !1,
+          configurable: !0
+        }),
+        (t.prototype.updatePosition = function (e, t) {
+          this.localPosition.copy(e)
+          var i = new THREE.Vector3(
+            this.localPosition.x,
+            -this.localPosition.y,
+            0
+          )
+          this.position.copy(i).add(t)
+        }),
+        (t.prototype.updateFontSize = function (e) {
+          var t = e / this.resolution
+          ;(this.fontSize = e),
+            this.scale.set(this.fontSize, this.fontSize, 1),
+            (this.charSize = this.glyphsHa * t * this.letterSpacing)
+        }),
+        (t.prototype.updateFontFamily = function (e) {
+          if (this.fontFamily !== e) {
+            this.fontFamily = e
+            var i = t.loadChar(this.char, e, this.LOD)
+            ;(this.geometry = i.geometry),
+              (this.resolution = i.resolution),
+              (this.glyphsHa = i.glyphsHa),
+              (this.geometry.userData = {
+                type: 'CharacterGeometry',
+                parameters: {
+                  char: this.char,
+                  fontFamily: this.fontFamily,
+                  letterSpacing: this.letterSpacing,
+                  fontSize: this.fontSize,
+                  lod: this.LOD,
+                  resolution: this.resolution,
+                  charSize: this.charSize,
+                  localPosition: this.localPosition
+                }
+              }),
+              this.updateFontSize(this.fontSize)
+          }
+        }),
+        (t.prototype.updateChar = function (e) {
+          if (this.char !== e) {
+            this.char = e
+            var i = t.loadChar(e, this.fontFamily, this.LOD)
+            ;(this.geometry = i.geometry),
+              (this.resolution = i.resolution),
+              (this.glyphsHa = i.glyphsHa),
+              (this.geometry.userData = {
+                type: 'CharacterGeometry',
+                parameters: {
+                  char: this.char,
+                  fontFamily: this.fontFamily,
+                  letterSpacing: this.letterSpacing,
+                  fontSize: this.fontSize,
+                  lod: this.LOD,
+                  resolution: this.resolution,
+                  charSize: this.charSize,
+                  localPosition: this.localPosition
+                }
+              }),
+              this.updateFontSize(this.fontSize)
+          }
+        }),
+        (t.prototype.updateLetterSpacing = function (e) {
+          this.letterSpacing !== e &&
+            ((this.letterSpacing = e), this.updateFontSize(this.fontSize))
+        }),
+        (t.prototype.updateLOD = function (e) {
+          if (this.LOD !== e) {
+            this.LOD = e
+            var i = t.loadChar(this.char, this.fontFamily, this.LOD)
+            ;(this.geometry = i.geometry),
+              (this.resolution = i.resolution),
+              (this.glyphsHa = i.glyphsHa),
+              (this.geometry.userData = {
+                type: 'CharacterGeometry',
+                parameters: {
+                  char: this.char,
+                  fontFamily: this.fontFamily,
+                  letterSpacing: this.letterSpacing,
+                  fontSize: this.fontSize,
+                  lod: this.LOD,
+                  resolution: this.resolution,
+                  charSize: this.charSize,
+                  localPosition: this.localPosition
+                }
+              }),
+              this.updateFontSize(this.fontSize)
+          }
+        }),
+        (t.prototype.clone = function () {
+          return new t({
+            char: this.char,
+            originalChar: this.originalChar,
+            fontFamily: this.fontFamily,
+            letterSpacing: this.letterSpacing,
+            fontSize: this.fontSize,
+            LOD: this.LOD
+          }).copy(this)
+        }),
+        (t.loadFont = function (e) {
+          return new Promise(function (i, r) {
+            t.fontCache[e]
+              ? i(t.fontCache[e])
+              : new THREE.FontLoader().load(
+                  t.FONTS_PATH + e + '.json',
+                  function (r) {
+                    ;(t.fontCache[e] = r), i(r)
+                  },
+                  void 0,
+                  r
+                )
+          })
+        }),
+        (t.loadChar = function (e, i, r) {
+          if (t.charCache[e]) {
+            if (t.charCache[e][r] && t.charCache[e][r].fontFamily === i)
+              return t.charCache[e][r]
+          } else t.charCache[e] = {}
+          var n = t.fontCache[i],
+            a = n.generateShapes(e, 1)
+          return (
+            (t.charCache[e][r] = {
+              geometry: new THREE.ShapeBufferGeometry(a, r),
+              fontFamily: i,
+              resolution: n.data.resolution,
+              glyphsHa: n.data.glyphs[e].ha
+            }),
+            t.charCache[e][r]
+          )
+        }),
+        (t.charCache = {}),
+        (t.fontCache = {}),
+        t
+      )
+    })(THREE.Mesh),
     TextFrame = (function (e) {
       function t(t, i) {
         void 0 === i &&
@@ -16936,10 +17232,10 @@ export function speRuntimeFactory (exports) {
           var r = []
           if ((e.prototype.raycast.call(this, t, r), r.length > 0)) i.push(r[0])
           else
-            for (var n = [], o = 0, a = this.children.length; o < a; ++o)
+            for (var n = [], a = 0, o = this.children.length; a < o; ++a)
               if (
-                this.children[o] instanceof Char3D &&
-                (t.intersectObject(this.children[o], !1, n), n.length > 0)
+                this.children[a] instanceof Char3D &&
+                (t.intersectObject(this.children[a], !1, n), n.length > 0)
               )
                 return (n[0].object = this), void i.push(n[0])
         }),
@@ -16947,23 +17243,23 @@ export function speRuntimeFactory (exports) {
           var i,
             r,
             n = this.userData,
-            o = this.geometry.userData,
-            a = o.parameters.width,
+            a = this.geometry.userData,
+            o = a.parameters.width,
             s = null === (i = t.parameters) || void 0 === i ? void 0 : i.width,
             l = null === (r = t.parameters) || void 0 === r ? void 0 : r.height,
-            c = o.parameters.height,
-            u = n.textFrame
+            c = a.parameters.height,
+            h = n.textFrame
           e.prototype.updateGeometry.call(this, t),
-            (u.maxLineSize = o.parameters.width),
-            u.textOrigin.set(
-              -0.5 * o.parameters.width,
-              0.5 * o.parameters.height,
+            (h.maxLineSize = a.parameters.width),
+            h.textOrigin.set(
+              -0.5 * a.parameters.width,
+              0.5 * a.parameters.height,
               0
             ),
             void 0 !== l && c !== l
               ? (this.checkOverFlow(), this.checkCapacity())
               : void 0 !== s &&
-                (a < s ? this.checkCapacity() : a > s && this.checkOverFlow())
+                (o < s ? this.checkCapacity() : o > s && this.checkOverFlow())
         }),
         (t.prototype.checkOverFlow = function (e) {
           void 0 === e && (e = 0)
@@ -16976,9 +17272,9 @@ export function speRuntimeFactory (exports) {
             n++
           ) {
             r[n].updateYLinePos(this.getNewLinePosition(n)), r[n].fullUpdate(i)
-            for (var o = []; r[n].checkOverFlow(t.textFrame.maxLineSize); )
+            for (var a = []; r[n].checkOverFlow(t.textFrame.maxLineSize); )
               r[n].containSpaceOverFlow()
-                ? o.splice(
+                ? a.splice(
                     0,
                     0,
                     r[n].getWord(
@@ -16986,12 +17282,12 @@ export function speRuntimeFactory (exports) {
                       TRAVEL_DIRECTION.TO_LEFT
                     )
                   )
-                : o.splice(0, 0, r[n].popChar())
-            if (o.length > 0) {
+                : a.splice(0, 0, r[n].popChar())
+            if (a.length > 0) {
               void 0 === r[n + 1] && (r[n].isEndLine(!1), this.createTextLine())
-              for (var a = 0, s = 0; s < o.length; s += 1)
-                for (var l = 0; l < o[s].length; l += 1)
-                  r[n + 1].addChar3D(o[s][l], i, a), (a += 1)
+              for (var o = 0, s = 0; s < a.length; s += 1)
+                for (var l = 0; l < a[s].length; l += 1)
+                  r[n + 1].addChar3D(a[s][l], i, o), (o += 1)
               r[n + 1].fullUpdate(i)
             }
             r[n].fullUpdate(i)
@@ -17005,32 +17301,32 @@ export function speRuntimeFactory (exports) {
               i = t.textFrame.textOrigin,
               r = t.textFrame.maxLineSize,
               n = t.textFrame.textLines,
-              o = e;
-            o < n.length;
-            o += 1
+              a = e;
+            a < n.length;
+            a += 1
           )
             if (
-              (n[o].updateYLinePos(this.getNewLinePosition(o)),
-              n[o].fullUpdate(i),
-              n[o - 1])
+              (n[a].updateYLinePos(this.getNewLinePosition(a)),
+              n[a].fullUpdate(i),
+              n[a - 1])
             )
-              for (; !n[o - 1].endLine; ) {
-                var a = void 0,
-                  s = n[o - 1].spaceLeft(r)
-                if (!(n[o].wordSize(0, TRAVEL_DIRECTION.TO_RIGHT) <= s)) {
-                  n[o].isEmpty()
-                    ? (n[o].endLine && n[o - 1].isEndLine(!0),
-                      n.splice(o, 1),
-                      (o -= 1))
-                    : (n[o].updateYLinePos(this.getNewLinePosition(o)),
-                      n[o].fullUpdate(i))
+              for (; !n[a - 1].endLine; ) {
+                var o = void 0,
+                  s = n[a - 1].spaceLeft(r)
+                if (!(n[a].wordSize(0, TRAVEL_DIRECTION.TO_RIGHT) <= s)) {
+                  n[a].isEmpty()
+                    ? (n[a].endLine && n[a - 1].isEndLine(!0),
+                      n.splice(a, 1),
+                      (a -= 1))
+                    : (n[a].updateYLinePos(this.getNewLinePosition(a)),
+                      n[a].fullUpdate(i))
                   break
                 }
-                a = n[o].containSpace()
-                  ? n[o].getWord(0, TRAVEL_DIRECTION.TO_RIGHT)
-                  : n[o].popChar(0)
-                for (var l = 0; l < a.length; l += 1)
-                  a[l] && n[o - 1].addChar3D(a[l], i)
+                o = n[a].containSpace()
+                  ? n[a].getWord(0, TRAVEL_DIRECTION.TO_RIGHT)
+                  : n[a].popChar(0)
+                for (var l = 0; l < o.length; l += 1)
+                  o[l] && n[a - 1].addChar3D(o[l], i)
               }
           this.textFullUpdate(e)
         }),
@@ -17095,29 +17391,29 @@ export function speRuntimeFactory (exports) {
           var t = this.userData
           t.textFrame.hexColor = e
           for (var i = t.textFrame.textLines, r = 0; r < i.length; r++)
-            for (var n = i[r].message, o = 0; o < n.length; o++) {
-              n[o].material.color.setHex(e)
+            for (var n = i[r].message, a = 0; a < n.length; a++) {
+              n[a].material.color.setHex(e)
             }
         }),
         (t.prototype.updateOpacity = function (e) {
           var t = this.userData
           t.textFrame.opacity = e
           for (var i = t.textFrame.textLines, r = 0; r < i.length; r++)
-            for (var n = i[r].message, o = 0; o < n.length; o++) {
-              n[o].material.opacity = e
+            for (var n = i[r].message, a = 0; a < n.length; a++) {
+              n[a].material.opacity = e
             }
         }),
         (t.prototype.updateVisible = function (e) {
           var t = this.userData
           t.textFrame.visible = e
           for (var i = t.textFrame.textLines, r = 0; r < i.length; r++)
-            for (var n = i[r].message, o = 0; o < n.length; o++) {
-              n[o].material.visible = e
+            for (var n = i[r].message, a = 0; a < n.length; a++) {
+              n[a].material.visible = e
             }
         }),
         (t.prototype.updateFontFamily = function (e) {
           return __awaiter(this, void 0, void 0, function () {
-            var t, i, r, n, o, a
+            var t, i, r, n, a, o
             return __generator(this, function (s) {
               switch (s.label) {
                 case 0:
@@ -17133,8 +17429,8 @@ export function speRuntimeFactory (exports) {
                     n < r.length;
                     n++
                   )
-                    for (o = r[n].message, a = 0; a < o.length; a++)
-                      o[a].updateFontFamily(e)
+                    for (a = r[n].message, o = 0; o < a.length; o++)
+                      a[o].updateFontFamily(e)
                   return (
                     this.textFullUpdate(),
                     this.checkOverFlow(),
@@ -17156,7 +17452,7 @@ export function speRuntimeFactory (exports) {
         }),
         (t.prototype.updateTextTransform = function (e) {
           return __awaiter(this, void 0, void 0, function () {
-            var t, i, r, n, o, a
+            var t, i, r, n, a, o
             return __generator(this, function (s) {
               switch (s.label) {
                 case 0:
@@ -17171,18 +17467,18 @@ export function speRuntimeFactory (exports) {
                   ) {
                     case TEXT_TRANSFORM.UPPERCASE:
                       for (n = 0; n < r.length; n++)
-                        for (o = r[n].message, a = 0; a < o.length; a++)
-                          r[n].message[a].updateChar(o[a].char.toUpperCase())
+                        for (a = r[n].message, o = 0; o < a.length; o++)
+                          r[n].message[o].updateChar(a[o].char.toUpperCase())
                       break
                     case TEXT_TRANSFORM.LOWERCASE:
                       for (n = 0; n < r.length; n++)
-                        for (o = r[n].message, a = 0; a < o.length; a++)
-                          r[n].message[a].updateChar(o[a].char.toLowerCase())
+                        for (a = r[n].message, o = 0; o < a.length; o++)
+                          r[n].message[o].updateChar(a[o].char.toLowerCase())
                       break
                     default:
                       for (n = 0; n < r.length; n++)
-                        for (o = r[n].message, a = 0; a < o.length; a++)
-                          r[n].message[a].updateChar(o[a].originalChar)
+                        for (a = r[n].message, o = 0; o < a.length; o++)
+                          r[n].message[o].updateChar(a[o].originalChar)
                   }
                   return (
                     this.textFullUpdate(),
@@ -17199,8 +17495,8 @@ export function speRuntimeFactory (exports) {
             i = t.textFrame.textLines
           t.textFrame.letterSpacing = e
           for (var r = 0; r < i.length; r++)
-            for (var n = i[r].message, o = 0; o < n.length; o++)
-              n[o].updateLetterSpacing(e)
+            for (var n = i[r].message, a = 0; a < n.length; a++)
+              n[a].updateLetterSpacing(e)
           this.textFullUpdate(), this.checkOverFlow(), this.checkCapacity()
         }),
         (t.prototype.updateLOD = function (e) {
@@ -17228,19 +17524,19 @@ export function speRuntimeFactory (exports) {
           e.prototype.copy.call(this, t, i)
           var r = this.userData,
             n = t.userData,
-            o = this.geometry.userData
+            a = this.geometry.userData
           r.textFrame.textOrigin = new THREE.Vector3(
-            -0.5 * o.parameters.width,
-            0.5 * o.parameters.height,
+            -0.5 * a.parameters.width,
+            0.5 * a.parameters.height,
             0
           )
-          var a = n.textFrame.textLines
+          var o = n.textFrame.textLines
           r.textFrame.textLines = []
-          for (var s = 0; s < a.length; s++) {
-            var l = a[s].clone(),
+          for (var s = 0; s < o.length; s++) {
+            var l = o[s].clone(),
               c = l.message
             r.textFrame.textLines.push(l)
-            for (var u = 0; u < c.length; u++) this.add(c[u])
+            for (var h = 0; h < c.length; h++) this.add(c[h])
           }
           return (
             this.textFullUpdate(), this.updateColor(n.textFrame.hexColor), this
@@ -17277,8 +17573,8 @@ export function speRuntimeFactory (exports) {
             var i,
               r,
               n = this
-            return __generator(this, function (o) {
-              switch (o.label) {
+            return __generator(this, function (a) {
+              switch (a.label) {
                 case 0:
                   return (
                     e.prototype.fromJSON.call(this, t),
@@ -17288,7 +17584,7 @@ export function speRuntimeFactory (exports) {
                         [4, Char3D.loadFont(i.fontFamily)])
                   )
                 case 1:
-                  o.sent(),
+                  a.sent(),
                     (i.textOrigin = new THREE.Vector3(
                       i.textOrigin.x,
                       i.textOrigin.y,
@@ -17303,14 +17599,14 @@ export function speRuntimeFactory (exports) {
                     })),
                     i.textLinesData &&
                       ((i.textLines = i.textLinesData.map(function (e, t) {
-                        var o = new TextLine(
+                        var a = new TextLine(
                             Number(e.yLinePos),
                             Number(e.lineHeight),
                             Number(e.maxCharSize)
                           ),
-                          a = e.message.map(function (e, a) {
+                          o = e.message.map(function (e, o) {
                             if (void 0 === e.char) {
-                              var s = i.textLines[t].message[a]
+                              var s = i.textLines[t].message[o]
                               if ('geometries' in s) {
                                 var l = s.geometries[0].userData.parameters
                                 Object.assign(e, {
@@ -17330,14 +17626,14 @@ export function speRuntimeFactory (exports) {
                                 fontSize: Number(e.fontSize),
                                 LOD: e.LOD
                               },
-                              u = new Char3D(c, r.clone())
-                            return o.addChar3D(u, i.textOrigin), n.add(u), u
+                              h = new Char3D(c, r.clone())
+                            return a.addChar3D(h, i.textOrigin), n.add(h), h
                           })
-                        return (o.message = a), o
+                        return (a.message = o), a
                       })),
                       (this.userData.textFrame = i)),
                     this.textFullUpdate(),
-                    (o.label = 2)
+                    (a.label = 2)
                 case 2:
                   return [2, this]
               }
@@ -17351,2878 +17647,926 @@ export function speRuntimeFactory (exports) {
         t
       )
     })(AbstractMesh),
-    IDENTITY_MATRIX = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
-    ATTRIBUTE_NAME_MAPPING = { TEXCOORD_0: 'UV' },
-    DEFAULT_SAMPLER = {
-      magFilter: GLTF_TEXTURE_MAG_FILTER.NEAREST,
-      minFilter: GLTF_TEXTURE_MIN_FILTER.NEAREST,
-      wrapS: GLTF_TEXTURE_WRAP_MODE.CLAMP_TO_EDGE,
-      wrapT: GLTF_TEXTURE_WRAP_MODE.CLAMP_TO_EDGE
-    },
-    DEFAULT_IMAGE = new Image(),
-    DEFAULT_TEXTURE = new THREE.Texture(),
-    DEFAULT_ARRAY_COLORS = [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0
-    ],
-    DEFAULT_STEPS = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    DEFAULT_SHADOWMAP_SIZE = [2048, 2048],
-    GLTFImporter = (function () {
-      function e() {
-        ;(this._scene = null),
-          (this._camera = null),
-          (this._exportOptions = null),
-          (this._sceneOptions = null),
-          (this._gltfFile = null),
-          (this._nodes = []),
-          (this._cameras = []),
-          (this._lights = []),
-          (this._meshes = []),
-          (this._accessors = []),
-          (this._materials = []),
-          (this._textures = []),
-          (this._texturesMap = {}),
-          (this._objects = {}),
-          (this._interactionStates = {})
+    READ_FILE_TYPE
+  function loadFile(e, t, i) {
+    void 0 === i && (i = READ_FILE_TYPE.ARRAY_BUFFER)
+    var r = new FileReader()
+    return new Promise(function (n, a) {
+      var o = function () {
+        a({ error: !0, filename: e.name }),
+          t.itemError(e.name),
+          t.itemEnd(e.name)
+      }
+      switch (
+        (r.addEventListener('loadstart', function () {
+          t.itemStart(e.name)
+        }),
+        r.addEventListener(
+          'load',
+          function (e) {
+            var t,
+              i = null === (t = e.target) || void 0 === t ? void 0 : t.result
+            null != i ? n(i) : o()
+          },
+          !1
+        ),
+        r.addEventListener('error', o),
+        i)
+      ) {
+        case READ_FILE_TYPE.TEXT:
+          r.readAsText(e)
+          break
+        case READ_FILE_TYPE.BINARY_STRING:
+          if (void 0 !== r.readAsBinaryString) {
+            r.readAsBinaryString(e)
+            break
+          }
+        case READ_FILE_TYPE.ARRAY_BUFFER:
+        default:
+          r.readAsArrayBuffer(e)
+      }
+    })
+  }
+  !(function (e) {
+    ;(e[(e.TEXT = 0)] = 'TEXT'),
+      (e[(e.ARRAY_BUFFER = 1)] = 'ARRAY_BUFFER'),
+      (e[(e.BINARY_STRING = 2)] = 'BINARY_STRING')
+  })(READ_FILE_TYPE || (READ_FILE_TYPE = {}))
+  var LoaderMixin = function (e) {
+    return function (t) {
+      void 0 === t && (t = THREE.DefaultLoadingManager),
+        (this.manager = t),
+        (this.loader = new e(t))
+    }
+  }
+  function upgrade(e) {
+    var t = e.metadata
+    return (
+      console.info('File format version ' + (null == t ? void 0 : t.version)),
+      void 0 === (null == t ? void 0 : t.version)
+        ? (console.warn('Unknow file version'), !1)
+        : ((t.version <= 1.1 || 4.5 === t.version) &&
+            (upGeometryDataV1_1(e.geometries),
+            updateInteractionStateDataV1_1(e.interactionStates),
+            upObjectDataV1_1(e.object),
+            (t.version = 1.2),
+            console.warn('File upgraded from v1.1 or inferior to v1.2')),
+          1.2 === t.version &&
+            (upObjectDataV1_2(e.object, e.object),
+            (t.version = 1.3),
+            console.warn('File upgraded from v1.2 to v1.3')),
+          1.3 === t.version &&
+            (upObjectDataV1_3(e.object),
+            (t.version = 1.4),
+            console.warn('File upgraded from v1.3 to v1.4')),
+          !0)
+    )
+  }
+  function upObjectDataV1_1(e) {
+    var t, i, r, n, a, o, s, l, c, h
+    if (
+      void 0 === (null === (s = e.userData) || void 0 === s ? void 0 : s.type)
+    )
+      if ('OrthographicCamera' === e.type || 'PerspectiveCamera' === e.type) {
+        var u = e
+        Object.assign(e, {
+          objectType: 'CombinedCamera',
+          cameraType: u.type,
+          isDefaultCamera: !0,
+          hiddenMatrix: new THREE.Matrix4().toArray(),
+          name: 'Default Camera',
+          far: 1e5,
+          zoomOrtho: u.zoom,
+          zoomPersp: 1,
+          nearOrtho: -5e4,
+          nearPersp: 50
+        }),
+          delete e.type,
+          void 0 !== u.typeCamera &&
+            (Object.assign(e, { cameraType: u.typeCamera }),
+            delete e.typeCamera)
+      } else
+        'Scene' === e.type
+          ? (Object.assign(e, { objectType: e.type }), delete e.type)
+          : 'HemisphereLight' === e.type
+          ? Object.assign(e, { isDefaultAmbientLight: !0 })
+          : 'DirectionalLight' === e.type &&
+            Object.assign(e, { isDefaultDirectionalLight: !0 })
+    if (void 0 !== e.userData) {
+      var d = e.userData
+      void 0 !== d.type &&
+        (Object.assign(e, { objectType: d.type }), delete d.type),
+        void 0 !== d.interaction &&
+          (Object.assign(e, { interaction: d.interaction }),
+          delete d.interaction),
+        !0 === d.isDefaultAmbientLight
+          ? (Object.assign(e, { isDefaultAmbientLight: !0 }),
+            delete d.isDefaultAmbientLight)
+          : !0 === d.isDefaultDirectionalLight
+          ? (Object.assign(e, { isDefaultDirectionalLight: !0 }),
+            delete d.isDefaultDirectionalLight)
+          : !0 === d.isDefaultCamera &&
+            (Object.assign(e, { isDefaultCamera: !0 }),
+            delete d.isDefaultCamera),
+        Object.assign(e, {
+          raycastLock: d.lock,
+          scaleLock: d.scaleLock,
+          hiddenMatrix:
+            null !==
+              (c =
+                null === (l = d.hiddenMatrix) || void 0 === l
+                  ? void 0
+                  : l.elements) && void 0 !== c
+              ? c
+              : new THREE.Matrix4().toArray()
+        }),
+        delete d.lock,
+        delete d.scaleLock,
+        delete d.hiddenMatrix,
+        delete d.isEntity
+    }
+    if (
+      void 0 !==
+      (null === (h = e.interaction) || void 0 === h ? void 0 : h.events)
+    )
+      try {
+        for (
+          var f = __values(e.interaction.events), p = f.next();
+          !p.done;
+          p = f.next()
+        ) {
+          var m = p.value
+          if (void 0 !== m.targets)
+            try {
+              for (
+                var g = ((r = void 0), __values(m.targets)), v = g.next();
+                !v.done;
+                v = g.next()
+              ) {
+                var y = v.value
+                void 0 !== y.springControls &&
+                  (Object.assign(y, {
+                    springParameters: {
+                      mass: y.springControls[0],
+                      stiffness: y.springControls[1],
+                      damping: y.springControls[2],
+                      velocity: y.springControls[3]
+                    }
+                  }),
+                  delete y.springControls)
+              }
+            } catch (e) {
+              r = { error: e }
+            } finally {
+              try {
+                v && !v.done && (n = g.return) && n.call(g)
+              } finally {
+                if (r) throw r.error
+              }
+            }
+        }
+      } catch (e) {
+        t = { error: e }
+      } finally {
+        try {
+          p && !p.done && (i = f.return) && i.call(f)
+        } finally {
+          if (t) throw t.error
+        }
+      }
+    if (void 0 !== e.children)
+      try {
+        for (
+          var E = __values(e.children), A = E.next();
+          !A.done;
+          A = E.next()
+        ) {
+          upObjectDataV1_1(A.value)
+        }
+      } catch (e) {
+        a = { error: e }
+      } finally {
+        try {
+          A && !A.done && (o = E.return) && o.call(E)
+        } finally {
+          if (a) throw a.error
+        }
+      }
+  }
+  function upGeometryDataV1_1(e) {
+    var t, i, r
+    if (void 0 !== e)
+      try {
+        for (var n = __values(e), a = n.next(); !a.done; a = n.next()) {
+          var o = a.value
+          if (
+            void 0 !==
+            (null === (r = o.userData) || void 0 === r ? void 0 : r.type)
+          ) {
+            var s = o.userData.parameters
+            'extrudeDepth' in s || Object.assign(s, { extrudeDepth: 0 }),
+              'extrudeBevelSize' in s ||
+                Object.assign(s, { extrudeBevelSize: 0 }),
+              'extrudeBevelSegments' in s ||
+                Object.assign(s, { extrudeBevelSegments: 1 })
+          }
+        }
+      } catch (e) {
+        t = { error: e }
+      } finally {
+        try {
+          a && !a.done && (i = n.return) && i.call(n)
+        } finally {
+          if (t) throw t.error
+        }
+      }
+  }
+  function updateInteractionStateDataV1_1(e) {
+    var t, i
+    if (void 0 !== e)
+      try {
+        for (var r = __values(e), n = r.next(); !n.done; n = r.next()) {
+          var a = n.value
+          if (void 0 !== a.quaternion) {
+            var o = new THREE.Quaternion().fromArray(a.quaternion)
+            Object.assign(a, {
+              rotation: new THREE.Euler().setFromQuaternion(o).toArray()
+            })
+          }
+        }
+      } catch (e) {
+        t = { error: e }
+      } finally {
+        try {
+          n && !n.done && (i = r.return) && i.call(r)
+        } finally {
+          if (t) throw t.error
+        }
+      }
+  }
+  function upObjectDataV1_2(e, t) {
+    var i, r, n
+    if (
+      ('HemisphereLight' === e.type || !0 === e.isDefaultAmbientLight
+        ? (t.ambientLight = e.uuid)
+        : !0 ===
+            (null === (n = e.userData) || void 0 === n
+              ? void 0
+              : n.isDefaultDirectionalLight) ||
+          !0 === e.isDefaultDirectionalLight
+        ? (t.directionalLight = e.uuid)
+        : !0 === e.isDefaultCamera &&
+          ((t.camera = e.uuid),
+          (t.activeCamera = e.uuid),
+          Object.assign(e, { name: 'Default Camera' })),
+      void 0 !== e.children)
+    )
+      try {
+        for (
+          var a = __values(e.children), o = a.next();
+          !o.done;
+          o = a.next()
+        ) {
+          upObjectDataV1_2(o.value, t)
+        }
+      } catch (e) {
+        i = { error: e }
+      } finally {
+        try {
+          o && !o.done && (r = a.return) && r.call(a)
+        } finally {
+          if (i) throw i.error
+        }
+      }
+  }
+  function upObjectDataV1_3(e) {
+    var t, i, r, n, a, o, s, l
+    if ('Scene' === e.objectType) {
+      var c = e.userData,
+        h = null !== (t = c.rgb) && void 0 !== t ? t : { r: 25, g: 25, b: 25 },
+        u =
+          null !== (i = c.fogColor) && void 0 !== i
+            ? i
+            : { r: 25, g: 25, b: 25 }
+      Object.assign(e, {
+        color: [h.r / 255, h.g / 255, h.b / 255],
+        alpha: c.alpha,
+        fogEnable: c.fogEnable,
+        fogUseBGColor: c.fogUseBGColor,
+        fog: {
+          color: [u.r / 255, u.g / 255, u.b / 255],
+          near: c.fogNear,
+          far: c.fogFar
+        },
+        directionalLightState: c.directionalLightState,
+        ambientLightState: c.ambientLightState,
+        shadowsState: c.shadowsState,
+        wireframeState: c.wireframeState,
+        canvas: {
+          mode: null !== (r = c.canvasMode) && void 0 !== r ? r : 1,
+          fullScreen: null === (n = c.canvasFullScreen) || void 0 === n || n,
+          size: {
+            width:
+              null !==
+                (o =
+                  null === (a = c.canvasCustomSize) || void 0 === a
+                    ? void 0
+                    : a.width) && void 0 !== o
+                ? o
+                : 512,
+            height:
+              null !==
+                (l =
+                  null === (s = c.canvasCustomSize) || void 0 === s
+                    ? void 0
+                    : s.height) && void 0 !== l
+                ? l
+                : 512
+          }
+        }
+      }),
+        delete c.rgb,
+        delete c.alpha,
+        delete c.fogEnable,
+        delete c.fogUseBGColor,
+        delete c.fogColor,
+        delete c.fogNear,
+        delete c.fogFar,
+        delete c.directionalLightState,
+        delete c.ambientLightState,
+        delete c.shadowsState,
+        delete c.wireframeState,
+        delete c.canvasMode,
+        delete c.canvasFullScreen,
+        delete c.canvasCustomSize
+    }
+  }
+  var normal = new THREE.Vector3(0, 0, 1),
+    worldNormal = new THREE.Vector3(),
+    coplanarPoint = new THREE.Vector3(),
+    normalMatrix = new THREE.Matrix3(),
+    VectorObject = (function (e) {
+      function t(t, i) {
+        var r
+        void 0 === t && (t = VectorGeometry.create({})),
+          void 0 === i && (i = new BasicMaterial({ side: THREE.DoubleSide }))
+        var n = e.call(this, t, i) || this
+        return (
+          (n.recursiveSelection = !1),
+          (n.objectType = 'VectorObject'),
+          (n.eventDispatcher = new THREE.EventDispatcher()),
+          (n._onShapeUpdate = function () {
+            if (
+              (n.computeSingleBoundingBox(),
+              n.geometry.computeBoundingSphere(),
+              n.geometry.computeBoundingBox(),
+              n.geometry instanceof VectorSurfaceGeometry)
+            ) {
+              if (n.geometry.updateFromShape()) {
+                var e = n.geometry.drawCount,
+                  t = n.geometry.userData
+                n.updateGeometry(
+                  Object.assign(n.geometry.userData, {
+                    parameters: Object.assign(t.parameters, {
+                      surfaceMaxCount: e + 1e3
+                    })
+                  })
+                )
+              }
+            } else n.updateGeometry({})
+          }),
+          (n.castShadow = !0),
+          (n.receiveShadow = !0),
+          (n.forceComputeSize = !0),
+          (n.shape = t.userData.shape),
+          null === (r = n.shape.eventDispatcher) ||
+            void 0 === r ||
+            r.addEventListener('update', n._onShapeUpdate),
+          n
+        )
       }
       return (
-        (e.prototype.decode = function (e) {
-          e&&(e.extensions=e.extensions||{});
-          var t, i
-          if (
-            ((this._scene = null),
-            (this._camera = null),
-            (this._exportOptions = {}),
-            (this._sceneOptions = {}),
-            (this._nodes = []),
-            (this._objects = {}),
-            (this._cameras = []),
-            (this._lights = []),
-            (this._meshes = []),
-            (this._accessors = []),
-            (this._materials = []),
-            (this._gltfFile = e),
-            !this._gltfFile)
-          )
-            return (
-              console.error('::decode >>> no gltf file was given'),
-              [null, null, null, null]
-            )
-          if (
-            (this._decodeTextureData(this._gltfFile),
-            this._decodeInteractionStates(this._gltfFile),
-            this._decodeVertexData(this._gltfFile),
-            this._decodeExportOptions(this._gltfFile),
-            this._decodeSceneOptions(this._gltfFile),
-            this._decodeCameras(this._gltfFile),
-            this._decodeLights(this._gltfFile),
-            this._decodeMeshes(this._gltfFile),
-            this._decodeMaterials(this._gltfFile),
-            this._decodeNodes(this._gltfFile),
-            this._decodeInteractions(this._gltfFile),
-            this._decodeSceneGraph(this._gltfFile),
-            this._gltfFile.scenes.length < 1)
-          )
-            return (
-              console.error(
-                "GLTFImporter::decode >>> there are no scenes in this\n                           gltf file, so we can't return a valid scene to the application"
-              ),
-              [null, null, null, null]
-            )
-          this._gltfFile.scenes.length > 1 &&
-            console.warn(
-              'GLTFImporter::decode >>> there are more than one default\n                          scene in the gltf file. Taking only the first one as default'
-            )
-          var r = this._gltfFile.scenes[0]
-          r.nodes.length > 1 &&
-            console.warn(
-              'GLTFImporter::decode >>> there are more root nodes in\n                          the default scene being decoded. Using first root instead'
-            )
-          var n = r.nodes[0]
-          this._scene = this._nodes[n]
-          var o =
-            null !==
-              (i =
-                null ===
-                  (t = this._gltfFile.extensions.SPE_scene_options.camera) ||
-                void 0 === t
-                  ? void 0
-                  : t.mainCameraIndex) && void 0 !== i
-              ? i
-              : -1
-          return (
-            o < this._nodes.length && o >= 0 && (this._camera = this._nodes[o]),
-            [this._scene, this._camera, this._exportOptions, this._sceneOptions]
-          )
+        __extends(t, e),
+        (t.prototype.toJSON = function (t) {
+          var i = e.prototype.toJSON.call(this, t)
+          return (i.object.objectType = 'VectorObject'), i
         }),
-        (e.prototype._decodeTextureData = function (e) {
+        (t.prototype.setHelperVisibility = function () {}),
+        (t.prototype.updateGeometry = function (t) {
+          if (
+            (e.prototype.updateGeometry.call(this, t),
+            'userData' in this.geometry)
+          ) {
+            var i = this.geometry.userData.parameters
+            this.eventDispatcher.dispatchEvent({
+              type: 'geometryUpdate',
+              parameters: i
+            })
+          }
+        }),
+        (t.prototype.updateWorldMatrix = function (t, i) {
+          e.prototype.updateWorldMatrix.call(this, t, i),
+            normalMatrix.getNormalMatrix(this.matrixWorld),
+            worldNormal.copy(normal).applyMatrix3(normalMatrix).normalize(),
+            this.getWorldPosition(coplanarPoint),
+            this.shape.plane.setFromNormalAndCoplanarPoint(
+              worldNormal,
+              coplanarPoint
+            )
+        }),
+        (t.prototype.clone = function (e) {
+          var i = this.shape.clone(),
+            r = this.material.clone(),
+            n = this.geometry.userData,
+            a = new t(
+              VectorGeometry.create(Object.assign({}, n, { shape: i })),
+              r
+            ).copy(this, e)
+          return i.update(), a
+        }),
+        (t.prototype.raycast = function (e, t) {
+          AbstractMesh.prototype.raycast.call(this, e, t)
+        }),
+        t
+      )
+    })(AbstractMesh),
+    GeometryLoader = (function () {
+      function e() {
+        this._buffers = []
+      }
+      return (
+        (e.prototype.parse = function (e) {
           var t,
             i,
             r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T,
-            x,
-            _,
-            w,
-            S,
-            b
-          function R(e) {
-            switch (e) {
-              case GLTF_TEXTURE_WRAP_MODE.CLAMP_TO_EDGE:
-                return THREE.ClampToEdgeWrapping
-              case GLTF_TEXTURE_WRAP_MODE.MIRRORED_REPEAT:
-                return THREE.MirroredRepeatWrapping
-              case GLTF_TEXTURE_WRAP_MODE.REPEAT:
-                return THREE.RepeatWrapping
-            }
-          }
-          function C(e) {
-            switch (e) {
-              case GLTF_TEXTURE_MAG_FILTER.LINEAR:
-                return THREE.LinearFilter
-              case GLTF_TEXTURE_MAG_FILTER.NEAREST:
-                return THREE.NearestFilter
-            }
-          }
-          function O(e) {
-            switch (e) {
-              case GLTF_TEXTURE_MIN_FILTER.LINEAR:
-                return THREE.LinearFilter
-              case GLTF_TEXTURE_MIN_FILTER.LINEAR_MIPMAP_LINEAR:
-                return THREE.LinearMipmapLinearFilter
-              case GLTF_TEXTURE_MIN_FILTER.LINEAR_MIPMAP_NEAREST:
-                return THREE.LinearMipmapNearestFilter
-              case GLTF_TEXTURE_MIN_FILTER.NEAREST:
-                return THREE.NearestFilter
-              case GLTF_TEXTURE_MIN_FILTER.NEAREST_MIPMAP_LINEAR:
-                return THREE.NearestMipmapLinearFilter
-              case GLTF_TEXTURE_MIN_FILTER.NEAREST_MIPMAP_NEAREST:
-                return THREE.NearestMipmapNearestFilter
-            }
-          }
-          for (
-            var D = null !== (t = e.images) && void 0 !== t ? t : [],
-              M = [],
-              L = 0;
-            L < D.length;
-            L++
-          ) {
-            ;((F = new Image()).src =
-              null !== (i = D[L].uri) && void 0 !== i ? i : ''),
-              M.push(F)
-          }
-          var P = null !== (r = e.samplers) && void 0 !== r ? r : [],
-            I = null !== (n = e.textures) && void 0 !== n ? n : []
-          for (L = 0; L < I.length; L++) {
-            var B = I[L],
-              H = null !== (o = B.source) && void 0 !== o ? o : -1,
-              N = null !== (a = B.sampler) && void 0 !== a ? a : -1,
-              F = null !== (s = M[H]) && void 0 !== s ? s : DEFAULT_IMAGE,
-              G = null !== (l = P[N]) && void 0 !== l ? l : DEFAULT_SAMPLER,
-              U =
-                null !==
-                  (u =
-                    null === (c = G.extensions) || void 0 === c
-                      ? void 0
-                      : c.repeat) && void 0 !== u
-                  ? u
-                  : [1, 1],
-              z =
-                null !==
-                  (d =
-                    null === (h = G.extensions) || void 0 === h
-                      ? void 0
-                      : h.offset) && void 0 !== d
-                  ? d
-                  : [0, 0],
-              V =
-                null !==
-                  (p =
-                    null === (f = G.extensions) || void 0 === f
-                      ? void 0
-                      : f.center) && void 0 !== p
-                  ? p
-                  : [0, 0],
-              k =
-                null !==
-                  (m =
-                    null === (v = G.extensions) || void 0 === v
-                      ? void 0
-                      : v.rotation) && void 0 !== m
-                  ? m
-                  : 0,
-              j = new THREE.Texture(
-                F,
-                THREE.Texture.DEFAULT_MAPPING,
-                R(G.wrapS),
-                R(G.wrapT),
-                C(G.magFilter),
-                O(G.minFilter),
-                null !==
-                  (E =
-                    null === (g = G.extensions) || void 0 === g
-                      ? void 0
-                      : g.format) && void 0 !== E
-                  ? E
-                  : THREE.RGBAFormat,
-                null !==
-                  (A =
-                    null === (y = G.extensions) || void 0 === y
-                      ? void 0
-                      : y.type) && void 0 !== A
-                  ? A
-                  : THREE.UnsignedByteType,
-                null !==
-                  (x =
-                    null === (T = G.extensions) || void 0 === T
-                      ? void 0
-                      : T.anisotropy) && void 0 !== x
-                  ? x
-                  : 1,
-                null !==
-                  (w =
-                    null === (_ = G.extensions) || void 0 === _
-                      ? void 0
-                      : _.encoding) && void 0 !== w
-                  ? w
-                  : THREE.sRGBEncoding
-              )
-            j.repeat.fromArray(U),
-              j.offset.fromArray(z),
-              j.center.fromArray(V),
-              (j.flipY =
-                null ===
-                  (b =
-                    null === (S = G.extensions) || void 0 === S
-                      ? void 0
-                      : S.flipY) ||
-                void 0 === b ||
-                b),
-              (j.rotation = k),
-              j.updateMatrix(),
-              this._textures.push(j)
-          }
-          var Y = e.extensions.SPE_textures_uuid_map
-          for (var $ in Y) {
-            var Q = Y[Number($)]
-            this._texturesMap[Q] = this._textures[Number($)]
-          }
-        }),
-        (e.prototype._decodeInteractionStates = function (e) {
-          var t = e.extensions.SPE_interaction_states.states
-          for (var i in t) {
-            var r = t[i]
-            this._interactionStates[i] = new InteractionState().fromJSON(
-              r,
-              this._texturesMap
-            )
-          }
-        }),
-        (e.prototype._decodeVertexData = function (e) {
-          for (
-            var t,
-              i,
-              r,
-              n = null !== (t = e.buffers) && void 0 !== t ? t : [],
-              o = [],
-              a = 0;
-            a < n.length;
-            a++
+            n = new THREE.BufferGeometry()
+          if (
+            ((this._vertexData = e.vertexData),
+            this._loadBuffers(this._vertexData.buffers),
+            (n.uuid = e.uuid),
+            this._vertexData.accessors)
           )
-            o.push(this._decodeBuffer(n[a]))
-          var s = null !== (i = e.bufferViews) && void 0 !== i ? i : [],
-            l = []
-          for (a = 0; a < s.length; a++) l.push(this._decodeBufferView(s[a], o))
-          var c = null !== (r = e.accessors) && void 0 !== r ? r : []
-          for (a = 0; a < c.length; a++)
-            this._accessors.push(this._decodeAccessor(c[a], l))
-        }),
-        (e.prototype._decodeBuffer = function (e) {
-          var t = e.byteLength,
-            i = e.uri
-          if (i.indexOf('base64')) {
-            for (
-              var r = i.slice(i.indexOf('base64') + 7),
-                n = atob(r),
-                o = new Uint8Array(n.length),
-                a = 0;
-              a < n.length;
-              a++
-            )
-              o[a] = n.charCodeAt(a)
-            return { data: o, length: t }
-          }
-          return i.indexOf('.bin')
-            ? (console.error(
-                'GLTFImporter::_decodeBuffer >>> decoding from external binary file is not supported yet'
-              ),
-              { data: new Uint8Array(0), length: 0 })
-            : (console.error(
-                'GLTFImporter::_decodeBuffer >>> invalid gltf-buffer description'
-              ),
-              { data: new Uint8Array(0), length: 0 })
-        }),
-        (e.prototype._decodeBufferView = function (e, t) {
-          var i = e.byteLength,
-            r = e.byteOffset,
-            n = e.buffer,
-            o = e.target
-          return n < 0 || n >= t.length
-            ? (console.error(
-                'GLTFImporter::_decodeBufferView >>> id of buffer out of range'
-              ),
-              {
-                data: new Uint8Array(0),
-                length: 0,
-                target: GLTF_BUFFER_TARGET.ARRAY_BUFFER
-              })
-            : { data: t[n].data.slice(r, r + i), length: i, target: o }
-        }),
-        (e.prototype._decodeAccessor = function (e, t) {
-          var i = e.bufferView,
-            r = e.byteOffset,
-            n = e.componentType,
-            o = e.count,
-            a = e.type
-          if (i < 0 || i >= t.length)
-            return (
-              console.error(
-                'GLTFImporter::_decodeAccessor >>> id of buffer-view out of range'
-              ),
-              {
-                bufferData: new THREE.BufferAttribute([0], 0),
-                itemSize: 0,
-                componentSize: 0
-              }
-            )
-          var s,
-            l = t[i],
-            c = GetAccessorItemSize(a),
-            u = GetAccessorComponentSize(n),
-            h = o * c * u,
-            d = l.data.slice(r, r + h)
-          switch (n) {
-            case GLTF_COMPONENT_TYPE.UNSIGNED_BYTE:
-              s = new THREE.Uint8BufferAttribute(new Uint8Array(d.buffer), c)
-              break
-            case GLTF_COMPONENT_TYPE.UNSIGNED_SHORT:
-              s = new THREE.Uint16BufferAttribute(
-                new Uint16Array(d.buffer),
-                c
-              )
-              break
-            case GLTF_COMPONENT_TYPE.UNSIGNED_INT:
-              s = new THREE.Uint32BufferAttribute(
-                new Uint32Array(d.buffer),
-                c
-              )
-              break
-            case GLTF_COMPONENT_TYPE.FLOAT:
+            for (var a = 0, o = this._vertexData.accessors.length; a < o; ++a) {
+              var s = this._vertexData.accessors[a].attributeName
+              'indices' === s
+                ? n.setIndex(this._loadAccessor(a))
+                : n.setAttribute(s, this._loadAccessor(a))
+            }
+          if (null === (r = e.data) || void 0 === r ? void 0 : r.groups)
+            try {
               for (
-                var f = d.length / Float32Array.BYTES_PER_ELEMENT,
-                  p = new Float32Array(f),
-                  v = new DataView(
-                    new ArrayBuffer(Float32Array.BYTES_PER_ELEMENT)
-                  ),
-                  m = 0;
-                m < p.length;
-                m++
-              )
-                v.setUint8(0, d[4 * m + 0]),
-                  v.setUint8(1, d[4 * m + 1]),
-                  v.setUint8(2, d[4 * m + 2]),
-                  v.setUint8(3, d[4 * m + 3]),
-                  (p[m] = v.getFloat32(0, !0))
-              s = new THREE.Float32BufferAttribute(p, c)
-              break
-            default:
-              console.error(
-                'GLTFImporter::_decodeAccessor >>> invalid component-type (' +
-                  n +
-                  ')'
-              ),
-                (s = new THREE.Uint8BufferAttribute(new Uint8Array(0), 0))
-          }
-          return { bufferData: s, itemSize: c, componentSize: u }
-        }),
-        (e.prototype._decodeExportOptions = function (e) {
-          var t, i, r, n, o, a, s, l, c, u, h, d, f, p
-          if (this._exportOptions) {
-            var v = e.extensions.SPE_export_options
-            ;(this._exportOptions.generatorFormat =
-              null !== (t = v.generatorFormat) && void 0 !== t
-                ? t
-                : GLTF_GENERATOR_FORMAT.FORMAT_GLTF_SPLINE_EXT),
-              (this._exportOptions.useOrbitControls =
-                null === (i = v.useOrbitControls) || void 0 === i || i),
-              (this._exportOptions.bgColor = new THREE.Color().fromArray(
-                null !== (r = v.bgColor) && void 0 !== r ? r : [0.1, 0.1, 0.1]
-              )),
-              (this._exportOptions.bgAlpha =
-                null !== (n = v.bgAlpha) && void 0 !== n ? n : 0),
-              (this._exportOptions.orbitDamped =
-                null !== (o = v.orbitDamped) && void 0 !== o && o),
-              (this._exportOptions.orbitTarget =
-                new THREE.Vector3().fromArray(
-                  null !== (a = v.orbitTarget) && void 0 !== a ? a : [0, 0, 0]
-                )),
-              (this._exportOptions.cameraType =
-                null !== (s = v.cameraType) && void 0 !== s
-                  ? s
-                  : 'OrthographicCamera'),
-              (this._exportOptions.cameraRotate =
-                null === (l = v.cameraRotate) || void 0 === l || l),
-              (this._exportOptions.cameraPan =
-                null === (c = v.cameraPan) || void 0 === c || c),
-              (this._exportOptions.cameraZoom =
-                null === (u = v.cameraZoom) || void 0 === u || u),
-              (this._exportOptions.viewMode =
-                null !== (h = v.viewMode) && void 0 !== h
-                  ? h
-                  : RUNTIME_VIEWMODE.FULLSCREEN),
-              (this._exportOptions.viewWidth =
-                null !== (d = v.viewWidth) && void 0 !== d
-                  ? d
-                  : window.innerWidth),
-              (this._exportOptions.viewHeight =
-                null !== (f = v.viewHeight) && void 0 !== f
-                  ? f
-                  : window.innerHeight),
-              (this._exportOptions.quality =
-                null !== (p = v.quality) && void 0 !== p
-                  ? p
-                  : RUNTIME_QUALITY.DEFAULT)
-          }
-        }),
-        (e.prototype._decodeSceneOptions = function (e) {
-          var t, i, r, n, o, a, s, l, c
-          if (this._sceneOptions) {
-            var u = e.extensions.SPE_scene_options
-            ;(this._sceneOptions.camera = {
-              mainCameraIndex:
-                null !==
-                  (i =
-                    null === (t = u.camera) || void 0 === t
-                      ? void 0
-                      : t.mainCameraIndex) && void 0 !== i
-                  ? i
-                  : -1
-            }),
-              u.fog &&
-                (this._sceneOptions.fog = {
-                  color: new THREE.Color().fromArray(
-                    null !== (r = u.fog.color) && void 0 !== r
-                      ? r
-                      : [0.1, 0.1, 0.1]
-                  ),
-                  near: null !== (n = u.fog.near) && void 0 !== n ? n : 1,
-                  far: null !== (o = u.fog.far) && void 0 !== o ? o : 1e3
-                }),
-              u.fogExp2 &&
-                (this._sceneOptions.fogExp2 = {
-                  color: new THREE.Color().fromArray(
-                    null !== (a = u.fogExp2.color) && void 0 !== a
-                      ? a
-                      : [0.1, 0.1, 0.1]
-                  ),
-                  density:
-                    null !== (s = u.fogExp2.density) && void 0 !== s ? s : 25e-5
-                }),
-              u.postProcessing &&
-                (this._sceneOptions.postProcessing = {
-                  enabled:
-                    null !== (l = u.postProcessing.enabled) &&
-                    void 0 !== l &&
-                    l,
-                  data:
-                    null !== (c = u.postProcessing.data) && void 0 !== c
-                      ? c
-                      : {}
-                })
-          }
-        }),
-        (e.prototype._decodeCameras = function (e) {
-          var t = e.cameras
-          if (t)
-            for (var i = 0; i < t.length; i++) {
-              var r = t[i],
-                n = this._decodeCamera(r)
-              this._cameras.push(n)
-            }
-          else
-            console.warn(
-              'GLTFImporter::_decodeCameras >>> there are no cameras in the given gltf file'
-            )
-        }),
-        (e.prototype._decodeCamera = function (e) {
-          var t,
-            i,
-            r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T = null,
-            x = 100,
-            _ = 100,
-            w = 45,
-            S = 0.1,
-            b = 5e4,
-            R = 1
-          switch (e.type) {
-            case CAMERA_TYPE.ORTHOGRAPHIC:
-              ;(x =
-                null !==
-                  (i =
-                    null === (t = e.orthographic) || void 0 === t
-                      ? void 0
-                      : t.xmag) && void 0 !== i
-                  ? i
-                  : 100),
-                (_ =
-                  null !==
-                    (n =
-                      null === (r = e.orthographic) || void 0 === r
-                        ? void 0
-                        : r.ymag) && void 0 !== n
-                    ? n
-                    : 100),
-                (S =
-                  null !==
-                    (a =
-                      null === (o = e.orthographic) || void 0 === o
-                        ? void 0
-                        : o.znear) && void 0 !== a
-                    ? a
-                    : 0.1),
-                (b =
-                  null !==
-                    (l =
-                      null === (s = e.orthographic) || void 0 === s
-                        ? void 0
-                        : s.zfar) && void 0 !== l
-                    ? l
-                    : 5e4),
-                (R =
-                  null !==
-                    (h =
-                      null ===
-                        (u =
-                          null === (c = e.extensions) || void 0 === c
-                            ? void 0
-                            : c.SPE_camera_options) || void 0 === u
-                        ? void 0
-                        : u.zoom) && void 0 !== h
-                    ? h
-                    : 1),
-                (T = new CombinedCamera(x, _, w, S, b)).toOrthographic(),
-                (T.zoom = R)
-              break
-            case CAMERA_TYPE.PERSPECTIVE:
-              ;(w =
-                (null !==
-                  (f =
-                    null === (d = e.perspective) || void 0 === d
-                      ? void 0
-                      : d.yfov) && void 0 !== f
-                  ? f
-                  : Math.PI / 4) * THREE.MathUtils.RAD2DEG),
-                (S =
-                  null !==
-                    (v =
-                      null === (p = e.perspective) || void 0 === p
-                        ? void 0
-                        : p.znear) && void 0 !== v
-                    ? v
-                    : 0.1),
-                (b =
-                  null !==
-                    (g =
-                      null === (m = e.perspective) || void 0 === m
-                        ? void 0
-                        : m.zfar) && void 0 !== g
-                    ? g
-                    : 5e4),
-                (R =
-                  null !==
-                    (A =
-                      null ===
-                        (y =
-                          null === (E = e.extensions) || void 0 === E
-                            ? void 0
-                            : E.SPE_camera_options) || void 0 === y
-                        ? void 0
-                        : y.zoom) && void 0 !== A
-                    ? A
-                    : 1),
-                (T = new CombinedCamera(x, _, w, S, b)).toPerspective(),
-                (T.zoom = R)
-              break
-            default:
-              console.error(
-                'GLTFImporter::_decodeCamera >>> unsupported camera type (' +
-                  e.type +
-                  ')'
-              ),
-                (T = new CombinedCamera(x, _, w, S, b)).toOrthographic(),
-                (T.zoom = R)
-          }
-          return T
-        }),
-        (e.prototype._decodeLights = function (e) {
-          var t = e.extensions.KHR_lights_punctual.lights
-          if (t)
-            for (var i = 0; i < t.length; i++) {
-              var r = t[i],
-                n = this._decodeLight(r)
-              this._lights.push(n)
-            }
-          else
-            console.warn(
-              'GLTFImporter::_decodeLights >>> there are no lights in the given gltf file'
-            )
-        }),
-        (e.prototype._decodeLight = function (e) {
-          var t,
-            i,
-            r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T,
-            x,
-            _,
-            w,
-            S,
-            b,
-            R,
-            C,
-            O,
-            D,
-            M,
-            L,
-            P,
-            I,
-            B,
-            H,
-            N,
-            F,
-            G,
-            U,
-            z,
-            V,
-            k,
-            j,
-            Y,
-            $,
-            Q,
-            W,
-            X,
-            J,
-            K,
-            q,
-            Z,
-            ee,
-            te,
-            ie,
-            re,
-            ne,
-            oe,
-            ae,
-            se,
-            le,
-            ce,
-            ue,
-            he,
-            de,
-            fe,
-            pe,
-            ve,
-            me,
-            ge,
-            Ee,
-            ye,
-            Ae,
-            Te,
-            xe,
-            _e,
-            we,
-            Se,
-            be,
-            Re,
-            Ce,
-            Oe,
-            De,
-            Me,
-            Le,
-            Pe,
-            Ie,
-            Be,
-            He,
-            Ne,
-            Fe,
-            Ge,
-            Ue,
-            ze,
-            Ve,
-            ke,
-            je,
-            Ye,
-            $e,
-            Qe,
-            We,
-            Xe,
-            Je,
-            Ke = null
-          switch (e.type) {
-            case LIGHT_TYPE.HEMISPHERIC:
-              var qe = new THREE.Color().fromArray(
-                  null !== (t = e.color) && void 0 !== t ? t : [1, 1, 1]
-                ),
-                Ze = new THREE.Color().setHex(8553090),
-                et = null !== (i = e.intensity) && void 0 !== i ? i : 0.75
-              Ke = new THREE.HemisphereLight(qe, Ze, et)
-              break
-            case LIGHT_TYPE.DIRECTIONAL:
-              ;(qe = new THREE.Color().fromArray(
-                null !== (r = e.color) && void 0 !== r ? r : [1, 1, 1]
-              )),
-                (et = null !== (n = e.intensity) && void 0 !== n ? n : 1)
-              ;((Ke = new LightDirectional(qe, et)).castShadow =
-                null !==
-                  (l =
-                    null ===
-                      (s =
-                        null ===
-                          (a =
-                            null === (o = e.extensions) || void 0 === o
-                              ? void 0
-                              : o.SPE_light_parameters) || void 0 === a
-                          ? void 0
-                          : a.shadows) || void 0 === s
-                      ? void 0
-                      : s.castShadow) &&
-                void 0 !== l &&
-                l),
-                (Ke.shadow.mapSize = new THREE.Vector2().fromArray(
-                  null !==
-                    (d =
-                      null ===
-                        (h =
-                          null ===
-                            (u =
-                              null === (c = e.extensions) || void 0 === c
-                                ? void 0
-                                : c.SPE_light_parameters) || void 0 === u
-                            ? void 0
-                            : u.shadows) || void 0 === h
-                        ? void 0
-                        : h.shadowmapSize) && void 0 !== d
-                    ? d
-                    : DEFAULT_SHADOWMAP_SIZE
-                )),
-                (Ke.shadow.bias =
-                  null !==
-                    (m =
-                      null ===
-                        (v =
-                          null ===
-                            (p =
-                              null === (f = e.extensions) || void 0 === f
-                                ? void 0
-                                : f.SPE_light_parameters) || void 0 === p
-                            ? void 0
-                            : p.shadows) || void 0 === v
-                        ? void 0
-                        : v.shadowmapBias) && void 0 !== m
-                    ? m
-                    : 0),
-                (Ke.shadow.camera.right =
-                  null !==
-                    (A =
-                      null ===
-                        (y =
-                          null ===
-                            (E =
-                              null === (g = e.extensions) || void 0 === g
-                                ? void 0
-                                : g.SPE_light_parameters) || void 0 === E
-                            ? void 0
-                            : E.shadows) || void 0 === y
-                        ? void 0
-                        : y.shadowmapViewRight) && void 0 !== A
-                    ? A
-                    : 1250),
-                (Ke.shadow.camera.left =
-                  null !==
-                    (w =
-                      null ===
-                        (_ =
-                          null ===
-                            (x =
-                              null === (T = e.extensions) || void 0 === T
-                                ? void 0
-                                : T.SPE_light_parameters) || void 0 === x
-                            ? void 0
-                            : x.shadows) || void 0 === _
-                        ? void 0
-                        : _.shadowmapViewLeft) && void 0 !== w
-                    ? w
-                    : -1250),
-                (Ke.shadow.camera.top =
-                  null !==
-                    (C =
-                      null ===
-                        (R =
-                          null ===
-                            (b =
-                              null === (S = e.extensions) || void 0 === S
-                                ? void 0
-                                : S.SPE_light_parameters) || void 0 === b
-                            ? void 0
-                            : b.shadows) || void 0 === R
-                        ? void 0
-                        : R.shadowmapViewTop) && void 0 !== C
-                    ? C
-                    : 1250),
-                (Ke.shadow.camera.bottom =
-                  null !==
-                    (L =
-                      null ===
-                        (M =
-                          null ===
-                            (D =
-                              null === (O = e.extensions) || void 0 === O
-                                ? void 0
-                                : O.SPE_light_parameters) || void 0 === D
-                            ? void 0
-                            : D.shadows) || void 0 === M
-                        ? void 0
-                        : M.shadowmapViewBottom) && void 0 !== L
-                    ? L
-                    : -1250),
-                (Ke.shadow.camera.near =
-                  null !==
-                    (H =
-                      null ===
-                        (B =
-                          null ===
-                            (I =
-                              null === (P = e.extensions) || void 0 === P
-                                ? void 0
-                                : P.SPE_light_parameters) || void 0 === I
-                            ? void 0
-                            : I.shadows) || void 0 === B
-                        ? void 0
-                        : B.shadowmapViewNear) && void 0 !== H
-                    ? H
-                    : 1),
-                (Ke.shadow.camera.far =
-                  null !==
-                    (U =
-                      null ===
-                        (G =
-                          null ===
-                            (F =
-                              null === (N = e.extensions) || void 0 === N
-                                ? void 0
-                                : N.SPE_light_parameters) || void 0 === F
-                            ? void 0
-                            : F.shadows) || void 0 === G
-                        ? void 0
-                        : G.shadowmapViewFar) && void 0 !== U
-                    ? U
-                    : 2500)
-              break
-            case LIGHT_TYPE.POINT:
-              ;(qe = new THREE.Color().fromArray(
-                null !== (z = e.color) && void 0 !== z ? z : [1, 1, 1]
-              )),
-                (et = null !== (V = e.intensity) && void 0 !== V ? V : 1)
-              var tt = null !== (k = e.range) && void 0 !== k ? k : 0,
-                it =
-                  null !==
-                    (Q =
-                      null ===
-                        ($ =
-                          null ===
-                            (Y =
-                              null === (j = e.extensions) || void 0 === j
-                                ? void 0
-                                : j.SPE_light_parameters) || void 0 === Y
-                            ? void 0
-                            : Y.custom) || void 0 === $
-                        ? void 0
-                        : $.decay) && void 0 !== Q
-                    ? Q
-                    : 1
-              ;((Ke = new LightPoint(qe, et, tt, it)).castShadow =
-                null !==
-                  (K =
-                    null ===
-                      (J =
-                        null ===
-                          (X =
-                            null === (W = e.extensions) || void 0 === W
-                              ? void 0
-                              : W.SPE_light_parameters) || void 0 === X
-                          ? void 0
-                          : X.shadows) || void 0 === J
-                      ? void 0
-                      : J.castShadow) &&
-                void 0 !== K &&
-                K),
-                (Ke.shadow.mapSize = new THREE.Vector2().fromArray(
-                  null !==
-                    (te =
-                      null ===
-                        (ee =
-                          null ===
-                            (Z =
-                              null === (q = e.extensions) || void 0 === q
-                                ? void 0
-                                : q.SPE_light_parameters) || void 0 === Z
-                            ? void 0
-                            : Z.shadows) || void 0 === ee
-                        ? void 0
-                        : ee.shadowmapSize) && void 0 !== te
-                    ? te
-                    : DEFAULT_SHADOWMAP_SIZE
-                )),
-                (Ke.shadow.bias =
-                  null !==
-                    (oe =
-                      null ===
-                        (ne =
-                          null ===
-                            (re =
-                              null === (ie = e.extensions) || void 0 === ie
-                                ? void 0
-                                : ie.SPE_light_parameters) || void 0 === re
-                            ? void 0
-                            : re.shadows) || void 0 === ne
-                        ? void 0
-                        : ne.shadowmapBias) && void 0 !== oe
-                    ? oe
-                    : 0),
-                (Ke.shadow.camera.near =
-                  null !==
-                    (ce =
-                      null ===
-                        (le =
-                          null ===
-                            (se =
-                              null === (ae = e.extensions) || void 0 === ae
-                                ? void 0
-                                : ae.SPE_light_parameters) || void 0 === se
-                            ? void 0
-                            : se.shadows) || void 0 === le
-                        ? void 0
-                        : le.shadowmapViewNear) && void 0 !== ce
-                    ? ce
-                    : 1),
-                (Ke.shadow.camera.far =
-                  null !==
-                    (fe =
-                      null ===
-                        (de =
-                          null ===
-                            (he =
-                              null === (ue = e.extensions) || void 0 === ue
-                                ? void 0
-                                : ue.SPE_light_parameters) || void 0 === he
-                            ? void 0
-                            : he.shadows) || void 0 === de
-                        ? void 0
-                        : de.shadowmapViewFar) && void 0 !== fe
-                    ? fe
-                    : 2500)
-              break
-            case LIGHT_TYPE.SPOT:
-              ;(qe = new THREE.Color().fromArray(
-                null !== (pe = e.color) && void 0 !== pe ? pe : [1, 1, 1]
-              )),
-                (et = null !== (ve = e.intensity) && void 0 !== ve ? ve : 1),
-                (tt = null !== (me = e.range) && void 0 !== me ? me : 0)
-              var rt =
-                  null !==
-                    (Ee =
-                      null === (ge = e.spot) || void 0 === ge
-                        ? void 0
-                        : ge.innerConeAngle) && void 0 !== Ee
-                    ? Ee
-                    : Math.PI / 3,
-                nt =
-                  ((it =
-                    null !==
-                      (xe =
-                        null ===
-                          (Te =
-                            null ===
-                              (Ae =
-                                null === (ye = e.extensions) || void 0 === ye
-                                  ? void 0
-                                  : ye.SPE_light_parameters) || void 0 === Ae
-                              ? void 0
-                              : Ae.custom) || void 0 === Te
-                          ? void 0
-                          : Te.decay) && void 0 !== xe
-                      ? xe
-                      : 1),
-                  null !==
-                    (be =
-                      null ===
-                        (Se =
-                          null ===
-                            (we =
-                              null === (_e = e.extensions) || void 0 === _e
-                                ? void 0
-                                : _e.SPE_light_parameters) || void 0 === we
-                            ? void 0
-                            : we.custom) || void 0 === Se
-                        ? void 0
-                        : Se.penumbra) && void 0 !== be
-                    ? be
-                    : 0)
-              ;((Ke = new LightSpot(qe, et, tt, rt, nt, it)).castShadow =
-                null !==
-                  (De =
-                    null ===
-                      (Oe =
-                        null ===
-                          (Ce =
-                            null === (Re = e.extensions) || void 0 === Re
-                              ? void 0
-                              : Re.SPE_light_parameters) || void 0 === Ce
-                          ? void 0
-                          : Ce.shadows) || void 0 === Oe
-                      ? void 0
-                      : Oe.castShadow) &&
-                void 0 !== De &&
-                De),
-                (Ke.shadow.mapSize = new THREE.Vector2().fromArray(
-                  null !==
-                    (Ie =
-                      null ===
-                        (Pe =
-                          null ===
-                            (Le =
-                              null === (Me = e.extensions) || void 0 === Me
-                                ? void 0
-                                : Me.SPE_light_parameters) || void 0 === Le
-                            ? void 0
-                            : Le.shadows) || void 0 === Pe
-                        ? void 0
-                        : Pe.shadowmapSize) && void 0 !== Ie
-                    ? Ie
-                    : DEFAULT_SHADOWMAP_SIZE
-                )),
-                (Ke.shadow.bias =
-                  null !==
-                    (Fe =
-                      null ===
-                        (Ne =
-                          null ===
-                            (He =
-                              null === (Be = e.extensions) || void 0 === Be
-                                ? void 0
-                                : Be.SPE_light_parameters) || void 0 === He
-                            ? void 0
-                            : He.shadows) || void 0 === Ne
-                        ? void 0
-                        : Ne.shadowmapBias) && void 0 !== Fe
-                    ? Fe
-                    : 0),
-                (Ke.shadow.camera.fov =
-                  null !==
-                    (Ve =
-                      null ===
-                        (ze =
-                          null ===
-                            (Ue =
-                              null === (Ge = e.extensions) || void 0 === Ge
-                                ? void 0
-                                : Ge.SPE_light_parameters) || void 0 === Ue
-                            ? void 0
-                            : Ue.shadows) || void 0 === ze
-                        ? void 0
-                        : ze.shadowmapViewFov) && void 0 !== Ve
-                    ? Ve
-                    : 2 * THREE.MathUtils.RAD2DEG * rt),
-                (Ke.shadow.camera.near =
-                  null !==
-                    ($e =
-                      null ===
-                        (Ye =
-                          null ===
-                            (je =
-                              null === (ke = e.extensions) || void 0 === ke
-                                ? void 0
-                                : ke.SPE_light_parameters) || void 0 === je
-                            ? void 0
-                            : je.shadows) || void 0 === Ye
-                        ? void 0
-                        : Ye.shadowmapViewNear) && void 0 !== $e
-                    ? $e
-                    : 1),
-                (Ke.shadow.camera.far =
-                  null !==
-                    (Je =
-                      null ===
-                        (Xe =
-                          null ===
-                            (We =
-                              null === (Qe = e.extensions) || void 0 === Qe
-                                ? void 0
-                                : Qe.SPE_light_parameters) || void 0 === We
-                            ? void 0
-                            : We.shadows) || void 0 === Xe
-                        ? void 0
-                        : Xe.shadowmapViewFar) && void 0 !== Je
-                    ? Je
-                    : 2500)
-              break
-            default:
-              console.error(
-                'GLTFImporter::_decodeLight >>> unsupported light type (' +
-                  e.type +
-                  ')'
-              )
-          }
-          return Ke
-        }),
-        (e.prototype._decodeMeshes = function (e) {
-          var t = e.meshes
-          if (t)
-            for (var i = 0; i < t.length; i++) {
-              var r = t[i],
-                n = this._decodeMesh(r)
-              this._meshes.push(n)
-            }
-          else
-            console.error(
-              'GLTFImporter::_decodeMeshes >>> there are no meshes in this gltf-file'
-            )
-        }),
-        (e.prototype._decodeMesh = function (e) {
-          return !(e.primitives.length > 0)
-            ? this._decodeParametriGeometry(e)
-            : this._decodeNonParametricGeometry(e)
-        }),
-        (e.prototype._decodeParametriGeometry = function (e) {
-          var t,
-            i =
-              null === (t = e.extensions) || void 0 === t
-                ? void 0
-                : t.SPE_primitive
-          return createGeometry(
-            null != i
-              ? i
-              : {
-                  type: 'SphereGeometry',
-                  parameters: { width: 100, height: 100, depth: 100 }
-                }
-          )
-        }),
-        (e.prototype._decodeNonParametricGeometry = function (e) {
-          var t,
-            i,
-            r,
-            n,
-            o,
-            a = e.primitives[0],
-            s = null !== (t = a.indices) && void 0 !== t ? t : -1,
-            l = a.attributes,
-            c = null !== (i = this._accessors[s]) && void 0 !== i ? i : null,
-            u = {}
-          for (var h in l) {
-            var d = l[h]
-            u[h] = this._accessors[d]
-          }
-          var f = new THREE.BufferGeometry()
-          for (var p in (c && f.setIndex(c.bufferData), u)) {
-            h = p in ATTRIBUTE_NAME_MAPPING ? ATTRIBUTE_NAME_MAPPING[p] : p
-            f.setAttribute(h.toLowerCase(), u[p].bufferData)
-          }
-          if (!e.extensions)
-            return (
-              console.error(
-                'GLTFImporter::_decodeNonParametricGeometry >>> must have SPE_primitive extension'
-              ),
-              f
-            )
-          var v = new THREE.Vector3()
-          f.computeBoundingBox(), f.boundingBox.getSize(v)
-          var m = e.extensions.SPE_primitive,
-            g = null !== (r = m.parameters.width) && void 0 !== r ? r : v.x,
-            E = null !== (n = m.parameters.height) && void 0 !== n ? n : v.y,
-            y = null !== (o = m.parameters.depth) && void 0 !== o ? o : v.z
-          return (
-            f.scale(
-              Math.abs(v.x) < 1e-5 ? 1 : g / v.x,
-              Math.abs(v.y) < 1e-5 ? 1 : E / v.y,
-              Math.abs(v.z) < 1e-5 ? 1 : y / v.z
-            ),
-            (f.userData = {
-              type: 'NonParametricGeometry',
-              parameters: { width: g, height: E, depth: y }
-            }),
-            f
-          )
-        }),
-        (e.prototype._decodeMaterials = function (e) {
-          var t = e.materials
-          if (t)
-            for (var i = 0; i < t.length; i++) {
-              var r = t[i],
-                n = this._decodeMaterial(r)
-              this._materials.push(n)
-            }
-          else
-            console.error(
-              'GLTFImporter::_decodeMaterials >>> there are no materials in this gltf-file'
-            )
-        }),
-        (e.prototype._decodeMaterial = function (e) {
-          var t,
-            i,
-            r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E = null !== (t = e.name) && void 0 !== t ? t : 'DefaultMaterial',
-            y =
-              (null !== (i = e.alphaMode) && void 0 !== i
-                ? i
-                : GLTF_MATERIAL_ALPHA_MODE.OPAQUE) ===
-              GLTF_MATERIAL_ALPHA_MODE.BLEND,
-            A = null !== (r = e.alphaCutoff) && void 0 !== r ? r : 1
-          if (!e.extensions)
-            return (
-              console.error(
-                'GLTFImporter::_decodeMaterial >>> there must be extensions for materials in Spline'
-              ),
-              null
-            )
-          if (!e.extensions.KHR_materials_common)
-            return (
-              console.error(
-                'GLTFImporter::_decodeMaterial >>> there must be the KHR_materials_common extension for spline usage'
-              ),
-              null
-            )
-          if (!e.extensions.SPE_materials_layers)
-            return (
-              console.error(
-                'GLTFImporter::_decodeMaterial >>> there must be the SPE_materials_layers extension for spline usage'
-              ),
-              null
-            )
-          if (!e.extensions.SPE_materials_options)
-            return (
-              console.error(
-                'GLTFImporter::_decodeMaterial >>> there must be the SPE_materials_options extension for spline usage'
-              ),
-              null
-            )
-          var T = e.extensions.KHR_materials_common,
-            x = e.extensions.SPE_materials_layers,
-            _ = e.extensions.SPE_materials_options
-          function w(e) {
-            switch (e) {
-              case GLTF_MATERIAL_SIDE.FRONT_SIDE:
-                return THREE.FrontSide
-              case GLTF_MATERIAL_SIDE.BACK_SIDE:
-                return THREE.BackSide
-              case GLTF_MATERIAL_SIDE.DOUBLE_SIDE:
-                return THREE.DoubleSide
-            }
-          }
-          var S = null
-          switch (T.technique) {
-            case GLTF_LIGHTING_TECHNIQUE.CONSTANT:
-              var b = new THREE.Color().fromArray(
-                  null !== (n = T.ambient) && void 0 !== n ? n : [0.5, 0.5, 0.5]
-                ),
-                R = _.visible,
-                C = _.wireframe,
-                O = _.shadingMode === GLTF_MATERIAL_SHADING_MODE.FLAT_SHADING,
-                D = w(_.side)
-              S = new BasicMaterial({
-                name: E,
-                color: b,
-                visible: R,
-                wireframe: C,
-                flatShading: O,
-                side: D,
-                transparent: y,
-                opacity: A
-              })
-              break
-            case GLTF_LIGHTING_TECHNIQUE.LAMBERT:
-              b = new THREE.Color().fromArray(
-                null !== (o = T.diffuse) && void 0 !== o ? o : [0.5, 0.5, 0.5]
-              )
-              var M = new THREE.Color().fromArray(
-                null !== (a = T.emission) && void 0 !== a ? a : [0, 0, 0]
-              )
-              ;(R = _.visible),
-                (C = _.wireframe),
-                (O = _.shadingMode === GLTF_MATERIAL_SHADING_MODE.FLAT_SHADING),
-                (D = w(_.side))
-              S = new LambertMaterial({
-                name: E,
-                color: b,
-                emissive: M,
-                visible: R,
-                wireframe: C,
-                flatShading: O,
-                side: D,
-                transparent: y,
-                opacity: A
-              })
-              break
-            case GLTF_LIGHTING_TECHNIQUE.BLINN:
-              b = new THREE.Color().fromArray(
-                null !== (s = T.diffuse) && void 0 !== s ? s : [0.5, 0.5, 0.5]
-              )
-              var L = new THREE.Color().fromArray(
-                  null !== (l = T.specular) && void 0 !== l
-                    ? l
-                    : [0.5, 0.5, 0.5]
-                ),
-                P = null !== (c = T.shininess) && void 0 !== c ? c : 32
-              ;(M = new THREE.Color().fromArray(
-                null !== (u = T.emission) && void 0 !== u ? u : [0, 0, 0]
-              )),
-                (R = _.visible),
-                (C = _.wireframe),
-                (O = _.shadingMode === GLTF_MATERIAL_SHADING_MODE.FLAT_SHADING),
-                (D = w(_.side))
-              S = new PhongMaterial$1({
-                name: E,
-                color: b,
-                specular: L,
-                shininess: P,
-                emissive: M,
-                visible: R,
-                wireframe: C,
-                flatShading: O,
-                side: D,
-                transparent: y,
-                opacity: A
-              })
-              break
-            case GLTF_LIGHTING_TECHNIQUE.TOON:
-              ;(b = new THREE.Color().fromArray(
-                null !== (h = T.ambient) && void 0 !== h ? h : [0.5, 0.5, 0.5]
-              )),
-                (M = new THREE.Color().fromArray(
-                  null !== (d = T.emission) && void 0 !== d ? d : [0, 0, 0]
-                )),
-                (R = _.visible),
-                (C = _.wireframe),
-                (O = _.shadingMode === GLTF_MATERIAL_SHADING_MODE.FLAT_SHADING),
-                (D = w(_.side))
-              S = new ToonMaterial({
-                name: E,
-                color: b,
-                emissive: M,
-                visible: R,
-                wireframe: C,
-                flatShading: O,
-                side: D,
-                transparent: y,
-                opacity: A
-              })
-              break
-            case GLTF_LIGHTING_TECHNIQUE.PHYSICAL:
-              b = new THREE.Color().fromArray(
-                null !== (f = T.diffuse) && void 0 !== f ? f : [0.5, 0.5, 0.5]
-              )
-              var I = null !== (p = T.roughness) && void 0 !== p ? p : 0.3,
-                B = null !== (v = T.metalness) && void 0 !== v ? v : 0,
-                H = null !== (m = T.reflectivity) && void 0 !== m ? m : 0.5
-              ;(M = new THREE.Color().fromArray(
-                null !== (g = T.emission) && void 0 !== g ? g : [0, 0, 0]
-              )),
-                (R = _.visible),
-                (C = _.wireframe),
-                (O = _.shadingMode === GLTF_MATERIAL_SHADING_MODE.FLAT_SHADING),
-                (D = w(_.side))
-              S = new PhysicalMaterial({
-                name: E,
-                color: b,
-                roughness: I,
-                metalness: B,
-                reflectivity: H,
-                emissive: M,
-                visible: R,
-                wireframe: C,
-                flatShading: O,
-                side: D,
-                transparent: y,
-                opacity: A
-              })
-              break
-            default:
-              ;(b = new THREE.Color(9079434)),
-                (L = new THREE.Color(9079434))
-              S = new PhongMaterial$1({
-                name: E,
-                color: b,
-                specular: L,
-                shininess: (P = 32),
-                transparent: y,
-                opacity: A
-              })
-          }
-          return (
-            this._setupLayersInMaterial(S, x.layers),
-            (S.onBeforeCompile = ShaderLib.createCallback(S)),
-            S
-          )
-        }),
-        (e.prototype._setupLayersInMaterial = function (e, t) {
-          var i,
-            r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T,
-            x,
-            _,
-            w,
-            S,
-            b,
-            R,
-            C,
-            O,
-            D,
-            M,
-            L,
-            P,
-            I,
-            B,
-            H,
-            N,
-            F,
-            G,
-            U,
-            z,
-            V,
-            k,
-            j,
-            Y,
-            $,
-            Q,
-            W,
-            X,
-            J,
-            K,
-            q,
-            Z,
-            ee,
-            te,
-            ie,
-            re,
-            ne,
-            oe,
-            ae,
-            se,
-            le,
-            ce,
-            ue,
-            he,
-            de,
-            fe,
-            pe,
-            ve,
-            me = this
-          function ge(e) {
-            var t
-            return null !== (t = me._textures[e]) && void 0 !== t
-              ? t
-              : DEFAULT_TEXTURE
-          }
-          function Ee(e) {
-            for (var t = Math.floor(e.length / 4), i = [], r = 0; r < t; r++) {
-              var n = e[4 * r + 0],
-                o = e[4 * r + 1],
-                a = e[4 * r + 2],
-                s = e[4 * r + 3]
-              i.push(new THREE.Vector4(n, o, a, s))
-            }
-            return i
-          }
-          var ye = e.userData.layers,
-            Ae = null
-          ye.dispose()
-          for (var Te = 0; Te < t.length; Te++) {
-            var xe = t[Te],
-              _e = xe.id,
-              we = xe.uniforms,
-              Se = {
-                type: xe.type,
-                alpha:
-                  null !==
-                    (r =
-                      null === (i = we.alpha) || void 0 === i
-                        ? void 0
-                        : i.value) && void 0 !== r
-                    ? r
-                    : 1,
-                mode:
-                  null !==
-                    (o =
-                      null === (n = we.mode) || void 0 === n
-                        ? void 0
-                        : n.value) && void 0 !== o
-                    ? o
-                    : 0,
-                color: new THREE.Color().fromArray(
-                  null !==
-                    (s =
-                      null === (a = we.color) || void 0 === a
-                        ? void 0
-                        : a.value) && void 0 !== s
-                    ? s
-                    : [0.1, 0.1, 0.1]
-                ),
-                texture: ge(
-                  null !==
-                    (c =
-                      null === (l = we.texture) || void 0 === l
-                        ? void 0
-                        : l.value) && void 0 !== c
-                    ? c
-                    : -1
-                ),
-                crop:
-                  null !==
-                    (h =
-                      null === (u = we.crop) || void 0 === u
-                        ? void 0
-                        : u.value) && void 0 !== h
-                    ? h
-                    : 0,
-                cnormal: new THREE.Vector3().fromArray(
-                  null !==
-                    (f =
-                      null === (d = we.cnormal) || void 0 === d
-                        ? void 0
-                        : d.value) && void 0 !== f
-                    ? f
-                    : [0, 0, 1]
-                ),
-                near:
-                  null !==
-                    (v =
-                      null === (p = we.near) || void 0 === p
-                        ? void 0
-                        : p.value) && void 0 !== v
-                    ? v
-                    : 700,
-                far:
-                  null !==
-                    (g =
-                      null === (m = we.far) || void 0 === m
-                        ? void 0
-                        : m.value) && void 0 !== g
-                    ? g
-                    : 1e3,
-                origin: new THREE.Vector3().fromArray(
-                  null !==
-                    (y =
-                      null === (E = we.origin) || void 0 === E
-                        ? void 0
-                        : E.value) && void 0 !== y
-                    ? y
-                    : [0, 0, 0]
-                ),
-                isVector:
-                  null !==
-                    (T =
-                      null === (A = we.isVector) || void 0 === A
-                        ? void 0
-                        : A.value) && void 0 !== T
-                    ? T
-                    : 0,
-                colorA: new THREE.Color().fromArray(
-                  null !==
-                    (_ =
-                      null === (x = we.colorA) || void 0 === x
-                        ? void 0
-                        : x.value) && void 0 !== _
-                    ? _
-                    : [0.1, 0.1, 0.1]
-                ),
-                colorB: new THREE.Color().fromArray(
-                  null !==
-                    (S =
-                      null === (w = we.colorB) || void 0 === w
-                        ? void 0
-                        : w.value) && void 0 !== S
-                    ? S
-                    : [0.1, 0.1, 0.1]
-                ),
-                colorC: new THREE.Color().fromArray(
-                  null !==
-                    (R =
-                      null === (b = we.colorC) || void 0 === b
-                        ? void 0
-                        : b.value) && void 0 !== R
-                    ? R
-                    : [0.1, 0.1, 0.1]
-                ),
-                colorD: new THREE.Color().fromArray(
-                  null !==
-                    (O =
-                      null === (C = we.colorD) || void 0 === C
-                        ? void 0
-                        : C.value) && void 0 !== O
-                    ? O
-                    : [0.1, 0.1, 0.1]
-                ),
-                scale:
-                  null !==
-                    (M =
-                      null === (D = we.scale) || void 0 === D
-                        ? void 0
-                        : D.value) && void 0 !== M
-                    ? M
-                    : 2,
-                move:
-                  null !==
-                    (P =
-                      null === (L = we.move) || void 0 === L
-                        ? void 0
-                        : L.value) && void 0 !== P
-                    ? P
-                    : 1,
-                distortion: new THREE.Vector2().fromArray(
-                  null !==
-                    (B =
-                      null === (I = we.distortion) || void 0 === I
-                        ? void 0
-                        : I.value) && void 0 !== B
-                    ? B
-                    : [1, 1]
-                ),
-                fA: new THREE.Vector2().fromArray(
-                  null !==
-                    (N =
-                      null === (H = we.fA) || void 0 === H
-                        ? void 0
-                        : H.value) && void 0 !== N
-                    ? N
-                    : [1.7, 9.2]
-                ),
-                fB: new THREE.Vector2().fromArray(
-                  null !==
-                    (G =
-                      null === (F = we.fB) || void 0 === F
-                        ? void 0
-                        : F.value) && void 0 !== G
-                    ? G
-                    : [8.3, 2.8]
-                ),
-                intA:
-                  null !==
-                    (z =
-                      null === (U = we.intA) || void 0 === U
-                        ? void 0
-                        : U.value) && void 0 !== z
-                    ? z
-                    : 10,
-                intB:
-                  null !==
-                    (k =
-                      null === (V = we.intB) || void 0 === V
-                        ? void 0
-                        : V.value) && void 0 !== k
-                    ? k
-                    : 10,
-                intC:
-                  null !==
-                    (Y =
-                      null === (j = we.intC) || void 0 === j
-                        ? void 0
-                        : j.value) && void 0 !== Y
-                    ? Y
-                    : 10,
-                intD:
-                  null !==
-                    (Q =
-                      null === ($ = we.intD) || void 0 === $
-                        ? void 0
-                        : $.value) && void 0 !== Q
-                    ? Q
-                    : 10,
-                bias:
-                  null !==
-                    (X =
-                      null === (W = we.bias) || void 0 === W
-                        ? void 0
-                        : W.value) && void 0 !== X
-                    ? X
-                    : 0.1,
-                intensity:
-                  null !==
-                    (K =
-                      null === (J = we.intensity) || void 0 === J
-                        ? void 0
-                        : J.value) && void 0 !== K
-                    ? K
-                    : 2,
-                factor:
-                  null !==
-                    (Z =
-                      null === (q = we.factor) || void 0 === q
-                        ? void 0
-                        : q.value) && void 0 !== Z
-                    ? Z
-                    : 1,
-                colors: Ee(
-                  null !==
-                    (te =
-                      null === (ee = we.colors) || void 0 === ee
-                        ? void 0
-                        : ee.value) && void 0 !== te
-                    ? te
-                    : DEFAULT_ARRAY_COLORS
-                ),
-                steps:
-                  null !==
-                    (re =
-                      null === (ie = we.steps) || void 0 === ie
-                        ? void 0
-                        : ie.value) && void 0 !== re
-                    ? re
-                    : DEFAULT_STEPS,
-                gl_type:
-                  null !==
-                    (oe =
-                      null === (ne = we.gl_type) || void 0 === ne
-                        ? void 0
-                        : ne.value) && void 0 !== oe
-                    ? oe
-                    : 0,
-                num:
-                  null !==
-                    (se =
-                      null === (ae = we.num) || void 0 === ae
-                        ? void 0
-                        : ae.value) && void 0 !== se
-                    ? se
-                    : 2,
-                smooth:
-                  null !==
-                    (ce =
-                      null === (le = we.smooth) || void 0 === le
-                        ? void 0
-                        : le.value) &&
-                  void 0 !== ce &&
-                  ce,
-                offset: new THREE.Vector2().fromArray(
-                  null !==
-                    (he =
-                      null === (ue = we.offset) || void 0 === ue
-                        ? void 0
-                        : ue.value) && void 0 !== he
-                    ? he
-                    : [0, 0]
-                ),
-                morph: new THREE.Vector2().fromArray(
-                  null !==
-                    (fe =
-                      null === (de = we.morph) || void 0 === de
-                        ? void 0
-                        : de.value) && void 0 !== fe
-                    ? fe
-                    : [0, 0]
-                ),
-                angle:
-                  null !==
-                    (ve =
-                      null === (pe = we.angle) || void 0 === pe
-                        ? void 0
-                        : pe.value) && void 0 !== ve
-                    ? ve
-                    : 0
-              }
-            if (0 == Te) Ae = ye.head = new Layer(_e, Se)
-            else {
-              var be = new Layer(_e, Se)
-              ;(Ae.next = be), (Ae = be)
-            }
-          }
-        }),
-        (e.prototype._decodeNodes = function (e) {
-          var t = e.nodes
-          if (t)
-            for (var i = 0; i < t.length; i++) {
-              var r = t[i],
-                n = this._decodeNode(r)
-              this._nodes.push(n), (this._objects[n.uuid] = n)
-            }
-          else
-            console.error(
-              'GLTFImporter::_decodeMaterials >>> there are no materials in this gltf-file'
-            )
-        }),
-        (e.prototype._decodeInteractions = function (e) {
-          for (
-            var t,
-              i,
-              r,
-              n,
-              o =
-                null !== (t = e.extensions.SPE_interactions.interactions) &&
-                void 0 !== t
-                  ? t
-                  : [],
-              a = e.nodes,
-              s = 0;
-            s < a.length;
-            s++
-          ) {
-            var l =
-              null !==
-                (n =
-                  null ===
-                    (r =
-                      null === (i = a[s].extensions) || void 0 === i
-                        ? void 0
-                        : i.SPE_node_3d) || void 0 === r
-                    ? void 0
-                    : r.interaction) && void 0 !== n
-                ? n
-                : -1
-            if (l >= 0 && l < o.length) {
-              var c = o[l],
-                u = this._interactionStates,
-                h = this._objects
-              this._nodes[s].interaction.fromJSON(c, h, u)
-            }
-          }
-        }),
-        (e.prototype._decodeNode = function (e) {
-          var t,
-            i,
-            r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T,
-            x,
-            _,
-            w,
-            S,
-            b,
-            R,
-            C,
-            O,
-            D,
-            M,
-            L,
-            P,
-            I,
-            B,
-            H,
-            N,
-            F,
-            G,
-            U,
-            z,
-            V,
-            k,
-            j
-          if (
-            !(null === (t = e.extensions) || void 0 === t
-              ? void 0
-              : t.SPE_node_3d)
-          )
-            return (
-              console.error(
-                'GLTFImporter::_decodeNode >>> tried decoding a non-spline object'
-              ),
-              new THREE.Object3D()
-            )
-          var Y = e.extensions.SPE_node_3d,
-            $ = Y.type
-          switch ($) {
-            case OBJECT_TYPE.SCENE:
-              var Q =
-                  null !== (i = e.name) && void 0 !== i ? i : 'Default Scene',
-                W =
-                  null !== (r = Y.uuid) && void 0 !== r
-                    ? r
-                    : THREE.MathUtils.generateUUID(),
-                X = new Scene()
-              return (X.name = Q), (X.uuid = W), X
-            case OBJECT_TYPE.CAMERA:
-              var J = null !== (n = e.camera) && void 0 !== n ? n : -1
-              if (J < 0 || J >= this._cameras.length)
-                return (
-                  console.error(
-                    'GLTFImporter::_decodeNode >>> camera index out of range'
-                  ),
-                  new EmptyObject()
-                )
-              var K = this._cameras[J],
-                q = new THREE.Vector3().fromArray(
-                  null !== (o = e.translation) && void 0 !== o ? o : [0, 0, 0]
-                ),
-                Z = new THREE.Quaternion().fromArray(
-                  null !== (a = e.rotation) && void 0 !== a ? a : [0, 0, 0, 1]
-                ),
-                ee = new THREE.Matrix4().fromArray(
-                  null !== (s = Y.hiddenMatrix) && void 0 !== s
-                    ? s
-                    : IDENTITY_MATRIX
-                ),
-                te = null === (l = Y.visible) || void 0 === l || l,
-                ie =
-                  null !== (c = Y.uuid) && void 0 !== c
-                    ? c
-                    : THREE.MathUtils.generateUUID(),
-                re =
-                  null !== (u = e.name) && void 0 !== u
-                    ? u
-                    : 'Camera_' + THREE.MathUtils.generateUUID()
-              return (
-                K.position.copy(q),
-                K.quaternion.copy(Z),
-                K.hiddenMatrix.copy(ee),
-                (K.visible = te),
-                (K.uuid = ie),
-                (K.name = re),
-                K.updateMatrix(),
-                K
-              )
-            case OBJECT_TYPE.LIGHT:
-              var ne =
-                null !==
-                  (d =
-                    null === (h = e.extensions.KHR_lights_punctual) ||
-                    void 0 === h
-                      ? void 0
-                      : h.light) && void 0 !== d
-                  ? d
-                  : -1
-              if (ne < 0 || ne >= this._lights.length)
-                return (
-                  console.error(
-                    'GLTFImporter::_decodeNode >>> light index out of range'
-                  ),
-                  new EmptyObject()
-                )
-              var oe = this._lights[ne],
-                ae = new THREE.Vector3().fromArray(
-                  null !== (f = e.translation) && void 0 !== f ? f : [0, 0, 0]
-                ),
-                se = new THREE.Quaternion().fromArray(
-                  null !== (p = e.rotation) && void 0 !== p ? p : [0, 0, 0, 1]
-                ),
-                le = new THREE.Matrix4().fromArray(
-                  null !== (v = Y.hiddenMatrix) && void 0 !== v
-                    ? v
-                    : IDENTITY_MATRIX
-                ),
-                ce = null === (m = Y.visible) || void 0 === m || m,
-                ue =
-                  null !== (g = Y.uuid) && void 0 !== g
-                    ? g
-                    : THREE.MathUtils.generateUUID(),
-                he =
-                  null !== (E = e.name) && void 0 !== E
-                    ? E
-                    : 'Light_' + THREE.MathUtils.generateUUID()
-              if (
-                ('HemisphereLight' !== oe.type && oe.position.copy(ae),
-                (oe.visible = ce),
-                (oe.uuid = ue),
-                (oe.name = he),
-                'HemisphereLight' !== oe.type && oe.hiddenMatrix.copy(le),
-                'SpotLight' === oe.type || 'DirectionalLight' === oe.type)
+                var l = __values(e.data.groups), c = l.next();
+                !c.done;
+                c = l.next()
               ) {
-                var de = new THREE.Matrix4().makeRotationFromQuaternion(se),
-                  fe = new THREE.Vector3(
-                    de.elements[8],
-                    de.elements[9],
-                    de.elements[10]
-                  )
-                oe.target.position.copy(oe.position.clone().add(fe))
+                var h = c.value
+                n.addGroup(h.start, h.count, h.materialIndex)
               }
-              return 'HemisphereLight' !== oe.type && oe.updateMatrix(), oe
-            case OBJECT_TYPE.MESH_3D:
-            case OBJECT_TYPE.MESH_2D:
-            case OBJECT_TYPE.TEXTFRAME:
-            case OBJECT_TYPE.VECTOR_OBJECT:
-              var pe = null !== (y = e.mesh) && void 0 !== y ? y : -1
-              ;(pe < 0 || pe >= this._meshes.length) &&
-                console.error(
-                  'GLTFImporter::_decodeNode >>> geometry index out of range'
-                )
-              var ve =
-                  null !== (A = this._meshes[pe]) && void 0 !== A
-                    ? A
-                    : new THREE.SphereBufferGeometry(100),
-                me = (
-                  null !== (T = this._gltfFile.meshes) && void 0 !== T ? T : []
-                )[pe],
-                ge = me.primitives.length > 0,
-                Ee =
-                  null !==
-                    (w =
-                      null ===
-                        (_ =
-                          null === (x = me.extensions) || void 0 === x
-                            ? void 0
-                            : x.SPE_material) || void 0 === _
-                        ? void 0
-                        : _.indices) && void 0 !== w
-                    ? w
-                    : [-1],
-                ye =
-                  null !==
-                    (R =
-                      null ===
-                        (b =
-                          null === (S = me.extensions) || void 0 === S
-                            ? void 0
-                            : S.SPE_material) || void 0 === b
-                        ? void 0
-                        : b.groups) && void 0 !== R
-                    ? R
-                    : [],
-                Ae = Ee.length > 1,
-                Te = new PhongMaterial$1({ color: 10592673 })
-              if (Ae) {
-                Te.dispose(), (Te = [])
-                for (var xe = 0; xe < Ee.length; xe++) {
-                  if ((_e = Ee[xe]) < 0 || _e >= this._materials.length)
-                    throw new Error(
-                      'GLTFImporter::_decodeNode >>> material index out of range'
-                    )
-                  Te.push(this._materials[_e])
-                }
-                ve.clearGroups()
-                for (xe = 0; xe < ye.length; xe++)
-                  ve.addGroup(ye[xe].start, ye[xe].count, ye[xe].materialIndex)
-              } else {
-                var _e = -1
-                if (
-                  (_e = ge
-                    ? null !== (C = me.primitives[0].material) && void 0 !== C
-                      ? C
-                      : -1
-                    : null !== (O = Ee[0]) && void 0 !== O
-                    ? O
-                    : -1) < 0 ||
-                  _e >= this._materials.length
-                )
-                  throw new Error(
-                    'GLTFImporter::_decodeNode >>> material index out of range'
-                  )
-                Te.dispose(), (Te = this._materials[_e])
+            } catch (e) {
+              t = { error: e }
+            } finally {
+              try {
+                c && !c.done && (i = l.return) && i.call(l)
+              } finally {
+                if (t) throw t.error
               }
-              var we = null
-              switch ($) {
-                case OBJECT_TYPE.MESH_3D:
-                  we = new Mesh3D(ve, Te)
-                  break
-                case OBJECT_TYPE.MESH_2D:
-                  we = new Mesh2D(ve, Te)
-                  break
-                case OBJECT_TYPE.TEXTFRAME:
-                  we = new TextFrame(ve, Te)
-                  var Se = e.extensions.SPE_node_3d.textData.object
-                  we.fromJSONasync(Se)
-                    .then(function () {})
-                    .catch(function (e) {
-                      console.error(e)
-                    })
-                  break
-                case OBJECT_TYPE.VECTOR_OBJECT:
-                  we = new VectorObject(ve, Te)
-              }
-              var be = new THREE.Vector3().fromArray(
-                  null !== (D = e.translation) && void 0 !== D ? D : [0, 0, 0]
-                ),
-                Re = new THREE.Quaternion().fromArray(
-                  null !== (M = e.rotation) && void 0 !== M ? M : [0, 0, 0, 1]
-                ),
-                Ce = new THREE.Vector3().fromArray(
-                  null !== (L = e.scale) && void 0 !== L ? L : [1, 1, 1]
-                ),
-                Oe = new THREE.Matrix4().fromArray(
-                  null !== (P = Y.hiddenMatrix) && void 0 !== P
-                    ? P
-                    : IDENTITY_MATRIX
-                ),
-                De = null === (I = Y.visible) || void 0 === I || I,
-                Me =
-                  null !== (B = Y.uuid) && void 0 !== B
-                    ? B
-                    : THREE.MathUtils.generateUUID(),
-                Le = null === (H = Y.castShadow) || void 0 === H || H,
-                Pe = null === (N = Y.receiveShadow) || void 0 === N || N
-              return (
-                we.position.copy(be),
-                we.quaternion.copy(Re),
-                we.scale.copy(Ce),
-                we.hiddenMatrix.copy(Oe),
-                (we.visible = De),
-                (we.uuid = Me),
-                (we.castShadow = Le),
-                (we.receiveShadow = Pe),
-                we.updateMatrix(),
-                null !== (F = e.extensions.SPE_node_3d.isCloner) &&
-                  void 0 !== F &&
-                  F &&
-                  ((we.cloner = new Cloner(we).fromJSON(
-                    e.extensions.SPE_node_3d.cloner
-                  )),
-                  we.add(we.cloner)),
-                we
-              )
-            case OBJECT_TYPE.EMPTY_OBJECT:
-              var Ie = new EmptyObject(),
-                Be = new THREE.Vector3().fromArray(
-                  null !== (G = e.translation) && void 0 !== G ? G : [0, 0, 0]
-                ),
-                He = new THREE.Quaternion().fromArray(
-                  null !== (U = e.rotation) && void 0 !== U ? U : [0, 0, 0, 1]
-                ),
-                Ne = new THREE.Vector3().fromArray(
-                  null !== (z = e.scale) && void 0 !== z ? z : [1, 1, 1]
-                ),
-                Fe = new THREE.Matrix4().fromArray(
-                  null !== (V = Y.hiddenMatrix) && void 0 !== V
-                    ? V
-                    : IDENTITY_MATRIX
-                ),
-                Ge = null === (k = Y.visible) || void 0 === k || k,
-                Ue =
-                  null !== (j = Y.uuid) && void 0 !== j
-                    ? j
-                    : THREE.MathUtils.generateUUID()
-              return (
-                Ie.position.copy(Be),
-                Ie.quaternion.copy(He),
-                Ie.scale.copy(Ne),
-                Ie.hiddenMatrix.copy(Fe),
-                (Ie.visible = Ge),
-                (Ie.uuid = Ue),
-                Ie.updateMatrix(),
-                Ie
-              )
-          }
-          return (
-            console.error(
-              'GLTFImporter::_decodeNode >>> unsupported object type (' +
-                $ +
-                ')'
-            ),
-            new THREE.Object3D()
-          )
+            }
+          return n
         }),
-        (e.prototype._decodeSceneGraph = function (e) {
-          for (
-            var t, i = [{ nodeIndex: 0, parentNode: null }];
-            0 != i.length;
-
-          ) {
-            var r = i.pop(),
-              n = r.nodeIndex,
-              o = r.parentNode
-            if (n < this._nodes.length && n >= 0) {
-              var a = this._nodes[n]
-              if (!a) continue
-              o && o.add(a)
-              for (
-                var s =
-                    null !== (t = e.nodes[n].children) && void 0 !== t ? t : [],
-                  l = 0;
-                l < s.length;
-                l++
-              )
-                i.push({ nodeIndex: s[l], parentNode: a })
+        (e.prototype._loadAccessor = function (e) {
+          var t = this._vertexData.accessors[e],
+            i = this._loadBufferView(t.bufferView),
+            r = WEBGL_TYPE_SIZES[t.type],
+            n = new (0, WEBGL_COMPONENT_TYPES[t.componentType])(i.buffer)
+          return new THREE.BufferAttribute(n, r)
+        }),
+        (e.prototype._loadBufferView = function (e) {
+          var t = this._vertexData.bufferViews[e],
+            i = this._buffers[t.buffer],
+            r = t.byteLength || 0,
+            n = t.byteOffset || 0
+          return i.slice(n, n + r)
+        }),
+        (e.prototype._loadBuffers = function (e) {
+          var t, i
+          try {
+            for (var r = __values(e), n = r.next(); !n.done; n = r.next()) {
+              var a = n.value
+              if (a.uri) {
+                for (
+                  var o = a.uri.slice(a.uri.indexOf('base64') + 7),
+                    s = atob(o),
+                    l = new Uint8Array(s.length),
+                    c = 0;
+                  c < s.length;
+                  c++
+                )
+                  l[c] = s.charCodeAt(c)
+                this._buffers.push(l)
+              }
+            }
+          } catch (e) {
+            t = { error: e }
+          } finally {
+            try {
+              n && !n.done && (i = r.return) && i.call(r)
+            } finally {
+              if (t) throw t.error
             }
           }
         }),
         e
       )
     })(),
-    OrbitControls = function (e, t) {
-      var i, r, n, o, a
-      void 0 === t &&
-        console.warn(
-          'THREE.OrbitControls: The second parameter "domElement" is now mandatory.'
-        ),
-        t === document &&
-          console.error(
-            'THREE.OrbitControls: "document" should not be used as the target "domElement". Please use "renderer.domElement" instead.'
-          ),
-        (this.object = e),
-        (this.domElement = t),
-        (this.enabled = !0),
-        (this.target = new THREE.Vector3()),
-        (this.minDistance = 0),
-        (this.maxDistance = 1 / 0),
-        (this.minZoom = 0),
-        (this.maxZoom = 1 / 0),
-        (this.minPolarAngle = 0),
-        (this.maxPolarAngle = Math.PI),
-        (this.minAzimuthAngle = -1 / 0),
-        (this.maxAzimuthAngle = 1 / 0),
-        (this.enableDamping = !1),
-        (this.dampingFactor = 0.05),
-        (this.enableZoom = !0),
-        (this.zoomSpeed = 1),
-        (this.enableRotate = !0),
-        (this.rotateSpeed = 1),
-        (this.enablePan = !0),
-        (this.panSpeed = 1),
-        (this.screenSpacePanning = !1),
-        (this.keyPanSpeed = 7),
-        (this.autoRotate = !1),
-        (this.autoRotateSpeed = 2),
-        (this.enableKeys = !0),
-        (this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 }),
-        (this.mouseButtons = {
-          LEFT: THREE.MOUSE.ROTATE,
-          MIDDLE: THREE.MOUSE.DOLLY,
-          RIGHT: THREE.MOUSE.PAN
-        }),
-        (this.touches = {
-          ONE: THREE.TOUCH.ROTATE,
-          TWO: THREE.TOUCH.DOLLY_PAN
-        }),
-        (this.target0 = this.target.clone()),
-        (this.position0 = this.object.position.clone()),
-        (this.zoom0 = this.object.zoom),
-        (this.getPolarAngle = function () {
-          return p.phi
-        }),
-        (this.getAzimuthalAngle = function () {
-          return p.theta
-        }),
-        (this.saveState = function () {
-          s.target0.copy(s.target),
-            s.position0.copy(s.object.position),
-            (s.zoom0 = s.object.zoom)
-        }),
-        (this.reset = function () {
-          s.target.copy(s.target0),
-            s.object.position.copy(s.position0),
-            (s.object.zoom = s.zoom0),
-            s.object.updateProjectionMatrix(),
-            s.dispatchEvent(l),
-            s.update(),
-            (d = h.NONE)
-        }),
-        (this.update =
-          ((i = new THREE.Vector3()),
-          (r = new THREE.Quaternion().setFromUnitVectors(
-            e.up,
-            new THREE.Vector3(0, 1, 0)
-          )),
-          (n = r.clone().inverse()),
-          (o = new THREE.Vector3()),
-          (a = new THREE.Quaternion()),
-          function () {
-            var e = s.object.position
-            return (
-              i.copy(e).sub(s.target),
-              i.applyQuaternion(r),
-              p.setFromVector3(i),
-              s.autoRotate &&
-                d === h.NONE &&
-                O(((2 * Math.PI) / 60 / 60) * s.autoRotateSpeed),
-              s.enableDamping
-                ? ((p.theta += v.theta * s.dampingFactor),
-                  (p.phi += v.phi * s.dampingFactor))
-                : ((p.theta += v.theta), (p.phi += v.phi)),
-              (p.theta = Math.max(
-                s.minAzimuthAngle,
-                Math.min(s.maxAzimuthAngle, p.theta)
-              )),
-              (p.phi = Math.max(
-                s.minPolarAngle,
-                Math.min(s.maxPolarAngle, p.phi)
-              )),
-              p.makeSafe(),
-              (p.radius *= m),
-              (p.radius = Math.max(
-                s.minDistance,
-                Math.min(s.maxDistance, p.radius)
-              )),
-              !0 === s.enableDamping
-                ? s.target.addScaledVector(g, s.dampingFactor)
-                : s.target.add(g),
-              i.setFromSpherical(p),
-              i.applyQuaternion(n),
-              e.copy(s.target).add(i),
-              s.object.lookAt(s.target),
-              !0 === s.enableDamping
-                ? ((v.theta *= 1 - s.dampingFactor),
-                  (v.phi *= 1 - s.dampingFactor),
-                  g.multiplyScalar(1 - s.dampingFactor))
-                : (v.set(0, 0, 0), g.set(0, 0, 0)),
-              (m = 1),
-              !!(
-                E ||
-                o.distanceToSquared(s.object.position) > f ||
-                8 * (1 - a.dot(s.object.quaternion)) > f
-              ) &&
-                (s.dispatchEvent(l),
-                o.copy(s.object.position),
-                a.copy(s.object.quaternion),
-                (E = !1),
-                !0)
-            )
-          })),
-        (this.dispose = function () {
-          s.domElement.removeEventListener('contextmenu', q, !1),
-            s.domElement.removeEventListener('mousedown', j, !1),
-            s.domElement.removeEventListener('wheel', Q, !1),
-            s.domElement.removeEventListener('touchstart', X, !1),
-            s.domElement.removeEventListener('touchend', K, !1),
-            s.domElement.removeEventListener('touchmove', J, !1),
-            document.removeEventListener('mousemove', Y, !1),
-            document.removeEventListener('mouseup', $, !1),
-            s.domElement.removeEventListener('keydown', W, !1)
-        })
-      var s = this,
-        l = { type: 'change' },
-        c = { type: 'start' },
-        u = { type: 'end' },
-        h = {
-          NONE: -1,
-          ROTATE: 0,
-          DOLLY: 1,
-          PAN: 2,
-          TOUCH_ROTATE: 3,
-          TOUCH_PAN: 4,
-          TOUCH_DOLLY_PAN: 5,
-          TOUCH_DOLLY_ROTATE: 6
-        },
-        d = h.NONE,
-        f = 1e-6,
-        p = new THREE.Spherical(),
-        v = new THREE.Spherical(),
-        m = 1,
-        g = new THREE.Vector3(),
-        E = !1,
-        y = new THREE.Vector2(),
-        A = new THREE.Vector2(),
-        T = new THREE.Vector2(),
-        x = new THREE.Vector2(),
-        _ = new THREE.Vector2(),
-        w = new THREE.Vector2(),
-        S = new THREE.Vector2(),
-        b = new THREE.Vector2(),
-        R = new THREE.Vector2()
-      function C() {
-        return Math.pow(0.95, s.zoomSpeed)
-      }
-      function O(e) {
-        v.theta -= e
-      }
-      function D(e) {
-        v.phi -= e
-      }
-      var M = (function () {
-          var e = new THREE.Vector3()
-          return function (t, i) {
-            e.setFromMatrixColumn(i, 0), e.multiplyScalar(-t), g.add(e)
-          }
-        })(),
-        L = (function () {
-          var e = new THREE.Vector3()
-          return function (t, i) {
-            !0 === s.screenSpacePanning
-              ? e.setFromMatrixColumn(i, 1)
-              : (e.setFromMatrixColumn(i, 0), e.crossVectors(s.object.up, e)),
-              e.multiplyScalar(t),
-              g.add(e)
-          }
-        })(),
-        P = (function () {
-          var e = new THREE.Vector3()
-          return function (t, i) {
-            var r = s.domElement
-            if ('PerspectiveCamera' === s.object.cameraType) {
-              var n = s.object.position
-              e.copy(n).sub(s.target)
-              var o = e.length()
-              ;(o *= Math.tan(((s.object.fov / 2) * Math.PI) / 180)),
-                M((2 * t * o) / r.clientHeight, s.object.matrix),
-                L((2 * i * o) / r.clientHeight, s.object.matrix)
-            } else
-              'OrthographicCamera' === s.object.cameraType
-                ? (M(
-                    (t * (s.object.right - s.object.left)) /
-                      s.object.zoom /
-                      r.clientWidth,
-                    s.object.matrix
-                  ),
-                  L(
-                    (i * (s.object.top - s.object.bottom)) /
-                      s.object.zoom /
-                      r.clientHeight,
-                    s.object.matrix
-                  ))
-                : (console.warn(
-                    'WARNING: OrbitControls.js encountered an unknown camera type - pan disabled.'
-                  ),
-                  (s.enablePan = !1))
-          }
-        })()
-      function I(e) {
-        'PerspectiveCamera' === s.object.cameraType
-          ? (m /= e)
-          : 'OrthographicCamera' === s.object.cameraType
-          ? ((s.object.zoom = Math.max(
-              s.minZoom,
-              Math.min(s.maxZoom, s.object.zoom * e)
-            )),
-            s.object.updateProjectionMatrix(),
-            (E = !0))
-          : (console.warn(
-              'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'
-            ),
-            (s.enableZoom = !1))
-      }
-      function B(e) {
-        'PerspectiveCamera' === s.object.cameraType
-          ? (m *= e)
-          : 'OrthographicCamera' === s.object.cameraType
-          ? ((s.object.zoom = Math.max(
-              s.minZoom,
-              Math.min(s.maxZoom, s.object.zoom / e)
-            )),
-            s.object.updateProjectionMatrix(),
-            (E = !0))
-          : (console.warn(
-              'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.'
-            ),
-            (s.enableZoom = !1))
-      }
-      function H(e) {
-        y.set(e.clientX, e.clientY)
-      }
-      function N(e) {
-        x.set(e.clientX, e.clientY)
-      }
-      function F(e) {
-        if (1 == e.touches.length) y.set(e.touches[0].pageX, e.touches[0].pageY)
-        else {
-          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
-            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
-          y.set(t, i)
-        }
-      }
-      function G(e) {
-        if (1 == e.touches.length) x.set(e.touches[0].pageX, e.touches[0].pageY)
-        else {
-          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
-            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
-          x.set(t, i)
-        }
-      }
-      function U(e) {
-        var t = e.touches[0].pageX - e.touches[1].pageX,
-          i = e.touches[0].pageY - e.touches[1].pageY,
-          r = Math.sqrt(t * t + i * i)
-        S.set(0, r)
-      }
-      function z(e) {
-        if (1 == e.touches.length) A.set(e.touches[0].pageX, e.touches[0].pageY)
-        else {
-          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
-            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
-          A.set(t, i)
-        }
-        T.subVectors(A, y).multiplyScalar(s.rotateSpeed)
-        var r = s.domElement
-        O((2 * Math.PI * T.x) / r.clientHeight),
-          D((2 * Math.PI * T.y) / r.clientHeight),
-          y.copy(A)
-      }
-      function V(e) {
-        if (1 == e.touches.length) _.set(e.touches[0].pageX, e.touches[0].pageY)
-        else {
-          var t = 0.5 * (e.touches[0].pageX + e.touches[1].pageX),
-            i = 0.5 * (e.touches[0].pageY + e.touches[1].pageY)
-          _.set(t, i)
-        }
-        w.subVectors(_, x).multiplyScalar(s.panSpeed), P(w.x, w.y), x.copy(_)
-      }
-      function k(e) {
-        var t = e.touches[0].pageX - e.touches[1].pageX,
-          i = e.touches[0].pageY - e.touches[1].pageY,
-          r = Math.sqrt(t * t + i * i)
-        b.set(0, r),
-          R.set(0, Math.pow(b.y / S.y, s.zoomSpeed)),
-          I(R.y),
-          S.copy(b)
-      }
-      function j(e) {
-        if (!1 !== s.enabled) {
-          var t
-          switch (
-            (e.preventDefault(),
-            s.domElement.focus ? s.domElement.focus() : window.focus(),
-            e.button)
-          ) {
-            case 0:
-              t = s.mouseButtons.LEFT
-              break
-            case 1:
-              t = s.mouseButtons.MIDDLE
-              break
-            case 2:
-              t = s.mouseButtons.RIGHT
-              break
-            default:
-              t = -1
-          }
-          switch (t) {
-            case THREE.MOUSE.DOLLY:
-              if (!1 === s.enableZoom) return
-              !(function (e) {
-                S.set(e.clientX, e.clientY)
-              })(e),
-                (d = h.DOLLY)
-              break
-            case THREE.MOUSE.ROTATE:
-              if (e.ctrlKey || e.metaKey || e.shiftKey) {
-                if (!1 === s.enablePan) return
-                N(e), (d = h.PAN)
-              } else {
-                if (!1 === s.enableRotate) return
-                H(e), (d = h.ROTATE)
-              }
-              break
-            case THREE.MOUSE.PAN:
-              if (e.ctrlKey || e.metaKey || e.shiftKey) {
-                if (!1 === s.enableRotate) return
-                H(e), (d = h.ROTATE)
-              } else {
-                if (!1 === s.enablePan) return
-                N(e), (d = h.PAN)
-              }
-              break
-            default:
-              d = h.NONE
-          }
-          d !== h.NONE &&
-            (document.addEventListener('mousemove', Y, !1),
-            document.addEventListener('mouseup', $, !1),
-            s.dispatchEvent(c))
-        }
-      }
-      function Y(e) {
-        if (!1 !== s.enabled)
-          switch ((e.preventDefault(), d)) {
-            case h.ROTATE:
-              if (!1 === s.enableRotate) return
-              !(function (e) {
-                A.set(e.clientX, e.clientY),
-                  T.subVectors(A, y).multiplyScalar(s.rotateSpeed)
-                var t = s.domElement
-                O((2 * Math.PI * T.x) / t.clientHeight),
-                  D((2 * Math.PI * T.y) / t.clientHeight),
-                  y.copy(A),
-                  s.update()
-              })(e)
-              break
-            case h.DOLLY:
-              if (!1 === s.enableZoom) return
-              !(function (e) {
-                b.set(e.clientX, e.clientY),
-                  R.subVectors(b, S),
-                  R.y > 0 ? I(C()) : R.y < 0 && B(C()),
-                  S.copy(b),
-                  s.update()
-              })(e)
-              break
-            case h.PAN:
-              if (!1 === s.enablePan) return
-              !(function (e) {
-                _.set(e.clientX, e.clientY),
-                  w.subVectors(_, x).multiplyScalar(s.panSpeed),
-                  P(w.x, w.y),
-                  x.copy(_),
-                  s.update()
-              })(e)
-          }
-      }
-      function $(e) {
-        !1 !== s.enabled &&
-          (document.removeEventListener('mousemove', Y, !1),
-          document.removeEventListener('mouseup', $, !1),
-          s.dispatchEvent(u),
-          (d = h.NONE))
-      }
-      function Q(e) {
-        !1 === s.enabled ||
-          !1 === s.enableZoom ||
-          (d !== h.NONE && d !== h.ROTATE) ||
-          (e.preventDefault(),
-          e.stopPropagation(),
-          s.dispatchEvent(c),
-          (function (e) {
-            e.deltaY < 0 ? B(C()) : e.deltaY > 0 && I(C()), s.update()
-          })(e),
-          s.dispatchEvent(u))
-      }
-      function W(e) {
-        !1 !== s.enabled &&
-          !1 !== s.enableKeys &&
-          !1 !== s.enablePan &&
-          (function (e) {
-            var t = !1
-            switch (e.keyCode) {
-              case s.keys.UP:
-                P(0, s.keyPanSpeed), (t = !0)
-                break
-              case s.keys.BOTTOM:
-                P(0, -s.keyPanSpeed), (t = !0)
-                break
-              case s.keys.LEFT:
-                P(s.keyPanSpeed, 0), (t = !0)
-                break
-              case s.keys.RIGHT:
-                P(-s.keyPanSpeed, 0), (t = !0)
-            }
-            t && (e.preventDefault(), s.update())
-          })(e)
-      }
-      function X(e) {
-        if (!1 !== s.enabled) {
-          switch ((e.preventDefault(), e.touches.length)) {
-            case 1:
-              switch (s.touches.ONE) {
-                case THREE.TOUCH.ROTATE:
-                  if (!1 === s.enableRotate) return
-                  F(e), (d = h.TOUCH_ROTATE)
-                  break
-                case THREE.TOUCH.PAN:
-                  if (!1 === s.enablePan) return
-                  G(e), (d = h.TOUCH_PAN)
-                  break
-                default:
-                  d = h.NONE
-              }
-              break
-            case 2:
-              switch (s.touches.TWO) {
-                case THREE.TOUCH.DOLLY_PAN:
-                  if (!1 === s.enableZoom && !1 === s.enablePan) return
-                  !(function (e) {
-                    s.enableZoom && U(e), s.enablePan && G(e)
-                  })(e),
-                    (d = h.TOUCH_DOLLY_PAN)
-                  break
-                case THREE.TOUCH.DOLLY_ROTATE:
-                  if (!1 === s.enableZoom && !1 === s.enableRotate) return
-                  !(function (e) {
-                    s.enableZoom && U(e), s.enableRotate && F(e)
-                  })(e),
-                    (d = h.TOUCH_DOLLY_ROTATE)
-                  break
-                default:
-                  d = h.NONE
-              }
-              break
-            default:
-              d = h.NONE
-          }
-          d !== h.NONE && s.dispatchEvent(c)
-        }
-      }
-      function J(e) {
-        if (!1 !== s.enabled)
-          switch ((e.preventDefault(), e.stopPropagation(), d)) {
-            case h.TOUCH_ROTATE:
-              if (!1 === s.enableRotate) return
-              z(e), s.update()
-              break
-            case h.TOUCH_PAN:
-              if (!1 === s.enablePan) return
-              V(e), s.update()
-              break
-            case h.TOUCH_DOLLY_PAN:
-              if (!1 === s.enableZoom && !1 === s.enablePan) return
-              !(function (e) {
-                s.enableZoom && k(e), s.enablePan && V(e)
-              })(e),
-                s.update()
-              break
-            case h.TOUCH_DOLLY_ROTATE:
-              if (!1 === s.enableZoom && !1 === s.enableRotate) return
-              !(function (e) {
-                s.enableZoom && k(e), s.enableRotate && z(e)
-              })(e),
-                s.update()
-              break
-            default:
-              d = h.NONE
-          }
-      }
-      function K(e) {
-        !1 !== s.enabled && (s.dispatchEvent(u), (d = h.NONE))
-      }
-      function q(e) {
-        !1 !== s.enabled && e.preventDefault()
-      }
-      s.domElement.addEventListener('contextmenu', q, !1),
-        s.domElement.addEventListener('mousedown', j, !1),
-        s.domElement.addEventListener('wheel', Q, !1),
-        s.domElement.addEventListener('touchstart', X, !1),
-        s.domElement.addEventListener('touchend', K, !1),
-        s.domElement.addEventListener('touchmove', J, !1),
-        s.domElement.addEventListener('keydown', W, !1),
-        -1 === s.domElement.tabIndex && (s.domElement.tabIndex = 0),
-        this.update()
+    WEBGL_COMPONENT_TYPES = {
+      5120: Int8Array,
+      5121: Uint8Array,
+      5122: Int16Array,
+      5123: Uint16Array,
+      5125: Uint32Array,
+      5126: Float32Array
+    },
+    WEBGL_TYPE_SIZES = {
+      SCALAR: 1,
+      VEC2: 2,
+      VEC3: 3,
+      VEC4: 4,
+      MAT2: 4,
+      MAT3: 9,
+      MAT4: 16
     }
-  ;(OrbitControls.prototype = Object.create(THREE.EventDispatcher.prototype)),
-    (OrbitControls.prototype.constructor = OrbitControls)
-  var MapControls = function (e, t) {
-    OrbitControls.call(this, e, t),
-      (this.mouseButtons.LEFT = THREE.MOUSE.PAN),
-      (this.mouseButtons.RIGHT = THREE.MOUSE.ROTATE),
-      (this.touches.ONE = THREE.TOUCH.PAN),
-      (this.touches.TWO = THREE.TOUCH.DOLLY_ROTATE)
+  function arrayToLibrary(e) {
+    var t
+    return (
+      e instanceof Array
+        ? ((t = {}),
+          e.forEach(function (e) {
+            t[e.uuid] = e
+          }))
+        : (t = e),
+      t
+    )
   }
-  ;(MapControls.prototype = Object.create(THREE.EventDispatcher.prototype)),
-    (MapControls.prototype.constructor = MapControls)
+  function getGeometry(e, t) {
+    return (
+      void 0 === e[t] &&
+        console.warn('ObjectLoader > getGeometry: undefined geometry', t),
+      e[t]
+    )
+  }
+  function getMaterial(e, t) {
+    if (void 0 !== t) {
+      if (t instanceof Array) {
+        for (var i = [], r = 0, n = t.length; r < n; r++) {
+          var a = t[r]
+          void 0 === e[a] &&
+            console.warn('ObjectLoader > getMaterial: undefined material', a),
+            i.push(e[a])
+        }
+        return i
+      }
+      return (
+        void 0 === e[t] &&
+          console.warn('ObjectLoader > getMaterial: undefined material', t),
+        e[t]
+      )
+    }
+  }
+  var ObjectLoader = (function (e) {
+      function t() {
+        var t = (null !== e && e.apply(this, arguments)) || this
+        return (t.path = ''), (t.resourcePath = ''), t
+      }
+      return (
+        __extends(t, e),
+        (t.prototype.loadFromFile = function (e) {
+          var t
+          return __awaiter(this, void 0, void 0, function () {
+            var i, r
+            return __generator(this, function (n) {
+              switch (n.label) {
+                case 0:
+                  return [4, loadFile(e, this.manager, READ_FILE_TYPE.TEXT)]
+                case 1:
+                  return (
+                    (i = n.sent()),
+                    ((r = this.parse(JSON.parse(i))).name =
+                      null !== (t = e.name.split('.').shift()) && void 0 !== t
+                        ? t
+                        : e.name),
+                    this.manager.itemEnd(e.name),
+                    [2, r]
+                  )
+              }
+            })
+          })
+        }),
+        (t.prototype.load = function (e, t, i, r) {
+          var n = this,
+            a =
+              '' === this.path
+                ? THREE.LoaderUtils.extractUrlBase(e)
+                : this.path
+          this.resourcePath = this.resourcePath || a
+          var o = new THREE.FileLoader(this.manager)
+          o.setPath(this.path),
+            o.load(
+              e,
+              function (i) {
+                var a = null
+                try {
+                  a = JSON.parse(i)
+                } catch (t) {
+                  return (
+                    void 0 !== r && r(t),
+                    console.warn("ObjectLoader > load: can't parse " + e + '.'),
+                    void console.error(t)
+                  )
+                }
+                var o = a.metadata
+                void 0 !== o &&
+                void 0 !== o.type &&
+                'geometry' !== o.type.toLowerCase()
+                  ? n.parse(a, t)
+                  : console.error("THREE.ObjectLoader: Can't load " + e)
+              },
+              i,
+              r
+            )
+        }),
+        (t.prototype.parse = function (e, t) {
+          if (!1 === upgrade(e))
+            return console.error('File can not be parser'), new Scene()
+          var i = {},
+            r = this.parseGeometries(e.geometries),
+            n = this.loader.parseImages(e.images, function () {
+              void 0 !== t && t(l)
+            }),
+            a = this.loader.parseTextures(e.textures, n),
+            o = arrayToLibrary(this.loader.parseMaterials(e.materials, a)),
+            s = this.customParseMaterials(o, arrayToLibrary(a)),
+            l = this.parseObject(e.object, r, s, i),
+            c = this.parseInteractionStates(e.interactionStates, a)
+          return (
+            this.parseInteractions(e.object, i, c),
+            (void 0 !== e.images && 0 !== e.images.length) ||
+              (void 0 !== t && t(l)),
+            l
+          )
+        }),
+        (t.prototype.parseGeometries = function (e) {
+          var t,
+            i,
+            r = {}
+          if (void 0 !== e)
+            for (var n = 0, a = e.length; n < a; n++) {
+              var o = e[n],
+                s = void 0
+              try {
+                switch (
+                  null === (t = o.userData) || void 0 === t ? void 0 : t.type
+                ) {
+                  case void 0:
+                    s = this.loader.parseGeometries([o])[o.uuid]
+                    break
+                  case 'NonParametricGeometry':
+                    ;(s = o.vertexData
+                      ? new GeometryLoader().parse(o)
+                      : this.loader.parseGeometries([o])[o.uuid]).userData = {}
+                    var l = Object.assign({}, o.userData, { geometry: s })
+                    s = NonParametricGeometry.create(l)
+                    break
+                  default:
+                    s = createGeometry(o.userData)
+                }
+                ;(s.uuid = o.uuid),
+                  void 0 !== o.name && (s.name = o.name),
+                  (r[o.uuid] = s)
+              } catch (e) {
+                console.warn(
+                  'ObjectLoader > parseGeometries: error parsing geometry of type .',
+                  null === (i = o.userData) || void 0 === i ? void 0 : i.type
+                ),
+                  console.error(e)
+              }
+            }
+          return r
+        }),
+        (t.prototype.customParseMaterials = function (e, t) {
+          var i = {}
+          for (var r in e) {
+            var n = e[r].userData
+            if (void 0 !== n.type) {
+              var a = speMaterials[n.type]
+              i[r] = a.fromJSON(e[r], t)
+            }
+          }
+          return i
+        }),
+        (t.prototype.parseObject = function (e, t, i, r) {
+          var n, a, o
+          if (void 0 !== e.geometry) {
+            var s = getGeometry(t, e.geometry),
+              l = getMaterial(i, e.material)
+            if (s) {
+              switch (e.objectType) {
+                case 'Mesh2D':
+                  o = new Mesh2D(s, l).fromJSON(e)
+                  break
+                case 'Mesh3D':
+                  o = new Mesh3D(s, l).fromJSON(e)
+                  break
+                case 'NonParametric':
+                  o = new NonParametric(s, l).fromJSON(e)
+                  break
+                case 'TextFrame':
+                  ;(o = new TextFrame(s, l))
+                    .fromJSONasync(e)
+                    .then(function () {})
+                    .catch(function () {})
+                  break
+                case 'VectorObject':
+                  o = new VectorObject(s, l).fromJSON(e)
+                  break
+                default:
+                  return void console.warn(
+                    'ObjectLoader > parseObject: unsupported object type',
+                    e.objectType
+                  )
+              }
+              l || (o.name += ' (Recovered)')
+            } else
+              ((o = new EmptyObject().fromJSON(e)).name += ' (Recovered)'),
+                console.warn('An empty object is created instead')
+          } else
+            switch (e.objectType) {
+              case 'Scene':
+                o = new Scene().fromJSON(e)
+                break
+              case 'CombinedCamera':
+                o = new CombinedCamera().fromJSON(e)
+                break
+              case 'LightDirectional':
+                o = new LightDirectional().fromJSON(e)
+                break
+              case 'LightPoint':
+                o = new LightPoint().fromJSON(e)
+                break
+              case 'LightSpot':
+                o = new LightSpot().fromJSON(e)
+                break
+              case 'EmptyObject':
+                o = new EmptyObject().fromJSON(e)
+                break
+              default:
+                if (
+                  'HemisphereLight' !== e.type &&
+                  'DirectionalLight' !== e.type
+                )
+                  return void console.warn(
+                    'ObjectLoader > parseObject: unsupported object type',
+                    e.objectType
+                  )
+                o = this.loader.parseObject(e, t, i)
+            }
+          if ((isEntity$1(o) && (r[e.uuid] = o), void 0 !== e.children))
+            try {
+              for (
+                var c = __values(e.children), h = c.next();
+                !h.done;
+                h = c.next()
+              ) {
+                var u = h.value,
+                  d = this.parseObject(u, t, i, r)
+                void 0 !== d && o.add(d)
+              }
+            } catch (e) {
+              n = { error: e }
+            } finally {
+              try {
+                h && !h.done && (a = c.return) && a.call(c)
+              } finally {
+                if (n) throw n.error
+              }
+            }
+          return o instanceof Scene && o.initFromObjectLoader(e), o
+        }),
+        (t.prototype.parseInteractionStates = function (e, t) {
+          var i = {}
+          if (void 0 !== e)
+            for (var r = 0, n = e.length; r < n; r++) {
+              var a = new InteractionState().fromJSON(e[r], t)
+              i[a.uuid] = a
+            }
+          return i
+        }),
+        (t.prototype.parseInteractions = function (e, t, i) {
+          var r,
+            n,
+            a = t[e.uuid]
+          if (
+            (void 0 !== e.interaction &&
+              void 0 !== a &&
+              (a.interaction = new Interaction(a).fromJSON(
+                e.interaction,
+                t,
+                i
+              )),
+            void 0 !== e.children)
+          )
+            try {
+              for (
+                var o = __values(e.children), s = o.next();
+                !s.done;
+                s = o.next()
+              ) {
+                var l = s.value
+                this.parseInteractions(l, t, i)
+              }
+            } catch (e) {
+              r = { error: e }
+            } finally {
+              try {
+                s && !s.done && (n = o.return) && n.call(o)
+              } finally {
+                if (r) throw r.error
+              }
+            }
+        }),
+        t
+      )
+    })(LoaderMixin(THREE.ObjectLoader)),
+    RUNTIME_VIEWMODE,
+    RUNTIME_QUALITY
+  !(function (e) {
+    ;(e[(e.FULLSCREEN = 1)] = 'FULLSCREEN'),
+      (e[(e.CUSTOM_SIZE = 2)] = 'CUSTOM_SIZE')
+  })(RUNTIME_VIEWMODE || (RUNTIME_VIEWMODE = {})),
+    (function (e) {
+      ;(e.HIGH = 'high'),
+        (e.MIDDLE = 'middle'),
+        (e.LOW = 'low'),
+        (e.DEFAULT = 'default')
+    })(RUNTIME_QUALITY || (RUNTIME_QUALITY = {}))
   var Application = (function () {
       function e() {
         ;(this._viewportMode = RUNTIME_VIEWMODE.FULLSCREEN),
           (this._viewportWidth = window.innerWidth),
           (this._viewportHeight = window.innerHeight),
+          (this._exportOptions = {
+            useHostedRuntime: !1,
+            useOrbitControls: !0,
+            orbitTarget: new THREE.Vector3(),
+            orbitDamped: !1,
+            cameraRotate: !0,
+            cameraPan: !0,
+            cameraZoom: !0,
+            quality: RUNTIME_QUALITY.DEFAULT,
+            watermark: !0
+          }),
           (this._running = !1),
-          (this._renderer = null),
-          (this._scene = null),
-          (this._camera = null),
-          (this._controls = null),
-          (this._playmode = null),
-          (this._postProcessing = null),
-          (this._decoder = new GLTFImporter()),
           window.addEventListener('resize', this.resize.bind(this))
       }
       return (
-             (e.prototype.start = function (e,__REACT_SPLINE_EDIT___CANVAS__) {
+        (e.prototype.start = function (e,$$__react_spline__canvas) {
           var t = this
-          const fetchPromise = new Promise((resolve) =>
-            resolve(
-              typeof e === 'object'
-                ? e
-                : fetch(e).then(function (e) {
-                    return e.json()
-                  })
-            )
-          )
-          fetchPromise
+          Promise.resolve(e)
             .then(function (e) {
-              var i
-              ;(i = __read(t._decoder.decode(CreateFromJson(e)), 4)),
-                (t._scene = i[0]),
-                (t._camera = i[1]),
-                (t._exportOptions = i[2]),
-                (t._sceneOptions = i[3]),
-                t.init(__REACT_SPLINE_EDIT___CANVAS__),
-                (t._running = !0),
-                t.run(),
-                t.resize()
+              var i,
+                r,
+                n,
+                a,
+                o,
+                s,
+                l,
+                c,
+                h = new ObjectLoader()
+              if (
+                ((t._scene = h.parse(e)),
+                (t._camera = t._scene.activeCamera),
+                e.options)
+              ) {
+                var u = e.options
+                t._exportOptions = {
+                  useHostedRuntime:
+                    null !== (i = u.useHostedRuntime) && void 0 !== i && i,
+                  useOrbitControls:
+                    null !== (r = u.useOrbitControls) && void 0 !== r && r,
+                  orbitTarget: new THREE.Vector3().fromArray(u.orbitTarget),
+                  orbitDamped:
+                    null !== (n = u.orbitDamped) && void 0 !== n && n,
+                  cameraRotate:
+                    null !== (a = u.cameraRotate) && void 0 !== a && a,
+                  cameraPan: null !== (o = u.cameraPan) && void 0 !== o && o,
+                  cameraZoom: null !== (s = u.cameraZoom) && void 0 !== s && s,
+                  quality:
+                    null !== (l = u.quality) && void 0 !== l
+                      ? l
+                      : RUNTIME_QUALITY.DEFAULT,
+                  watermark: null !== (c = u.watermark) && void 0 !== c && c
+                }
+              }
+              t.init($$__react_spline__canvas), (t._running = !0), t.run(), t.resize()
             })
             .catch(function (e) {
               console.error(e)
@@ -20232,17 +18576,22 @@ export function speRuntimeFactory (exports) {
           requestAnimationFrame(this.run.bind(this)), this.render()
         }),
         (e.prototype.render = function () {
+          var e, t
           this._running &&
             (this._renderer
-              ? (this._controls && this._controls.update(),
+              ? (null === (e = this._controls) || void 0 === e || e.update(),
                 this._playmode &&
                   !this._playmode.isEnable &&
                   this._playmode.activate(),
                 this._scene &&
                   this._camera &&
-                  (this._postProcessing
+                  ((
+                    null === (t = this._scene.postprocessing) || void 0 === t
+                      ? void 0
+                      : t.enabled
+                  )
                     ? ((this._renderer.autoClear = !0),
-                      this._postProcessing.render())
+                      this._scene.postprocessing.render())
                     : ((this._renderer.autoClear = !0),
                       this._renderer.render(this._scene, this._camera))))
               : console.error(
@@ -20265,208 +18614,82 @@ export function speRuntimeFactory (exports) {
                   (this._camera.top = this._viewportHeight / 2),
                   (this._camera.bottom = -this._viewportHeight / 2)),
               this._camera.updateProjectionMatrix()),
-            this._renderer &&
-              this._renderer.setSize(this._viewportWidth, this._viewportHeight))
+            this._renderer.setSize(this._viewportWidth, this._viewportHeight))
         }),
-        (e.prototype.init = function(__REACT_SPLINE_EDIT___CANVAS__) {
-          __REACT_SPLINE_EDIT___CANVAS__=__REACT_SPLINE_EDIT___CANVAS__||document.getElementById("canvas3d")
+        (e.prototype.init = function ($$__react_spline__canvas) {
           var e,
             t,
             i,
             r,
-            n,
-            o,
-            a,
-            s,
-            l,
-            c,
-            u,
-            h,
-            d,
-            f,
-            p,
-            v,
-            m,
-            g,
-            E,
-            y,
-            A,
-            T,
-            x,
-            _,
-            w,
-            S,
-            b,
-            R,
-            C,
-            O,
-            D = __REACT_SPLINE_EDIT___CANVAS__
-          null !==
-            (i =
-              null ===
-                (t =
-                  null === (e = this._sceneOptions) || void 0 === e
-                    ? void 0
-                    : e.postProcessing) || void 0 === t
-                ? void 0
-                : t.enabled) &&
-          void 0 !== i &&
-          i
-            ? (this._renderer = new THREE.WebGLRenderer({
-                canvas: D,
-                antialias: !1,
-                stencil: !1,
-                depth: !1,
-                powerPreference: 'high-performance'
-              }))
-            : (this._renderer = new THREE.WebGLRenderer({
-                canvas: D,
-                antialias: !0,
-                alpha: !0,
-                stencil: !0,
-                depth: !0
-              }))
-          var M =
-              null !==
-                (n =
-                  null === (r = this._exportOptions) || void 0 === r
-                    ? void 0
-                    : r.viewWidth) && void 0 !== n
-                ? n
-                : window.innerWidth,
-            L =
-              null !==
-                (a =
-                  null === (o = this._exportOptions) || void 0 === o
-                    ? void 0
-                    : o.viewHeight) && void 0 !== a
-                ? a
-                : window.innerHeight,
-            P =
-              null !==
-                (l =
-                  null === (s = this._exportOptions) || void 0 === s
-                    ? void 0
-                    : s.bgColor) && void 0 !== l
-                ? l
-                : new THREE.Color(1644825),
-            I =
-              null !==
-                (u =
-                  null === (c = this._exportOptions) || void 0 === c
-                    ? void 0
-                    : c.bgAlpha) && void 0 !== u
-                ? u
-                : 0
-          if (
-            ((this._viewportWidth = M),
-            (this._viewportHeight = L),
-            this._renderer.setPixelRatio(window.devicePixelRatio),
-            this._renderer.setSize(this._viewportWidth, this._viewportHeight),
-            (this._renderer.shadowMap.enabled = !0),
-            (this._renderer.shadowMap.type = THREE.PCFSoftShadowMap),
-            this._renderer.setClearColor(P, I),
-            (this._viewportMode =
-              null !==
-                (d =
-                  null === (h = this._exportOptions) || void 0 === h
-                    ? void 0
-                    : h.viewMode) && void 0 !== d
-                ? d
-                : RUNTIME_VIEWMODE.FULLSCREEN),
-            null ===
-              (p =
-                null === (f = this._exportOptions) || void 0 === f
+            n =$$__react_spline__canvas|| document.getElementById('canvas3d')
+          if (this._scene && this._camera) {
+            if (
+              ((
+                null === (e = this._scene.postprocessing) || void 0 === e
                   ? void 0
-                  : f.useOrbitControls) ||
-              void 0 === p ||
-              p)
-          ) {
-            ;(this._controls = new OrbitControls(
-              this._camera,
-              this._renderer.domElement
-            )),
-              this._controls.target.copy(
-                null !==
-                  (m =
-                    null === (v = this._exportOptions) || void 0 === v
-                      ? void 0
-                      : v.orbitTarget) && void 0 !== m
-                  ? m
-                  : new THREE.Vector3()
+                  : e.enabled
+              )
+                ? ((this._renderer = new THREE.WebGLRenderer({
+                    canvas: n,
+                    antialias: !1,
+                    stencil: !1,
+                    depth: !1,
+                    powerPreference: 'high-performance'
+                  })),
+                  this._scene.postprocessing.init({
+                    renderer: this._renderer,
+                    camera: this._camera,
+                    scene: this._scene
+                  }))
+                : (this._renderer = new THREE.WebGLRenderer({
+                    canvas: n,
+                    antialias: !0,
+                    alpha: !0,
+                    stencil: !0,
+                    depth: !0,
+                    powerPreference: 'high-performance'
+                  })),
+              this._renderer.setPixelRatio(window.devicePixelRatio),
+              this._renderer.setSize(this._viewportWidth, this._viewportHeight),
+              (this._renderer.shadowMap.enabled = !0),
+              (this._renderer.shadowMap.type = THREE.PCFSoftShadowMap),
+              this._renderer.setClearColor(
+                this._scene.color,
+                this._scene.alpha
               ),
-              (this._controls.enableRotate =
-                null !==
-                  (E =
-                    null === (g = this._exportOptions) || void 0 === g
-                      ? void 0
-                      : g.cameraRotate) &&
-                void 0 !== E &&
-                E),
-              (this._controls.enablePan =
-                null !==
-                  (A =
-                    null === (y = this._exportOptions) || void 0 === y
-                      ? void 0
-                      : y.cameraPan) &&
-                void 0 !== A &&
-                A),
-              (this._controls.enableZoom =
-                null !==
-                  (x =
-                    null === (T = this._exportOptions) || void 0 === T
-                      ? void 0
-                      : T.cameraZoom) &&
-                void 0 !== x &&
-                x),
-              (this._controls.enableDamping =
-                null !==
-                  (w =
-                    null === (_ = this._exportOptions) || void 0 === _
-                      ? void 0
-                      : _.orbitDamped) &&
-                void 0 !== w &&
-                w)
-            b =
-              null === (S = this._exportOptions) || void 0 === S
-                ? void 0
-                : S.orbitDamped
-            ;(this._controls.rotateSpeed = 1), (this._controls.panSpeed = 1)
-          }
-          if (
-            ((this._playmode = new PlayMode(
+              (this._viewportMode =
+                null !== (t = this._scene.canvas.mode) && void 0 !== t
+                  ? t
+                  : RUNTIME_VIEWMODE.FULLSCREEN),
+              (this._viewportWidth =
+                null !== (i = this._scene.canvas.size.width) && void 0 !== i
+                  ? i
+                  : window.innerWidth),
+              (this._viewportHeight =
+                null !== (r = this._scene.canvas.size.height) && void 0 !== r
+                  ? r
+                  : window.innerHeight),
+              this._exportOptions.useOrbitControls)
+            ) {
+              ;(this._controls = new OrbitControls(
+                this._camera,
+                this._renderer.domElement
+              )),
+                this._controls.target.copy(this._exportOptions.orbitTarget),
+                (this._controls.enableRotate =
+                  this._exportOptions.cameraRotate),
+                (this._controls.enablePan = this._exportOptions.cameraPan),
+                (this._controls.enableZoom = this._exportOptions.cameraZoom),
+                (this._controls.enableDamping = this._exportOptions.orbitDamped)
+              this._exportOptions.orbitDamped
+              ;(this._controls.rotateSpeed = 1), (this._controls.panSpeed = 1)
+            }
+            this._playmode = new PlayMode(
               this._renderer.domElement,
               this._scene,
               this._camera
-            )),
-            null === (R = this._sceneOptions) || void 0 === R ? void 0 : R.fog)
-          ) {
-            var B = this._sceneOptions.fog,
-              H = new THREE.Fog(B.color.getHex(), B.near, B.far)
-            this._scene.fog = H
+            )
           }
-          if (
-            null === (C = this._sceneOptions) || void 0 === C
-              ? void 0
-              : C.fogExp2
-          ) {
-            ;(B = this._sceneOptions.fogExp2),
-              (H = new THREE.FogExp2(B.color.getHex(), B.density))
-            this._scene.fog = H
-          }
-          ;(null === (O = this._sceneOptions) || void 0 === O
-            ? void 0
-            : O.postProcessing) &&
-            this._sceneOptions.postProcessing.enabled &&
-            ((this._postProcessing = new Post()),
-            this._postProcessing.fromJSON(
-              this._sceneOptions.postProcessing.data
-            ),
-            this._postProcessing.init({
-              renderer: this._renderer,
-              camera: this._camera,
-              scene: this._scene
-            }))
         }),
         e
       )
