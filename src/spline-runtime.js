@@ -1,5 +1,5 @@
-import * as THREE from "three/build/three"
-export const speRuntimeFactory = function (exports) {
+const THREE=require("three/build/three.min.js");
+module.exports.speRuntimeFactory = function (exports) {
   'use strict'
   /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
