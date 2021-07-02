@@ -1,6 +1,6 @@
 import React from 'react'
-// import { SPLINE_EXPORTED_SCENE_TWO } from './scene2'
-import SPLINE_EXPORTED_SCENE from './scene.json'
+// import SPLINE_EXPORTED_SCENE from './scene.json'
+import SPLINE_EXPORTED_SCENE_TWO from './scene-two.json'
 import { Spline } from 'react-spline'
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <h1 style={{ position: 'absolute', zIndex: 1, color: '#fff' }}>
           If you see this, react-spline works.
         </h1>
-        <Spline scene={SPLINE_EXPORTED_SCENE} />
+        <Spline scene={SPLINE_EXPORTED_SCENE_TWO} />
       </div>
       {/* <div
         style={{
