@@ -1,8 +1,22 @@
+// Console Warning Workaround
+console.warn = (function () {
+  const prevConsole = console.warn.bind(console);
+  const previousWarnings = [];
+  return function (...args) {
+    const key = args.join("");
+    if (previousWarnings.includes(key)) {
+      return;
+    }
+    previousWarnings.push(key);
+    return prevConsole(...args);
+  };
+})();
+
 import * as _THREE from 'three/build/three.min.js'
 
 window.THREE = _THREE
 
-export function speRuntimeFactory (exports) {
+export function speRuntimeFactory(exports) {
   'use strict'
   /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -17,20 +31,19 @@ export function speRuntimeFactory (exports) {
     LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
-    ***************************************************************************** */ 
-   var extendStatics =
-    function (e, t) {
-      return (extendStatics =
-        Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array &&
-          function (e, t) {
-            e.__proto__ = t
-          }) ||
+    ***************************************************************************** */
+  var extendStatics = function (e, t) {
+    return (extendStatics =
+      Object.setPrototypeOf ||
+      ({ __proto__: [] } instanceof Array &&
         function (e, t) {
-          for (var i in t)
-            Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-        })(e, t)
-    }
+          e.__proto__ = t
+        }) ||
+      function (e, t) {
+        for (var i in t)
+          Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+      })(e, t)
+  }
   function __extends(e, t) {
     if ('function' != typeof t && null !== t)
       throw new TypeError(
@@ -1993,11 +2006,7 @@ export function speRuntimeFactory (exports) {
             var ce = C.angle(),
               he = Math.PI - ce
             ;(I = w.clone()).y -= o / Math.sin(ce - Math.PI / 2)
-            for (
-              var ue = new THREE.Vector3(), de = [], fe = 0;
-              fe < s;
-              fe++
-            ) {
+            for (var ue = new THREE.Vector3(), de = [], fe = 0; fe < s; fe++) {
               for (
                 var pe = [],
                   me = Math.PI / 2 - (he * fe) / s,
@@ -2943,8 +2952,7 @@ export function speRuntimeFactory (exports) {
       void 0 === t && (t = 12),
       e && e instanceof THREE.EllipseCurve
         ? 2 * t
-        : e &&
-          (e instanceof THREE.LineCurve || e instanceof THREE.LineCurve3)
+        : e && (e instanceof THREE.LineCurve || e instanceof THREE.LineCurve3)
         ? 1
         : e && e instanceof THREE.SplineCurve
         ? t * e.points.length
@@ -5351,10 +5359,7 @@ export function speRuntimeFactory (exports) {
         var i = e.call(this) || this
         return (
           (i._drawCount = 0),
-          (i.positions = new THREE.BufferAttribute(
-            new Float32Array(3 * t),
-            3
-          )),
+          (i.positions = new THREE.BufferAttribute(new Float32Array(3 * t), 3)),
           i.setAttribute('position', i.positions),
           i
         )
@@ -9988,9 +9993,7 @@ export function speRuntimeFactory (exports) {
             ra_align: void 0 !== i.ra_align && i.ra_align,
             ra_axis: void 0 !== i.ra_axis ? i.ra_axis : 'y',
             ra_scale:
-              void 0 !== i.ra_scale
-                ? i.ra_scale.clone()
-                : new THREE.Vector3(),
+              void 0 !== i.ra_scale ? i.ra_scale.clone() : new THREE.Vector3(),
             ra_rotation:
               void 0 !== i.ra_rotation
                 ? i.ra_rotation.clone()
@@ -10000,9 +10003,7 @@ export function speRuntimeFactory (exports) {
                 ? i.ra_position.clone()
                 : new THREE.Vector3(),
             li_scale:
-              void 0 !== i.li_scale
-                ? i.li_scale.clone()
-                : new THREE.Vector3(),
+              void 0 !== i.li_scale ? i.li_scale.clone() : new THREE.Vector3(),
             li_rotation:
               void 0 !== i.li_rotation
                 ? i.li_rotation.clone()
@@ -14689,9 +14690,7 @@ export function speRuntimeFactory (exports) {
     ]),
     BlendMode = class extends THREE.EventDispatcher {
       constructor(e, t = 1) {
-        super(),
-          (this.blendFunction = e),
-          (this.opacity = new THREE.Uniform(t))
+        super(), (this.blendFunction = e), (this.opacity = new THREE.Uniform(t))
       }
       getBlendFunction() {
         return this.blendFunction
@@ -18264,9 +18263,7 @@ export function speRuntimeFactory (exports) {
         (t.prototype.load = function (e, t, i, r) {
           var n = this,
             a =
-              '' === this.path
-                ? THREE.LoaderUtils.extractUrlBase(e)
-                : this.path
+              '' === this.path ? THREE.LoaderUtils.extractUrlBase(e) : this.path
           this.resourcePath = this.resourcePath || a
           var o = new THREE.FileLoader(this.manager)
           o.setPath(this.path),
@@ -18528,7 +18525,7 @@ export function speRuntimeFactory (exports) {
           window.addEventListener('resize', this.resize.bind(this))
       }
       return (
-        (e.prototype.start = function (e,$$__react_spline__canvas) {
+        (e.prototype.start = function (e, $$__react_spline__canvas) {
           var t = this
           Promise.resolve(e)
             .then(function (e) {
@@ -18566,7 +18563,10 @@ export function speRuntimeFactory (exports) {
                   watermark: null !== (c = u.watermark) && void 0 !== c && c
                 }
               }
-              t.init($$__react_spline__canvas), (t._running = !0), t.run(), t.resize()
+              t.init($$__react_spline__canvas),
+                (t._running = !0),
+                t.run(),
+                t.resize()
             })
             .catch(function (e) {
               console.error(e)
@@ -18621,7 +18621,7 @@ export function speRuntimeFactory (exports) {
             t,
             i,
             r,
-            n =$$__react_spline__canvas|| document.getElementById('canvas3d')
+            n = $$__react_spline__canvas || document.getElementById('canvas3d')
           if (this._scene && this._camera) {
             if (
               ((
