@@ -48,6 +48,9 @@ class Example extends Component {
 ## Loading the Spline model
 To download Spline models from the link that gets generated in Spline, it's accessible at ``https://my.spline.design/example-8b43571.../scene.json`` (**Note**: Here *example-8b43571* in the link is a placeholder for a Spline generated link). You can then import the object and use it like shown above.
 
+## Multiple THREE.js Warning Issue
+The older versions of this library experience a ~~bug~~ problem, where outdated usage of functions in the Spline runtime cause multiple duplicate warnings to clutter the console. For now, it has been disabled by a workaround script that removes duplicate warnings from the console until we have a proper solution.
+
 ## License
 
 MIT © [utkarshdubey](https://github.com/utkarshdubey)
