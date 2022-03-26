@@ -2,6 +2,9 @@
 
 [![NPM](https://img.shields.io/npm/v/react-spline.svg)](https://www.npmjs.com/package/react-spline) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Archive Notice
+The repository has been archived now since Spline has released their official library [@splinetool/react-spline](https://www.npmjs.com/package/@splinetool/react-spline) for importing models. I had fun maintaining this project, if your existing workspace is using `react-spline`, the transitioning won't be hard since most of the generics are similar. Thanks for stopping by.
+
 A painless, configurable, [spline](https://spline.design) wrapper for React to add sweet animations easily into your projects.
 
 ![Demo Gif](./demo.gif)
